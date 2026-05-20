@@ -1,0 +1,255 @@
+.info-page {
+  background: linear-gradient(180deg, #fdf2f6 0%, #faf6f2 28%, #fffefb 100%);
+  min-height: calc(100vh - 120px);
+  padding: 28px 0 64px;
+}
+
+.info-page__container {
+  max-width: 1080px;
+}
+
+.info-page__top-bar {
+  margin-bottom: 14px;
+}
+
+.info-page__breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #8a7b72;
+}
+
+.info-page__crumb-link {
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  color: #600b45;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.info-page__crumb-link:hover {
+  color: #4b0030;
+}
+
+.info-page__hero {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(212, 180, 131, 0.45);
+}
+
+.info-page__eyebrow {
+  margin: 0 0 10px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8a7b72;
+}
+
+.info-page__title {
+  margin: 0 0 10px;
+  font-family: var(--font-sans);
+  font-size: clamp(26px, 4vw, 34px);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #600b45;
+  line-height: 1.2;
+}
+
+.info-page__subtitle {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #5c4f4a;
+  max-width: 640px;
+}
+
+.info-page__layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 40px;
+  align-items: start;
+}
+
+.info-page__article {
+  background: #fffefb;
+  border: 1px solid rgba(212, 180, 131, 0.4);
+  border-radius: 12px;
+  padding: 28px 32px 36px;
+  box-shadow: 0 8px 32px rgba(96, 11, 69, 0.06);
+}
+
+.info-page__section + .info-page__section {
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(212, 180, 131, 0.25);
+}
+
+.info-page__section:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.info-page__section-title {
+  margin: 0 0 14px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #600b45;
+}
+
+.info-page__paragraph {
+  margin: 0 0 12px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #5c4f4a;
+}
+
+.info-page__paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.info-page__list {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #5c4f4a;
+}
+
+.info-page__list li {
+  margin-bottom: 10px;
+}
+
+.info-page__list li:last-child {
+  margin-bottom: 0;
+}
+
+.info-page__inline-cta {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(212, 180, 131, 0.35);
+}
+
+.info-page__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  background: #600b45;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.info-page__cta:hover {
+  background: #4b0030;
+}
+
+.info-page__cta--outline {
+  width: 100%;
+  background: transparent;
+  color: #600b45;
+  border: 1px solid #600b45;
+  margin-top: 16px;
+}
+
+.info-page__cta--outline:hover {
+  background: rgba(96, 11, 69, 0.06);
+}
+
+.info-page__sidebar {
+  position: sticky;
+  top: 120px;
+}
+
+.info-page__support-card {
+  background: #fffefb;
+  border: 1px solid rgba(212, 180, 131, 0.45);
+  border-radius: 12px;
+  padding: 22px 20px;
+  box-shadow: 0 6px 24px rgba(96, 11, 69, 0.08);
+}
+
+.info-page__support-card h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #600b45;
+}
+
+.info-page__support-card > p:first-of-type {
+  margin: 0 0 16px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #5c4f4a;
+}
+
+.info-page__support-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #600b45;
+  text-decoration: none;
+}
+
+.info-page__support-row:hover {
+  text-decoration: underline;
+}
+
+.info-page__support-hours {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #8a7b72;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .info-page__layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .info-page__sidebar {
+    position: static;
+  }
+
+  .info-page__article {
+    padding: 22px 20px 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .info-page {
+    padding: 16px 0 48px;
+  }
+
+  .info-page__title {
+    font-size: 22px;
+  }
+
+  .info-page__subtitle {
+    font-size: 14px;
+  }
+}

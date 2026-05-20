@@ -1,0 +1,132 @@
+/* Amazon.in-style product details block */
+.pdp-product-details {
+  padding-top: 4px;
+}
+
+.pdp-amazon-main-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f1111;
+  margin: 0 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e7e7e7;
+  font-family: var(--font-sans);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.pdp-amazon-section {
+  margin-bottom: 22px;
+}
+
+.pdp-amazon-subtitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f1111;
+  margin: 0 0 10px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.pdp-amazon-kv {
+  margin: 0;
+}
+
+.pdp-amazon-kv__row {
+  display: grid;
+  grid-template-columns: minmax(120px, 42%) 1fr;
+  gap: 6px 14px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f2f2;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.pdp-amazon-kv__row:last-child {
+  border-bottom: none;
+}
+
+.pdp-amazon-kv__row dt {
+  color: #565959;
+  font-weight: 400;
+  margin: 0;
+}
+
+.pdp-amazon-kv__row dd {
+  margin: 0;
+  color: #0f1111;
+}
+
+@media (max-width: 768px) {
+  .pdp-amazon-main-title {
+    font-size: 16px;
+  }
+
+  .pdp-amazon-kv__row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 10px 0;
+  }
+
+  .pdp-amazon-kv__row dt {
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+  .pdp-amazon-bullets li {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pdp-amazon-section {
+    margin-bottom: 16px;
+  }
+}
+
+.pdp-amazon-bullets {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pdp-amazon-bullets li {
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #0f1111;
+}
+
+.pdp-amazon-bullets li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+
+.pdp-amazon-bullets li strong {
+  font-weight: 700;
+  color: #0f1111;
+}
+
+.pdp-amazon-desc-box {
+  background: #f7fafa;
+  border: 1px solid #d5d9d9;
+  border-radius: 4px;
+  padding: 14px 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #0f1111;
+}
+
+.pdp-amazon-desc-box p {
+  margin: 0;
+}
+
+.pdp-amazon-model-note {
+  font-size: 12px;
+  color: #565959;
+  margin: 10px 0 0;
+}

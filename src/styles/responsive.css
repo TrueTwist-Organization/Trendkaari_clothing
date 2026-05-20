@@ -1,0 +1,96 @@
+/* ═══════════════════════════════════════════════════════════════
+   FlexFit — Global mobile responsive utilities
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  --mobile-nav-height: 60px;
+  --header-offset-mobile: 104px; /* announcement ~30 + header ~70 */
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --page-bottom-mobile: calc(var(--mobile-nav-height) + var(--safe-bottom) + 12px);
+}
+
+/* Prevent horizontal overflow; stable gutter avoids layout shift */
+html {
+  overflow-x: clip;
+  scrollbar-gutter: stable;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+}
+
+.overlay {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Mobile: space for bottom nav + safe area */
+@media (max-width: 768px) {
+  .app-container {
+    padding-bottom: var(--page-bottom-mobile);
+  }
+
+  .main-content {
+    padding-bottom: 8px;
+  }
+
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .section-padding {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .section-title {
+    font-size: 18px;
+    letter-spacing: 1.5px;
+  }
+
+  /* Drawers full width on phones */
+  .drawer {
+    max-width: 100%;
+  }
+
+  .drawer-header,
+  .drawer-content {
+    padding: 16px;
+  }
+
+  .mobile-bottom-navbar {
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: var(--safe-bottom);
+    height: calc(var(--mobile-nav-height) + var(--safe-bottom));
+  }
+
+  .floating-admin-toggle-btn {
+    bottom: calc(var(--page-bottom-mobile) + 8px);
+    right: 12px;
+    padding: 8px 12px;
+    font-size: 8px;
+    max-width: calc(100% - 80px);
+  }
+
+  .whatsapp-widget {
+    bottom: calc(var(--page-bottom-mobile) + 4px);
+    right: 12px;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .section-padding {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}

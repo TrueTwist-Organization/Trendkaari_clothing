@@ -1,0 +1,26 @@
+.ad-slot-embed {
+  width: 100%;
+  margin: 12px 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.ad-slot-embed--global {
+  margin: 0;
+  border-bottom: 1px solid var(--border-color, #efefef);
+}
+
+.ad-slot-embed--fullwidth {
+  grid-column: 1 / -1;
+  margin: 16px 0 8px;
+}
+
+.ad-slot-embed--compact {
+  margin: 8px 0;
+}
+
+.ad-slot-embed iframe,
+.ad-slot-embed img {
+  max-width: 100%;
+  height: auto;
+}

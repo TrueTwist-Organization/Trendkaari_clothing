@@ -1,0 +1,709 @@
+import React, { useState, useEffect } from 'react';
+import Header from './components/Header';
+import HeroSlider from './components/HeroSlider';
+import TrendsSection from './components/TrendsSection';
+import PromoBannerSlider from './components/PromoBannerSlider';
+import AdSlotEmbed from './components/AdSlotEmbed';
+import HomeAdSlot from './components/HomeAdSlot';
+import GiftCollectionSection from './components/GiftCollectionSection';
+import CategoriesSection from './components/CategoriesSection';
+import ReviewsSection from './components/ReviewsSection';
+import Footer from './components/Footer';
+import InfoPage from './components/InfoPage';
+import { getInfoPage } from './data/footerInfoPages';
+import MenuDrawer from './components/MenuDrawer';
+import SearchDrawer from './components/SearchDrawer';
+import CartDrawer from './components/CartDrawer';
+import WishlistDrawer from './components/WishlistDrawer';
+import { loadWishlist, saveWishlist, isInWishlist } from './utils/wishlistStorage';
+import UserAuthModal from './components/UserAuthModal';
+import AccountDrawer from './components/AccountDrawer';
+import QuickViewModal from './components/QuickViewModal';
+import MobileNavbar from './components/MobileNavbar';
+import WhatsappWidget from './components/WhatsappWidget';
+import ProductDetailPage from './components/ProductDetailPage';
+import CollectionListingPage from './components/CollectionListingPage';
+import { products as initialProducts } from './data/products';
+import {
+  fetchStoreAdSlots,
+  fetchStoreCoupons,
+  fetchStoreProducts,
+  fetchStoreSettings,
+  submitStoreOrder,
+} from './api/storeApi';
+import { applySiteSettingsToDocument } from './utils/siteSettings';
+import { adSlotsToCodeMap } from './utils/adSlots';
+import { userMe } from './api/userApi';
+import { getUserToken, setUserToken } from './api/client';
+import CheckoutFlow from './checkout/CheckoutFlow';
+import { saveCheckoutState } from './checkout/checkoutStorage';
+import './App.css';
+
+export default function App() {
+  // Global synchronized states
+  const [productsList, setProductsList] = useState(initialProducts);
+
+  // Helper to parse URL route
+  const getRouteInfo = () => {
+    if (typeof window !== 'undefined') {
+      const segments = window.location.pathname.split('/').filter(Boolean);
+      if (segments[0] === 'category') {
+        return {
+          viewMode: 'home',
+          activeCategory: decodeURIComponent(segments[1] || 'all'),
+          selectedProduct: null,
+          isCategoryPage: true,
+          infoSlug: null,
+        };
+      } else if (segments[0] === 'product') {
+        const prodId = parseInt(segments[1]);
+        const found = initialProducts.find(p => p.id === prodId);
+        return {
+          viewMode: 'product-detail',
+          activeCategory: 'all',
+          selectedProduct: found || null,
+          isCategoryPage: false,
+          infoSlug: null,
+        };
+      } else if (segments[0] === 'info' && segments[1]) {
+        const slug = decodeURIComponent(segments[1]);
+        return {
+          viewMode: getInfoPage(slug) ? 'info' : 'home',
+          activeCategory: 'all',
+          selectedProduct: null,
+          isCategoryPage: false,
+          infoSlug: getInfoPage(slug) ? slug : null,
+        };
+      }
+    }
+    return {
+      viewMode: 'home',
+      activeCategory: 'all',
+      selectedProduct: null,
+      isCategoryPage: false,
+      infoSlug: null,
+    };
+  };
+
+  const initialRoute = getRouteInfo();
+
+  const [activeCategory, setActiveCategory] = useState(initialRoute.activeCategory);
+  const [selectedProduct, setSelectedProduct] = useState(initialRoute.selectedProduct);
+  const [viewMode, setViewMode] = useState(initialRoute.viewMode);
+  const [isCategoryPage, setIsCategoryPage] = useState(initialRoute.isCategoryPage);
+  const [infoSlug, setInfoSlug] = useState(initialRoute.infoSlug ?? null);
+
+  const [cartItems, setCartItems] = useState([]);
+  const [wishlistItems, setWishlistItems] = useState(() => loadWishlist());
+  
+  // Drawer visibility states
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isWishlistOpen, setIsWishlistOpen] = useState(false);
+  const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
+  const [user, setUser] = useState(null);
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  const [authModalMode, setAuthModalMode] = useState('login');
+  const [isAccountOpen, setIsAccountOpen] = useState(false);
+  const [pendingCheckout, setPendingCheckout] = useState(false);
+  const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
+
+  // Simulated Orders database (synced with API when server running)
+  const [orders, setOrders] = useState([
+    {
+      id: 'ORD-894103',
+      customerName: 'Aishwarya Sen',
+      email: 'aishwarya@yahoo.com',
+      phone: '+91 98845 22912',
+      address: 'Apt 2B, Gulmohar Court, Sector 15, Vashi, Navi Mumbai, 400703',
+      items: [
+        {
+          id: 1001,
+          title: 'Sage Green Cotton Straight Kurta',
+          price: 1499,
+          selectedSize: 'M',
+          quantity: 1,
+          image: '/kurtas/Kurtas/1/040A2925_700x.webp'
+        }
+      ],
+      subtotal: 1499,
+      discount: 100,
+      grandTotal: 1399,
+      status: 'Delivered',
+      date: '17/05/2026, 04:32 PM'
+    },
+    {
+      id: 'ORD-304212',
+      customerName: 'Priya Mukherjee',
+      email: 'priya.m@gmail.com',
+      phone: '+91 98302 11985',
+      address: 'Flat 502, Prestige Tower, Salt Lake, Kolkata, 700091',
+      items: [
+        {
+          id: 1011,
+          title: 'Exquisite Emerald Green Silk Lehenga Set',
+          price: 2499,
+          selectedSize: 'XL',
+          quantity: 1,
+          image: '/lehengas/Lehengas/1/040A3523_700x.webp'
+        }
+      ],
+      subtotal: 2499,
+      discount: 0,
+      grandTotal: 2499,
+      status: 'Shipped',
+      date: '18/05/2026, 11:15 AM'
+    }
+  ]);
+
+  // Active Dynamic Coupons database
+  const [coupons, setCoupons] = useState([
+    { code: 'SALE100', discount: 20, discountType: 'flat', minPurchase: 199 },
+    { code: 'FESTIVE50', discount: 50, discountType: 'flat', minPurchase: 499 },
+  ]);
+  const [siteSettings, setSiteSettings] = useState(null);
+  const [adCodes, setAdCodes] = useState({});
+
+  // Router Nav Handlers
+  const navigateToRoute = (routePath, isNewTab = false) => {
+    if (isNewTab) {
+      window.open(routePath, '_blank');
+      return;
+    }
+
+    window.history.pushState({}, '', routePath);
+    
+    // Parse new route
+    const segments = routePath.split('/').filter(Boolean);
+    if (segments[0] === 'category') {
+      const cat = decodeURIComponent(segments[1] || 'all');
+      setActiveCategory(cat);
+      setViewMode('home');
+      setSelectedProduct(null);
+      setIsCategoryPage(true);
+      setInfoSlug(null);
+      window.scrollTo(0, 0);
+    } else if (segments[0] === 'product') {
+      const prodId = parseInt(segments[1]);
+      const found = productsList.find(p => p.id === prodId);
+      setSelectedProduct(found || null);
+      setViewMode('product-detail');
+      setIsCategoryPage(false);
+      setInfoSlug(null);
+      window.scrollTo(0, 0);
+    } else if (segments[0] === 'info' && segments[1]) {
+      const slug = decodeURIComponent(segments[1]);
+      if (getInfoPage(slug)) {
+        setInfoSlug(slug);
+        setViewMode('info');
+        setActiveCategory('all');
+        setSelectedProduct(null);
+        setIsCategoryPage(false);
+        window.scrollTo(0, 0);
+      } else {
+        navigateToRoute('/');
+      }
+    } else {
+      setActiveCategory('all');
+      setViewMode('home');
+      setSelectedProduct(null);
+      setIsCategoryPage(false);
+      setInfoSlug(null);
+      window.scrollTo(0, 0);
+    }
+  };
+
+  // Load catalog from API when backend is available
+  useEffect(() => {
+    fetchStoreProducts().then((list) => {
+      if (list?.length) setProductsList(list);
+    });
+    fetchStoreCoupons().then((list) => {
+      if (list?.length) setCoupons(list);
+    });
+    fetchStoreSettings().then((s) => {
+      if (s) setSiteSettings(applySiteSettingsToDocument(s));
+    });
+    fetchStoreAdSlots().then((list) => {
+      if (list?.length) setAdCodes(adSlotsToCodeMap(list));
+    });
+  }, []);
+
+  // Restore user session from token
+  useEffect(() => {
+    if (!getUserToken()) return;
+    userMe()
+      .then((data) => setUser(data.user))
+      .catch(() => setUserToken(null));
+  }, []);
+
+  // Listen to popstate event (browser back/forward button clicks)
+  useEffect(() => {
+    const handlePopState = () => {
+      const route = getRouteInfo();
+      setActiveCategory(route.activeCategory);
+      setViewMode(route.viewMode);
+      setSelectedProduct(route.selectedProduct);
+      setIsCategoryPage(route.isCategoryPage);
+      setInfoSlug(route.infoSlug ?? null);
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [productsList]);
+
+  useEffect(() => {
+    document.body.classList.toggle('category-page', isCategoryPage);
+    document.body.classList.toggle('info-page', viewMode === 'info');
+    return () => {
+      document.body.classList.remove('category-page');
+      document.body.classList.remove('info-page');
+    };
+  }, [isCategoryPage, viewMode]);
+
+  /* Pause top-bar animation while scrolling (reduces visible “shake”) */
+  useEffect(() => {
+    let scrollEndTimer;
+    const onScroll = () => {
+      document.body.classList.add('is-scrolling');
+      clearTimeout(scrollEndTimer);
+      scrollEndTimer = setTimeout(() => {
+        document.body.classList.remove('is-scrolling');
+      }, 180);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      clearTimeout(scrollEndTimer);
+      document.body.classList.remove('is-scrolling');
+    };
+  }, []);
+
+  const buildLocalOrder = (orderDetails) => ({
+    id: 'ORD-' + Math.floor(100000 + Math.random() * 900000),
+    customerName: orderDetails.name,
+    email: orderDetails.email,
+    phone: orderDetails.phone,
+    address: orderDetails.address,
+    items: orderDetails.items,
+    subtotal: orderDetails.subtotal,
+    discount: orderDetails.discount ?? 0,
+    grandTotal: orderDetails.grandTotal,
+    status: 'Pending',
+    paymentStatus: orderDetails.paymentMethod === 'cod' ? 'COD' : 'Paid',
+    paymentMethod: orderDetails.paymentMethod,
+    date: new Date().toLocaleString('en-IN', { hour12: true }),
+    createdAt: new Date().toISOString(),
+    trackingId: 'TRK' + Math.floor(100000000 + Math.random() * 900000000),
+    eta: '3–5 days',
+  });
+
+  const handleOpenCheckout = (seed) => {
+    if (cartItems.length === 0) return;
+    if (seed?.appliedCoupon) {
+      saveCheckoutState({
+        coupon: { code: seed.appliedCoupon.code, applied: seed.appliedCoupon },
+      });
+    }
+    setIsCartOpen(false);
+    setIsCheckoutOpen(true);
+  };
+
+  const handleCheckoutPlaceOrder = async (orderDetails) => {
+    try {
+      const result = await submitStoreOrder(orderDetails);
+      const newOrder = result?.order;
+      if (!newOrder) {
+        throw new Error('We could not complete your order due to a technical issue.');
+      }
+      setOrders((prev) => [newOrder, ...prev]);
+      const refreshed = await fetchStoreProducts();
+      if (refreshed?.length) setProductsList(refreshed);
+      setCartItems([]);
+      return {
+        order: {
+          ...newOrder,
+          trackingId: newOrder.trackingId || 'TRK' + Math.floor(100000000 + Math.random() * 900000000),
+          eta: newOrder.eta || '3–5 days',
+        },
+      };
+    } catch (err) {
+      if (err?.status === 401) {
+        setPendingCheckout(true);
+        setAuthModalMode('login');
+        setIsAuthModalOpen(true);
+        throw new Error('Please sign in to place your order.');
+      }
+      throw new Error(
+        err?.message || 'We could not complete your order due to a technical issue. Please try again.'
+      );
+    }
+  };
+
+  // Shopper Shopping Bag Actions
+  const handleAddToCart = (product, size, qty = 1) => {
+    if (!size) {
+      alert("Please select a size first!");
+      return;
+    }
+
+    setCartItems((prevItems) => {
+      const existingIdx = prevItems.findIndex(
+        (item) => item.id === product.id && item.selectedSize === size
+      );
+
+      if (existingIdx > -1) {
+        const updated = [...prevItems];
+        updated[existingIdx].quantity += qty;
+        return updated;
+      } else {
+        return [...prevItems, { ...product, selectedSize: size, quantity: qty }];
+      }
+    });
+
+    setIsCartOpen(true);
+  };
+
+  const handleUpdateQty = (productId, size, newQty) => {
+    if (newQty < 1) return;
+    setCartItems((prev) =>
+      prev.map((item) =>
+        item.id === productId && item.selectedSize === size
+          ? { ...item, quantity: newQty }
+          : item
+      )
+    );
+  };
+
+  const handleRemoveItem = (productId, size) => {
+    setCartItems((prev) =>
+      prev.filter((item) => !(item.id === productId && item.selectedSize === size))
+    );
+  };
+
+  const handleClearCart = () => {
+    setCartItems([]);
+  };
+
+  const handleSelectCategory = (category) => {
+    if (category === 'all') {
+      navigateToRoute('/');
+    } else {
+      navigateToRoute(`/category/${encodeURIComponent(category)}`);
+    }
+  };
+
+  const handleOpenQuickView = (product) => {
+    navigateToRoute(`/product/${product.id}`);
+  };
+
+  const handleCloseQuickView = () => {
+    setSelectedProduct(null);
+    setIsQuickViewOpen(false);
+  };
+
+  const handleUserLoginSuccess = (loggedInUser) => {
+    setUser(loggedInUser);
+    if (pendingCheckout) {
+      setPendingCheckout(false);
+      setIsCheckoutOpen(true);
+    }
+  };
+
+  const handleOpenProfile = () => {
+    if (user) {
+      setIsAccountOpen(true);
+    } else {
+      setAuthModalMode('login');
+      setIsAuthModalOpen(true);
+    }
+  };
+
+  const handleRequireLogin = () => {
+    setPendingCheckout(true);
+    setAuthModalMode('login');
+    setIsAuthModalOpen(true);
+  };
+
+  const handleUserLogout = () => {
+    setUser(null);
+  };
+
+  const handleAddToWishlist = (product, selectedSize) => {
+    if (!product?.id) return;
+    setWishlistItems((prev) => {
+      if (prev.some((item) => item.id === product.id)) {
+        setIsWishlistOpen(true);
+        return prev;
+      }
+      const next = [
+        ...prev,
+        {
+          ...product,
+          selectedSize: selectedSize || product.sizes?.[0] || null,
+          savedAt: Date.now(),
+        },
+      ];
+      saveWishlist(next);
+      return next;
+    });
+    setIsWishlistOpen(true);
+  };
+
+  const handleRemoveFromWishlist = (productId) => {
+    setWishlistItems((prev) => {
+      const next = prev.filter((item) => item.id !== productId);
+      saveWishlist(next);
+      return next;
+    });
+  };
+
+  const handleOpenWishlist = () => {
+    setIsWishlistOpen(true);
+  };
+
+  const handleNavigateInfoPage = (slug) => {
+    navigateToRoute(`/info/${encodeURIComponent(slug)}`);
+  };
+
+  const handleGoBack = () => {
+    if (typeof window !== 'undefined' && window.history.length > 1) {
+      window.history.back();
+      return;
+    }
+    navigateToRoute('/');
+  };
+
+  const handleScrollToSection = (sectionId) => {
+    const scroll = () =>
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    if (viewMode === 'home' && !isCategoryPage) {
+      scroll();
+      return;
+    }
+
+    navigateToRoute('/');
+    setTimeout(scroll, 350);
+  };
+
+  const wishlistCount = wishlistItems.length;
+
+  return (
+    <div className="app-container">
+      
+      {/* Sticky Header */}
+      <Header
+        cartCount={cartItems.reduce((acc, item) => acc + item.quantity, 0)}
+        wishlistCount={wishlistCount}
+        user={user}
+        solidHeader={viewMode === 'product-detail' || isCategoryPage || viewMode === 'info'}
+        onOpenMenu={() => setIsMenuOpen(true)}
+        onOpenSearch={() => setIsSearchOpen(true)}
+        onOpenCart={() => setIsCartOpen(true)}
+        onOpenWishlist={handleOpenWishlist}
+        onOpenProfile={handleOpenProfile}
+        onLogoClick={() => {
+          navigateToRoute('/');
+        }}
+      />
+
+      <AdSlotEmbed html={adCodes.global_banner} className="ad-slot-embed--global" />
+
+      {/* Main Page Layout */}
+      <main className="main-content">
+        
+        {viewMode === 'info' ? (
+          <InfoPage
+            slug={infoSlug}
+            onBack={handleGoBack}
+            onBackToHome={() => navigateToRoute('/')}
+            onOpenAccount={handleOpenProfile}
+          />
+        ) : viewMode === 'home' ? (
+          <>
+            {isCategoryPage ? (
+              <CollectionListingPage
+                adCodes={adCodes}
+                activeCategory={activeCategory}
+                onSelectCategory={handleSelectCategory}
+                onAddToCart={handleAddToCart}
+                onOpenQuickView={handleOpenQuickView}
+                onBack={handleGoBack}
+                products={productsList}
+              />
+            ) : (
+              <>
+                <HomeAdSlot code={adCodes.home_below_header} label="home_below_header" />
+
+                <HeroSlider onSelectCategory={handleSelectCategory} />
+                <HomeAdSlot code={adCodes.home_after_hero} label="home_after_hero" />
+
+                <TrendsSection onSelectCategory={handleSelectCategory} />
+                <HomeAdSlot code={adCodes.home_after_trends} label="home_after_trends" />
+
+                <HomeAdSlot code={adCodes.home_main} label="home_main" />
+                <PromoBannerSlider onSelectCategory={handleSelectCategory} />
+                <HomeAdSlot code={adCodes.home_after_promo} label="home_after_promo" />
+
+                <HomeAdSlot code={adCodes.home_before_categories} label="home_before_categories" />
+                <CategoriesSection
+                  activeCategory={activeCategory}
+                  onSelectCategory={handleSelectCategory}
+                  onAddToCart={handleAddToCart}
+                  onOpenQuickView={handleOpenQuickView}
+                  products={productsList}
+                />
+                <HomeAdSlot code={adCodes.home_after_categories} label="home_after_categories" />
+
+                <HomeAdSlot code={adCodes.home_before_gift} label="home_before_gift" />
+                <GiftCollectionSection
+                  onSelectCategory={handleSelectCategory}
+                  onSelectProduct={handleOpenQuickView}
+                />
+                <HomeAdSlot code={adCodes.home_after_gift} label="home_after_gift" />
+
+                <HomeAdSlot code={adCodes.home_before_reviews} label="home_before_reviews" />
+                <ReviewsSection />
+                <HomeAdSlot code={adCodes.home_after_reviews} label="home_after_reviews" />
+              </>
+            )}
+          </>
+        ) : (
+          <ProductDetailPage
+            product={selectedProduct}
+            adCodes={adCodes}
+            onBack={handleGoBack}
+            onBackToHome={() => {
+              if (activeCategory && activeCategory !== 'all') {
+                navigateToRoute(`/category/${encodeURIComponent(activeCategory)}`);
+              } else {
+                navigateToRoute('/');
+              }
+            }}
+            onAddToCart={handleAddToCart}
+            onAddToWishlist={handleAddToWishlist}
+            isInWishlist={selectedProduct ? isInWishlist(wishlistItems, selectedProduct.id) : false}
+            allProducts={productsList}
+            onSelectProduct={(p) => navigateToRoute(`/product/${p.id}`)}
+            coupons={coupons}
+          />
+        )}
+
+      </main>
+
+      {/* Footer */}
+      <Footer
+        onSelectCategory={handleSelectCategory}
+        onOpenAccount={handleOpenProfile}
+        onScrollToSection={handleScrollToSection}
+        onNavigateInfoPage={handleNavigateInfoPage}
+        siteSettings={siteSettings}
+      />
+
+      {/* Slide-out Drawers & Overlay views */}
+      
+      <MenuDrawer
+        isOpen={isMenuOpen}
+        onClose={() => setIsMenuOpen(false)}
+        onSelectCategory={handleSelectCategory}
+      />
+
+      <SearchDrawer
+        isOpen={isSearchOpen}
+        onClose={() => setIsSearchOpen(false)}
+        onOpenQuickView={handleOpenQuickView}
+        onSelectCategory={handleSelectCategory}
+        products={productsList}
+      />
+
+      <CartDrawer
+        isOpen={isCartOpen}
+        onClose={() => setIsCartOpen(false)}
+        cartItems={cartItems}
+        onUpdateQty={handleUpdateQty}
+        onRemoveItem={handleRemoveItem}
+        onClearCart={handleClearCart}
+        coupons={coupons}
+        onOpenCheckout={handleOpenCheckout}
+        user={user}
+        adAboveCheckout={adCodes.cart_above_checkout}
+      />
+
+      <WishlistDrawer
+        isOpen={isWishlistOpen}
+        onClose={() => setIsWishlistOpen(false)}
+        wishlistItems={wishlistItems}
+        onRemoveItem={handleRemoveFromWishlist}
+        onAddToCart={handleAddToCart}
+        onSelectProduct={(p) => navigateToRoute(`/product/${p.id}`)}
+      />
+
+      <CheckoutFlow
+        isOpen={isCheckoutOpen}
+        onClose={() => setIsCheckoutOpen(false)}
+        cartItems={cartItems}
+        coupons={coupons}
+        user={user}
+        adCodes={adCodes}
+        onUserLogin={handleUserLoginSuccess}
+        onPlaceOrder={handleCheckoutPlaceOrder}
+        onContinueShopping={() => {
+          setIsCheckoutOpen(false);
+          navigateToRoute('/');
+        }}
+        onReviewCart={() => {
+          setIsCheckoutOpen(false);
+          setIsCartOpen(true);
+        }}
+      />
+
+      <UserAuthModal
+        isOpen={isAuthModalOpen}
+        onClose={() => {
+          setIsAuthModalOpen(false);
+          setPendingCheckout(false);
+        }}
+        onSuccess={handleUserLoginSuccess}
+        initialMode={authModalMode}
+      />
+
+      <AccountDrawer
+        isOpen={isAccountOpen}
+        onClose={() => setIsAccountOpen(false)}
+        user={user}
+        onLogout={handleUserLogout}
+      />
+
+      <QuickViewModal
+        product={selectedProduct}
+        isOpen={isQuickViewOpen}
+        onClose={handleCloseQuickView}
+        onAddToCart={handleAddToCart}
+        onAddToWishlist={handleAddToWishlist}
+        isInWishlist={selectedProduct ? isInWishlist(wishlistItems, selectedProduct.id) : false}
+        allProducts={productsList}
+        onSelectProduct={(p) => navigateToRoute(`/product/${p.id}`)}
+        coupons={coupons}
+      />
+
+      {/* WhatsApp Support Float Widget */}
+      <WhatsappWidget />
+
+      {/* Mobile Bottom sticky bar */}
+      <MobileNavbar
+        activeCategory={activeCategory}
+        onSelectCategory={handleSelectCategory}
+        onOpenWishlist={handleOpenWishlist}
+        onOpenProfile={handleOpenProfile}
+        onOpenCart={() => setIsCartOpen(true)}
+      />
+
+      <a href="/admin" className="floating-admin-toggle-btn" title="Open Admin Portal Dashboard">
+        🔑 Admin Portal
+      </a>
+
+    </div>
+  );
+}
