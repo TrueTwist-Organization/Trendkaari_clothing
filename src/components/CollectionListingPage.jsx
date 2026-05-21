@@ -132,12 +132,6 @@ export default function CollectionListingPage({
           tagline: "Perfect coordinated traditional gents outfits",
           description: "Step into effortless traditional poise with our coordinated men's kurta pajama sets. Designed in luxurious silk and breathable cotton styles to keep you looking your ethnic best."
         };
-      case 'nehru jackets':
-        return {
-          title: "NEHRU JACKETS FOR GENTS",
-          tagline: "Opulent waistcoats and bandhgala styles",
-          description: "Accentuate your Indian ethnic look with our custom-tailored Nehru Jackets. Featuring bespoke button placements, premium breast pockets, and textured linen weave finishes."
-        };
       case 'sherwanis':
         return {
           title: "MEN'S ROYAL SHERWANIS",
@@ -237,8 +231,8 @@ export default function CollectionListingPage({
       case 'men-traditional':
         return {
           title: "MEN'S TRADITIONAL WEAR",
-          tagline: "Kurtas, ethnic co-ords, Nehru jackets & wedding blazers",
-          description: "Celebrate in style with handcrafted kurtas, ethnic co-ord sets, Nehru and ethnic jackets, plus wedding-ready blazers — curated for festivals, weddings, and ceremonial dressing."
+          tagline: "Kurtas, ethnic co-ords, jackets & wedding blazers",
+          description: "Celebrate in style with handcrafted kurtas, ethnic co-ord sets, statement jackets, plus wedding-ready blazers — curated for festivals, weddings, and ceremonial dressing."
         };
       case 'men-western':
         return {

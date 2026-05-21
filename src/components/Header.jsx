@@ -87,8 +87,8 @@ export default function Header({
                   src={SITE_LOGO_SRC}
                   alt={SITE_LOGO_ALT}
                   className="flexfit-logo-img"
-                  width={280}
-                  height={56}
+                  width={420}
+                  height={84}
                   decoding="async"
                 />
               </div>

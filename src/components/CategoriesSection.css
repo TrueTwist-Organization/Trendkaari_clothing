@@ -25,7 +25,7 @@
 /* SHOP BY CATEGORIES — centered sub-headings (Women / Gents) */
 .categories-section .collection-subheading-wrap {
   text-align: center;
-  margin-bottom: 28px;
+  margin-bottom: 14px;
   padding: 0 16px;
 }
 
@@ -42,7 +42,7 @@
   width: 50px;
   height: 2px;
   background-color: #600b45;
-  margin: 12px auto 0;
+  margin: 8px auto 0;
 }
 
 /* ==========================================================================
@@ -64,8 +64,14 @@
   --cat-visual-h: calc(var(--cat-circle-size) + var(--cat-pop-out));
   --cat-scroll-gap: clamp(28px, 3.2vw, 44px);
   background-color: #fcfbf7;
-  padding: 60px 0 40px;
+  padding: 48px 0 32px;
   overflow-x: clip;
+}
+
+/* section-padding is also on this block — keep one tight vertical rhythm */
+.categories-section.section-padding {
+  padding-top: 48px;
+  padding-bottom: 32px;
 }
 
 .categories-section-inner {
@@ -86,7 +92,7 @@
 
 .categories-main-heading {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 28px;
 }
 
 .categories-main-title {
@@ -123,7 +129,11 @@
 }
 
 .categories-section .women-collection-block {
-  margin-bottom: 48px;
+  margin-bottom: 24px;
+}
+
+.categories-section .gents-collection-block {
+  margin-bottom: 0;
 }
 
 .categories-section-inner {
@@ -154,7 +164,7 @@
   margin-right: 0;
   overflow: hidden;
   position: relative;
-  padding: 28px 0 14px;
+  padding: 12px 0 8px;
   -webkit-mask-image: linear-gradient(
     90deg,
     transparent 0%,
@@ -317,6 +327,28 @@
 }
 
 @media (max-width: 900px) {
+  .categories-section,
+  .categories-section.section-padding {
+    padding-top: 32px;
+    padding-bottom: 20px;
+  }
+
+  .categories-main-heading {
+    margin-bottom: 18px;
+  }
+
+  .categories-section .collection-subheading-wrap {
+    margin-bottom: 10px;
+  }
+
+  .categories-section .women-collection-block {
+    margin-bottom: 16px;
+  }
+
+  .category-scroll-wrap {
+    padding: 8px 0 4px;
+  }
+
   .categories-section {
     --cat-item-w: 152px;
     --cat-circle-size: 142px;
@@ -361,6 +393,32 @@
 }
 
 @media (max-width: 480px) {
+  .categories-section,
+  .categories-section.section-padding {
+    padding-top: 24px;
+    padding-bottom: 16px;
+  }
+
+  .categories-main-heading {
+    margin-bottom: 14px;
+  }
+
+  .categories-section .collection-subheading-wrap {
+    margin-bottom: 8px;
+  }
+
+  .categories-section .women-collection-block {
+    margin-bottom: 12px;
+  }
+
+  .category-scroll-wrap {
+    padding: 6px 0 2px;
+  }
+
+  .categories-section .collection-subheading-divider {
+    margin-top: 6px;
+  }
+
   .categories-section {
     --cat-item-w: 138px;
     --cat-circle-size: 128px;
@@ -928,9 +986,14 @@
 }
 
 @media (max-width: 768px) {
+  .categories-section .collection-category-block {
+    padding: 0;
+    margin-bottom: 0;
+  }
+
   .collection-category-block {
     padding: 16px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
 
   .collection-block-title {

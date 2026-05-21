@@ -250,6 +250,31 @@
   margin-bottom: 6px;
 }
 
+.pdp-combo-meta {
+  margin-bottom: 10px;
+}
+
+.pdp-combo-badge {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 4px;
+  background: var(--brand-plum, #600b45);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.pdp-combo-includes {
+  margin: 8px 0 0;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--text-secondary, #666);
+  line-height: 1.45;
+}
+
 .pdp-sku-label {
   font-size: 11px;
   color: var(--text-light);

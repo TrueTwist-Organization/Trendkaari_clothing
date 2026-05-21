@@ -30,8 +30,13 @@ export function isWearGroupCategory(category) {
   return Boolean(WEAR_GROUP_FILTERS[category?.toLowerCase()]);
 }
 
+const CATEGORY_ALIASES = {
+  'nehru jackets': 'jackets',
+};
+
 export function filterProductsByCategory(products, activeCategory) {
-  const cat = (activeCategory || 'all').toLowerCase();
+  const raw = (activeCategory || 'all').toLowerCase();
+  const cat = CATEGORY_ALIASES[raw] || raw;
   if (cat === 'all') return products;
 
   const group = WEAR_GROUP_FILTERS[cat];

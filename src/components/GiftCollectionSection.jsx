@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Gift, Heart, ShoppingBag, Sparkles, Star } from 'lucide-react';
+import { buildGiftComboPayload } from '../utils/giftComboProduct';
 import './GiftCollectionSection.css';
 
 function formatPrice(n) {
@@ -32,6 +33,7 @@ const LOOKS_HER = [
     heroImage:
       '/suit-sets/Suit Sets/10/LBL101KS263_1_e108b0e0-b09f-4c9d-a0cd-f9162746a1e8_700x.webp',
     productId: 1031,
+    galleryProductIds: [1031],
     price: 348,
   },
   {
@@ -43,6 +45,7 @@ const LOOKS_HER = [
       'Breezy linen co-ord paired with a flowy maxi — your go-to western weekend uniform.',
     heroImage: '/co-ords/co-ord_set/1/1.webp',
     productId: 2101,
+    galleryProductIds: [2101],
     price: 348,
   },
   {
@@ -54,6 +57,7 @@ const LOOKS_HER = [
       'Indo-western party edit — pastel co-ord with a festive dupatta suit for sangeet nights.',
     heroImage: '/co-ords/co-ord_set/4/1.webp',
     productId: 2104,
+    galleryProductIds: [2104],
     price: 348,
   },
 ];
@@ -67,7 +71,8 @@ const LOOKS_HIM = [
     description:
       'Classic wedding kurta with a sharp navy co-ord for reception — traditional top, modern bottom.',
     heroImage: '/mens/kurtas/kurta/4/xxl-dmm-daswani-exports-original-imahmgj4r2evzddc.webp',
-    productId: 3201,
+    productId: 3904,
+    galleryProductIds: [3904],
     price: 398,
   },
   {
@@ -79,6 +84,7 @@ const LOOKS_HIM = [
       'Full stripe co-ord for day plans plus a satin shirt for evening — western weekend sorted.',
     heroImage: '/mens/coords/co-ordset men/co5/3.webp',
     productId: 3405,
+    galleryProductIds: [3405],
     price: 348,
   },
   {
@@ -90,44 +96,83 @@ const LOOKS_HIM = [
       'Office-smart desert co-ord with a peach resort shorts set — travel and meetings covered.',
     heroImage: '/mens/coords/co-ordset men/co9/1.avif',
     productId: 3409,
+    galleryProductIds: [3409],
     price: 398,
   },
 ];
 
 const LOOKS_COUPLE = [
   {
-    id: 'couple-coord',
+    id: 'couple-sage',
     theme: 'emerald',
-    badge: 'Resort couples',
-    name: 'Sage Breeze Linen Couple Set',
-    description:
-      'Perfect matching sage green lounge outfits. Cozy co-ords & breezy resort shirt combo.',
-    heroImage: '/co-ords/co-ord_set/2/1.webp',
+    badge: 'Resort match',
+    name: 'Sage Breeze Couple Set',
+    description: 'Matching sage green linen outfits for a coordinated resort holiday look.',
+    heroImage: '/combos/combo-sage-resort.png',
     productId: 2102,
-    price: 398,
+    partnerProductId: 3405,
+    galleryProductIds: [2102, 3405],
+    price: 699,
   },
   {
-    id: 'couple-festive',
+    id: 'couple-emerald',
     theme: 'burgundy',
     badge: 'Festive duo',
-    name: 'Festive Sage & Wedding Kurta',
-    description:
-      'Her sage co-ord set with his embroidered wedding kurta — ready for family functions together.',
-    heroImage: '/co-ords/co-ord_set/2/1.webp',
-    productId: 2102,
-    price: 398,
+    name: 'Emerald & Cream Festive Pair',
+    description: 'Her emerald suit with his cream kurta — the perfect pair for family celebrations.',
+    heroImage: '/combos/combo-emerald-festive.png',
+    productId: 1006,
+    partnerProductId: 3906,
+    galleryProductIds: [1006, 3906],
+    price: 749,
   },
   {
-    id: 'couple-royal',
+    id: 'couple-navy',
     theme: 'navy',
-    badge: 'Sangeet pair',
-    name: 'Royal Suit & Navy Co-ord',
-    description:
-      'Her embroidered suit set with his navy reception co-ord — sangeet night power couple look.',
-    heroImage:
-      '/suit-sets/Suit Sets/10/LBL101KS263_1_e108b0e0-b09f-4c9d-a0cd-f9162746a1e8_700x.webp',
+    badge: 'Evening power',
+    name: 'Midnight Navy Power Couple',
+    description: 'Her silk saree and his structured blazer in matching navy blue for gala nights.',
+    heroImage: '/combos/combo-navy-royal.png',
+    productId: 1025,
+    partnerProductId: 3301,
+    galleryProductIds: [1025, 3301],
+    price: 899,
+  },
+  {
+    id: 'couple-pink',
+    theme: 'emerald',
+    badge: 'Wedding match',
+    name: 'Blush Pink Wedding Duo',
+    description: 'Complementary pink floral lehenga and silk bandhgala for garden weddings.',
+    heroImage: '/combos/combo-pink-wedding.png',
+    productId: 1015,
+    partnerProductId: 3906,
+    galleryProductIds: [1015, 3906],
+    price: 949,
+  },
+  {
+    id: 'couple-mustard',
+    theme: 'burgundy',
+    badge: 'Sunny pair',
+    name: 'Mustard Bloom Outdoor Set',
+    description: 'Cheerful mustard yellow matching outfits for bright outdoor festivities.',
+    heroImage: '/combos/combo-mustard-outdoor.png',
+    productId: 1039,
+    partnerProductId: 3905,
+    galleryProductIds: [1039, 3905],
+    price: 599,
+  },
+  {
+    id: 'couple-wine',
+    theme: 'navy',
+    badge: 'Winter lounge',
+    name: 'Wine Velvet Winter Combo',
+    description: 'Luxurious wine velvet dress and blazer for elegant winter evening parties.',
+    heroImage: '/combos/combo-wine-velvet.png',
     productId: 1031,
-    price: 348,
+    partnerProductId: 3906,
+    galleryProductIds: [1031, 3906],
+    price: 999,
   },
 ];
 
@@ -148,14 +193,32 @@ function GiftSurpriseCard({ look, tab, onSelectProduct }) {
   const priceLabel = cfg.priceLabel || 'Combo gift price';
   const total = look.price;
 
+  const openProduct = () => {
+    onSelectProduct?.();
+  };
+
   const handleShop = (e) => {
     e.stopPropagation();
-    onSelectProduct?.({ id: look.productId });
+    openProduct();
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      openProduct();
+    }
   };
 
   return (
     <article className={`gift-box gift-box--${look.theme}`}>
-      <div className="gift-box__card" tabIndex={0}>
+      <div
+        className="gift-box__card"
+        tabIndex={0}
+        role="button"
+        aria-label={`View ${look.name}`}
+        onClick={openProduct}
+        onKeyDown={handleKeyDown}
+      >
         <div className="gift-box__layer gift-box__layer--reveal">
           <div className="gift-box__reveal-media">
             <span className="gift-box__badge">{look.badge}</span>
@@ -200,16 +263,17 @@ function GiftSurpriseCard({ look, tab, onSelectProduct }) {
   );
 }
 
-export default function GiftCollectionSection({ onSelectProduct }) {
+export default function GiftCollectionSection({ onSelectProduct, products = [] }) {
   const [tab, setTab] = useState('her');
   const config = TAB_CONFIG[tab];
 
-  const goProduct = (payload) => {
-    if (onSelectProduct) {
+  const goProduct = (look) => {
+    const payload = buildGiftComboPayload({ ...look, tab }, products);
+    if (payload && onSelectProduct) {
       onSelectProduct(payload);
       return;
     }
-    document.getElementById('shop-catalog')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('catalog-products-list')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -242,7 +306,12 @@ export default function GiftCollectionSection({ onSelectProduct }) {
 
         <div className="gift-unbox__grid" key={tab}>
           {config.looks.map((look) => (
-            <GiftSurpriseCard key={look.id} look={look} tab={tab} onSelectProduct={goProduct} />
+            <GiftSurpriseCard
+              key={look.id}
+              look={look}
+              tab={tab}
+              onSelectProduct={() => goProduct(look)}
+            />
           ))}
         </div>
       </div>

@@ -70,7 +70,7 @@ const SYNONYM_ALIASES = [
   { terms: ['t-shirt', 'tshirt', 'tee', 'tees'], slug: 't-shirts' },
   { terms: ['men kurta', 'mens kurta', "men's kurta", 'gents kurta', 'kurta'], slug: 'gents kurtas' },
   { terms: ['ethnic co-ord', 'ethnic coord', 'men co-ord ethnic'], slug: 'gents co-ords' },
-  { terms: ['nehru', 'nehru jacket', 'ethnic jacket', 'waistcoat'], slug: 'nehru jackets' },
+  { terms: ['jacket', 'jackets', 'denim jacket', 'leather jacket', 'bomber', 'puffer'], slug: 'jackets' },
   { terms: ['wedding blazer', 'ethnic blazer', 'bandhgala'], slug: 'blazers' },
   { terms: ['shirt', 'formal shirt'], slug: 'shirts' },
   { terms: ['men t-shirt', 'mens tshirt', 'polo'], slug: 'gents t-shirts' },

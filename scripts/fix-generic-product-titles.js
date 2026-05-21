@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Replace generic numbered titles (e.g. "Premium Designer Kurta 7") with unique names.
+ * Replace generic numbered titles with unique product names by category folder.
  */
 import { readFileSync, writeFileSync, existsSync } from 'fs';
 import path from 'path';
@@ -10,7 +10,6 @@ const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const PRODUCTS_PATH = path.join(ROOT, '../src/data/products.js');
 const STORE_PATH = path.join(ROOT, '../server/data/store.json');
 
-/** Folder index from image path: /kurtas/Kurtas/7/... */
 const LADIES_KURTA_BY_FOLDER = {
   1: 'Ivory Gold Yoke Embroidered Straight Kurta',
   2: 'Teal Blue Printed A-Line Cotton Kurta',
@@ -24,19 +23,88 @@ const LADIES_KURTA_BY_FOLDER = {
   10: 'Lavender Pastel Printed Layered Kurta',
 };
 
-const GENERIC_KURTA = /^Premium Designer Kurta (\d+)$/i;
+const LEHENGA_BY_FOLDER = {
+  1: 'Royal Maroon Zari Embroidered Bridal Lehenga',
+  2: 'Lavanya Peach Mirror Work Festive Lehenga',
+  3: 'Emerald Green Silk Banarasi Lehenga Choli',
+  4: 'Midnight Blue Sequin Party Wear Lehenga',
+  5: 'Blush Pink Organza Floral Lehenga Set',
+  6: 'Gold Tissue Reception Lehenga with Dupatta',
+  7: 'Wine Velvet A-Line Festive Lehenga',
+  8: 'Teal Georgette Threadwork Lehenga',
+  9: 'Ivory Cream Net Embroidered Lehenga',
+  10: 'Coral Orange Bandhani Print Lehenga',
+};
 
-function folderFromProduct(p) {
+const SAREE_BY_FOLDER = {
+  1: 'Banarasi Gold Border Silk Saree',
+  2: 'Kanjivaram Temple Border Silk Saree',
+  3: 'Pastel Green Chanderi Cotton Saree',
+  4: 'Red Bandhani Georgette Saree',
+  5: 'Navy Blue Printed Linen Saree',
+  6: 'Mauve Organza Floral Saree',
+  7: 'Black Gold Zari Party Wear Saree',
+  8: 'Mustard Handloom Cotton Saree',
+  9: 'Peach Tissue Embroidered Saree',
+  10: 'Multicolor Ikat Silk Blend Saree',
+};
+
+const SUIT_SET_BY_FOLDER = {
+  1: 'Ivory Embroidered Palazzo Suit Set',
+  2: 'Sage Green Printed Sharara Suit Set',
+  3: 'Rust Orange Georgette Anarkali Suit Set',
+  4: 'Powder Blue Chanderi Three-Piece Suit',
+  5: 'Magenta Silk Straight Kurta Suit Set',
+  6: 'Olive Green Cotton Kurta Pant Set',
+  7: 'Lavender Mirror Work Festive Suit Set',
+  8: 'Charcoal Grey Embroidered Salwar Suit Set',
+  9: 'Yellow Floral Muslin Co-ord Suit Set',
+  10: 'Wine Maroon Velvet Party Suit Set',
+};
+
+const TITLE_RULES = [
+  {
+    pattern: /^Premium Designer Kurta (\d+)$/i,
+    map: LADIES_KURTA_BY_FOLDER,
+    pathRe: /\/Kurtas\/(\d+)\//i,
+    fallbackPathRe: /\/kurtas\/[^/]+\/(\d+)\//i,
+  },
+  {
+    pattern: /^Exquisite Designer Lehenga (\d+)$/i,
+    map: LEHENGA_BY_FOLDER,
+    pathRe: /\/Lehengas\/(\d+)\//i,
+    fallbackPathRe: /\/lehengas\/[^/]+\/(\d+)\//i,
+  },
+  {
+    pattern: /^Elegant Silk Saree (\d+)$/i,
+    map: SAREE_BY_FOLDER,
+    pathRe: /\/Sarees\/(\d+)\//i,
+    fallbackPathRe: /\/sarees\/[^/]+\/(\d+)\//i,
+  },
+  {
+    pattern: /^Embroidered Suit Set (\d+)$/i,
+    map: SUIT_SET_BY_FOLDER,
+    pathRe: /\/Suit Sets\/(\d+)\//i,
+    fallbackPathRe: /\/suit-sets\/[^/]+\/(\d+)\//i,
+  },
+];
+
+function folderFromProduct(p, rule) {
   const src = p.image || p.images?.[0] || '';
-  const m = String(src).match(/\/Kurtas\/(\d+)\//i) || String(src).match(/\/kurtas\/[^/]+\/(\d+)\//i);
+  const m =
+    String(src).match(rule.pathRe) || String(src).match(rule.fallbackPathRe);
   return m ? Number(m[1]) : null;
 }
 
 function newTitleForProduct(p) {
-  const m = String(p.title || '').match(GENERIC_KURTA);
-  if (!m) return null;
-  const folder = folderFromProduct(p) ?? Number(m[1]);
-  return LADIES_KURTA_BY_FOLDER[folder] || null;
+  for (const rule of TITLE_RULES) {
+    const m = String(p.title || '').match(rule.pattern);
+    if (!m) continue;
+    const folder = folderFromProduct(p, rule) ?? Number(m[1]);
+    const title = rule.map[folder];
+    if (title) return { oldTitle: p.title, newTitle: title };
+  }
+  return null;
 }
 
 function replaceTitleInValue(val, oldTitle, newTitle) {
@@ -57,11 +125,17 @@ function replaceTitleInValue(val, oldTitle, newTitle) {
 }
 
 function renameProduct(p) {
-  const newTitle = newTitleForProduct(p);
-  if (!newTitle) return { product: p, changed: false };
-  const oldTitle = p.title;
+  const match = newTitleForProduct(p);
+  if (!match) return { product: p, changed: false };
+  const { oldTitle, newTitle } = match;
   const next = replaceTitleInValue({ ...p, title: newTitle }, oldTitle, newTitle);
   return { product: next, changed: true, oldTitle, newTitle };
+}
+
+const genericPatterns = TITLE_RULES.map((r) => r.pattern);
+
+function isGenericTitle(title) {
+  return genericPatterns.some((re) => re.test(String(title || '')));
 }
 
 const { products } = await import('../src/data/products.js');
@@ -75,18 +149,42 @@ const updated = products.map((p) => {
   return product;
 });
 
-writeFileSync(PRODUCTS_PATH, `export const products = ${JSON.stringify(updated, null, 2)};\n`, 'utf8');
+writeFileSync(
+  PRODUCTS_PATH,
+  `export const products = ${JSON.stringify(updated, null, 2)};\n`,
+  'utf8',
+);
 
 if (existsSync(STORE_PATH)) {
   const store = JSON.parse(readFileSync(STORE_PATH, 'utf8'));
   const byId = new Map(updated.map((p) => [p.id, p]));
-  store.products = (store.products || []).map((p) => {
+
+  function syncProduct(p) {
     const next = byId.get(p.id);
-    if (!next) return p;
-    const oldTitle = p.title;
-    if (!GENERIC_KURTA.test(oldTitle)) return { ...p, title: next.title };
-    return replaceTitleInValue({ ...p, title: next.title }, oldTitle, next.title);
-  });
+    if (!next || !isGenericTitle(p.title)) return p;
+    return replaceTitleInValue({ ...p, title: next.title }, p.title, next.title);
+  }
+
+  store.products = (store.products || []).map(syncProduct);
+
+  if (Array.isArray(store.orders)) {
+    store.orders = store.orders.map((order) => {
+      if (!order?.items) return order;
+      return {
+        ...order,
+        items: order.items.map((item) => {
+          const next = byId.get(item.productId ?? item.id);
+          if (!next || !isGenericTitle(item.title)) return item;
+          return replaceTitleInValue(
+            { ...item, title: next.title },
+            item.title,
+            next.title,
+          );
+        }),
+      };
+    });
+  }
+
   writeFileSync(STORE_PATH, JSON.stringify(store, null, 2), 'utf8');
 }
 

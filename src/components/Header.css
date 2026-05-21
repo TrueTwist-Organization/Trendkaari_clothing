@@ -106,7 +106,7 @@ body.info-page .libas-header-wrapper .header-search-trigger {
 
 /* Main Header */
 .main-header {
-  height: 80px;
+  height: 100px;
   display: flex;
   align-items: center;
 }
@@ -231,9 +231,9 @@ body.info-page .header-search-trigger:hover {
 
 .flexfit-logo-img {
   display: block;
-  height: 56px;
+  height: 84px;
   width: auto;
-  max-width: min(280px, 52vw);
+  max-width: min(420px, 65vw);
   object-fit: contain;
   object-position: center;
   transition: height 0.25s ease, filter 0.25s ease;
@@ -241,8 +241,8 @@ body.info-page .header-search-trigger:hover {
 }
 
 .libas-header-wrapper.scrolled .flexfit-logo-img {
-  height: 48px;
-  max-width: min(240px, 48vw);
+  height: 72px;
+  max-width: min(380px, 60vw);
   filter: none;
 }
 
@@ -351,11 +351,11 @@ body.info-page .header-search-trigger:hover {
   }
   
   .main-header {
-    height: 70px;
+    height: 88px;
   }
   
   .libas-header-wrapper.scrolled .main-header {
-    height: 64px;
+    height: 78px;
   }
   
   .announcement-bar {
@@ -374,11 +374,11 @@ body.info-page .header-search-trigger:hover {
   }
 
   .main-header {
-    height: 64px;
+    height: 78px;
   }
 
   .libas-header-wrapper.scrolled .main-header {
-    height: 58px;
+    height: 70px;
   }
 
   .brand-logo {
@@ -387,13 +387,13 @@ body.info-page .header-search-trigger:hover {
   }
 
   .flexfit-logo-img {
-    height: 44px;
-    max-width: min(200px, 58vw);
+    height: 60px;
+    max-width: min(280px, 68vw);
   }
 
   .libas-header-wrapper.scrolled .flexfit-logo-img {
-    height: 40px;
-    max-width: min(180px, 54vw);
+    height: 54px;
+    max-width: min(260px, 64vw);
   }
 
   .header-left {

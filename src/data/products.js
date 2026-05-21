@@ -1953,7 +1953,7 @@ export const products = [
   },
   {
     "id": 1010,
-    "title": "Exquisite Designer Lehenga 1",
+    "title": "Royal Maroon Zari Embroidered Bridal Lehenga",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -1977,7 +1977,7 @@ export const products = [
       "/lehengas/Lehengas/1/040A3558_700x.webp",
       "/lehengas/Lehengas/1/040A3562_700x.webp"
     ],
-    "description": "Discover Exquisite Designer Lehenga 1 from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Royal Maroon Zari Embroidered Bridal Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -1988,7 +1988,7 @@ export const products = [
     ],
     "rating": "4.8",
     "reviewsCount": 20,
-    "descriptionLong": "Discover Exquisite Designer Lehenga 1 from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Royal Maroon Zari Embroidered Bridal Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Flared / A-line",
@@ -1999,7 +1999,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Exquisite Designer Lehenga 1 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Royal Maroon Zari Embroidered Bridal Lehenga features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -2058,7 +2058,7 @@ export const products = [
   },
   {
     "id": 1011,
-    "title": "Exquisite Designer Lehenga 10",
+    "title": "Coral Orange Bandhani Print Lehenga",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -2075,7 +2075,7 @@ export const products = [
       "/lehengas/Lehengas/10/040A2714_700x.webp",
       "/lehengas/Lehengas/10/040A2716_700x.webp"
     ],
-    "description": "Discover Exquisite Designer Lehenga 10 from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Coral Orange Bandhani Print Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -2086,7 +2086,7 @@ export const products = [
     ],
     "rating": "4.4",
     "reviewsCount": 131,
-    "descriptionLong": "Discover Exquisite Designer Lehenga 10 from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Coral Orange Bandhani Print Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Flared / A-line",
@@ -2097,7 +2097,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Exquisite Designer Lehenga 10 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Coral Orange Bandhani Print Lehenga features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -2156,7 +2156,7 @@ export const products = [
   },
   {
     "id": 1012,
-    "title": "Exquisite Designer Lehenga 2",
+    "title": "Lavanya Peach Mirror Work Festive Lehenga",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -2173,7 +2173,7 @@ export const products = [
       "/lehengas/Lehengas/2/Lavanya71015_700x.webp",
       "/lehengas/Lehengas/2/Lavanya71017_700x.webp"
     ],
-    "description": "Discover Exquisite Designer Lehenga 2 from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Lavanya Peach Mirror Work Festive Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -2184,7 +2184,7 @@ export const products = [
     ],
     "rating": "4.8",
     "reviewsCount": 154,
-    "descriptionLong": "Discover Exquisite Designer Lehenga 2 from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Lavanya Peach Mirror Work Festive Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Flared / A-line",
@@ -2195,7 +2195,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Exquisite Designer Lehenga 2 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Lavanya Peach Mirror Work Festive Lehenga features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -2254,7 +2254,7 @@ export const products = [
   },
   {
     "id": 1013,
-    "title": "Exquisite Designer Lehenga 3",
+    "title": "Emerald Green Silk Banarasi Lehenga Choli",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -2272,7 +2272,7 @@ export const products = [
       "/lehengas/Lehengas/3/040A3784_700x.webp",
       "/lehengas/Lehengas/3/040A3786_700x.webp"
     ],
-    "description": "Discover Exquisite Designer Lehenga 3 from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Emerald Green Silk Banarasi Lehenga Choli from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -2283,7 +2283,7 @@ export const products = [
     ],
     "rating": "4.6",
     "reviewsCount": 58,
-    "descriptionLong": "Discover Exquisite Designer Lehenga 3 from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Emerald Green Silk Banarasi Lehenga Choli from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Flared / A-line",
@@ -2294,7 +2294,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Exquisite Designer Lehenga 3 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Emerald Green Silk Banarasi Lehenga Choli features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -2353,7 +2353,7 @@ export const products = [
   },
   {
     "id": 1014,
-    "title": "Exquisite Designer Lehenga 4",
+    "title": "Midnight Blue Sequin Party Wear Lehenga",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -2370,7 +2370,7 @@ export const products = [
       "/lehengas/Lehengas/4/040A1493_700x.webp",
       "/lehengas/Lehengas/4/040A1494_700x.webp"
     ],
-    "description": "Discover Exquisite Designer Lehenga 4 from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Midnight Blue Sequin Party Wear Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -2381,7 +2381,7 @@ export const products = [
     ],
     "rating": "4.5",
     "reviewsCount": 103,
-    "descriptionLong": "Discover Exquisite Designer Lehenga 4 from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Midnight Blue Sequin Party Wear Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Flared / A-line",
@@ -2392,7 +2392,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Exquisite Designer Lehenga 4 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Midnight Blue Sequin Party Wear Lehenga features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -2451,7 +2451,7 @@ export const products = [
   },
   {
     "id": 1015,
-    "title": "Exquisite Designer Lehenga 5",
+    "title": "Blush Pink Organza Floral Lehenga Set",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -2468,7 +2468,7 @@ export const products = [
       "/lehengas/Lehengas/5/LBL101KS650_8_700x.webp",
       "/lehengas/Lehengas/5/LBL101KS650_9_700x.webp"
     ],
-    "description": "Discover Exquisite Designer Lehenga 5 from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Blush Pink Organza Floral Lehenga Set from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -2479,7 +2479,7 @@ export const products = [
     ],
     "rating": "4.3",
     "reviewsCount": 94,
-    "descriptionLong": "Discover Exquisite Designer Lehenga 5 from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Blush Pink Organza Floral Lehenga Set from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Flared / A-line",
@@ -2490,7 +2490,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Exquisite Designer Lehenga 5 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Blush Pink Organza Floral Lehenga Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -2549,7 +2549,7 @@ export const products = [
   },
   {
     "id": 1016,
-    "title": "Exquisite Designer Lehenga 6",
+    "title": "Gold Tissue Reception Lehenga with Dupatta",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -2566,7 +2566,7 @@ export const products = [
       "/lehengas/Lehengas/6/LBL101KS616_6_700x.webp",
       "/lehengas/Lehengas/6/LBL101KS616_7_700x.webp"
     ],
-    "description": "Discover Exquisite Designer Lehenga 6 from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Gold Tissue Reception Lehenga with Dupatta from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -2577,7 +2577,7 @@ export const products = [
     ],
     "rating": "4.8",
     "reviewsCount": 187,
-    "descriptionLong": "Discover Exquisite Designer Lehenga 6 from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Gold Tissue Reception Lehenga with Dupatta from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Flared / A-line",
@@ -2588,7 +2588,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Exquisite Designer Lehenga 6 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Gold Tissue Reception Lehenga with Dupatta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -2647,7 +2647,7 @@ export const products = [
   },
   {
     "id": 1017,
-    "title": "Exquisite Designer Lehenga 7",
+    "title": "Wine Velvet A-Line Festive Lehenga",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -2661,7 +2661,7 @@ export const products = [
       "/lehengas/Lehengas/7/sku63_3_29b55751-1919-48dd-93ec-1597cc039aff_700x.webp",
       "/lehengas/Lehengas/7/sku63_4_ffa9963b-9d7b-485b-ad2b-3881813f291f_700x.webp"
     ],
-    "description": "Discover Exquisite Designer Lehenga 7 from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Wine Velvet A-Line Festive Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -2672,7 +2672,7 @@ export const products = [
     ],
     "rating": "5.0",
     "reviewsCount": 218,
-    "descriptionLong": "Discover Exquisite Designer Lehenga 7 from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Wine Velvet A-Line Festive Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Flared / A-line",
@@ -2683,7 +2683,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Exquisite Designer Lehenga 7 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Wine Velvet A-Line Festive Lehenga features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -2742,7 +2742,7 @@ export const products = [
   },
   {
     "id": 1018,
-    "title": "Exquisite Designer Lehenga 8",
+    "title": "Teal Georgette Threadwork Lehenga",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -2759,7 +2759,7 @@ export const products = [
       "/lehengas/Lehengas/8/LBL101KS588_6_700x.webp",
       "/lehengas/Lehengas/8/LBL101KS588_7_700x.webp"
     ],
-    "description": "Discover Exquisite Designer Lehenga 8 from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Teal Georgette Threadwork Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -2770,7 +2770,7 @@ export const products = [
     ],
     "rating": "4.5",
     "reviewsCount": 216,
-    "descriptionLong": "Discover Exquisite Designer Lehenga 8 from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Teal Georgette Threadwork Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Flared / A-line",
@@ -2781,7 +2781,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Exquisite Designer Lehenga 8 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Teal Georgette Threadwork Lehenga features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -2840,7 +2840,7 @@ export const products = [
   },
   {
     "id": 1019,
-    "title": "Exquisite Designer Lehenga 9",
+    "title": "Ivory Cream Net Embroidered Lehenga",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -2856,7 +2856,7 @@ export const products = [
       "/lehengas/Lehengas/9/040A1708_700x.webp",
       "/lehengas/Lehengas/9/040A1719_700x.webp"
     ],
-    "description": "Discover Exquisite Designer Lehenga 9 from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Ivory Cream Net Embroidered Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -2867,7 +2867,7 @@ export const products = [
     ],
     "rating": "4.6",
     "reviewsCount": 59,
-    "descriptionLong": "Discover Exquisite Designer Lehenga 9 from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Ivory Cream Net Embroidered Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Flared / A-line",
@@ -2878,7 +2878,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Exquisite Designer Lehenga 9 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Ivory Cream Net Embroidered Lehenga features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -2937,7 +2937,7 @@ export const products = [
   },
   {
     "id": 1020,
-    "title": "Elegant Silk Saree 1",
+    "title": "Banarasi Gold Border Silk Saree",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -2966,7 +2966,7 @@ export const products = [
       "/sarees/Sarees/1/0T3A5581_700x.webp",
       "/sarees/Sarees/1/0T3A5586_700x.webp"
     ],
-    "description": "Discover Elegant Silk Saree 1 from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Banarasi Gold Border Silk Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -2977,7 +2977,7 @@ export const products = [
     ],
     "rating": "4.6",
     "reviewsCount": 135,
-    "descriptionLong": "Discover Elegant Silk Saree 1 from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Banarasi Gold Border Silk Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular / Straight Fit",
@@ -2988,7 +2988,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Silk Blend for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Elegant Silk Saree 1 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Banarasi Gold Border Silk Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -3047,7 +3047,7 @@ export const products = [
   },
   {
     "id": 1021,
-    "title": "Elegant Silk Saree 10",
+    "title": "Multicolor Ikat Silk Blend Saree",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -3063,7 +3063,7 @@ export const products = [
       "/sarees/Sarees/10/SV-20240903-2345_3d20251b-1a01-4645-8110-7900f2b40051_700x.webp",
       "/sarees/Sarees/10/SV-20240903-2372_9e2755d9-f729-4e27-b17c-59833dfaca15_700x.webp"
     ],
-    "description": "Discover Elegant Silk Saree 10 from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Multicolor Ikat Silk Blend Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -3074,7 +3074,7 @@ export const products = [
     ],
     "rating": "4.7",
     "reviewsCount": 159,
-    "descriptionLong": "Discover Elegant Silk Saree 10 from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Multicolor Ikat Silk Blend Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular / Straight Fit",
@@ -3085,7 +3085,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Silk Blend for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Elegant Silk Saree 10 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Multicolor Ikat Silk Blend Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -3144,7 +3144,7 @@ export const products = [
   },
   {
     "id": 1022,
-    "title": "Elegant Silk Saree 2",
+    "title": "Kanjivaram Temple Border Silk Saree",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -3161,7 +3161,7 @@ export const products = [
       "/sarees/Sarees/2/SV-20240903-1059_0f30f0ab-8e3f-4079-b584-826833e093c4_700x.webp",
       "/sarees/Sarees/2/SV-20240903-1255_cb5eebb8-f29b-4e19-a8a9-969e38666986_700x.webp"
     ],
-    "description": "Discover Elegant Silk Saree 2 from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Kanjivaram Temple Border Silk Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -3172,7 +3172,7 @@ export const products = [
     ],
     "rating": "4.3",
     "reviewsCount": 212,
-    "descriptionLong": "Discover Elegant Silk Saree 2 from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Kanjivaram Temple Border Silk Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular / Straight Fit",
@@ -3183,7 +3183,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Silk Blend for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Elegant Silk Saree 2 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Kanjivaram Temple Border Silk Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -3242,7 +3242,7 @@ export const products = [
   },
   {
     "id": 1023,
-    "title": "Elegant Silk Saree 3",
+    "title": "Pastel Green Chanderi Cotton Saree",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -3259,7 +3259,7 @@ export const products = [
       "/sarees/Sarees/3/SV-20240903-0806_6c3b0bab-a878-49df-853b-0f1153bf4080_700x.webp",
       "/sarees/Sarees/3/SV-20240903-0941_e251e1a6-d9e2-40cf-94a1-357ee03c4076_700x.webp"
     ],
-    "description": "Discover Elegant Silk Saree 3 from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Pastel Green Chanderi Cotton Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -3270,7 +3270,7 @@ export const products = [
     ],
     "rating": "4.4",
     "reviewsCount": 174,
-    "descriptionLong": "Discover Elegant Silk Saree 3 from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Pastel Green Chanderi Cotton Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular / Straight Fit",
@@ -3281,7 +3281,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Silk Blend for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Elegant Silk Saree 3 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Pastel Green Chanderi Cotton Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -3340,7 +3340,7 @@ export const products = [
   },
   {
     "id": 1024,
-    "title": "Elegant Silk Saree 4",
+    "title": "Red Bandhani Georgette Saree",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -3358,7 +3358,7 @@ export const products = [
       "/sarees/Sarees/4/SV-20240903-1211_700x (1).webp",
       "/sarees/Sarees/4/SV-20240903-1211_700x.webp"
     ],
-    "description": "Discover Elegant Silk Saree 4 from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Red Bandhani Georgette Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -3369,7 +3369,7 @@ export const products = [
     ],
     "rating": "4.4",
     "reviewsCount": 56,
-    "descriptionLong": "Discover Elegant Silk Saree 4 from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Red Bandhani Georgette Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular / Straight Fit",
@@ -3380,7 +3380,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Silk Blend for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Elegant Silk Saree 4 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Red Bandhani Georgette Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -3439,7 +3439,7 @@ export const products = [
   },
   {
     "id": 1025,
-    "title": "Elegant Silk Saree 5",
+    "title": "Navy Blue Printed Linen Saree",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -3455,7 +3455,7 @@ export const products = [
       "/sarees/Sarees/5/SV-20240903-1940_46f214fe-67a5-4bb3-acc7-e76c42551d9e_700x.webp",
       "/sarees/Sarees/5/SV-20240903-2611_f952014f-a248-49c3-b820-3031922d2eb1_700x.webp"
     ],
-    "description": "Discover Elegant Silk Saree 5 from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Navy Blue Printed Linen Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -3466,7 +3466,7 @@ export const products = [
     ],
     "rating": "4.9",
     "reviewsCount": 51,
-    "descriptionLong": "Discover Elegant Silk Saree 5 from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Navy Blue Printed Linen Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular / Straight Fit",
@@ -3477,7 +3477,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Silk Blend for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Elegant Silk Saree 5 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Navy Blue Printed Linen Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -3536,7 +3536,7 @@ export const products = [
   },
   {
     "id": 1026,
-    "title": "Elegant Silk Saree 6",
+    "title": "Mauve Organza Floral Saree",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -3553,7 +3553,7 @@ export const products = [
       "/sarees/Sarees/6/SV-20240903-2112_120621eb-0443-455f-86e0-35634f23a3a9_700x.webp",
       "/sarees/Sarees/6/SV-20240903-2392_4cca2f26-29c8-48f5-acf4-fe1b37e66bad_700x.webp"
     ],
-    "description": "Discover Elegant Silk Saree 6 from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Mauve Organza Floral Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -3564,7 +3564,7 @@ export const products = [
     ],
     "rating": "4.7",
     "reviewsCount": 104,
-    "descriptionLong": "Discover Elegant Silk Saree 6 from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Mauve Organza Floral Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular / Straight Fit",
@@ -3575,7 +3575,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Silk Blend for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Elegant Silk Saree 6 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Mauve Organza Floral Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -3634,7 +3634,7 @@ export const products = [
   },
   {
     "id": 1027,
-    "title": "Elegant Silk Saree 7",
+    "title": "Black Gold Zari Party Wear Saree",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -3653,7 +3653,7 @@ export const products = [
       "/sarees/Sarees/7/SV-20240903-1042_a6f9e80b-e94e-4760-9d0d-574ed15de1e3_700x.webp",
       "/sarees/Sarees/7/SV-20240903-1182_931e1c69-4d08-44b6-8984-b2af89230c4a_700x.webp"
     ],
-    "description": "Discover Elegant Silk Saree 7 from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Black Gold Zari Party Wear Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -3664,7 +3664,7 @@ export const products = [
     ],
     "rating": "4.7",
     "reviewsCount": 200,
-    "descriptionLong": "Discover Elegant Silk Saree 7 from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Black Gold Zari Party Wear Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular / Straight Fit",
@@ -3675,7 +3675,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Silk Blend for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Elegant Silk Saree 7 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Black Gold Zari Party Wear Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -3734,7 +3734,7 @@ export const products = [
   },
   {
     "id": 1028,
-    "title": "Elegant Silk Saree 8",
+    "title": "Mustard Handloom Cotton Saree",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -3756,7 +3756,7 @@ export const products = [
       "/sarees/Sarees/8/0T3A5356_700x.webp",
       "/sarees/Sarees/8/0T3A5359_700x.webp"
     ],
-    "description": "Discover Elegant Silk Saree 8 from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Mustard Handloom Cotton Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -3767,7 +3767,7 @@ export const products = [
     ],
     "rating": "4.3",
     "reviewsCount": 146,
-    "descriptionLong": "Discover Elegant Silk Saree 8 from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Mustard Handloom Cotton Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular / Straight Fit",
@@ -3778,7 +3778,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Silk Blend for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Elegant Silk Saree 8 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Mustard Handloom Cotton Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -3837,7 +3837,7 @@ export const products = [
   },
   {
     "id": 1029,
-    "title": "Elegant Silk Saree 9",
+    "title": "Peach Tissue Embroidered Saree",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -3855,7 +3855,7 @@ export const products = [
       "/sarees/Sarees/9/L12.01.25_3532_43117b46-ab12-4269-8fed-0375305b5427_700x.webp",
       "/sarees/Sarees/9/L12.01.25_3547_33128c31-b45d-4240-b2c3-634c0659e06c_700x.webp"
     ],
-    "description": "Discover Elegant Silk Saree 9 from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Peach Tissue Embroidered Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -3866,7 +3866,7 @@ export const products = [
     ],
     "rating": "4.3",
     "reviewsCount": 102,
-    "descriptionLong": "Discover Elegant Silk Saree 9 from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Peach Tissue Embroidered Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular / Straight Fit",
@@ -3877,7 +3877,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Silk Blend for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Elegant Silk Saree 9 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Peach Tissue Embroidered Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -3936,7 +3936,7 @@ export const products = [
   },
   {
     "id": 1030,
-    "title": "Embroidered Suit Set 1",
+    "title": "Ivory Embroidered Palazzo Suit Set",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -3954,7 +3954,7 @@ export const products = [
       "/suit-sets/Suit Sets/1/SV-20240406-1164_700x.webp",
       "/suit-sets/Suit Sets/1/SV-20240406-1468_700x.webp"
     ],
-    "description": "Discover Embroidered Suit Set 1 from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Ivory Embroidered Palazzo Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -3965,7 +3965,7 @@ export const products = [
     ],
     "rating": "4.6",
     "reviewsCount": 44,
-    "descriptionLong": "Discover Embroidered Suit Set 1 from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Ivory Embroidered Palazzo Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -3976,7 +3976,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Embroidered Suit Set 1 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Ivory Embroidered Palazzo Suit Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -4035,7 +4035,7 @@ export const products = [
   },
   {
     "id": 1031,
-    "title": "Embroidered Suit Set 10",
+    "title": "Wine Maroon Velvet Party Suit Set",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -4051,7 +4051,7 @@ export const products = [
       "/suit-sets/Suit Sets/10/LBL101KS263_5_700x.webp",
       "/suit-sets/Suit Sets/10/LBL101KS263_6_1c664049-9b6a-4e9d-af95-45699f8c1409_700x.webp"
     ],
-    "description": "Discover Embroidered Suit Set 10 from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Wine Maroon Velvet Party Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -4062,7 +4062,7 @@ export const products = [
     ],
     "rating": "4.3",
     "reviewsCount": 36,
-    "descriptionLong": "Discover Embroidered Suit Set 10 from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Wine Maroon Velvet Party Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -4073,7 +4073,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Embroidered Suit Set 10 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Wine Maroon Velvet Party Suit Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -4132,7 +4132,7 @@ export const products = [
   },
   {
     "id": 1032,
-    "title": "Embroidered Suit Set 2",
+    "title": "Sage Green Printed Sharara Suit Set",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -4153,7 +4153,7 @@ export const products = [
       "/suit-sets/Suit Sets/2/0T3A4439_a11d6591-3bce-48e0-b40a-5d700615adaf_700x.webp",
       "/suit-sets/Suit Sets/2/0T3A4441_41ebe5ee-8ae0-4bab-afb8-01fc1548a1c2_700x.webp"
     ],
-    "description": "Discover Embroidered Suit Set 2 from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Sage Green Printed Sharara Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -4164,7 +4164,7 @@ export const products = [
     ],
     "rating": "4.6",
     "reviewsCount": 186,
-    "descriptionLong": "Discover Embroidered Suit Set 2 from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Sage Green Printed Sharara Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -4175,7 +4175,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Embroidered Suit Set 2 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Sage Green Printed Sharara Suit Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -4234,7 +4234,7 @@ export const products = [
   },
   {
     "id": 1033,
-    "title": "Embroidered Suit Set 3",
+    "title": "Rust Orange Georgette Anarkali Suit Set",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -4248,7 +4248,7 @@ export const products = [
       "/suit-sets/Suit Sets/3/yellow_leheriya_anarkali_suit_set_2_f2ed9c07-8d6f-467f-b7fc-5eb44737d0d8_700x.webp",
       "/suit-sets/Suit Sets/3/yellow_leheriya_anarkali_suit_set_3_3ea599f3-2286-4596-8454-201baec2ccf1_700x.webp"
     ],
-    "description": "Discover Embroidered Suit Set 3 from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Rust Orange Georgette Anarkali Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -4259,7 +4259,7 @@ export const products = [
     ],
     "rating": "4.3",
     "reviewsCount": 143,
-    "descriptionLong": "Discover Embroidered Suit Set 3 from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Rust Orange Georgette Anarkali Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -4270,7 +4270,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Embroidered Suit Set 3 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Rust Orange Georgette Anarkali Suit Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -4329,7 +4329,7 @@ export const products = [
   },
   {
     "id": 1034,
-    "title": "Embroidered Suit Set 4",
+    "title": "Powder Blue Chanderi Three-Piece Suit",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -4348,7 +4348,7 @@ export const products = [
       "/suit-sets/Suit Sets/4/0T3A4534_700x.webp",
       "/suit-sets/Suit Sets/4/0T3A4538_700x.webp"
     ],
-    "description": "Discover Embroidered Suit Set 4 from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Powder Blue Chanderi Three-Piece Suit from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -4359,7 +4359,7 @@ export const products = [
     ],
     "rating": "4.9",
     "reviewsCount": 59,
-    "descriptionLong": "Discover Embroidered Suit Set 4 from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Powder Blue Chanderi Three-Piece Suit from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -4370,7 +4370,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Embroidered Suit Set 4 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Powder Blue Chanderi Three-Piece Suit features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -4429,7 +4429,7 @@ export const products = [
   },
   {
     "id": 1035,
-    "title": "Embroidered Suit Set 5",
+    "title": "Magenta Silk Straight Kurta Suit Set",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -4444,7 +4444,7 @@ export const products = [
       "/suit-sets/Suit Sets/5/4_3bf6d0ac-4b80-4372-8c5d-b0296a55f0c5_700x.webp",
       "/suit-sets/Suit Sets/5/SKU_3_1_635e1b35-4d4b-4349-b377-b8a4c980e8e2_700x.webp"
     ],
-    "description": "Discover Embroidered Suit Set 5 from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Magenta Silk Straight Kurta Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -4455,7 +4455,7 @@ export const products = [
     ],
     "rating": "4.7",
     "reviewsCount": 42,
-    "descriptionLong": "Discover Embroidered Suit Set 5 from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Magenta Silk Straight Kurta Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -4466,7 +4466,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Embroidered Suit Set 5 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Magenta Silk Straight Kurta Suit Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -4525,7 +4525,7 @@ export const products = [
   },
   {
     "id": 1036,
-    "title": "Embroidered Suit Set 6",
+    "title": "Olive Green Cotton Kurta Pant Set",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -4542,7 +4542,7 @@ export const products = [
       "/suit-sets/Suit Sets/6/LBL101KS704_7_700x.webp",
       "/suit-sets/Suit Sets/6/LBL101KS704_9_700x.webp"
     ],
-    "description": "Discover Embroidered Suit Set 6 from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Olive Green Cotton Kurta Pant Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -4553,7 +4553,7 @@ export const products = [
     ],
     "rating": "5.0",
     "reviewsCount": 144,
-    "descriptionLong": "Discover Embroidered Suit Set 6 from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Olive Green Cotton Kurta Pant Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -4564,7 +4564,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Embroidered Suit Set 6 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Olive Green Cotton Kurta Pant Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -4623,7 +4623,7 @@ export const products = [
   },
   {
     "id": 1037,
-    "title": "Embroidered Suit Set 7",
+    "title": "Lavender Mirror Work Festive Suit Set",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -4642,7 +4642,7 @@ export const products = [
       "/suit-sets/Suit Sets/7/LBL101KS706_7_700x.webp",
       "/suit-sets/Suit Sets/7/LBL101KS706_8_700x.webp"
     ],
-    "description": "Discover Embroidered Suit Set 7 from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Lavender Mirror Work Festive Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -4653,7 +4653,7 @@ export const products = [
     ],
     "rating": "4.6",
     "reviewsCount": 105,
-    "descriptionLong": "Discover Embroidered Suit Set 7 from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Lavender Mirror Work Festive Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -4664,7 +4664,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Embroidered Suit Set 7 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Lavender Mirror Work Festive Suit Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -4723,7 +4723,7 @@ export const products = [
   },
   {
     "id": 1038,
-    "title": "Embroidered Suit Set 8",
+    "title": "Charcoal Grey Embroidered Salwar Suit Set",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -4737,7 +4737,7 @@ export const products = [
       "/suit-sets/Suit Sets/8/LBL101KS62_3_700x.webp",
       "/suit-sets/Suit Sets/8/LBL101KS62_4_700x.webp"
     ],
-    "description": "Discover Embroidered Suit Set 8 from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Charcoal Grey Embroidered Salwar Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -4748,7 +4748,7 @@ export const products = [
     ],
     "rating": "4.9",
     "reviewsCount": 150,
-    "descriptionLong": "Discover Embroidered Suit Set 8 from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Charcoal Grey Embroidered Salwar Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -4759,7 +4759,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Embroidered Suit Set 8 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Charcoal Grey Embroidered Salwar Suit Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -4818,7 +4818,7 @@ export const products = [
   },
   {
     "id": 1039,
-    "title": "Embroidered Suit Set 9",
+    "title": "Yellow Floral Muslin Co-ord Suit Set",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -4839,7 +4839,7 @@ export const products = [
       "/suit-sets/Suit Sets/9/L12.01.25_1955_7b917121-a01b-4258-99cb-90d137ef973e_700x.webp",
       "/suit-sets/Suit Sets/9/L12.01.25_1983_c04d8c4a-d760-46eb-addc-7ea975d07c19_700x.webp"
     ],
-    "description": "Discover Embroidered Suit Set 9 from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Yellow Floral Muslin Co-ord Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -4850,7 +4850,7 @@ export const products = [
     ],
     "rating": "4.8",
     "reviewsCount": 186,
-    "descriptionLong": "Discover Embroidered Suit Set 9 from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Yellow Floral Muslin Co-ord Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -4861,7 +4861,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Embroidered Suit Set 9 features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Yellow Floral Muslin Co-ord Suit Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -10475,7 +10475,7 @@ export const products = [
       "/mens/jackets/jacketmen/j1/2.webp",
       "/mens/jackets/jacketmen/j1/3.webp"
     ],
-    "description": "FlexFit Studio presents Raw Tan Premium Biker Leather Jacket—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "Raw Tan Premium Biker Leather Jacket pairs sharp looks with practical 60% Cotton, 40% Polyester construction—ideal when you want style without sacrificing comfort.",
     "sizes": [
       "S",
       "M",
@@ -10483,29 +10483,34 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.4",
+    "rating": 4.4,
     "reviewsCount": 45,
-    "descriptionLong": "FlexFit Studio presents Raw Tan Premium Biker Leather Jacket—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "Raw Tan Premium Biker Leather Jacket pairs sharp looks with practical 60% Cotton, 40% Polyester construction—ideal when you want style without sacrificing comfort.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
-      "Fit type": "Regular Fit",
-      "Sleeve type": "Short / Half Sleeve",
-      "Collar style": "Round Neck",
+      "Colour": "As shown",
+      "Fit type": "Regular Outerwear Fit",
+      "Sleeve type": "Full Sleeve",
+      "Collar style": "Round / Spread Collar",
       "Length": "Standard Length",
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Raw Tan Premium Biker Leather Jacket is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
-      "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
-      "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
-      "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
-      "MOISTURE-WICKING & BREATHABLE: Air circulation helps prevent overheating in warm weather. Ideal for sports, travel and all-day comfort."
+      "MATERIAL & FABRIC: Raw Tan Premium Biker Leather Jacket uses 60% Cotton, 40% Polyester for a breathable, easy-care finish—suitable for long days and repeat wear.",
+      "DESIGNED TO MOVE: The cut allows natural movement while keeping a neat line—pair with denim, chinos or co-ord bottoms from trendkaari.",
+      "COLOUR & FINISH: As shown tone is selected to stay versatile across seasons; quality stitching supports daily rotation.",
+      "CARE: Follow garment label—gentle machine wash cold for cotton blends; dry flat or line dry in shade to protect colour.",
+      "VERSATILE WEAR: Dress up with loafers or keep it relaxed with sneakers—Raw Tan Premium Biker Leather Jacket adapts to your schedule."
     ],
     "additionalInfo": {
-      "Net Quantity": "1 Count",
+      "Manufacturer": "trendkaari, India",
       "Country of Origin": "India",
-      "Item Weight": "Approx. 250 g",
-      "Product Care": "Machine wash cold, do not bleach, dry in shade"
+      "Item Weight": "Approx. 650 g",
+      "Item Dimensions": "Packaged dimensions vary by size",
+      "Net Quantity": "1 Count",
+      "Generic Name": "Jacket",
+      "Product Care": "Machine wash cold, do not bleach, dry in shade",
+      "Colour": "As shown"
     },
     "sizeChart": [
       {
@@ -10560,7 +10565,7 @@ export const products = [
       "/mens/jackets/jacketmen/j2/1.webp",
       "/mens/jackets/jacketmen/j2/2.webp"
     ],
-    "description": "FlexFit Studio presents Rugged Indigo Stonewashed Denim Jacket—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "trendkaari presents Rugged Indigo Stonewashed Denim Jacket in As shown—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
     "sizes": [
       "S",
       "M",
@@ -10568,29 +10573,34 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.4",
+    "rating": 4.4,
     "reviewsCount": 65,
-    "descriptionLong": "FlexFit Studio presents Rugged Indigo Stonewashed Denim Jacket—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "trendkaari presents Rugged Indigo Stonewashed Denim Jacket in As shown—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
-      "Fit type": "Regular Fit",
-      "Sleeve type": "Short / Half Sleeve",
-      "Collar style": "Round Neck",
+      "Colour": "As shown",
+      "Fit type": "Regular Outerwear Fit",
+      "Sleeve type": "Full Sleeve",
+      "Collar style": "Round / Spread Collar",
       "Length": "Standard Length",
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Rugged Indigo Stonewashed Denim Jacket is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
-      "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
-      "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
-      "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
-      "MOISTURE-WICKING & BREATHABLE: Air circulation helps prevent overheating in warm weather. Ideal for sports, travel and all-day comfort."
+      "MATERIAL & FABRIC: Rugged Indigo Stonewashed Denim Jacket uses 60% Cotton, 40% Polyester for a breathable, easy-care finish—suitable for long days and repeat wear.",
+      "DESIGNED TO MOVE: The cut allows natural movement while keeping a neat line—pair with denim, chinos or co-ord bottoms from trendkaari.",
+      "COLOUR & FINISH: As shown tone is selected to stay versatile across seasons; quality stitching supports daily rotation.",
+      "CARE: Follow garment label—gentle machine wash cold for cotton blends; dry flat or line dry in shade to protect colour.",
+      "VERSATILE WEAR: Dress up with loafers or keep it relaxed with sneakers—Rugged Indigo Stonewashed Denim Jacket adapts to your schedule."
     ],
     "additionalInfo": {
-      "Net Quantity": "1 Count",
+      "Manufacturer": "trendkaari, India",
       "Country of Origin": "India",
-      "Item Weight": "Approx. 250 g",
-      "Product Care": "Machine wash cold, do not bleach, dry in shade"
+      "Item Weight": "Approx. 650 g",
+      "Item Dimensions": "Packaged dimensions vary by size",
+      "Net Quantity": "1 Count",
+      "Generic Name": "Jacket",
+      "Product Care": "Machine wash cold, do not bleach, dry in shade",
+      "Colour": "As shown"
     },
     "sizeChart": [
       {
@@ -10646,7 +10656,7 @@ export const products = [
       "/mens/jackets/jacketmen/j3/RFJ1105_5.webp",
       "/mens/jackets/jacketmen/j3/RFJ1105_6.webp"
     ],
-    "description": "FlexFit Studio presents Olive Drab Heavyweight Field Utility Jacket—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "Meet Olive Drab Heavyweight Field Utility Jacket: a jackets essential from trendkaari, tailored in 60% Cotton, 40% Polyester for modern Indian wardrobes.",
     "sizes": [
       "S",
       "M",
@@ -10654,29 +10664,34 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 85,
-    "descriptionLong": "FlexFit Studio presents Olive Drab Heavyweight Field Utility Jacket—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "Meet Olive Drab Heavyweight Field Utility Jacket: a jackets essential from trendkaari, tailored in 60% Cotton, 40% Polyester for modern Indian wardrobes.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
-      "Fit type": "Regular Fit",
-      "Sleeve type": "Short / Half Sleeve",
-      "Collar style": "Round Neck",
+      "Colour": "Green",
+      "Fit type": "Regular Outerwear Fit",
+      "Sleeve type": "Full Sleeve",
+      "Collar style": "Round / Spread Collar",
       "Length": "Standard Length",
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Olive Drab Heavyweight Field Utility Jacket is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
-      "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
-      "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
-      "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
-      "MOISTURE-WICKING & BREATHABLE: Air circulation helps prevent overheating in warm weather. Ideal for sports, travel and all-day comfort."
+      "FABRIC FEEL: Olive Drab Heavyweight Field Utility Jacket is cut in 60% Cotton, 40% Polyester chosen for softness, shape retention and a clean drape on the body.",
+      "FIT & SILHOUETTE: Regular Outerwear Fit gives balanced room through chest and waist—works for office-casual, travel and weekend plans.",
+      "STYLE NOTE: Green shade complements both neutral and bold layering pieces in your closet.",
+      "CARE: Follow garment label—gentle machine wash cold for cotton blends; dry flat or line dry in shade to protect colour.",
+      "OCCASION: Smart choice for brunch, casual meetings, gym-to-street looks and gifting within trendkaari menswear."
     ],
     "additionalInfo": {
-      "Net Quantity": "1 Count",
+      "Manufacturer": "trendkaari, India",
       "Country of Origin": "India",
-      "Item Weight": "Approx. 250 g",
-      "Product Care": "Machine wash cold, do not bleach, dry in shade"
+      "Item Weight": "Approx. 650 g",
+      "Item Dimensions": "Packaged dimensions vary by size",
+      "Net Quantity": "1 Count",
+      "Generic Name": "Jacket",
+      "Product Care": "Machine wash cold, do not bleach, dry in shade",
+      "Colour": "Green"
     },
     "sizeChart": [
       {
@@ -10732,7 +10747,7 @@ export const products = [
       "/mens/jackets/jacketmen/j4/RFJ0284M_2.webp",
       "/mens/jackets/jacketmen/j4/RFJ0284M_3.webp"
     ],
-    "description": "FlexFit Studio presents Midnight Black Urban Puffer Jacket—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "trendkaari presents Midnight Black Urban Puffer Jacket in Black—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
     "sizes": [
       "S",
       "M",
@@ -10740,29 +10755,34 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 105,
-    "descriptionLong": "FlexFit Studio presents Midnight Black Urban Puffer Jacket—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "trendkaari presents Midnight Black Urban Puffer Jacket in Black—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
-      "Fit type": "Regular Fit",
-      "Sleeve type": "Short / Half Sleeve",
-      "Collar style": "Round Neck",
+      "Colour": "Black",
+      "Fit type": "Regular Outerwear Fit",
+      "Sleeve type": "Full Sleeve",
+      "Collar style": "Round / Spread Collar",
       "Length": "Standard Length",
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Midnight Black Urban Puffer Jacket is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
-      "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
-      "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
-      "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
-      "MOISTURE-WICKING & BREATHABLE: Air circulation helps prevent overheating in warm weather. Ideal for sports, travel and all-day comfort."
+      "FABRIC FEEL: Midnight Black Urban Puffer Jacket is cut in 60% Cotton, 40% Polyester chosen for softness, shape retention and a clean drape on the body.",
+      "FIT & SILHOUETTE: Regular Outerwear Fit gives balanced room through chest and waist—works for office-casual, travel and weekend plans.",
+      "STYLE NOTE: Black shade complements both neutral and bold layering pieces in your closet.",
+      "CARE: Follow garment label—gentle machine wash cold for cotton blends; dry flat or line dry in shade to protect colour.",
+      "OCCASION: Smart choice for brunch, casual meetings, gym-to-street looks and gifting within trendkaari menswear."
     ],
     "additionalInfo": {
-      "Net Quantity": "1 Count",
+      "Manufacturer": "trendkaari, India",
       "Country of Origin": "India",
-      "Item Weight": "Approx. 250 g",
-      "Product Care": "Machine wash cold, do not bleach, dry in shade"
+      "Item Weight": "Approx. 650 g",
+      "Item Dimensions": "Packaged dimensions vary by size",
+      "Net Quantity": "1 Count",
+      "Generic Name": "Jacket",
+      "Product Care": "Machine wash cold, do not bleach, dry in shade",
+      "Colour": "Black"
     },
     "sizeChart": [
       {
@@ -10818,7 +10838,7 @@ export const products = [
       "/mens/jackets/jacketmen/j5/xl-1-no-pm86-technosport-original-imahhhhus7kzrmgu.webp",
       "/mens/jackets/jacketmen/j5/xl-1-no-pm86-technosport-original-imahhhhuzrztseax.webp"
     ],
-    "description": "FlexFit Studio presents Classic Navy Premium Varsity Bomber Jacket—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "trendkaari presents Classic Navy Premium Varsity Bomber Jacket in Blue—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
     "sizes": [
       "S",
       "M",
@@ -10826,29 +10846,34 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.6",
+    "rating": 4.6,
     "reviewsCount": 125,
-    "descriptionLong": "FlexFit Studio presents Classic Navy Premium Varsity Bomber Jacket—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "trendkaari presents Classic Navy Premium Varsity Bomber Jacket in Blue—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
-      "Fit type": "Regular Fit",
-      "Sleeve type": "Short / Half Sleeve",
-      "Collar style": "Round Neck",
+      "Colour": "Blue",
+      "Fit type": "Regular Outerwear Fit",
+      "Sleeve type": "Full Sleeve",
+      "Collar style": "Round / Spread Collar",
       "Length": "Standard Length",
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Classic Navy Premium Varsity Bomber Jacket is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
-      "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
-      "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
-      "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
-      "MOISTURE-WICKING & BREATHABLE: Air circulation helps prevent overheating in warm weather. Ideal for sports, travel and all-day comfort."
+      "MATERIAL & FABRIC: Classic Navy Premium Varsity Bomber Jacket uses 60% Cotton, 40% Polyester for a breathable, easy-care finish—suitable for long days and repeat wear.",
+      "DESIGNED TO MOVE: The cut allows natural movement while keeping a neat line—pair with denim, chinos or co-ord bottoms from trendkaari.",
+      "COLOUR & FINISH: Blue tone is selected to stay versatile across seasons; quality stitching supports daily rotation.",
+      "CARE: Follow garment label—gentle machine wash cold for cotton blends; dry flat or line dry in shade to protect colour.",
+      "VERSATILE WEAR: Dress up with loafers or keep it relaxed with sneakers—Classic Navy Premium Varsity Bomber Jacket adapts to your schedule."
     ],
     "additionalInfo": {
-      "Net Quantity": "1 Count",
+      "Manufacturer": "trendkaari, India",
       "Country of Origin": "India",
-      "Item Weight": "Approx. 250 g",
-      "Product Care": "Machine wash cold, do not bleach, dry in shade"
+      "Item Weight": "Approx. 650 g",
+      "Item Dimensions": "Packaged dimensions vary by size",
+      "Net Quantity": "1 Count",
+      "Generic Name": "Jacket",
+      "Product Care": "Machine wash cold, do not bleach, dry in shade",
+      "Colour": "Blue"
     },
     "sizeChart": [
       {
@@ -10904,7 +10929,7 @@ export const products = [
       "/mens/jackets/jacketmen/j6/RFJ0099M_2.webp",
       "/mens/jackets/jacketmen/j6/RFJ0099M_3.webp"
     ],
-    "description": "FlexFit Studio presents Suede Camel Luxury Trucker Jacket—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "Suede Camel Luxury Trucker Jacket pairs sharp looks with practical 60% Cotton, 40% Polyester construction—ideal when you want style without sacrificing comfort.",
     "sizes": [
       "S",
       "M",
@@ -10912,29 +10937,34 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 145,
-    "descriptionLong": "FlexFit Studio presents Suede Camel Luxury Trucker Jacket—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "Suede Camel Luxury Trucker Jacket pairs sharp looks with practical 60% Cotton, 40% Polyester construction—ideal when you want style without sacrificing comfort.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
-      "Fit type": "Regular Fit",
-      "Sleeve type": "Short / Half Sleeve",
-      "Collar style": "Round Neck",
+      "Colour": "As shown",
+      "Fit type": "Regular Outerwear Fit",
+      "Sleeve type": "Full Sleeve",
+      "Collar style": "Round / Spread Collar",
       "Length": "Standard Length",
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Suede Camel Luxury Trucker Jacket is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
-      "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
-      "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
-      "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
-      "MOISTURE-WICKING & BREATHABLE: Air circulation helps prevent overheating in warm weather. Ideal for sports, travel and all-day comfort."
+      "FABRIC FEEL: Suede Camel Luxury Trucker Jacket is cut in 60% Cotton, 40% Polyester chosen for softness, shape retention and a clean drape on the body.",
+      "FIT & SILHOUETTE: Regular Outerwear Fit gives balanced room through chest and waist—works for office-casual, travel and weekend plans.",
+      "STYLE NOTE: As shown shade complements both neutral and bold layering pieces in your closet.",
+      "CARE: Follow garment label—gentle machine wash cold for cotton blends; dry flat or line dry in shade to protect colour.",
+      "OCCASION: Smart choice for brunch, casual meetings, gym-to-street looks and gifting within trendkaari menswear."
     ],
     "additionalInfo": {
-      "Net Quantity": "1 Count",
+      "Manufacturer": "trendkaari, India",
       "Country of Origin": "India",
-      "Item Weight": "Approx. 250 g",
-      "Product Care": "Machine wash cold, do not bleach, dry in shade"
+      "Item Weight": "Approx. 650 g",
+      "Item Dimensions": "Packaged dimensions vary by size",
+      "Net Quantity": "1 Count",
+      "Generic Name": "Jacket",
+      "Product Care": "Machine wash cold, do not bleach, dry in shade",
+      "Colour": "As shown"
     },
     "sizeChart": [
       {
@@ -10990,7 +11020,7 @@ export const products = [
       "/mens/jackets/jacketmen/j7/RFJ1096_2.webp",
       "/mens/jackets/jacketmen/j7/RFJ1096_3.webp"
     ],
-    "description": "FlexFit Studio presents Charcoal Windproof Performance Hooded Jacket—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "Meet Charcoal Windproof Performance Hooded Jacket: a jackets essential from trendkaari, tailored in 60% Cotton, 40% Polyester for modern Indian wardrobes.",
     "sizes": [
       "S",
       "M",
@@ -10998,29 +11028,34 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 165,
-    "descriptionLong": "FlexFit Studio presents Charcoal Windproof Performance Hooded Jacket—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "Meet Charcoal Windproof Performance Hooded Jacket: a jackets essential from trendkaari, tailored in 60% Cotton, 40% Polyester for modern Indian wardrobes.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
-      "Fit type": "Regular Fit",
-      "Sleeve type": "Short / Half Sleeve",
-      "Collar style": "Round Neck",
+      "Colour": "As shown",
+      "Fit type": "Regular Outerwear Fit",
+      "Sleeve type": "Full Sleeve",
+      "Collar style": "Round / Spread Collar",
       "Length": "Standard Length",
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Charcoal Windproof Performance Hooded Jacket is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
-      "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
-      "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
-      "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
-      "MOISTURE-WICKING & BREATHABLE: Air circulation helps prevent overheating in warm weather. Ideal for sports, travel and all-day comfort."
+      "MATERIAL & FABRIC: Charcoal Windproof Performance Hooded Jacket uses 60% Cotton, 40% Polyester for a breathable, easy-care finish—suitable for long days and repeat wear.",
+      "DESIGNED TO MOVE: The cut allows natural movement while keeping a neat line—pair with denim, chinos or co-ord bottoms from trendkaari.",
+      "COLOUR & FINISH: As shown tone is selected to stay versatile across seasons; quality stitching supports daily rotation.",
+      "CARE: Follow garment label—gentle machine wash cold for cotton blends; dry flat or line dry in shade to protect colour.",
+      "VERSATILE WEAR: Dress up with loafers or keep it relaxed with sneakers—Charcoal Windproof Performance Hooded Jacket adapts to your schedule."
     ],
     "additionalInfo": {
-      "Net Quantity": "1 Count",
+      "Manufacturer": "trendkaari, India",
       "Country of Origin": "India",
-      "Item Weight": "Approx. 250 g",
-      "Product Care": "Machine wash cold, do not bleach, dry in shade"
+      "Item Weight": "Approx. 650 g",
+      "Item Dimensions": "Packaged dimensions vary by size",
+      "Net Quantity": "1 Count",
+      "Generic Name": "Jacket",
+      "Product Care": "Machine wash cold, do not bleach, dry in shade",
+      "Colour": "As shown"
     },
     "sizeChart": [
       {
@@ -11076,7 +11111,7 @@ export const products = [
       "/mens/jackets/jacketmen/j8/RFJ1100_1.webp",
       "/mens/jackets/jacketmen/j8/RFJ1100_3.webp"
     ],
-    "description": "FlexFit Studio presents Burgundy Satin Flight Bomber Jacket—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "trendkaari presents Burgundy Satin Flight Bomber Jacket in As shown—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
     "sizes": [
       "S",
       "M",
@@ -11084,29 +11119,34 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 35,
-    "descriptionLong": "FlexFit Studio presents Burgundy Satin Flight Bomber Jacket—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "trendkaari presents Burgundy Satin Flight Bomber Jacket in As shown—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
-      "Fit type": "Regular Fit",
-      "Sleeve type": "Short / Half Sleeve",
-      "Collar style": "Round Neck",
+      "Colour": "As shown",
+      "Fit type": "Regular Outerwear Fit",
+      "Sleeve type": "Full Sleeve",
+      "Collar style": "Round / Spread Collar",
       "Length": "Standard Length",
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Burgundy Satin Flight Bomber Jacket is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
-      "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
-      "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
-      "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
-      "MOISTURE-WICKING & BREATHABLE: Air circulation helps prevent overheating in warm weather. Ideal for sports, travel and all-day comfort."
+      "MATERIAL & FABRIC: Burgundy Satin Flight Bomber Jacket uses 60% Cotton, 40% Polyester for a breathable, easy-care finish—suitable for long days and repeat wear.",
+      "DESIGNED TO MOVE: The cut allows natural movement while keeping a neat line—pair with denim, chinos or co-ord bottoms from trendkaari.",
+      "COLOUR & FINISH: As shown tone is selected to stay versatile across seasons; quality stitching supports daily rotation.",
+      "CARE: Follow garment label—gentle machine wash cold for cotton blends; dry flat or line dry in shade to protect colour.",
+      "VERSATILE WEAR: Dress up with loafers or keep it relaxed with sneakers—Burgundy Satin Flight Bomber Jacket adapts to your schedule."
     ],
     "additionalInfo": {
-      "Net Quantity": "1 Count",
+      "Manufacturer": "trendkaari, India",
       "Country of Origin": "India",
-      "Item Weight": "Approx. 250 g",
-      "Product Care": "Machine wash cold, do not bleach, dry in shade"
+      "Item Weight": "Approx. 650 g",
+      "Item Dimensions": "Packaged dimensions vary by size",
+      "Net Quantity": "1 Count",
+      "Generic Name": "Jacket",
+      "Product Care": "Machine wash cold, do not bleach, dry in shade",
+      "Colour": "As shown"
     },
     "sizeChart": [
       {
@@ -11162,7 +11202,7 @@ export const products = [
       "/mens/jackets/jacketmen/j9/RFJ1041M_2.webp",
       "/mens/jackets/jacketmen/j9/RFJ1041M_3.webp"
     ],
-    "description": "FlexFit Studio presents Khaki Canvas Winter Sherpa-Lined Jacket—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "trendkaari presents Khaki Canvas Winter Sherpa-Lined Jacket in As shown—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
     "sizes": [
       "S",
       "M",
@@ -11170,29 +11210,34 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 55,
-    "descriptionLong": "FlexFit Studio presents Khaki Canvas Winter Sherpa-Lined Jacket—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "trendkaari presents Khaki Canvas Winter Sherpa-Lined Jacket in As shown—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
-      "Fit type": "Regular Fit",
-      "Sleeve type": "Short / Half Sleeve",
-      "Collar style": "Round Neck",
+      "Colour": "As shown",
+      "Fit type": "Regular Outerwear Fit",
+      "Sleeve type": "Full Sleeve",
+      "Collar style": "Round / Spread Collar",
       "Length": "Standard Length",
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Khaki Canvas Winter Sherpa-Lined Jacket is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
-      "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
-      "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
-      "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
-      "MOISTURE-WICKING & BREATHABLE: Air circulation helps prevent overheating in warm weather. Ideal for sports, travel and all-day comfort."
+      "FABRIC FEEL: Khaki Canvas Winter Sherpa-Lined Jacket is cut in 60% Cotton, 40% Polyester chosen for softness, shape retention and a clean drape on the body.",
+      "FIT & SILHOUETTE: Regular Outerwear Fit gives balanced room through chest and waist—works for office-casual, travel and weekend plans.",
+      "STYLE NOTE: As shown shade complements both neutral and bold layering pieces in your closet.",
+      "CARE: Follow garment label—gentle machine wash cold for cotton blends; dry flat or line dry in shade to protect colour.",
+      "OCCASION: Smart choice for brunch, casual meetings, gym-to-street looks and gifting within trendkaari menswear."
     ],
     "additionalInfo": {
-      "Net Quantity": "1 Count",
+      "Manufacturer": "trendkaari, India",
       "Country of Origin": "India",
-      "Item Weight": "Approx. 250 g",
-      "Product Care": "Machine wash cold, do not bleach, dry in shade"
+      "Item Weight": "Approx. 650 g",
+      "Item Dimensions": "Packaged dimensions vary by size",
+      "Net Quantity": "1 Count",
+      "Generic Name": "Jacket",
+      "Product Care": "Machine wash cold, do not bleach, dry in shade",
+      "Colour": "As shown"
     },
     "sizeChart": [
       {
@@ -11248,7 +11293,7 @@ export const products = [
       "/mens/jackets/jacketmen/j10/s-4-no-bkrjkt-fashnexx-original-imahgaemhv7qfx64.webp",
       "/mens/jackets/jacketmen/j10/s-4-no-bkrjkt-fashnexx-original-imahgaemy4ryvd7m.webp"
     ],
-    "description": "FlexFit Studio presents Slate Grey Waterproof Outdoor Raincoat—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "Meet Slate Grey Waterproof Outdoor Raincoat: a jackets essential from trendkaari, tailored in 60% Cotton, 40% Polyester for modern Indian wardrobes.",
     "sizes": [
       "S",
       "M",
@@ -11256,29 +11301,34 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.3",
+    "rating": 4.3,
     "reviewsCount": 75,
-    "descriptionLong": "FlexFit Studio presents Slate Grey Waterproof Outdoor Raincoat—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "Meet Slate Grey Waterproof Outdoor Raincoat: a jackets essential from trendkaari, tailored in 60% Cotton, 40% Polyester for modern Indian wardrobes.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
-      "Fit type": "Regular Fit",
-      "Sleeve type": "Short / Half Sleeve",
-      "Collar style": "Round Neck",
+      "Colour": "As shown",
+      "Fit type": "Regular Outerwear Fit",
+      "Sleeve type": "Full Sleeve",
+      "Collar style": "Round / Spread Collar",
       "Length": "Standard Length",
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Slate Grey Waterproof Outdoor Raincoat is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
-      "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
-      "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
-      "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
-      "MOISTURE-WICKING & BREATHABLE: Air circulation helps prevent overheating in warm weather. Ideal for sports, travel and all-day comfort."
+      "MATERIAL & FABRIC: Slate Grey Waterproof Outdoor Raincoat uses 60% Cotton, 40% Polyester for a breathable, easy-care finish—suitable for long days and repeat wear.",
+      "DESIGNED TO MOVE: The cut allows natural movement while keeping a neat line—pair with denim, chinos or co-ord bottoms from trendkaari.",
+      "COLOUR & FINISH: As shown tone is selected to stay versatile across seasons; quality stitching supports daily rotation.",
+      "CARE: Follow garment label—gentle machine wash cold for cotton blends; dry flat or line dry in shade to protect colour.",
+      "VERSATILE WEAR: Dress up with loafers or keep it relaxed with sneakers—Slate Grey Waterproof Outdoor Raincoat adapts to your schedule."
     ],
     "additionalInfo": {
-      "Net Quantity": "1 Count",
+      "Manufacturer": "trendkaari, India",
       "Country of Origin": "India",
-      "Item Weight": "Approx. 250 g",
-      "Product Care": "Machine wash cold, do not bleach, dry in shade"
+      "Item Weight": "Approx. 650 g",
+      "Item Dimensions": "Packaged dimensions vary by size",
+      "Net Quantity": "1 Count",
+      "Generic Name": "Jacket",
+      "Product Care": "Machine wash cold, do not bleach, dry in shade",
+      "Colour": "As shown"
     },
     "sizeChart": [
       {

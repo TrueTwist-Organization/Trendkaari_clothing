@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import HeroSlider from './components/HeroSlider';
 import TrendsSection from './components/TrendsSection';
-import PromoBannerSlider from './components/PromoBannerSlider';
+import OfferSection from './components/OfferSection';
 import AdSlotEmbed from './components/AdSlotEmbed';
 import HomeAdSlot from './components/HomeAdSlot';
 import GiftCollectionSection from './components/GiftCollectionSection';
@@ -394,8 +394,61 @@ export default function App() {
     }
   };
 
-  const handleOpenQuickView = (product) => {
-    navigateToRoute(`/product/${product.id}`);
+  const mergeProductForDetail = (payload) => {
+    const id = payload?.id ?? payload?.productId;
+    if (!id) return null;
+    const base = productsList.find((p) => p.id === id);
+    if (!base) return null;
+
+    const hero = payload.heroImage || payload.image;
+    const fromPayload = payload.images?.length ? [...payload.images] : null;
+    const catalog = base.images?.length ? [...base.images] : [base.image];
+    const mergedList = fromPayload?.length
+      ? fromPayload
+      : hero
+        ? [hero, ...catalog.filter((url) => url && url !== hero)]
+        : catalog;
+    const uniqueImages = [...new Set(mergedList.filter(Boolean))];
+
+    return {
+      ...base,
+      title: payload.name || payload.title || base.title,
+      description: payload.description || base.description,
+      descriptionLong: payload.descriptionLong || payload.description || base.descriptionLong,
+      price: payload.price ?? base.price,
+      originalPrice: payload.originalPrice ?? base.originalPrice,
+      discount: payload.discount ?? base.discount,
+      image: uniqueImages[0] || base.image,
+      images: uniqueImages.length ? uniqueImages : [base.image],
+      aboutItems: payload.aboutItems?.length ? payload.aboutItems : base.aboutItems,
+      highlights:
+        payload.highlights && Object.keys(payload.highlights).length
+          ? payload.highlights
+          : base.highlights,
+      isGiftCombo: payload.isGiftCombo ?? false,
+      comboBadge: payload.comboBadge,
+      comboIncludes: payload.comboIncludes,
+      partnerProduct: payload.partnerProduct ?? null,
+    };
+  };
+
+  const handleOpenQuickView = (payload) => {
+    const id = payload?.id ?? payload?.productId;
+    if (!id) return;
+
+    const merged = mergeProductForDetail(payload);
+    if (merged) {
+      setSelectedProduct(merged);
+      setViewMode('product-detail');
+      setIsCategoryPage(false);
+      setInfoSlug(null);
+      setActiveCategory('all');
+      window.history.pushState({}, '', `/product/${id}`);
+      window.scrollTo(0, 0);
+      return;
+    }
+
+    navigateToRoute(`/product/${id}`);
   };
 
   const handleCloseQuickView = () => {
@@ -543,8 +596,8 @@ export default function App() {
                 <TrendsSection onSelectCategory={handleSelectCategory} />
                 <HomeAdSlot code={adCodes.home_after_trends} label="home_after_trends" />
 
+                <OfferSection onSelectCategory={handleSelectCategory} />
                 <HomeAdSlot code={adCodes.home_main} label="home_main" />
-                <PromoBannerSlider onSelectCategory={handleSelectCategory} />
                 <HomeAdSlot code={adCodes.home_after_promo} label="home_after_promo" />
 
                 <HomeAdSlot code={adCodes.home_before_categories} label="home_before_categories" />
@@ -561,6 +614,7 @@ export default function App() {
                 <GiftCollectionSection
                   onSelectCategory={handleSelectCategory}
                   onSelectProduct={handleOpenQuickView}
+                  products={productsList}
                 />
                 <HomeAdSlot code={adCodes.home_after_gift} label="home_after_gift" />
 

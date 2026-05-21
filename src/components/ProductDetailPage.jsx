@@ -34,7 +34,8 @@ export default function ProductDetailPage({
   // Scroll to top when a product loads in full page mode
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [product]);
+    setActiveImageIndex(0);
+  }, [product?.id]);
 
   useEffect(() => {
     document.body.classList.add('pdp-page');
@@ -131,6 +132,14 @@ export default function ProductDetailPage({
         <div className="pdp-details-col right-info-section">
           <div className="pdp-details-buy">
           <h1 className="pdp-title">{product.title}</h1>
+          {product.isGiftCombo ? (
+            <div className="pdp-combo-meta">
+              <span className="pdp-combo-badge">{product.comboBadge || 'Gift combo'}</span>
+              {product.comboIncludes ? (
+                <p className="pdp-combo-includes">Includes: {product.comboIncludes}</p>
+              ) : null}
+            </div>
+          ) : null}
           <p className="pdp-sku-label">SKU: LIB-{(product.id * 8934).toString(16).toUpperCase()}</p>
 
           <PageAdSlot code={ad('product_after_title')} label="product_after_title" variant="pdp" />

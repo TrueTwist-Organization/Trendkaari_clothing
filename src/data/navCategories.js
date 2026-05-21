@@ -32,7 +32,7 @@ export const MENU_MEN_GROUPS = [
     categories: [
       { tag: 'gents kurtas', label: 'Kurtas' },
       { tag: 'gents co-ords', label: 'Co-ord Sets (Ethnic)' },
-      { tag: 'nehru jackets', label: 'Nehru Jackets / Ethnic Jackets' },
+      { tag: 'jackets', label: 'Jackets' },
       { tag: 'blazers', label: 'Blazers (Ethnic / Wedding style)' },
     ],
   },

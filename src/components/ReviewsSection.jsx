@@ -400,7 +400,7 @@ export default function ReviewsSection() {
                 ))
               : visibleTriplet.map(({ review, position }) => (
                   <ReviewArchCard key={`${review.id}-${position}`} review={review} position={position} />
-                ))}
+            ))}
           </div>
 
           <button

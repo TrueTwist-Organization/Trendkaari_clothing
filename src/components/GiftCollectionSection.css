@@ -123,6 +123,7 @@
   box-shadow: 0 18px 44px rgba(0, 0, 0, 0.22);
   perspective: 1200px;
   outline: none;
+  cursor: pointer;
 }
 
 .gift-box__card:focus-visible {
@@ -635,8 +636,17 @@
 }
 
 @media (max-width: 768px) {
+  .gift-unbox {
+    padding: 24px 0 32px;
+  }
+
+  .gift-unbox__head {
+    margin-bottom: 20px;
+  }
+
   .gift-unbox__tabs {
     width: 100%;
+    margin-bottom: 24px;
   }
 
   .gift-unbox__tab {
