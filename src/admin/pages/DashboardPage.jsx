@@ -96,7 +96,7 @@ export default function DashboardPage() {
       </header>
 
       {/* Hero Welcome Banner */}
-      <div className="admin-cyber-welcome-banner" style={{
+      <div className="admin-cyber-welcome-banner admin-cyber-welcome-banner--hero" style={{
         background: 'linear-gradient(135deg, var(--admin-plum) 0%, var(--admin-plum-dark) 100%)',
         color: '#fff',
         padding: '28px 32px',
@@ -154,7 +154,10 @@ export default function DashboardPage() {
       </div>
 
       {/* 4 Stats Cards Grid */}
-      <div className="admin-cyber-stats" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '20px', marginBottom: 28 }}>
+      <div
+        className="admin-cyber-stats admin-dashboard-stats-grid"
+        style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '20px', marginBottom: 28 }}
+      >
         
         {/* Card 1: PRODUCTS */}
         <div className="glass-panel" style={{ 
@@ -358,15 +361,18 @@ export default function DashboardPage() {
             <span style={{ fontSize: '12px', color: 'var(--admin-text-soft)' }}>Revenue generated over the last 7 days</span>
           </div>
 
-          <div style={{ 
-            height: '180px', 
-            display: 'flex', 
-            alignItems: 'flex-end', 
-            justifyContent: 'space-between', 
-            padding: '20px 10px 10px', 
+          <div
+            className="admin-weekly-chart"
+            style={{
+            height: '180px',
+            display: 'flex',
+            alignItems: 'flex-end',
+            justifyContent: 'space-between',
+            padding: '20px 10px 10px',
             borderBottom: '1px solid var(--admin-border)',
-            gap: '8px'
-          }}>
+            gap: '8px',
+          }}
+          >
             {(() => {
               const trendData = data.salesTrend || [];
               const maxRevenue = Math.max(...trendData.map((t) => t.revenue), 1);
@@ -374,7 +380,7 @@ export default function DashboardPage() {
                 const pct = Math.max((d.revenue / maxRevenue) * 100, 3); // Minimum 3% height for flat days to show a tiny baseline bar
                 return (
                   <div key={d.day} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flex: 1, height: '100%', justifyContent: 'flex-end' }}>
-                    <div style={{ fontSize: '9px', fontWeight: '600', color: 'var(--admin-text-soft)', marginBottom: 4 }}>
+                    <div className="admin-weekly-chart__label" style={{ fontSize: '9px', fontWeight: '600', color: 'var(--admin-text-soft)', marginBottom: 4 }}>
                       ₹{d.revenue.toLocaleString('en-IN')}
                     </div>
                     <div 
@@ -402,7 +408,7 @@ export default function DashboardPage() {
             })()}
           </div>
 
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 12, padding: '0 10px' }}>
+          <div className="admin-weekly-chart-footer" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 12, padding: '0 10px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
               <TrendingUp size={16} style={{ color: 'var(--admin-plum)' }} />
               <span style={{ fontSize: '13px', fontWeight: '600', color: 'var(--admin-plum)' }}>
@@ -545,7 +551,7 @@ export default function DashboardPage() {
           Breakdown of subcategories and active design stock items in your store database
         </p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px 30px' }}>
+        <div className="admin-catalog-mix-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: '20px 30px' }}>
           {Object.entries(data.categoryMix)
             .sort((a, b) => b[1] - a[1])
             .slice(0, 8)

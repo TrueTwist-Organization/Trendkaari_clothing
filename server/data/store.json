@@ -6867,7 +6867,7 @@
       ],
       "rating": "4.6",
       "reviewsCount": 201,
-      "stock": 24,
+      "stock": 23,
       "gender": "ladies",
       "fabricTags": [
         "Cotton"
@@ -6878,7 +6878,7 @@
           "color": "Default",
           "colorHex": "#f5f5f5",
           "stockBySize": {
-            "XS": 4,
+            "XS": 3,
             "S": 4,
             "M": 4,
             "L": 4,
@@ -22396,6 +22396,143 @@
   ],
   "orders": [
     {
+      "id": "ORD-513937",
+      "userId": "USR-1779344334203",
+      "customerName": "Jinal",
+      "email": "jinalman30@gmail.com",
+      "phone": "23456789078907",
+      "address": "wq, w, w, w, 365620, w",
+      "items": [
+        {
+          "id": 1049,
+          "title": "Rust Orange Satin Wrap Tunic Top",
+          "price": 199,
+          "originalPrice": 398,
+          "discount": "50% OFF",
+          "category": "women",
+          "subCategory": "tops",
+          "wearType": "western",
+          "image": "/tops/9/1.webp",
+          "images": [
+            "/tops/9/1.webp",
+            "/tops/9/2.webp",
+            "/tops/9/3.webp",
+            "/tops/9/4.webp",
+            "/tops/9/5.webp"
+          ],
+          "description": "Discover Rust Orange Satin Wrap Tunic Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "rating": "4.6",
+          "reviewsCount": 201,
+          "stock": 24,
+          "gender": "ladies",
+          "fabricTags": [
+            "Cotton"
+          ],
+          "variants": [
+            {
+              "id": "default",
+              "color": "Default",
+              "colorHex": "#f5f5f5",
+              "stockBySize": {
+                "XS": 4,
+                "S": 4,
+                "M": 4,
+                "L": 4,
+                "XL": 4,
+                "XXL": 4
+              }
+            }
+          ],
+          "descriptionLong": "Discover Rust Orange Satin Wrap Tunic Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+          "highlights": {
+            "Material composition": "Premium Viscose / Muslin Cotton",
+            "Fit type": "Regular / Straight Fit",
+            "Neck style": "Designer Neckline",
+            "Sleeve type": "Three-Quarter (3/4) Sleeves",
+            "Pattern": "Ethnic weave / print",
+            "Country of Origin": "India"
+          },
+          "aboutItems": [
+            "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
+            "DESIGN & CRAFT: Rust Orange Satin Wrap Tunic Top features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+            "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
+            "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
+            "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
+          ],
+          "additionalInfo": {
+            "Net Quantity": "1 Set",
+            "Country of Origin": "India",
+            "Ideal For": "Festive, wedding guest, party wear",
+            "Product Care": "Dry clean / gentle hand wash"
+          },
+          "sizeChart": [
+            {
+              "size": "XS",
+              "chest": "32 – 34",
+              "shoulder": "14",
+              "length": "38",
+              "sleeve": "16"
+            },
+            {
+              "size": "S",
+              "chest": "34 – 36",
+              "shoulder": "14.5",
+              "length": "40",
+              "sleeve": "17"
+            },
+            {
+              "size": "M",
+              "chest": "36 – 38",
+              "shoulder": "15",
+              "length": "42",
+              "sleeve": "17.5"
+            },
+            {
+              "size": "L",
+              "chest": "38 – 40",
+              "shoulder": "15.5",
+              "length": "44",
+              "sleeve": "18"
+            },
+            {
+              "size": "XL",
+              "chest": "40 – 42",
+              "shoulder": "16",
+              "length": "46",
+              "sleeve": "18.5"
+            },
+            {
+              "size": "XXL",
+              "chest": "42 – 44",
+              "shoulder": "16.5",
+              "length": "48",
+              "sleeve": "19"
+            }
+          ],
+          "sizeChartType": "ethnic",
+          "isGiftCombo": false,
+          "partnerProduct": null,
+          "selectedSize": "XS",
+          "quantity": 1
+        }
+      ],
+      "subtotal": 199,
+      "discount": 0,
+      "grandTotal": 199,
+      "status": "Pending",
+      "paymentStatus": "Paid",
+      "date": "21/5/2026, 11:49:01 am",
+      "createdAt": "2026-05-21T06:19:01.989Z"
+    },
+    {
       "id": "ORD-653308",
       "userId": "USR-1779252572257",
       "customerName": "Jinal",
@@ -23861,6 +23998,14 @@
       "phone": "",
       "passwordHash": "$2b$10$LP/ZqaiFu4Z5qnS22mxmVuN29Ew45mbQhBGOeGODYofyXvssjHS7G",
       "createdAt": "2026-05-20T04:49:32.333Z"
+    },
+    {
+      "id": "USR-1779344334203",
+      "name": "Jinal",
+      "email": "jinalman30@gmail.com",
+      "phone": "",
+      "passwordHash": "$2b$10$lRU2Yu.jLXmjW1GFgiFBEOL5UlHMWaS7inL6/cOgQoec/v13MWwUK",
+      "createdAt": "2026-05-21T06:18:54.257Z"
     }
   ],
   "admin": {

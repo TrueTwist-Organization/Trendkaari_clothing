@@ -1,5 +1,17 @@
 import { useEffect, useState } from 'react';
-import { LayoutDashboard, Package, ShoppingBag, Tag, Settings, Image, Gift, LogOut, Store } from 'lucide-react';
+import {
+  LayoutDashboard,
+  Package,
+  ShoppingBag,
+  Tag,
+  Settings,
+  Image,
+  Gift,
+  LogOut,
+  Store,
+  Menu,
+  X,
+} from 'lucide-react';
 import { checkApiHealth } from '../api/client';
 
 const NAV = [
@@ -14,6 +26,7 @@ const NAV = [
 
 export default function AdminLayout({ admin, activePage, onNavigate, onLogout, children }) {
   const [apiOnline, setApiOnline] = useState(null);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
     checkApiHealth().then(setApiOnline);
@@ -21,13 +34,48 @@ export default function AdminLayout({ admin, activePage, onNavigate, onLogout, c
     return () => clearInterval(id);
   }, []);
 
+  useEffect(() => {
+    if (!sidebarOpen) return undefined;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const onKey = (e) => {
+      if (e.key === 'Escape') setSidebarOpen(false);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => {
+      document.body.style.overflow = prev;
+      window.removeEventListener('keydown', onKey);
+    };
+  }, [sidebarOpen]);
+
+  const handleNavigate = (id) => {
+    onNavigate(id);
+    setSidebarOpen(false);
+  };
+
   return (
-    <div className="admin-cyber-shell">
-      <aside className="admin-cyber-sidebar glass-panel">
+    <div className={`admin-cyber-shell${sidebarOpen ? ' admin-cyber-shell--nav-open' : ''}`}>
+      <button
+        type="button"
+        className="admin-sidebar-backdrop"
+        aria-label="Close menu"
+        onClick={() => setSidebarOpen(false)}
+        tabIndex={sidebarOpen ? 0 : -1}
+      />
+
+      <aside className={`admin-cyber-sidebar glass-panel${sidebarOpen ? ' is-open' : ''}`}>
         <div className="admin-cyber-sidebar__head">
           <span className="admin-cyber-sidebar__badge">Admin Portal</span>
           <h2>trendkaari</h2>
-          <p>{admin?.email}</p>
+          <p className="admin-cyber-sidebar__role">Signed in</p>
+          <button
+            type="button"
+            className="admin-sidebar-close"
+            onClick={() => setSidebarOpen(false)}
+            aria-label="Close menu"
+          >
+            <X size={20} />
+          </button>
         </div>
 
         <nav className="admin-cyber-nav">
@@ -36,7 +84,7 @@ export default function AdminLayout({ admin, activePage, onNavigate, onLogout, c
               key={id}
               type="button"
               className={`admin-cyber-nav__btn${activePage === id ? ' is-active' : ''}`}
-              onClick={() => onNavigate(id)}
+              onClick={() => handleNavigate(id)}
             >
               <Icon size={16} />
               <span>{label}</span>
@@ -60,7 +108,25 @@ export default function AdminLayout({ admin, activePage, onNavigate, onLogout, c
         </div>
       </aside>
 
-      <main className="admin-cyber-main">{children}</main>
+      <div className="admin-cyber-shell__body">
+        <header className="admin-mobile-topbar">
+          <button
+            type="button"
+            className="admin-mobile-menu-btn"
+            onClick={() => setSidebarOpen(true)}
+            aria-label="Open menu"
+            aria-expanded={sidebarOpen}
+          >
+            <Menu size={22} />
+          </button>
+          <div className="admin-mobile-topbar__brand">
+            <span className="admin-mobile-topbar__badge">Admin</span>
+            <strong>trendkaari</strong>
+          </div>
+        </header>
+
+        <main className="admin-cyber-main">{children}</main>
+      </div>
     </div>
   );
 }

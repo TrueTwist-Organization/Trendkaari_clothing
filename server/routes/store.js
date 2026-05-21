@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import { readStore, updateStore } from '../lib/store.js';
+import { sendOrderConfirmationEmail } from '../lib/orderEmail.js';
 import { requireUser } from '../middleware/userAuth.js';
 import { getStoreSettings, getActiveAdSlots } from '../lib/siteConfig.js';
 import { getPublicGiftCombos } from '../lib/giftCombos.js';
@@ -83,9 +84,17 @@ router.post('/orders', requireUser, async (req, res) => {
     return store;
   });
 
+  const emailResult = await sendOrderConfirmationEmail(
+    newOrder,
+    orderDetails.email || user?.email
+  );
+
   res.status(201).json({
-    message: 'Order placed successfully',
+    message: emailResult.sent
+      ? 'Order placed successfully'
+      : 'Order saved but confirmation email could not be sent',
     order: newOrder,
+    emailSent: emailResult.sent,
   });
 });
 

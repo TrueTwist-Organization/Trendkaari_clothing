@@ -476,6 +476,7 @@ export default function CheckoutFlow({
     await new Promise((r) => setTimeout(r, 1800));
     const orderPayload = {
       name: stored.shipping.fullName,
+      email: stored.shipping.email?.trim() || stored.login?.email?.trim() || '',
       phone: stored.shipping.phone,
       address: [
         stored.shipping.address,
@@ -496,13 +497,21 @@ export default function CheckoutFlow({
     };
     try {
       const result = await onPlaceOrder?.(orderPayload);
-      const order = result?.order || {
-        id: 'ORD-' + Math.floor(100000 + Math.random() * 900000),
-        ...orderPayload,
-        status: 'Pending',
-        date: new Date().toLocaleString('en-IN', { hour12: true }),
-        trackingId: 'TRK' + Math.floor(100000000 + Math.random() * 900000000),
-        eta: pincodeServiceable(stored.shipping.pincode).eta,
+      if (!result?.order) {
+        throw new Error('We could not complete your order due to a technical issue.');
+      }
+      if (result.emailSent !== true) {
+        throw new Error(
+          result.emailError ||
+            'Confirmation email could not be sent. Please start checkout again from your bag.'
+        );
+      }
+      const order = {
+        ...result.order,
+        trackingId:
+          result.order.trackingId ||
+          'TRK' + Math.floor(100000000 + Math.random() * 900000000),
+        eta: result.order.eta || pincodeServiceable(stored.shipping.pincode).eta,
       };
       setCompletedOrder(order);
       persist({ lastOrderId: order.id });

@@ -321,6 +321,14 @@ export default function App() {
       if (!newOrder) {
         throw new Error('We could not complete your order due to a technical issue.');
       }
+
+      if (result.emailSent !== true) {
+        setOrders((prev) => [newOrder, ...prev]);
+        throw new Error(
+          'Confirmation email could not be sent. Please try checkout again in a few minutes.'
+        );
+      }
+
       setOrders((prev) => [newOrder, ...prev]);
       const refreshed = await fetchStoreProducts();
       if (refreshed?.length) setProductsList(refreshed);
@@ -331,6 +339,7 @@ export default function App() {
           trackingId: newOrder.trackingId || 'TRK' + Math.floor(100000000 + Math.random() * 900000000),
           eta: newOrder.eta || '3–5 days',
         },
+        emailSent: true,
       };
     } catch (err) {
       if (err?.status === 401) {

@@ -4,7 +4,7 @@ import { adminLogin } from '../api/adminApi';
 import { checkApiHealth, setAdminToken } from '../api/client';
 
 export default function AdminLogin({ onSuccess }) {
-  const [email, setEmail] = useState('admin@gmail.com');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -78,7 +78,7 @@ export default function AdminLogin({ onSuccess }) {
               onChange={(e) => setPassword(e.target.value)}
               required
               autoComplete="current-password"
-              placeholder="Admin@123"
+              placeholder="Enter your password"
             />
           </label>
 
@@ -88,12 +88,6 @@ export default function AdminLogin({ onSuccess }) {
             {loading ? <span className="admin-chrome-loader" /> : 'Sign in'}
           </button>
         </form>
-
-        <div className="admin-cyber-login__hint glass-panel">
-          <strong>Default credentials</strong>
-          <span>Email: admin@gmail.com</span>
-          <span>Password: Admin@123</span>
-        </div>
 
         <a href="/" className="admin-cyber-link">
           ← Back to storefront

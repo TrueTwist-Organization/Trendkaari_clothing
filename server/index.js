@@ -63,6 +63,6 @@ function startAutoConfirmScheduler() {
 
 app.listen(PORT, () => {
   console.log(`trendkaari API running on http://localhost:${PORT}`);
-  console.log(`Admin login: ${process.env.ADMIN_EMAIL || 'admin@gmail.com'}`);
+  console.log('Admin panel: /admin');
   startAutoConfirmScheduler();
 });
