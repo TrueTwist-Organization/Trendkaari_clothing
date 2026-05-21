@@ -1,16 +1,11 @@
 import sharp from 'sharp';
 import fs from 'fs';
-import { uploadBufferToBlob, useBlobPersistence } from './blobStorage.js';
+import { uploadBufferToRemote, useRemoteMediaUpload } from './blobStorage.js';
 
 /** Matches storefront product cards & PDP (3:4 portrait, ~700px catalog width). */
 export const PRODUCT_IMAGE_WIDTH = 700;
 export const PRODUCT_IMAGE_HEIGHT = Math.round((PRODUCT_IMAGE_WIDTH * 4) / 3);
 
-/**
- * Resize & crop upload to standard product dimensions, save as WebP.
- * @param {string} inputPath - multer temp file
- * @param {string} outputPath - final file path (.webp)
- */
 export async function processProductUpload(inputPath, outputPath) {
   await sharp(inputPath)
     .rotate()
@@ -42,11 +37,11 @@ export async function saveUploadedProductImages(files, uploadDir) {
   for (const f of files) {
     const finalName = `${f.filename}.webp`;
 
-    if (useBlobPersistence()) {
+    if (useRemoteMediaUpload()) {
       const buffer = await productImageBuffer(f.path);
       if (f.path && fs.existsSync(f.path)) fs.unlinkSync(f.path);
-      const url = await uploadBufferToBlob(
-        `trendkaari/product-media/${finalName}`,
+      const url = await uploadBufferToRemote(
+        `public/product-media/${finalName}`,
         buffer,
         'image/webp'
       );

@@ -1,10 +1,9 @@
 import sharp from 'sharp';
 import fs from 'fs';
-import { uploadBufferToBlob, useBlobPersistence } from './blobStorage.js';
+import { uploadBufferToRemote, useRemoteMediaUpload } from './blobStorage.js';
 
 const MAX_WIDTH = 1400;
 
-/** Save combo image as WebP (local public/combos or Vercel Blob on production). */
 export async function saveComboImages(files, uploadDir) {
   const urls = [];
   for (const file of files) {
@@ -21,9 +20,9 @@ export async function saveComboImages(files, uploadDir) {
       fs.unlinkSync(file.path);
     }
 
-    if (useBlobPersistence()) {
-      const url = await uploadBufferToBlob(
-        `trendkaari/combos/${finalName}`,
+    if (useRemoteMediaUpload()) {
+      const url = await uploadBufferToRemote(
+        `public/combos/${finalName}`,
         buffer,
         'image/webp'
       );

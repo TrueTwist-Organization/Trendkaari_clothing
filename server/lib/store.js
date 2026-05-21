@@ -2,6 +2,12 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { DEFAULT_SITE_SETTINGS } from './siteConfig.js';
+import {
+  loadStoreFromGitHub,
+  saveStoreToGitHub,
+  useGitHubPersistence,
+} from './githubStore.js';
+import { loadStoreFromRedis, saveStoreToRedis, useRedisPersistence } from './redisStore.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.join(__dirname, '../data');
@@ -25,6 +31,7 @@ const DEFAULT_STORE = {
 
 let storeCache = null;
 let initPromise = null;
+let lastPersistError = null;
 
 function useBlobPersistence() {
   return Boolean(process.env.BLOB_READ_WRITE_TOKEN);
@@ -32,6 +39,19 @@ function useBlobPersistence() {
 
 function canWriteLocalFile() {
   return !process.env.VERCEL;
+}
+
+export function getPersistenceMode() {
+  if (useRedisPersistence()) return 'upstash-redis';
+  if (useGitHubPersistence()) return 'github';
+  if (useBlobPersistence()) return 'vercel-blob';
+  if (canWriteLocalFile()) return 'local-file';
+  if (process.env.VERCEL) return 'memory-only';
+  return 'local-file';
+}
+
+export function getLastPersistError() {
+  return lastPersistError;
 }
 
 function ensureDataDir() {
@@ -83,27 +103,100 @@ async function saveToBlob(store) {
   });
 }
 
+async function loadFromRemote() {
+  if (useRedisPersistence()) {
+    const fromRedis = await loadStoreFromRedis();
+    if (fromRedis) {
+      console.log('[store] loaded from Upstash Redis');
+      return fromRedis;
+    }
+  }
+
+  if (useBlobPersistence()) {
+    const fromBlob = await loadFromBlob();
+    if (fromBlob) {
+      console.log('[store] loaded from Vercel Blob');
+      return fromBlob;
+    }
+  }
+
+  if (useGitHubPersistence() || process.env.VERCEL) {
+    try {
+      const fromGitHub = await loadStoreFromGitHub();
+      if (fromGitHub) {
+        console.log('[store] loaded from GitHub');
+        return fromGitHub;
+      }
+    } catch (err) {
+      console.warn('[store] github load failed:', err.message);
+    }
+  }
+
+  return null;
+}
+
+async function saveToRemote(store) {
+  lastPersistError = null;
+
+  if (useRedisPersistence()) {
+    await saveStoreToRedis(store);
+    return;
+  }
+
+  if (useGitHubPersistence()) {
+    await saveStoreToGitHub(store);
+    return;
+  }
+
+  if (useBlobPersistence()) {
+    await saveToBlob(store);
+    return;
+  }
+
+  if (process.env.VERCEL) {
+    const msg =
+      'Live save needs UPSTASH_REDIS_* or GITHUB_TOKEN on Vercel (see .env.example).';
+    lastPersistError = msg;
+    throw new Error(msg);
+  }
+}
+
 export async function initStore() {
   if (storeCache) return storeCache;
   if (initPromise) return initPromise;
 
   initPromise = (async () => {
-    const fromBlob = await loadFromBlob();
-    if (fromBlob) {
-      storeCache = fromBlob;
-      console.log('[store] loaded from Vercel Blob');
+    const remote = await loadFromRemote();
+    if (remote) {
+      storeCache = remote;
       return storeCache;
     }
 
     storeCache = loadFromLocal();
-    if (useBlobPersistence()) {
+
+    if (useRedisPersistence()) {
+      try {
+        await saveStoreToRedis(storeCache);
+        console.log('[store] seeded Upstash Redis from store.json');
+      } catch (err) {
+        console.warn('[store] redis seed failed:', err.message);
+      }
+    } else if (useBlobPersistence()) {
       try {
         await saveToBlob(storeCache);
         console.log('[store] seeded Vercel Blob from store.json');
       } catch (err) {
         console.warn('[store] blob seed failed:', err.message);
       }
+    } else if (useGitHubPersistence()) {
+      try {
+        await saveStoreToGitHub(storeCache);
+        console.log('[store] seeded GitHub from store.json');
+      } catch (err) {
+        console.warn('[store] github seed failed:', err.message);
+      }
     }
+
     return storeCache;
   })();
 
@@ -124,7 +217,7 @@ export function readStore() {
 export async function writeStore(store) {
   storeCache = structuredClone(store);
   saveToLocal(storeCache);
-  await saveToBlob(storeCache);
+  await saveToRemote(storeCache);
 }
 
 export async function updateStore(mutator) {

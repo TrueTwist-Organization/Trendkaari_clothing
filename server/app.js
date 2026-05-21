@@ -6,7 +6,7 @@ import authRoutes from './routes/auth.js';
 import storeRoutes from './routes/store.js';
 import { ensureSeeded } from './lib/seed.js';
 import { syncCatalogFromSource } from './lib/catalog.js';
-import { readStore, initStore } from './lib/store.js';
+import { readStore, initStore, getPersistenceMode } from './lib/store.js';
 import { runAutoConfirmJob } from './lib/orderAutoConfirm.js';
 
 const app = express();
@@ -33,7 +33,8 @@ app.get('/api/health', (_req, res) => {
   res.json({
     ok: true,
     service: 'trendkaari-api',
-    persistence: process.env.BLOB_READ_WRITE_TOKEN ? 'vercel-blob' : 'local-file',
+    persistence: getPersistenceMode(),
+    persistWrites: getPersistenceMode() !== 'memory-only',
   });
 });
 
