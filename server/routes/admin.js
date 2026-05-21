@@ -104,14 +104,14 @@ function parseOrderDate(dateStr) {
   return new Date();
 }
 
-router.get('/auth/me', requireAdmin, (req, res) => {
+router.get('/auth/me', requireAdmin, async (req, res) => {
   const store = readStore();
   res.json({ admin: { email: store.admin.email, name: store.admin.name } });
 });
 
-router.get('/analytics/overview', requireAdmin, (req, res) => {
+router.get('/analytics/overview', requireAdmin, async (req, res) => {
   let store;
-  updateStore((s) => {
+  await updateStore((s) => {
     autoConfirmExpiredPendingOrders(s.orders);
     store = s;
     return s;
@@ -291,7 +291,7 @@ router.post('/products', requireAdmin, upload.array('images', 12), async (req, r
     const uploadedUrls = await saveUploadedProductImages(req.files || [], UPLOAD_DIR);
 
     const product = buildProductFromPayload(parsed, uploadedUrls);
-    updateStore((store) => {
+    await updateStore((store) => {
       const maxId = store.products.reduce((m, p) => Math.max(m, p.id || 0), 0);
       product.id = maxId + 1;
       store.products = [product, ...store.products];
@@ -313,7 +313,7 @@ router.patch('/products/:id', requireAdmin, upload.array('images', 12), async (r
     const uploadedUrls = await saveUploadedProductImages(req.files || [], UPLOAD_DIR);
 
     let updated = null;
-    updateStore((store) => {
+    await updateStore((store) => {
       store.products = store.products.map((p) => {
         if (p.id !== id) return p;
         updated = buildProductFromPayload({ ...p, ...parsed }, uploadedUrls, p);
@@ -330,18 +330,18 @@ router.patch('/products/:id', requireAdmin, upload.array('images', 12), async (r
   }
 });
 
-router.delete('/products/:id', requireAdmin, (req, res) => {
+router.delete('/products/:id', requireAdmin, async (req, res) => {
   const id = Number(req.params.id);
-  updateStore((store) => {
+  await updateStore((store) => {
     store.products = store.products.filter((p) => p.id !== id);
     return store;
   });
   res.json({ message: 'Product removed from catalog' });
 });
 
-router.get('/orders', requireAdmin, (req, res) => {
+router.get('/orders', requireAdmin, async (req, res) => {
   let orders = [];
-  updateStore((store) => {
+  await updateStore((store) => {
     autoConfirmExpiredPendingOrders(store.orders);
     orders = store.orders;
     return store;
@@ -349,7 +349,7 @@ router.get('/orders', requireAdmin, (req, res) => {
   res.json({ orders });
 });
 
-router.patch('/orders/:orderId/status', requireAdmin, (req, res) => {
+router.patch('/orders/:orderId/status', requireAdmin, async (req, res) => {
   const { orderId } = req.params;
   const { status } = req.body || {};
   const valid = ['Pending', 'Processing', 'Shipped', 'Delivered', 'Cancelled'];
@@ -358,7 +358,7 @@ router.patch('/orders/:orderId/status', requireAdmin, (req, res) => {
   }
 
   let updated = null;
-  updateStore((store) => {
+  await updateStore((store) => {
     store.orders = store.orders.map((o) => {
       if (o.id !== orderId) return o;
       const prev = o.status;
@@ -380,21 +380,21 @@ router.patch('/orders/:orderId/status', requireAdmin, (req, res) => {
   res.json({ message: 'Order status updated', order: updated });
 });
 
-router.delete('/orders/:orderId', requireAdmin, (req, res) => {
+router.delete('/orders/:orderId', requireAdmin, async (req, res) => {
   const { orderId } = req.params;
-  updateStore((store) => {
+  await updateStore((store) => {
     store.orders = store.orders.filter((o) => o.id !== orderId);
     return store;
   });
   res.json({ message: 'Order deleted' });
 });
 
-router.get('/coupons', requireAdmin, (req, res) => {
+router.get('/coupons', requireAdmin, async (req, res) => {
   const store = readStore();
   res.json({ coupons: store.coupons });
 });
 
-router.post('/coupons', requireAdmin, (req, res) => {
+router.post('/coupons', requireAdmin, async (req, res) => {
   const { code, discount, minPurchase, discountType } = req.body || {};
   if (!code || discount == null || discount === '' || !minPurchase) {
     return res.status(400).json({ error: 'All coupon fields required' });
@@ -419,52 +419,52 @@ router.post('/coupons', requireAdmin, (req, res) => {
   if (store.coupons.some((c) => c.code === coupon.code)) {
     return res.status(400).json({ error: 'Coupon code already exists' });
   }
-  updateStore((s) => {
+  await updateStore((s) => {
     s.coupons = [coupon, ...s.coupons];
     return s;
   });
   res.status(201).json({ message: 'Coupon activated', coupon });
 });
 
-router.delete('/coupons/:code', requireAdmin, (req, res) => {
+router.delete('/coupons/:code', requireAdmin, async (req, res) => {
   const code = req.params.code.toUpperCase();
   if (code === 'SALE100') {
     return res.status(400).json({ error: 'SALE100 is a protected base coupon' });
   }
-  updateStore((store) => {
+  await updateStore((store) => {
     store.coupons = store.coupons.filter((c) => c.code !== code);
     return store;
   });
   res.json({ message: 'Coupon removed' });
 });
 
-router.get('/settings', requireAdmin, (req, res) => {
+router.get('/settings', requireAdmin, async (req, res) => {
   const store = readStore();
   res.json({ settings: getStoreSettings(store) });
 });
 
-router.patch('/settings', requireAdmin, (req, res) => {
+router.patch('/settings', requireAdmin, async (req, res) => {
   const body = req.body || {};
   const next = mergeSiteSettings(body);
-  updateStore((store) => {
+  await updateStore((store) => {
     store.settings = next;
     return store;
   });
   res.json({ message: 'Settings saved', settings: next });
 });
 
-router.get('/ad-slots', requireAdmin, (req, res) => {
+router.get('/ad-slots', requireAdmin, async (req, res) => {
   const store = readStore();
   res.json({ adSlots: getAdSlotsForAdmin(store) });
 });
 
-router.put('/ad-slots', requireAdmin, (req, res) => {
+router.put('/ad-slots', requireAdmin, async (req, res) => {
   const { slots } = req.body || {};
   if (!slots || typeof slots !== 'object') {
     return res.status(400).json({ error: 'slots object required (placement → HTML code)' });
   }
   const next = buildAdSlotsFromPayload(slots);
-  updateStore((store) => {
+  await updateStore((store) => {
     store.adSlots = next;
     return store;
   });
@@ -474,11 +474,11 @@ router.put('/ad-slots', requireAdmin, (req, res) => {
   });
 });
 
-router.get('/gift-combos', requireAdmin, (req, res) => {
+router.get('/gift-combos', requireAdmin, async (req, res) => {
   let list = getAdminGiftCombos(readStore());
   if (!list.length) {
     list = seedGiftCombosIfEmpty(readStore());
-    updateStore((s) => {
+    await updateStore((s) => {
       s.giftCombos = list;
       return s;
     });
@@ -486,9 +486,9 @@ router.get('/gift-combos', requireAdmin, (req, res) => {
   res.json({ giftCombos: list });
 });
 
-router.post('/gift-combos/seed-defaults', requireAdmin, (req, res) => {
+router.post('/gift-combos/seed-defaults', requireAdmin, async (req, res) => {
   const list = DEFAULT_GIFT_COMBOS.map((c, i) => buildGiftComboFromBody(c, null));
-  updateStore((s) => {
+  await updateStore((s) => {
     s.giftCombos = list;
     return s;
   });
@@ -505,7 +505,7 @@ router.post('/gift-combos/upload', requireAdmin, upload.array('images', 12), asy
   }
 });
 
-router.post('/gift-combos', requireAdmin, (req, res) => {
+router.post('/gift-combos', requireAdmin, async (req, res) => {
   const body = req.body || {};
   const combo = buildGiftComboFromBody({
     ...body,
@@ -522,7 +522,7 @@ router.post('/gift-combos', requireAdmin, (req, res) => {
     return res.status(409).json({ error: `Combo id "${combo.id}" already exists` });
   }
 
-  updateStore((s) => {
+  await updateStore((s) => {
     if (!Array.isArray(s.giftCombos)) s.giftCombos = [];
     s.giftCombos = [...getAdminGiftCombos(s), combo];
     return s;
@@ -531,12 +531,12 @@ router.post('/gift-combos', requireAdmin, (req, res) => {
   res.status(201).json({ message: 'Gift combo created', combo });
 });
 
-router.patch('/gift-combos/:id', requireAdmin, (req, res) => {
+router.patch('/gift-combos/:id', requireAdmin, async (req, res) => {
   const { id } = req.params;
   const body = req.body || {};
   let updated = null;
 
-  updateStore((s) => {
+  await updateStore((s) => {
     const list = getAdminGiftCombos(s);
     const idx = list.findIndex((c) => c.id === id);
     if (idx < 0) return s;
@@ -564,10 +564,10 @@ router.patch('/gift-combos/:id', requireAdmin, (req, res) => {
   res.json({ message: 'Gift combo updated', combo: updated });
 });
 
-router.delete('/gift-combos/:id', requireAdmin, (req, res) => {
+router.delete('/gift-combos/:id', requireAdmin, async (req, res) => {
   const { id } = req.params;
   let removed = false;
-  updateStore((s) => {
+  await updateStore((s) => {
     const list = getAdminGiftCombos(s);
     const next = list.filter((c) => c.id !== id);
     removed = next.length < list.length;

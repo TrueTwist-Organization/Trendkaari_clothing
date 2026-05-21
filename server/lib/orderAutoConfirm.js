@@ -56,9 +56,9 @@ export function autoConfirmExpiredPendingOrders(orders, now = Date.now()) {
   return confirmed;
 }
 
-export function runAutoConfirmJob() {
+export async function runAutoConfirmJob() {
   let confirmed = 0;
-  updateStore((store) => {
+  await updateStore((store) => {
     confirmed = autoConfirmExpiredPendingOrders(store.orders);
     return store;
   });

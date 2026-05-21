@@ -43,7 +43,7 @@ router.post('/register', async (req, res) => {
     createdAt: new Date().toISOString(),
   };
 
-  updateStore((s) => {
+  await updateStore((s) => {
     s.users = s.users || [];
     s.users.push(user);
     return s;
@@ -84,9 +84,9 @@ router.get('/me', requireUser, (req, res) => {
   res.json({ user: sanitizeUser(user) });
 });
 
-router.get('/orders', requireUser, (req, res) => {
+router.get('/orders', requireUser, async (req, res) => {
   let orders = [];
-  updateStore((store) => {
+  await updateStore((store) => {
     autoConfirmExpiredPendingOrders(store.orders);
     orders = (store.orders || []).filter((o) => o.userId === req.user.id);
     return store;
@@ -117,12 +117,12 @@ function restoreOrderStock(store, items) {
   });
 }
 
-router.patch('/orders/:orderId/cancel', requireUser, (req, res) => {
+router.patch('/orders/:orderId/cancel', requireUser, async (req, res) => {
   const { orderId } = req.params;
   let updated = null;
   let error = null;
 
-  updateStore((store) => {
+  await updateStore((store) => {
     const idx = (store.orders || []).findIndex(
       (o) => o.id === orderId && o.userId === req.user.id
     );
@@ -174,11 +174,11 @@ router.patch('/orders/:orderId/cancel', requireUser, (req, res) => {
   res.json({ message: 'Order cancelled successfully', order: updated });
 });
 
-router.patch('/profile', requireUser, (req, res) => {
+router.patch('/profile', requireUser, async (req, res) => {
   const { name, phone } = req.body || {};
   let updated = null;
 
-  updateStore((s) => {
+  await updateStore((s) => {
     s.users = (s.users || []).map((u) => {
       if (u.id !== req.user.id) return u;
       updated = {

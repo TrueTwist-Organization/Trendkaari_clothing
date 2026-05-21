@@ -1,8 +1,9 @@
 import bcrypt from 'bcryptjs';
-import { readStore, writeStore } from './store.js';
+import { initStore, readStore, writeStore } from './store.js';
 import { normalizeProduct } from './catalog.js';
 
 export async function ensureSeeded() {
+  await initStore();
   const store = readStore();
   let changed = false;
 
@@ -68,7 +69,7 @@ export async function ensureSeeded() {
   }
 
   if (changed) {
-    writeStore(store);
+    await writeStore(store);
   }
 
   return store;

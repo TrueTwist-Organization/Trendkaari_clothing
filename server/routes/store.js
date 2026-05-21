@@ -59,7 +59,7 @@ router.post('/orders', requireUser, async (req, res) => {
     createdAt: new Date().toISOString(),
   };
 
-  updateStore((store) => {
+  await updateStore((store) => {
     orderDetails.items.forEach((item) => {
       const prod = store.products.find((p) => p.id === item.id);
       if (!prod) return;

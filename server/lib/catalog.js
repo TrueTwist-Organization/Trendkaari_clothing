@@ -31,7 +31,7 @@ export async function syncCatalogFromSource() {
   const { products } = await import('../../src/data/products.js');
   const normalized = products.map(normalizeProduct);
 
-  updateStore((store) => {
+  await updateStore((store) => {
     const byId = new Map((store.products || []).map((p) => [p.id, p]));
     for (const p of normalized) {
       const existing = byId.get(p.id);
