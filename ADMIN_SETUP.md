@@ -17,7 +17,7 @@ npm run dev:all
 
 | Field | Value |
 |-------|--------|
-| **Email** | `admin@flexfitstudio.com` |
+| **Email** | `admin@gmail.com` |
 | **Password** | `Admin@123` |
 
 Change via `.env`:
@@ -55,9 +55,20 @@ Restart the server after changing `.env`.
 - `POST /api/admin/coupons` — `{ code, discount, minPurchase }`
 - `DELETE /api/admin/coupons/:code`
 
+### Gift combos (homepage Gift Collection)
+- `GET /api/admin/gift-combos`
+- `POST /api/admin/gift-combos` — JSON body (name, price, images, product IDs, etc.)
+- `PATCH /api/admin/gift-combos/:id`
+- `DELETE /api/admin/gift-combos/:id`
+- `POST /api/admin/gift-combos/upload` — multipart `images` → saves to `public/combos/`
+- `POST /api/admin/gift-combos/seed-defaults` — restore built-in combo set
+
+Admin UI: **Gift Combos** in the sidebar (`/admin`).
+
 ### Store (public)
 - `GET /api/store/products`
 - `GET /api/store/coupons`
+- `GET /api/store/gift-combos`
 - `POST /api/store/orders` — checkout
 
 ## Features

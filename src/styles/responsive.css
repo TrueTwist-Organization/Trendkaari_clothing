@@ -4,7 +4,7 @@
 
 :root {
   --mobile-nav-height: 60px;
-  --header-offset-mobile: 104px; /* announcement ~30 + header ~70 */
+  --header-offset-mobile: 92px; /* announcement ~28 + header ~64 */
   --safe-bottom: env(safe-area-inset-bottom, 0px);
   --page-bottom-mobile: calc(var(--mobile-nav-height) + var(--safe-bottom) + 12px);
 }
@@ -67,20 +67,6 @@ html {
     height: calc(var(--mobile-nav-height) + var(--safe-bottom));
   }
 
-  .floating-admin-toggle-btn {
-    bottom: calc(var(--page-bottom-mobile) + 8px);
-    right: 12px;
-    padding: 8px 12px;
-    font-size: 8px;
-    max-width: calc(100% - 80px);
-  }
-
-  .whatsapp-widget {
-    bottom: calc(var(--page-bottom-mobile) + 4px);
-    right: 12px;
-    width: 48px;
-    height: 48px;
-  }
 }
 
 @media (max-width: 480px) {

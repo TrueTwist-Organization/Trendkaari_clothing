@@ -1326,3 +1326,138 @@
   transform: scaleY(1.03) translateY(-1px);
 }
 
+/* ─── Gift combos admin ─── */
+.admin-gift-combos-grid {
+  align-items: start;
+}
+
+.admin-cyber-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 600px) {
+  .admin-cyber-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.admin-cyber-label--checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 28px;
+  font-size: 12px;
+}
+
+.admin-cyber-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.admin-gift-combo-images-ta {
+  font-family: ui-monospace, monospace;
+  font-size: 12px;
+}
+
+.admin-gift-combo-upload-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.admin-gift-combo-upload-hint {
+  font-size: 11px;
+  color: var(--admin-muted);
+}
+
+.admin-gift-combo-list-title {
+  margin: 0 0 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--admin-plum);
+}
+
+.admin-gift-combo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.admin-gift-combo-list-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+}
+
+.admin-gift-combo-list-item__thumb {
+  width: 56px;
+  height: 72px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  background: rgba(96, 11, 69, 0.06);
+}
+
+.admin-gift-combo-list-item__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admin-gift-combo-list-item__thumb span {
+  font-size: 9px;
+  color: var(--admin-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.admin-gift-combo-list-item__body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.admin-gift-combo-list-item__body strong {
+  font-size: 13px;
+  color: var(--admin-text);
+}
+
+.admin-gift-combo-list-item__meta,
+.admin-gift-combo-list-item__ids {
+  font-size: 11px;
+  color: var(--admin-muted);
+}
+
+.admin-gift-combo-list-item__actions {
+  display: flex;
+  gap: 6px;
+}
+
+.admin-gift-combo-add-btn {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.admin-cyber-muted {
+  font-size: 13px;
+  color: var(--admin-muted);
+}
+

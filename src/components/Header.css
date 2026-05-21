@@ -292,10 +292,6 @@ body.info-page .header-search-trigger:hover {
   color: var(--brand-plum);
 }
 
-.contact-btn {
-  margin-right: 12px;
-}
-
 /* Badge Indicator */
 .badge-indicator {
   position: absolute;
@@ -321,13 +317,17 @@ body.info-page .header-search-trigger:hover {
   border-color: var(--bg-white);
 }
 
-/* Mobile responsive styles */
+/* Mobile / tablet — bottom nav for bag, wishlist, account */
 @media (max-width: 1024px) {
+  .header-laptop-only {
+    display: none !important;
+  }
+
   .header-container {
     padding: 0 20px;
   }
   
-  .btn-label, .contact-btn {
+  .btn-label {
     display: none !important;
   }
   
@@ -347,7 +347,7 @@ body.info-page .header-search-trigger:hover {
   }
   
   .header-right {
-    gap: 12px;
+    display: none;
   }
   
   .main-header {
@@ -370,54 +370,92 @@ body.info-page .header-search-trigger:hover {
 
 @media (max-width: 768px) {
   .header-container {
-    padding: 0 12px;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: 6px;
+    padding: 0 10px;
   }
 
   .main-header {
-    height: 78px;
+    height: 64px;
   }
 
   .libas-header-wrapper.scrolled .main-header {
-    height: 70px;
-  }
-
-  .brand-logo {
-    font-size: 20px;
-    letter-spacing: 2px;
-  }
-
-  .flexfit-logo-img {
-    height: 60px;
-    max-width: min(280px, 68vw);
-  }
-
-  .libas-header-wrapper.scrolled .flexfit-logo-img {
-    height: 54px;
-    max-width: min(260px, 64vw);
+    height: 58px;
   }
 
   .header-left {
-    gap: 8px;
+    flex: unset;
+    gap: 2px;
+    min-width: 0;
+    justify-self: start;
   }
 
-  .header-search-trigger {
-    gap: 6px;
-    font-size: 10px;
-    letter-spacing: 1px;
-  }
-
-  .header-search-trigger__icon-wrap svg {
-    width: 18px;
-    height: 18px;
+  .header-center {
+    justify-self: center;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    pointer-events: auto;
   }
 
   .header-right {
-    gap: 8px;
+    flex: unset;
+    gap: 0;
+    min-width: 0;
+    justify-self: end;
+  }
+
+  .header-btn {
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    padding: 0;
+    gap: 0;
+    flex-shrink: 0;
+  }
+
+  .header-search-trigger {
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    padding: 0;
+    gap: 0;
+    flex-shrink: 0;
+  }
+
+  .header-search-trigger__text {
+    display: none;
+  }
+
+  .header-search-trigger__icon-wrap svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .flexfit-logo-img {
+    height: 44px;
+    max-width: min(140px, 38vw);
+  }
+
+  .libas-header-wrapper.scrolled .flexfit-logo-img {
+    height: 40px;
+    max-width: min(128px, 36vw);
   }
 
   .header-icon-btn {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+  }
+
+  .badge-indicator {
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    font-size: 9px;
   }
 }
 
@@ -428,7 +466,37 @@ body.info-page .header-search-trigger:hover {
     padding: 4px 8px;
   }
 
-  .brand-logo {
-    font-size: 17px;
+  .header-container {
+    padding: 0 8px;
+    column-gap: 4px;
+  }
+
+  .main-header {
+    height: 60px;
+  }
+
+  .libas-header-wrapper.scrolled .main-header {
+    height: 56px;
+  }
+
+  .header-btn,
+  .header-search-trigger {
+    width: 36px;
+    height: 36px;
+  }
+
+  .header-icon-btn {
+    width: 34px;
+    height: 34px;
+  }
+
+  .flexfit-logo-img {
+    height: 38px;
+    max-width: min(118px, 34vw);
+  }
+
+  .libas-header-wrapper.scrolled .flexfit-logo-img {
+    height: 34px;
+    max-width: min(108px, 32vw);
   }
 }

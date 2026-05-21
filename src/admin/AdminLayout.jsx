@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { LayoutDashboard, Package, ShoppingBag, Tag, Settings, Image, LogOut, Store } from 'lucide-react';
+import { LayoutDashboard, Package, ShoppingBag, Tag, Settings, Image, Gift, LogOut, Store } from 'lucide-react';
 import { checkApiHealth } from '../api/client';
 
 const NAV = [
@@ -9,6 +9,7 @@ const NAV = [
   { id: 'coupons', label: 'Coupons', icon: Tag },
   { id: 'settings', label: 'Settings', icon: Settings },
   { id: 'ad-slots', label: 'Ad Slots', icon: Image },
+  { id: 'gift-combos', label: 'Gift Combos', icon: Gift },
 ];
 
 export default function AdminLayout({ admin, activePage, onNavigate, onLogout, children }) {

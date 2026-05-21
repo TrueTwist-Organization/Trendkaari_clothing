@@ -4,7 +4,7 @@ import { adminLogin } from '../api/adminApi';
 import { checkApiHealth, setAdminToken } from '../api/client';
 
 export default function AdminLogin({ onSuccess }) {
-  const [email, setEmail] = useState('admin@flexfitstudio.com');
+  const [email, setEmail] = useState('admin@gmail.com');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -91,7 +91,7 @@ export default function AdminLogin({ onSuccess }) {
 
         <div className="admin-cyber-login__hint glass-panel">
           <strong>Default credentials</strong>
-          <span>Email: admin@flexfitstudio.com</span>
+          <span>Email: admin@gmail.com</span>
           <span>Password: Admin@123</span>
         </div>
 

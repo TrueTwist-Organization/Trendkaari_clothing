@@ -394,7 +394,7 @@
 
 @media (max-width: 480px) {
   .hero-slider-section {
-    --hero-header-offset: 80px;
+    --hero-header-offset: 88px;
     padding-top: var(--hero-header-offset);
     padding-bottom: 0;
     min-height: auto;

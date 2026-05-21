@@ -2,6 +2,7 @@ import { Router } from 'express';
 import { readStore, updateStore } from '../lib/store.js';
 import { requireUser } from '../middleware/userAuth.js';
 import { getStoreSettings, getActiveAdSlots } from '../lib/siteConfig.js';
+import { getPublicGiftCombos } from '../lib/giftCombos.js';
 
 const router = Router();
 
@@ -24,6 +25,11 @@ router.get('/ad-slots', (req, res) => {
   const store = readStore();
   const placement = req.query.placement || null;
   res.json({ adSlots: getActiveAdSlots(store, placement || null) });
+});
+
+router.get('/gift-combos', (req, res) => {
+  const store = readStore();
+  res.json({ giftCombos: getPublicGiftCombos(store) });
 });
 
 router.post('/orders', requireUser, async (req, res) => {

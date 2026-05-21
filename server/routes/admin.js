@@ -16,11 +16,23 @@ import {
   getAdSlotsForAdmin,
   buildAdSlotsFromPayload,
 } from '../lib/siteConfig.js';
+import {
+  getAdminGiftCombos,
+  seedGiftCombosIfEmpty,
+  buildGiftComboFromBody,
+  validateGiftCombo,
+  DEFAULT_GIFT_COMBOS,
+} from '../lib/giftCombos.js';
+import { saveComboImages } from '../lib/comboImage.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const UPLOAD_DIR = path.join(__dirname, '../../public/product-media');
+const COMBO_UPLOAD_DIR = path.join(__dirname, '../../public/combos');
 if (!fs.existsSync(UPLOAD_DIR)) {
   fs.mkdirSync(UPLOAD_DIR, { recursive: true });
+}
+if (!fs.existsSync(COMBO_UPLOAD_DIR)) {
+  fs.mkdirSync(COMBO_UPLOAD_DIR, { recursive: true });
 }
 
 const upload = multer({
@@ -460,6 +472,112 @@ router.put('/ad-slots', requireAdmin, (req, res) => {
     message: 'Ad slots saved',
     adSlots: getAdSlotsForAdmin(readStore()),
   });
+});
+
+router.get('/gift-combos', requireAdmin, (req, res) => {
+  let list = getAdminGiftCombos(readStore());
+  if (!list.length) {
+    list = seedGiftCombosIfEmpty(readStore());
+    updateStore((s) => {
+      s.giftCombos = list;
+      return s;
+    });
+  }
+  res.json({ giftCombos: list });
+});
+
+router.post('/gift-combos/seed-defaults', requireAdmin, (req, res) => {
+  const list = DEFAULT_GIFT_COMBOS.map((c, i) => buildGiftComboFromBody(c, null));
+  updateStore((s) => {
+    s.giftCombos = list;
+    return s;
+  });
+  res.json({ message: 'Default gift combos restored', giftCombos: list });
+});
+
+router.post('/gift-combos/upload', requireAdmin, upload.array('images', 12), async (req, res) => {
+  try {
+    const urls = await saveComboImages(req.files || [], COMBO_UPLOAD_DIR);
+    res.json({ urls });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: err.message || 'Image upload failed' });
+  }
+});
+
+router.post('/gift-combos', requireAdmin, (req, res) => {
+  const body = req.body || {};
+  const combo = buildGiftComboFromBody({
+    ...body,
+    id: body.id || undefined,
+    updatedAt: new Date().toISOString(),
+  });
+  const errors = validateGiftCombo(combo);
+  if (errors.length) {
+    return res.status(400).json({ error: errors.join('; ') });
+  }
+
+  const list = getAdminGiftCombos(readStore());
+  if (list.some((c) => c.id === combo.id)) {
+    return res.status(409).json({ error: `Combo id "${combo.id}" already exists` });
+  }
+
+  updateStore((s) => {
+    if (!Array.isArray(s.giftCombos)) s.giftCombos = [];
+    s.giftCombos = [...getAdminGiftCombos(s), combo];
+    return s;
+  });
+
+  res.status(201).json({ message: 'Gift combo created', combo });
+});
+
+router.patch('/gift-combos/:id', requireAdmin, (req, res) => {
+  const { id } = req.params;
+  const body = req.body || {};
+  let updated = null;
+
+  updateStore((s) => {
+    const list = getAdminGiftCombos(s);
+    const idx = list.findIndex((c) => c.id === id);
+    if (idx < 0) return s;
+    updated = buildGiftComboFromBody(
+      { ...list[idx], ...body, id, updatedAt: new Date().toISOString() },
+      list[idx],
+    );
+    const errors = validateGiftCombo(updated);
+    if (errors.length) {
+      updated = { __error: errors.join('; ') };
+      return s;
+    }
+    const next = [...list];
+    next[idx] = updated;
+    s.giftCombos = next;
+    return s;
+  });
+
+  if (!updated) {
+    return res.status(404).json({ error: 'Combo not found' });
+  }
+  if (updated.__error) {
+    return res.status(400).json({ error: updated.__error });
+  }
+  res.json({ message: 'Gift combo updated', combo: updated });
+});
+
+router.delete('/gift-combos/:id', requireAdmin, (req, res) => {
+  const { id } = req.params;
+  let removed = false;
+  updateStore((s) => {
+    const list = getAdminGiftCombos(s);
+    const next = list.filter((c) => c.id !== id);
+    removed = next.length < list.length;
+    s.giftCombos = next;
+    return s;
+  });
+  if (!removed) {
+    return res.status(404).json({ error: 'Combo not found' });
+  }
+  res.json({ message: 'Gift combo removed' });
 });
 
 function buildProductFromPayload(data, newImages = [], existing = null) {

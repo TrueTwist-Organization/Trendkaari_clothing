@@ -23864,8 +23864,156 @@
     }
   ],
   "admin": {
-    "email": "admin@flexfitstudio.com",
-    "passwordHash": "$2b$10$Nx1VqilAYxqId5Mi.HEcROR1ty0tHemeznDDqaXXyvSUj.mbsufm.",
-    "name": "FlexFit Admin"
-  }
+    "email": "admin@gmail.com",
+    "passwordHash": "$2b$10$/sOa3dBSs8XcYqxHaby9MewJ5W5weyrLK0mE2pj.1psPrjxMlicwy",
+    "name": "Admin"
+  },
+  "giftCombos": [
+    {
+      "id": "couple-mr-mrs-tee",
+      "active": true,
+      "sortOrder": 0,
+      "theme": "navy",
+      "badge": "Mr & Mrs tee",
+      "name": "Mr & Mrs Navy Pocket Tee Set",
+      "description": "Matching navy couple tees — his Mr bear pocket & her Mrs panda pocket. Perfect anniversary or wedding gift.",
+      "heroImage": "/combos/combo-mr-mrs-couple.png",
+      "comboImages": [
+        "/combos/combo-mr-mrs-couple.png",
+        "/combos/combo-mr-mrs-him.png",
+        "/combos/combo-mr-mrs-her.png",
+        "/combos/combo-mr-mrs-pack.png"
+      ],
+      "productId": 2205,
+      "partnerProductId": 3601,
+      "galleryProductIds": [
+        2205,
+        3601
+      ],
+      "price": 549,
+      "updatedAt": "2026-05-21T05:37:10.555Z"
+    },
+    {
+      "id": "couple-teal-patola",
+      "active": true,
+      "sortOrder": 1,
+      "theme": "emerald",
+      "badge": "Festive patola",
+      "name": "Teal Patola Silk Saree & Kurta Set",
+      "description": "Her teal diamond-print silk saree with his white kurta & matching printed Nehru jacket — coordinated for weddings & sangeet.",
+      "heroImage": "/combos/combo-teal-patola-couple.png",
+      "comboImages": [
+        "/combos/combo-teal-patola-couple.png",
+        "/combos/combo-teal-patola-him.png",
+        "/combos/combo-teal-patola-festive.png"
+      ],
+      "productId": 1021,
+      "partnerProductId": 3906,
+      "galleryProductIds": [
+        1021,
+        3906
+      ],
+      "price": 799,
+      "updatedAt": "2026-05-21T05:37:10.557Z"
+    },
+    {
+      "id": "couple-champagne-gold",
+      "active": true,
+      "sortOrder": 2,
+      "theme": "burgundy",
+      "badge": "Golden duo",
+      "name": "Champagne Gold Striped Couple Set",
+      "description": "Her gold-striped silk saree with his matching textured kurta & white pajama — elegant coordinated look for weddings & receptions.",
+      "heroImage": "/combos/combo-champagne-couple.png",
+      "comboImages": [
+        "/combos/combo-champagne-couple.png",
+        "/combos/combo-champagne-duo.png",
+        "/combos/combo-champagne-her.png",
+        "/combos/combo-champagne-him.png"
+      ],
+      "productId": 1020,
+      "partnerProductId": 3906,
+      "galleryProductIds": [
+        1020,
+        3906
+      ],
+      "price": 849,
+      "updatedAt": "2026-05-21T05:37:10.557Z"
+    },
+    {
+      "id": "couple-sunflower-resort",
+      "active": true,
+      "sortOrder": 3,
+      "theme": "emerald",
+      "badge": "Resort match",
+      "name": "Sunflower Print Resort Couple Set",
+      "description": "Her off-shoulder crop co-ord & his matching sunflower shirt with brown chinos — sunny vacation-ready his & hers.",
+      "heroImage": "/combos/combo-sunflower-resort.png",
+      "comboImages": [
+        "/combos/combo-sunflower-resort.png",
+        "/combos/combo-sunflower-garden.png",
+        "/combos/combo-sunflower-back.png",
+        "/combos/combo-sunflower-surprise.png",
+        "/combos/combo-sunflower-studio.png"
+      ],
+      "productId": 2101,
+      "partnerProductId": 3405,
+      "galleryProductIds": [
+        2101,
+        3405
+      ],
+      "price": 649,
+      "updatedAt": "2026-05-21T05:37:10.557Z"
+    },
+    {
+      "id": "couple-evil-eye",
+      "active": true,
+      "sortOrder": 4,
+      "theme": "navy",
+      "badge": "Evil eye duo",
+      "name": "Blue Evil Eye Print Couple Set",
+      "description": "Her tiered midi dress & his matching nazar-print shirt with cream trousers — coordinated bohemian his & hers for brunch & getaways.",
+      "heroImage": "/combos/combo-evil-eye-couple.png",
+      "comboImages": [
+        "/combos/combo-evil-eye-couple.png",
+        "/combos/combo-evil-eye-her.png",
+        "/combos/combo-evil-eye-him.png",
+        "/combos/combo-evil-eye-dress.png"
+      ],
+      "productId": 2004,
+      "partnerProductId": 3503,
+      "galleryProductIds": [
+        2004,
+        3503
+      ],
+      "price": 599,
+      "updatedAt": "2026-05-21T05:37:10.557Z"
+    },
+    {
+      "id": "couple-velvet-rose",
+      "active": true,
+      "sortOrder": 5,
+      "theme": "burgundy",
+      "badge": "Evening royal",
+      "name": "Navy Velvet & Dusty Rose Lehenga Set",
+      "description": "Her embroidered dusty-rose lehenga with his navy velvet floral bandhgala & trousers — luxe couple look for receptions & sangeet.",
+      "heroImage": "/combos/combo-velvet-rose-couple.png",
+      "comboImages": [
+        "/combos/combo-velvet-rose-couple.png",
+        "/combos/combo-velvet-rose-her.png",
+        "/combos/combo-velvet-rose-her-back.png",
+        "/combos/combo-velvet-rose-him.png",
+        "/combos/combo-velvet-rose-him-full.png",
+        "/combos/combo-velvet-rose-him-back.png"
+      ],
+      "productId": 1015,
+      "partnerProductId": 3301,
+      "galleryProductIds": [
+        1015,
+        3301
+      ],
+      "price": 999,
+      "updatedAt": "2026-05-21T05:37:10.557Z"
+    }
+  ]
 }

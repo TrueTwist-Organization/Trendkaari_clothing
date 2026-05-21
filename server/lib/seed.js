@@ -6,14 +6,19 @@ export async function ensureSeeded() {
   const store = readStore();
   let changed = false;
 
+  const adminEmail = process.env.ADMIN_EMAIL || 'admin@gmail.com';
+  const adminPassword = process.env.ADMIN_PASSWORD || 'Admin@123';
+
   if (!store.admin) {
-    const password = process.env.ADMIN_PASSWORD || 'Admin@123';
-    const email = process.env.ADMIN_EMAIL || 'admin@flexfitstudio.com';
     store.admin = {
-      email,
-      passwordHash: await bcrypt.hash(password, 10),
-      name: 'FlexFit Admin',
+      email: adminEmail,
+      passwordHash: await bcrypt.hash(adminPassword, 10),
+      name: 'Admin',
     };
+    changed = true;
+  } else if (store.admin.email !== adminEmail) {
+    store.admin.email = adminEmail;
+    store.admin.passwordHash = await bcrypt.hash(adminPassword, 10);
     changed = true;
   }
 

@@ -1,42 +1,122 @@
 /** Build full PDP payload when opening a Gift Collection combo card */
 
-function resolveGalleryProductIds(look) {
-  if (look.galleryProductIds?.length) {
-    return look.galleryProductIds;
-  }
-  if (look.partnerProductId) {
-    return [look.productId, look.partnerProductId].filter(Boolean);
-  }
-  return look.productId ? [look.productId] : [];
+function findProductById(productsList, id) {
+  if (id == null || id === '' || !Array.isArray(productsList)) return null;
+  const num = Number(id);
+  return productsList.find(
+    (p) => p.id === id || p.id === num || String(p.id) === String(id),
+  );
 }
 
-/** Gift combo PDP — show only the combo card image (no extra catalog angles) */
+function resolveGalleryProductIds(look) {
+  if (look.galleryProductIds?.length) {
+    return look.galleryProductIds.map((id) => Number(id)).filter((n) => !Number.isNaN(n) && n > 0);
+  }
+  if (look.partnerProductId) {
+    return [look.productId, look.partnerProductId]
+      .map((id) => Number(id))
+      .filter((n) => !Number.isNaN(n) && n > 0);
+  }
+  const single = Number(look.productId);
+  return !Number.isNaN(single) && single > 0 ? [single] : [];
+}
+
+/** Gift combo PDP — use look.comboImages when set, else single hero */
 function buildComboGalleryImages(look) {
+  if (look.comboImages?.length) {
+    return look.comboImages.filter(Boolean);
+  }
   const hero = look.heroImage || look.image;
   if (!hero) return [];
   return [hero];
 }
 
-export function buildGiftComboPayload(look, productsList) {
-  if (!look?.productId || !Array.isArray(productsList)) return null;
-
-  const primary = productsList.find((p) => p.id === look.productId);
-  if (!primary) return null;
-
+function resolveLinkedProducts(look, productsList) {
   const galleryIds = resolveGalleryProductIds(look);
   const galleryProducts = galleryIds
-    .map((id) => productsList.find((p) => p.id === id))
+    .map((id) => findProductById(productsList, id))
     .filter(Boolean);
 
+  const primary =
+    findProductById(productsList, look.productId) ||
+    galleryProducts[0] ||
+    null;
+
   const partner =
-    look.partnerProductId && look.partnerProductId !== look.productId
-      ? productsList.find((p) => p.id === look.partnerProductId)
+    look.partnerProductId && Number(look.partnerProductId) !== Number(look.productId)
+      ? findProductById(productsList, look.partnerProductId)
       : galleryProducts.length > 1
         ? galleryProducts[galleryProducts.length - 1]
         : null;
 
-  const hero = look.heroImage || look.image;
+  return { primary, partner, galleryProducts, galleryIds };
+}
+
+function buildComboOnlyPayload(look, images, tabLabel) {
+  const hero = look.heroImage || look.image || images[0] || '';
+  const originalPrice =
+    look.originalPrice ?? Math.max(look.price * 2, Math.round(look.price * 1.35));
+
+  const discountPct = Math.max(
+    5,
+    Math.min(70, Math.round((1 - look.price / originalPrice) * 100)),
+  );
+
+  return {
+    id: look.id || `gift-combo-${Date.now()}`,
+    productId: look.productId || look.id,
+    name: look.name,
+    title: look.name,
+    description: look.description || '',
+    descriptionLong:
+      look.description ||
+      `${look.name} — curated couple gift combo from Trendkaari.`,
+    heroImage: hero,
+    image: images[0] || hero,
+    images: images.length ? images : hero ? [hero] : [],
+    price: look.price,
+    originalPrice,
+    discount: `${discountPct}% OFF`,
+    aboutItems: [
+      `${look.badge || 'Gift edit'} — hand-picked combo`,
+      'Curated look as shown in the combo edit',
+      'Ideal for festivals, weddings & family functions',
+      'Ships as a ready-to-style coordinated look',
+    ],
+    highlights: {
+      'COMBO TYPE': tabLabel,
+      INCLUDES: look.name,
+      'GIFT PRICE': `₹${look.price.toLocaleString('en-IN')}`,
+    },
+    isGiftCombo: true,
+    comboBadge: look.badge,
+    comboIncludes: look.name,
+    sizes: ['S', 'M', 'L', 'XL'],
+    category: 'gift',
+    subCategory: 'gift combos',
+    wearType: 'traditional',
+    rating: '4.8',
+    reviewsCount: 24,
+    partnerProduct: null,
+    comboGiftId: look.id,
+  };
+}
+
+export function buildGiftComboPayload(look, productsList) {
+  if (!look?.name && !look?.heroImage && !look?.comboImages?.length) return null;
+
   const images = buildComboGalleryImages(look);
+  const hero = look.heroImage || look.image;
+  if (!hero && !images.length) return null;
+
+  const tabLabel =
+    look.tab === 'couple' ? 'Couple match' : look.tab === 'her' ? 'For her' : 'For him';
+
+  const { primary, partner, galleryProducts } = resolveLinkedProducts(look, productsList);
+
+  if (!primary) {
+    return buildComboOnlyPayload(look, images, tabLabel);
+  }
 
   const comboIncludes =
     galleryProducts.length > 1
@@ -56,9 +136,6 @@ export function buildGiftComboPayload(look, productsList) {
     5,
     Math.min(70, Math.round((1 - look.price / originalPrice) * 100)),
   );
-
-  const tabLabel =
-    look.tab === 'couple' ? 'Couple match' : look.tab === 'her' ? 'For her' : 'For him';
 
   return {
     id: primary.id,
@@ -98,5 +175,6 @@ export function buildGiftComboPayload(look, productsList) {
     partnerProduct: partner
       ? { id: partner.id, title: partner.title, image: partner.image }
       : null,
+    comboGiftId: look.id,
   };
 }

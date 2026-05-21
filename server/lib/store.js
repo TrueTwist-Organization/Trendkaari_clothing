@@ -19,6 +19,7 @@ const DEFAULT_STORE = {
   admin: null,
   settings: { ...DEFAULT_SITE_SETTINGS },
   adSlots: [],
+  giftCombos: [],
 };
 
 function ensureDataDir() {

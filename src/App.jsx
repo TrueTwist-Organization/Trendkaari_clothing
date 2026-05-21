@@ -20,7 +20,6 @@ import UserAuthModal from './components/UserAuthModal';
 import AccountDrawer from './components/AccountDrawer';
 import QuickViewModal from './components/QuickViewModal';
 import MobileNavbar from './components/MobileNavbar';
-import WhatsappWidget from './components/WhatsappWidget';
 import ProductDetailPage from './components/ProductDetailPage';
 import CollectionListingPage from './components/CollectionListingPage';
 import { products as initialProducts } from './data/products';
@@ -29,6 +28,7 @@ import {
   fetchStoreCoupons,
   fetchStoreProducts,
   fetchStoreSettings,
+  fetchStoreGiftCombos,
   submitStoreOrder,
 } from './api/storeApi';
 import { applySiteSettingsToDocument } from './utils/siteSettings';
@@ -164,6 +164,7 @@ export default function App() {
   ]);
   const [siteSettings, setSiteSettings] = useState(null);
   const [adCodes, setAdCodes] = useState({});
+  const [giftCombos, setGiftCombos] = useState([]);
 
   // Router Nav Handlers
   const navigateToRoute = (routePath, isNewTab = false) => {
@@ -227,6 +228,9 @@ export default function App() {
     });
     fetchStoreAdSlots().then((list) => {
       if (list?.length) setAdCodes(adSlotsToCodeMap(list));
+    });
+    fetchStoreGiftCombos().then((list) => {
+      if (list?.length) setGiftCombos(list);
     });
   }, []);
 
@@ -394,14 +398,39 @@ export default function App() {
     }
   };
 
+  const findCatalogProduct = (id) => {
+    if (id == null || id === '') return null;
+    const num = Number(id);
+    return productsList.find(
+      (p) => p.id === id || p.id === num || String(p.id) === String(id),
+    );
+  };
+
   const mergeProductForDetail = (payload) => {
     const id = payload?.id ?? payload?.productId;
-    if (!id) return null;
-    const base = productsList.find((p) => p.id === id);
-    if (!base) return null;
+    if (!id && !payload?.isGiftCombo) return null;
 
+    const base = findCatalogProduct(id);
     const hero = payload.heroImage || payload.image;
     const fromPayload = payload.images?.length ? [...payload.images] : null;
+
+    if (!base) {
+      if (!payload?.isGiftCombo) return null;
+      const images = fromPayload?.length
+        ? fromPayload
+        : hero
+          ? [hero]
+          : [];
+      return {
+        ...payload,
+        id: payload.id ?? payload.productId,
+        title: payload.title || payload.name,
+        image: images[0] || hero || '',
+        images: images.length ? images : hero ? [hero] : [],
+        sizes: payload.sizes?.length ? payload.sizes : ['S', 'M', 'L', 'XL'],
+      };
+    }
+
     const catalog = base.images?.length ? [...base.images] : [base.image];
     const mergedList = fromPayload?.length
       ? fromPayload
@@ -429,6 +458,7 @@ export default function App() {
       comboBadge: payload.comboBadge,
       comboIncludes: payload.comboIncludes,
       partnerProduct: payload.partnerProduct ?? null,
+      comboGiftId: payload.comboGiftId,
     };
   };
 
@@ -541,15 +571,13 @@ export default function App() {
     setTimeout(scroll, 350);
   };
 
-  const wishlistCount = wishlistItems.length;
-
   return (
     <div className="app-container">
       
       {/* Sticky Header */}
       <Header
         cartCount={cartItems.reduce((acc, item) => acc + item.quantity, 0)}
-        wishlistCount={wishlistCount}
+        wishlistCount={wishlistItems.length}
         user={user}
         solidHeader={viewMode === 'product-detail' || isCategoryPage || viewMode === 'info'}
         onOpenMenu={() => setIsMenuOpen(true)}
@@ -615,6 +643,7 @@ export default function App() {
                   onSelectCategory={handleSelectCategory}
                   onSelectProduct={handleOpenQuickView}
                   products={productsList}
+                  giftCombos={giftCombos}
                 />
                 <HomeAdSlot code={adCodes.home_after_gift} label="home_after_gift" />
 
@@ -742,9 +771,6 @@ export default function App() {
         coupons={coupons}
       />
 
-      {/* WhatsApp Support Float Widget */}
-      <WhatsappWidget />
-
       {/* Mobile Bottom sticky bar */}
       <MobileNavbar
         activeCategory={activeCategory}
@@ -752,11 +778,9 @@ export default function App() {
         onOpenWishlist={handleOpenWishlist}
         onOpenProfile={handleOpenProfile}
         onOpenCart={() => setIsCartOpen(true)}
+        cartCount={cartItems.reduce((acc, item) => acc + item.quantity, 0)}
+        isCartOpen={isCartOpen}
       />
-
-      <a href="/admin" className="floating-admin-toggle-btn" title="Open Admin Portal Dashboard">
-        🔑 Admin Portal
-      </a>
 
     </div>
   );

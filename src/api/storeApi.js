@@ -43,3 +43,12 @@ export async function fetchStoreAdSlots(placement = null) {
     return null;
   }
 }
+
+export async function fetchStoreGiftCombos() {
+  try {
+    const data = await publicApiFetch('/api/store/gift-combos');
+    return data.giftCombos;
+  } catch {
+    return null;
+  }
+}

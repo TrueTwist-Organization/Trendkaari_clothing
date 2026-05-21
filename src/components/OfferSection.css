@@ -386,13 +386,55 @@ body.is-scrolling .offer-marquee__track {
   }
 
   .offer-section__visuals {
-    min-height: 360px;
-    max-width: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: clamp(8px, 2vw, 16px);
+    min-height: auto;
+    max-width: 520px;
+    padding: 16px 8px 24px;
+    overflow: visible;
     margin: 0 auto;
   }
 
+  .offer-polaroid {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: min(150px, 28vw);
+    flex-shrink: 0;
+  }
+
+  .offer-polaroid--1 {
+    transform: rotate(-7deg) translateY(-4px);
+    z-index: 3;
+  }
+
   .offer-polaroid--2 {
-    left: 28%;
+    transform: rotate(5deg) translateY(8px);
+    z-index: 2;
+  }
+
+  .offer-polaroid--3 {
+    transform: rotate(-4deg) translateY(-2px);
+    z-index: 1;
+  }
+
+  .offer-section:hover .offer-polaroid--1 {
+    transform: rotate(-7deg) translateY(-4px);
+  }
+
+  .offer-section:hover .offer-polaroid--2 {
+    transform: rotate(5deg) translateY(8px);
+  }
+
+  .offer-section:hover .offer-polaroid--3 {
+    transform: rotate(-4deg) translateY(-2px);
+  }
+
+  .offer-polaroid__caption {
+    display: none;
   }
 
   .offer-section__copy {
@@ -427,7 +469,81 @@ body.is-scrolling .offer-marquee__track {
   }
 }
 
-/* Mobile */
+/* Mobile — side-by-side polaroids (no absolute overlap / clipping) */
+@media (max-width: 768px) {
+  .offer-section {
+    overflow: visible;
+  }
+
+  .offer-section__inner {
+    gap: 28px;
+  }
+
+  .offer-section__visuals {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: clamp(6px, 2vw, 14px);
+    min-height: auto;
+    max-width: 100%;
+    padding: 12px 4px 20px;
+    overflow: visible;
+    margin: 0 auto 4px;
+  }
+
+  .offer-polaroid {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: min(118px, 29vw);
+    flex-shrink: 0;
+  }
+
+  .offer-polaroid--1 {
+    z-index: 3;
+    transform: rotate(-7deg) translateY(-4px);
+  }
+
+  .offer-polaroid--2 {
+    z-index: 2;
+    transform: rotate(5deg) translateY(8px);
+  }
+
+  .offer-polaroid--3 {
+    z-index: 1;
+    transform: rotate(-4deg) translateY(-2px);
+  }
+
+  .offer-section:hover .offer-polaroid--1 {
+    transform: rotate(-7deg) translateY(-4px);
+  }
+
+  .offer-section:hover .offer-polaroid--2 {
+    transform: rotate(5deg) translateY(8px);
+  }
+
+  .offer-section:hover .offer-polaroid--3 {
+    transform: rotate(-4deg) translateY(-2px);
+  }
+
+  .offer-polaroid__img {
+    object-position: center top;
+  }
+
+  .offer-polaroid__caption {
+    display: none;
+  }
+
+  .offer-section__headline {
+    min-height: auto;
+  }
+
+  .offer-section__watermark {
+    display: none;
+  }
+}
+
 @media (max-width: 560px) {
   .offer-section {
     padding: 36px 12px 40px;
@@ -439,33 +555,30 @@ body.is-scrolling .offer-marquee__track {
   }
 
   .offer-section__visuals {
-    min-height: 300px;
+    padding: 10px 0 16px;
+    gap: 6px;
   }
 
   .offer-polaroid {
-    width: min(140px, 38vw);
+    width: min(108px, 31vw);
   }
 
-  .offer-polaroid--1 {
-    left: 0;
+  .offer-polaroid__frame {
+    padding: 8px 8px 0;
   }
 
-  .offer-polaroid--2 {
-    left: 24%;
-    top: 46%;
-  }
-
-  .offer-polaroid--3 {
-    right: -4%;
-  }
-
-  .offer-polaroid__caption {
-    margin-top: 8px;
-    font-size: 0.9rem;
+  .offer-polaroid__label {
+    font-size: 0.52rem;
+    padding: 8px 2px 10px;
+    letter-spacing: 0.14em;
   }
 
   .offer-section__eyebrow {
     margin-bottom: 22px;
+  }
+
+  .offer-section__title-script {
+    font-size: clamp(2.2rem, 10vw, 2.8rem);
   }
 }
 

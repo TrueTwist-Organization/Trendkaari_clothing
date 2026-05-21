@@ -30,6 +30,14 @@
   margin-bottom: clamp(22px, 3.5vw, 32px);
 }
 
+.gift-unbox__empty {
+  margin: 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(96, 11, 69, 0.55);
+  padding: 24px 16px;
+}
+
 .gift-unbox__title {
   margin: 0;
   font-family: 'Cinzel', var(--font-serif), serif;
@@ -97,6 +105,19 @@
   grid-template-columns: repeat(3, 1fr);
   gap: clamp(16px, 2.5vw, 24px);
   animation: guFadeIn 0.4s ease;
+}
+
+.gift-unbox__grid--duo {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .gift-unbox__grid--duo {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 720px;
+  }
 }
 
 @keyframes guFadeIn {
@@ -437,6 +458,20 @@
   color: rgba(255, 255, 255, 0.88);
 }
 
+.gift-box__hint--tap {
+  display: none;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .gift-box__hint--hover {
+    display: none;
+  }
+
+  .gift-box__hint--tap {
+    display: block;
+  }
+}
+
 /* Hover — bow & text fade as box opens */
 .gift-box__card:hover .gift-box__face-deco,
 .gift-box__card:focus-within .gift-box__face-deco,
@@ -682,16 +717,9 @@
     scroll-snap-align: center;
   }
 
-  .gift-box__card:active .gift-box__face-panel--top {
-    transform: translateY(-102%);
-  }
-
-  .gift-box__card:active .gift-box__face-panel--bottom {
-    transform: translateY(102%);
-  }
-
-  .gift-box__card:active .gift-box__face-deco {
-    opacity: 0;
+  /* Tap uses .is-open (JS) — same animation as desktop hover */
+  .gift-box__card.is-open .gift-box__layer--reveal {
+    z-index: 2;
   }
 }
 

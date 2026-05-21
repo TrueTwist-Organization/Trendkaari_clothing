@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, Search, PhoneCall, User, Heart, ShoppingBag } from 'lucide-react';
+import { Menu, Search, User, Heart, ShoppingBag } from 'lucide-react';
 import { SITE_LOGO_ALT, SITE_LOGO_SRC } from '../constants/brand';
 import './Header.css';
 
@@ -44,7 +44,7 @@ export default function Header({
           <span className="divider-dot">•</span>
           <span className="mobile-hidden">FREE SHIPPING ON ALL ORDERS WITHIN INDIA</span>
           <span className="divider-dot mobile-hidden">•</span>
-          <span>EASY 15-DAY RETURNS</span>
+          <span>EASY 7-DAY RETURNS</span>
         </div>
       </div>
 
@@ -97,17 +97,22 @@ export default function Header({
 
           {/* Right: Actions */}
           <div className="header-right">
-            <a href="tel:+919205222171" className="header-btn contact-btn">
-              <PhoneCall size={18} />
-              <span className="btn-label">CONTACT US</span>
-            </a>
-            
-            <button className="header-icon-btn header-account-btn" onClick={onOpenProfile} aria-label={user ? 'My Account' : 'Login'}>
+            <button
+              type="button"
+              className="header-icon-btn header-account-btn header-laptop-only"
+              onClick={onOpenProfile}
+              aria-label={user ? 'My Account' : 'Login'}
+            >
               <User size={20} />
               {user && <span className="account-dot" title={user.name} />}
             </button>
 
-            <button className="header-icon-btn" onClick={onOpenWishlist} aria-label="Wishlist">
+            <button
+              type="button"
+              className="header-icon-btn header-laptop-only"
+              onClick={onOpenWishlist}
+              aria-label="Wishlist"
+            >
               <Heart size={20} />
               {wishlistCount > 0 && <span className="badge-indicator">{wishlistCount}</span>}
             </button>

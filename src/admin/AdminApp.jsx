@@ -9,6 +9,7 @@ import OrdersPage from './pages/OrdersPage';
 import CouponsPage from './pages/CouponsPage';
 import SettingsPage from './pages/SettingsPage';
 import AdSlotsPage from './pages/AdSlotsPage';
+import GiftCombosPage from './pages/GiftCombosPage';
 import Toast from './components/Toast';
 import './admin-theme.css';
 
@@ -59,6 +60,7 @@ export default function AdminApp() {
         {page === 'coupons' && <CouponsPage onToast={showToast} />}
         {page === 'settings' && <SettingsPage onToast={showToast} />}
         {page === 'ad-slots' && <AdSlotsPage onToast={showToast} />}
+        {page === 'gift-combos' && <GiftCombosPage onToast={showToast} />}
       </AdminLayout>
       {toast && (
         <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />

@@ -7,7 +7,7 @@ const POLAROIDS = [
     id: 'her',
     label: 'FOR HER',
     caption: 'Festive suits & lehengas',
-    image: '/suit-sets/Suit Sets/9/L12.01.25_1827_700x.webp',
+    image: '/combos/combo-velvet-rose-her.png',
     rotate: -9,
     className: 'offer-polaroid--1',
   },
@@ -15,7 +15,7 @@ const POLAROIDS = [
     id: 'him',
     label: 'FOR HIM',
     caption: 'Kurta sets & more',
-    image: '/mens/kurtas/kurta/4/xxl-dmm-daswani-exports-original-imahmgj4r2evzddc.webp',
+    image: '/combos/combo-velvet-rose-him.png',
     rotate: 7,
     className: 'offer-polaroid--2',
   },
@@ -23,7 +23,7 @@ const POLAROIDS = [
     id: 'couple',
     label: 'COUPLE MATCH',
     caption: 'Matching celebration looks',
-    image: '/combos/combo-pink-wedding.png',
+    image: '/combos/combo-velvet-rose-couple.png',
     rotate: -4,
     className: 'offer-polaroid--3',
   },
@@ -96,10 +96,20 @@ export default function OfferSection({ onSelectCategory }) {
               <div className="offer-polaroid__frame">
                 <img
                   src={card.image}
-                  alt=""
+                  alt={card.label}
                   className="offer-polaroid__img"
                   loading="lazy"
                   decoding="async"
+                  onError={(e) => {
+                    if (e.currentTarget.dataset.fallback) return;
+                    e.currentTarget.dataset.fallback = '1';
+                    const fallbacks = {
+                      her: '/banners/promo-women-western.png',
+                      him: '/banners/promo-men-modern.png',
+                      couple: '/banners/promo-couple-luxe.png',
+                    };
+                    e.currentTarget.src = fallbacks[card.id] || '/combos/combo-teal-patola-couple.png';
+                  }}
                 />
                 <span className="offer-polaroid__label">{card.label}</span>
               </div>

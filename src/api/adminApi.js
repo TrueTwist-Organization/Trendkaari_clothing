@@ -87,3 +87,37 @@ export function saveAdminAdSlots(slots) {
     body: JSON.stringify({ slots }),
   });
 }
+
+export function fetchAdminGiftCombos() {
+  return apiFetch('/api/admin/gift-combos');
+}
+
+export function createGiftCombo(combo) {
+  return apiFetch('/api/admin/gift-combos', {
+    method: 'POST',
+    body: JSON.stringify(combo),
+  });
+}
+
+export function updateGiftCombo(id, combo) {
+  return apiFetch(`/api/admin/gift-combos/${encodeURIComponent(id)}`, {
+    method: 'PATCH',
+    body: JSON.stringify(combo),
+  });
+}
+
+export function deleteGiftCombo(id) {
+  return apiFetch(`/api/admin/gift-combos/${encodeURIComponent(id)}`, {
+    method: 'DELETE',
+  });
+}
+
+export function uploadGiftComboImages(files) {
+  const fd = new FormData();
+  files.forEach((f) => fd.append('images', f));
+  return apiFetch('/api/admin/gift-combos/upload', { method: 'POST', body: fd });
+}
+
+export function seedDefaultGiftCombos() {
+  return apiFetch('/api/admin/gift-combos/seed-defaults', { method: 'POST' });
+}
