@@ -1,5 +1,7 @@
 /** Fixed ad placements — admin pastes HTML/JS; storefront injects per slot */
 
+import { CHECKOUT_STEPS } from '../checkout/checkoutSteps.js';
+
 const HOME_SLOTS = [
   {
     key: 'home_below_header',
@@ -256,6 +258,21 @@ const PRODUCT_SLOTS = [
   },
 ];
 
+const CHECKOUT_STEP_PAGE_SLOTS = CHECKOUT_STEPS.flatMap((step) => [
+  {
+    key: `checkout_step_${step.id}_top`,
+    title: `Checkout — ${step.label} (Top Ad)`,
+    description: `Step ${step.label} — ad slot above page content.`,
+    placeholder: 'Paste ad HTML/script…',
+  },
+  {
+    key: `checkout_step_${step.id}_bottom`,
+    title: `Checkout — ${step.label} (Bottom Ad)`,
+    description: `Step ${step.label} — ad slot below content, above Next/Back.`,
+    placeholder: 'Paste ad HTML/script…',
+  },
+]);
+
 const CHECKOUT_SLOTS = [
   {
     key: 'cart_above_checkout',
@@ -266,111 +283,10 @@ const CHECKOUT_SLOTS = [
   {
     key: 'checkout_empty_cart',
     title: 'Checkout — Empty Bag',
-    description: 'Checkout overlay when cart is empty.',
+    description: 'Checkout overlay when cart is empty (technical / empty state).',
     placeholder: 'Paste ad HTML/script…',
   },
-  {
-    key: 'checkout_top',
-    title: 'Checkout — Top (Below Progress)',
-    description: 'All checkout steps — below progress bar.',
-    placeholder: 'Paste ad HTML/script…',
-  },
-  {
-    key: 'checkout_after_banners',
-    title: 'Checkout — After Alerts',
-    description: 'Below offline / reservation banners, above step content.',
-    placeholder: 'Paste ad HTML/script…',
-  },
-  {
-    key: 'checkout_login_top',
-    title: 'Checkout — Login Top',
-    description: 'Login step — below heading, above form.',
-    placeholder: 'Paste ad HTML/script…',
-  },
-  {
-    key: 'checkout_login_bottom',
-    title: 'Checkout — Login Bottom',
-    description: 'Login step — below social / guest buttons.',
-    placeholder: 'Paste ad HTML/script…',
-  },
-  {
-    key: 'checkout_shipping_contact_top',
-    title: 'Checkout — Shipping Contact Top',
-    description: 'Shipping step 1 — above name & phone.',
-    placeholder: 'Paste ad HTML/script…',
-  },
-  {
-    key: 'checkout_shipping_contact_bottom',
-    title: 'Checkout — Shipping Contact Bottom',
-    description: 'Shipping step 1 — below name & phone, above Next.',
-    placeholder: 'Paste ad HTML/script…',
-  },
-  {
-    key: 'checkout_shipping_address_top',
-    title: 'Checkout — Shipping Address Top',
-    description: 'Shipping step 2 — above address form.',
-    placeholder: 'Paste ad HTML/script…',
-  },
-  {
-    key: 'checkout_shipping_address_bottom',
-    title: 'Checkout — Shipping Address Bottom',
-    description: 'Shipping step 2 — below address, above Continue to Review.',
-    placeholder: 'Paste ad HTML/script…',
-  },
-  {
-    key: 'checkout_review_top',
-    title: 'Checkout — Review Top',
-    description: 'Review step — above order summary.',
-    placeholder: 'Paste ad HTML/script…',
-  },
-  {
-    key: 'checkout_review_after_summary',
-    title: 'Checkout — Review After Summary',
-    description: 'Review step — below totals, above payment CTA.',
-    placeholder: 'Paste ad HTML/script…',
-  },
-  {
-    key: 'checkout_review_bottom',
-    title: 'Checkout — Review Bottom',
-    description: 'Review step — below Continue to Payment.',
-    placeholder: 'Paste ad HTML/script…',
-  },
-  {
-    key: 'checkout_payment_top',
-    title: 'Checkout — Payment Top',
-    description: 'Payment step — below heading.',
-    placeholder: 'Paste ad HTML/script…',
-  },
-  {
-    key: 'checkout_payment_after_methods',
-    title: 'Checkout — Payment After Methods',
-    description: 'Payment step — below COD/UPI tabs, above Place Order.',
-    placeholder: 'Paste ad HTML/script…',
-  },
-  {
-    key: 'checkout_payment_bottom',
-    title: 'Checkout — Payment Bottom',
-    description: 'Payment step — below Place Order row.',
-    placeholder: 'Paste ad HTML/script…',
-  },
-  {
-    key: 'checkout_success_top',
-    title: 'Checkout — Success Top',
-    description: 'Order success screen — top.',
-    placeholder: 'Paste ad HTML/script…',
-  },
-  {
-    key: 'checkout_success_bottom',
-    title: 'Checkout — Success Bottom',
-    description: 'Order success — below thank-you / continue shopping.',
-    placeholder: 'Paste ad HTML/script…',
-  },
-  {
-    key: 'checkout_page_bottom',
-    title: 'Checkout — Page Bottom',
-    description: 'Last slot on checkout overlay (all steps).',
-    placeholder: 'Paste ad HTML/script…',
-  },
+  ...CHECKOUT_STEP_PAGE_SLOTS,
 ];
 
 const OTHER_SLOTS = [

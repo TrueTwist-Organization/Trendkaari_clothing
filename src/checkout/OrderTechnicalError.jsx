@@ -16,9 +16,9 @@ export default function OrderTechnicalError({
           <p className="co-fail-eyebrow">Order failed</p>
           <h1 className="co-fail-title">Technical Error</h1>
           <p className="co-fail-lead">
-            We could not complete your order due to a technical issue.{' '}
-            <strong>Please start again by selecting your products</strong> from the shop, add them
-            to your bag, and try checkout once more.
+            We could not complete your order due to a technical issue. Your bag has been cleared so
+            you can start fresh — <strong>select your products again</strong>, add them to your bag,
+            and complete checkout from the beginning.
           </p>
           {detailMessage && (
             <p className="co-fail-detail-msg">{detailMessage}</p>
@@ -66,7 +66,7 @@ export default function OrderTechnicalError({
             Select products again
           </button>
           <button type="button" className="co-btn-back" onClick={onReviewCart}>
-            Review cart
+            Open empty bag
           </button>
         </div>
       </div>

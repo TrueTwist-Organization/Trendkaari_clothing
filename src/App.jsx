@@ -305,11 +305,11 @@ export default function App() {
 
   const handleOpenCheckout = (seed) => {
     if (cartItems.length === 0) return;
+    const partial = { step: 0 };
     if (seed?.appliedCoupon) {
-      saveCheckoutState({
-        coupon: { code: seed.appliedCoupon.code, applied: seed.appliedCoupon },
-      });
+      partial.coupon = { code: seed.appliedCoupon.code, applied: seed.appliedCoupon };
     }
+    saveCheckoutState(partial);
     setIsCartOpen(false);
     setIsCheckoutOpen(true);
   };
@@ -741,6 +741,9 @@ export default function App() {
         adCodes={adCodes}
         onUserLogin={handleUserLoginSuccess}
         onPlaceOrder={handleCheckoutPlaceOrder}
+        onUpdateQty={handleUpdateQty}
+        onRemoveItem={handleRemoveItem}
+        onClearCart={handleClearCart}
         onContinueShopping={() => {
           setIsCheckoutOpen(false);
           navigateToRoute('/');
