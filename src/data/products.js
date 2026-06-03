@@ -1,7 +1,7 @@
 export const products = [
   {
     "id": 241,
-    "title": "Classic Ivory Cotton Dupatta Set",
+    "title": "Deep Teal Cotton Printed Dupatta Set",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -18,7 +18,7 @@ export const products = [
       "/dupatta-sets/1/lbl101ks854_6_700x.webp",
       "/dupatta-sets/1/lbl101ks854_7_700x.webp"
     ],
-    "description": "Discover Classic Ivory Cotton Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Deep Teal Cotton Printed Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -29,7 +29,7 @@ export const products = [
     ],
     "rating": 4.9,
     "reviewsCount": 74,
-    "descriptionLong": "Discover Classic Ivory Cotton Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Deep Teal Cotton Printed Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -40,7 +40,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Classic Ivory Cotton Dupatta Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Deep Teal Cotton Printed Dupatta Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -95,11 +95,12 @@ export const products = [
         "sleeve": "19"
       }
     ],
-    "sizeChartType": "ethnic"
+    "sizeChartType": "ethnic",
+    "variants": []
   },
   {
     "id": 242,
-    "title": "Indigo Block Print Trousers & Dupatta",
+    "title": "Indigo Teal Block Print Dupatta Set",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -117,7 +118,7 @@ export const products = [
       "/dupatta-sets/2/LBL101KS293_7_700x.webp",
       "/dupatta-sets/2/0001_700x.webp"
     ],
-    "description": "Discover Indigo Block Print Trousers & Dupatta from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Indigo Teal Block Print Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -128,7 +129,7 @@ export const products = [
     ],
     "rating": 4.7,
     "reviewsCount": 196,
-    "descriptionLong": "Discover Indigo Block Print Trousers & Dupatta from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Indigo Teal Block Print Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -139,7 +140,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Indigo Block Print Trousers & Dupatta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Indigo Teal Block Print Dupatta Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -194,11 +195,12 @@ export const products = [
         "sleeve": "19"
       }
     ],
-    "sizeChartType": "ethnic"
+    "sizeChartType": "ethnic",
+    "variants": []
   },
   {
     "id": 243,
-    "title": "Royal Magenta Silk Dupatta Kurta Set",
+    "title": "Rose Pink Magenta Silk Dupatta Kurta Set",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -216,7 +218,7 @@ export const products = [
       "/dupatta-sets/3/LBL101KS352_8_700x.webp",
       "/dupatta-sets/3/LBL101KS352_9_700x.webp"
     ],
-    "description": "Discover Royal Magenta Silk Dupatta Kurta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Rose Pink Magenta Silk Dupatta Kurta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -227,7 +229,7 @@ export const products = [
     ],
     "rating": 4.9,
     "reviewsCount": 51,
-    "descriptionLong": "Discover Royal Magenta Silk Dupatta Kurta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Rose Pink Magenta Silk Dupatta Kurta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular / Straight Fit",
@@ -238,7 +240,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Silk Blend for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Royal Magenta Silk Dupatta Kurta Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Rose Pink Magenta Silk Dupatta Kurta Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -293,11 +295,12 @@ export const products = [
         "sleeve": "19"
       }
     ],
-    "sizeChartType": "ethnic"
+    "sizeChartType": "ethnic",
+    "variants": []
   },
   {
     "id": 244,
-    "title": "Sage Green Floral Print Dupatta Set",
+    "title": "Mustard Yellow Floral Print Dupatta Set",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -311,7 +314,7 @@ export const products = [
       "/dupatta-sets/4/LBL101KS62_3_700x.webp",
       "/dupatta-sets/4/LBL101KS62_4_700x.webp"
     ],
-    "description": "Discover Sage Green Floral Print Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Mustard Yellow Floral Print Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -322,7 +325,7 @@ export const products = [
     ],
     "rating": 4.8,
     "reviewsCount": 66,
-    "descriptionLong": "Discover Sage Green Floral Print Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Mustard Yellow Floral Print Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -333,7 +336,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Sage Green Floral Print Dupatta Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Mustard Yellow Floral Print Dupatta Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -388,11 +391,12 @@ export const products = [
         "sleeve": "19"
       }
     ],
-    "sizeChartType": "ethnic"
+    "sizeChartType": "ethnic",
+    "variants": []
   },
   {
     "id": 245,
-    "title": "Crimson Red Sharara Gota Dupatta Set",
+    "title": "Coral Red Sharara Gota Dupatta Set",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -410,7 +414,7 @@ export const products = [
       "/dupatta-sets/5/sku42_3_700x.webp",
       "/dupatta-sets/5/sku42_4_700x.webp"
     ],
-    "description": "Discover Crimson Red Sharara Gota Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Coral Red Sharara Gota Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -421,7 +425,7 @@ export const products = [
     ],
     "rating": 4.6,
     "reviewsCount": 176,
-    "descriptionLong": "Discover Crimson Red Sharara Gota Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Coral Red Sharara Gota Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -432,7 +436,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Crimson Red Sharara Gota Dupatta Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Coral Red Sharara Gota Dupatta Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -487,7 +491,8 @@ export const products = [
         "sleeve": "19"
       }
     ],
-    "sizeChartType": "ethnic"
+    "sizeChartType": "ethnic",
+    "variants": []
   },
   {
     "id": 246,
@@ -584,11 +589,12 @@ export const products = [
         "sleeve": "19"
       }
     ],
-    "sizeChartType": "ethnic"
+    "sizeChartType": "ethnic",
+    "variants": []
   },
   {
     "id": 247,
-    "title": "Pastel Lavender Organza Dupatta Set",
+    "title": "Sage Mint Green Organza Dupatta Set",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -601,7 +607,7 @@ export const products = [
       "/dupatta-sets/7/8_de61a66e-6d16-4628-bcdf-64b893d97795_700x.webp",
       "/dupatta-sets/7/9_8b4d8138-328e-4690-bbc0-b48fa0d52031_700x.webp"
     ],
-    "description": "Discover Pastel Lavender Organza Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Sage Mint Green Organza Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -612,7 +618,7 @@ export const products = [
     ],
     "rating": 4.8,
     "reviewsCount": 126,
-    "descriptionLong": "Discover Pastel Lavender Organza Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Sage Mint Green Organza Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -623,7 +629,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Pastel Lavender Organza Dupatta Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Sage Mint Green Organza Dupatta Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -678,11 +684,12 @@ export const products = [
         "sleeve": "19"
       }
     ],
-    "sizeChartType": "ethnic"
+    "sizeChartType": "ethnic",
+    "variants": []
   },
   {
     "id": 248,
-    "title": "Red Bandhej Kota Doria Dupatta Set",
+    "title": "Ruby Red Bandhej Kota Dupatta Set",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -696,7 +703,7 @@ export const products = [
       "/dupatta-sets/8/RedBandhejKotaDoriaDupatta_3_700x.webp",
       "/dupatta-sets/8/RedBandhejKotaDoriaDupatta_4_700x.webp"
     ],
-    "description": "Discover Red Bandhej Kota Doria Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Ruby Red Bandhej Kota Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -707,7 +714,7 @@ export const products = [
     ],
     "rating": 4.8,
     "reviewsCount": 82,
-    "descriptionLong": "Discover Red Bandhej Kota Doria Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Ruby Red Bandhej Kota Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -718,7 +725,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Red Bandhej Kota Doria Dupatta Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Ruby Red Bandhej Kota Dupatta Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -773,11 +780,12 @@ export const products = [
         "sleeve": "19"
       }
     ],
-    "sizeChartType": "ethnic"
+    "sizeChartType": "ethnic",
+    "variants": []
   },
   {
     "id": 249,
-    "title": "Peach Embroidered Silk Dupatta Kurta Set",
+    "title": "Blush Rose Pink Embroidered Dupatta Set",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -794,7 +802,7 @@ export const products = [
       "/dupatta-sets/9/LBL101KS348_6_eed44f69-ed9b-40b9-af19-64552f7fffcb_700x.webp",
       "/dupatta-sets/9/LBL101KS348_7_700x.webp"
     ],
-    "description": "Discover Peach Embroidered Silk Dupatta Kurta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Blush Rose Pink Embroidered Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -805,7 +813,7 @@ export const products = [
     ],
     "rating": 4.8,
     "reviewsCount": 151,
-    "descriptionLong": "Discover Peach Embroidered Silk Dupatta Kurta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Blush Rose Pink Embroidered Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular / Straight Fit",
@@ -816,7 +824,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Silk Blend for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Peach Embroidered Silk Dupatta Kurta Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Blush Rose Pink Embroidered Dupatta Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -871,11 +879,12 @@ export const products = [
         "sleeve": "19"
       }
     ],
-    "sizeChartType": "ethnic"
+    "sizeChartType": "ethnic",
+    "variants": []
   },
   {
     "id": 250,
-    "title": "Mint Green Ethnic Palazzo Dupatta Set",
+    "title": "Deep Plum Purple Anarkali Dupatta Set",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -892,7 +901,7 @@ export const products = [
       "/dupatta-sets/10/LBL101KS296_6_700x.webp",
       "/dupatta-sets/10/LBL101KS296_7_700x.webp"
     ],
-    "description": "Discover Mint Green Ethnic Palazzo Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Deep Plum Purple Anarkali Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -903,7 +912,7 @@ export const products = [
     ],
     "rating": 4.7,
     "reviewsCount": 130,
-    "descriptionLong": "Discover Mint Green Ethnic Palazzo Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Deep Plum Purple Anarkali Dupatta Set from FlexFit Studio—where tradition meets contemporary design. This dupatta sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -914,7 +923,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Mint Green Ethnic Palazzo Dupatta Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Deep Plum Purple Anarkali Dupatta Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -969,11 +978,12 @@ export const products = [
         "sleeve": "19"
       }
     ],
-    "sizeChartType": "ethnic"
+    "sizeChartType": "ethnic",
+    "variants": []
   },
   {
     "id": 1000,
-    "title": "Ivory Gold Yoke Embroidered Straight Kurta",
+    "title": "Ruby Red Gota Striped Straight Kurta Set",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -990,7 +1000,7 @@ export const products = [
       "/kurtas/Kurtas/1/LBL101KS612_6_b9031da5-058a-42b1-8193-2bee49c5426c_700x.webp",
       "/kurtas/Kurtas/1/LBL101KS612_7_11331730-5fca-4a0b-8c31-00613ce6d558_700x.webp"
     ],
-    "description": "Discover Ivory Gold Yoke Embroidered Straight Kurta from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Ruby Red Gota Striped Straight Kurta Set from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -999,9 +1009,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "5.0",
+    "rating": 5,
     "reviewsCount": 95,
-    "descriptionLong": "Discover Ivory Gold Yoke Embroidered Straight Kurta from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Ruby Red Gota Striped Straight Kurta Set from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -1012,7 +1022,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Ivory Gold Yoke Embroidered Straight Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Ruby Red Gota Striped Straight Kurta Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -1071,7 +1081,7 @@ export const products = [
   },
   {
     "id": 1001,
-    "title": "Lavender Pastel Printed Layered Kurta",
+    "title": "Mustard Yellow Layered Festive Kurta Set",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -1088,7 +1098,7 @@ export const products = [
       "/kurtas/Kurtas/10/DSC_5047_700x.webp",
       "/kurtas/Kurtas/10/DSC_5054_700x.webp"
     ],
-    "description": "Discover Lavender Pastel Printed Layered Kurta from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Mustard Yellow Layered Festive Kurta Set from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -1097,9 +1107,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.3",
+    "rating": 4.3,
     "reviewsCount": 65,
-    "descriptionLong": "Discover Lavender Pastel Printed Layered Kurta from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Mustard Yellow Layered Festive Kurta Set from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -1110,7 +1120,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Lavender Pastel Printed Layered Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Mustard Yellow Layered Festive Kurta Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -1169,7 +1179,7 @@ export const products = [
   },
   {
     "id": 1002,
-    "title": "Teal Blue Printed A-Line Cotton Kurta",
+    "title": "Mustard Yellow Gota Striped Cotton Kurta",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -1187,7 +1197,7 @@ export const products = [
       "/kurtas/Kurtas/2/LBL101KS710_8_700x.webp",
       "/kurtas/Kurtas/2/LBL101KS710_9_700x.webp"
     ],
-    "description": "Discover Teal Blue Printed A-Line Cotton Kurta from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Mustard Yellow Gota Striped Cotton Kurta from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -1196,9 +1206,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 93,
-    "descriptionLong": "Discover Teal Blue Printed A-Line Cotton Kurta from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Mustard Yellow Gota Striped Cotton Kurta from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -1209,7 +1219,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Teal Blue Printed A-Line Cotton Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Mustard Yellow Gota Striped Cotton Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -1268,7 +1278,7 @@ export const products = [
   },
   {
     "id": 1003,
-    "title": "Mustard Floral Threadwork Festive Kurta",
+    "title": "Sage Green Chikankari Embroidered Kurta Set",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -1285,7 +1295,7 @@ export const products = [
       "/kurtas/Kurtas/3/3_2c414c94-db64-4500-bb1b-53bc5a046a9a_700x.webp",
       "/kurtas/Kurtas/3/5_85180199-5a4e-4f29-881e-42629c8a4a6c_700x.webp"
     ],
-    "description": "Discover Mustard Floral Threadwork Festive Kurta from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Sage Green Chikankari Embroidered Kurta Set from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -1294,9 +1304,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.3",
+    "rating": 4.3,
     "reviewsCount": 120,
-    "descriptionLong": "Discover Mustard Floral Threadwork Festive Kurta from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Sage Green Chikankari Embroidered Kurta Set from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -1307,7 +1317,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Mustard Floral Threadwork Festive Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Sage Green Chikankari Embroidered Kurta Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -1366,7 +1376,7 @@ export const products = [
   },
   {
     "id": 1004,
-    "title": "Wine Maroon Silk Blend Anarkali Kurta",
+    "title": "Rose Pink Dhoti Style Kurti Set",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -1379,7 +1389,7 @@ export const products = [
       "/kurtas/Kurtas/4/LBL101KS05_4_700x.webp",
       "/kurtas/Kurtas/4/LBL101KS05_5_700x.webp"
     ],
-    "description": "Discover Wine Maroon Silk Blend Anarkali Kurta from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Rose Pink Dhoti Style Kurti Set from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -1388,9 +1398,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 142,
-    "descriptionLong": "Discover Wine Maroon Silk Blend Anarkali Kurta from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Rose Pink Dhoti Style Kurti Set from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -1401,7 +1411,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Wine Maroon Silk Blend Anarkali Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Rose Pink Dhoti Style Kurti Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -1460,7 +1470,7 @@ export const products = [
   },
   {
     "id": 1005,
-    "title": "Sky Blue Geometric Print Straight Kurta",
+    "title": "Black Floral Printed Sharara Kurta Set",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -1475,7 +1485,7 @@ export const products = [
       "/kurtas/Kurtas/5/LBL101KS60_4_18df2bf7-e60e-4127-aecf-716b88b044d9_700x.webp",
       "/kurtas/Kurtas/5/LBL101KS60_5_08e5761d-0c88-49f6-af07-fea1bc25335c_700x.webp"
     ],
-    "description": "Discover Sky Blue Geometric Print Straight Kurta from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Black Floral Printed Sharara Kurta Set from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -1484,9 +1494,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 32,
-    "descriptionLong": "Discover Sky Blue Geometric Print Straight Kurta from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Black Floral Printed Sharara Kurta Set from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -1497,7 +1507,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Sky Blue Geometric Print Straight Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Black Floral Printed Sharara Kurta Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -1556,7 +1566,7 @@ export const products = [
   },
   {
     "id": 1006,
-    "title": "Emerald Green Hand-Block Cotton Kurta",
+    "title": "Lavender Purple Organza Straight Kurta Set",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -1573,7 +1583,7 @@ export const products = [
       "/kurtas/Kurtas/6/27_a5b4481c-a2f5-48b6-beda-b32b0b1e4e87_700x.webp",
       "/kurtas/Kurtas/6/4_a54417ab-5ad9-4894-aa8a-dfae74ae4c97_700x.webp"
     ],
-    "description": "Discover Emerald Green Hand-Block Cotton Kurta from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Lavender Purple Organza Straight Kurta Set from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -1582,9 +1592,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "5.0",
+    "rating": 5,
     "reviewsCount": 167,
-    "descriptionLong": "Discover Emerald Green Hand-Block Cotton Kurta from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Lavender Purple Organza Straight Kurta Set from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -1595,7 +1605,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Emerald Green Hand-Block Cotton Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Lavender Purple Organza Straight Kurta Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -1654,7 +1664,7 @@ export const products = [
   },
   {
     "id": 1007,
-    "title": "Chocolate Brown Straight Cotton Kurta",
+    "title": "Tan Brown Organza Palazzo Kurta Set",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -1674,7 +1684,7 @@ export const products = [
       "/kurtas/Kurtas/7/0H8A2904_8b078b65-c988-4d2b-8a2b-b371e09faf62_700x.webp",
       "/kurtas/Kurtas/7/0H8A2905_3d012da1-976d-4c46-b6d1-f216f51b4807_700x.webp"
     ],
-    "description": "Discover Chocolate Brown Straight Cotton Kurta from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Tan Brown Organza Palazzo Kurta Set from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -1683,9 +1693,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 95,
-    "descriptionLong": "Discover Chocolate Brown Straight Cotton Kurta from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Tan Brown Organza Palazzo Kurta Set from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -1696,7 +1706,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Chocolate Brown Straight Cotton Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Tan Brown Organza Palazzo Kurta Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -1755,7 +1765,7 @@ export const products = [
   },
   {
     "id": 1008,
-    "title": "Blush Pink Floral Muslin Kurta",
+    "title": "Rose Pink Chikankari Palazzo Kurta Set",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -1773,7 +1783,7 @@ export const products = [
       "/kurtas/Kurtas/8/LBCL101KS240_7_700x.webp",
       "/kurtas/Kurtas/8/LBCL101KS240_8_82a8290a-8602-472d-b7f1-0f5174bb93e7_700x.webp"
     ],
-    "description": "Discover Blush Pink Floral Muslin Kurta from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Rose Pink Chikankari Palazzo Kurta Set from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -1782,9 +1792,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 85,
-    "descriptionLong": "Discover Blush Pink Floral Muslin Kurta from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Rose Pink Chikankari Palazzo Kurta Set from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -1795,7 +1805,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Blush Pink Floral Muslin Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Rose Pink Chikankari Palazzo Kurta Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -1854,7 +1864,7 @@ export const products = [
   },
   {
     "id": 1009,
-    "title": "Ruby Red Festive Embroidered Kurta",
+    "title": "Ruby Red Mirror Work Sleeveless Kurta",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -1872,7 +1882,7 @@ export const products = [
       "/kurtas/Kurtas/9/LBL101KS620_6_780984f2-6cf6-4d10-80a5-85cd5cc0c7b6_700x.webp",
       "/kurtas/Kurtas/9/LBL101KS620_7_b5ac921c-005e-453e-869a-f00ae3cf20c9_700x.webp"
     ],
-    "description": "Discover Ruby Red Festive Embroidered Kurta from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Ruby Red Mirror Work Sleeveless Kurta from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -1881,9 +1891,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "5.0",
+    "rating": 5,
     "reviewsCount": 193,
-    "descriptionLong": "Discover Ruby Red Festive Embroidered Kurta from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Ruby Red Mirror Work Sleeveless Kurta from FlexFit Studio—where tradition meets contemporary design. This kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -1894,7 +1904,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Ruby Red Festive Embroidered Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Ruby Red Mirror Work Sleeveless Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -1953,7 +1963,7 @@ export const products = [
   },
   {
     "id": 1010,
-    "title": "Royal Maroon Zari Embroidered Bridal Lehenga",
+    "title": "Multicolor Floral Print Lehenga Choli",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -1977,7 +1987,7 @@ export const products = [
       "/lehengas/Lehengas/1/040A3558_700x.webp",
       "/lehengas/Lehengas/1/040A3562_700x.webp"
     ],
-    "description": "Discover Royal Maroon Zari Embroidered Bridal Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Multicolor Floral Print Lehenga Choli from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -1986,9 +1996,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 20,
-    "descriptionLong": "Discover Royal Maroon Zari Embroidered Bridal Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Multicolor Floral Print Lehenga Choli from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Flared / A-line",
@@ -1999,7 +2009,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Royal Maroon Zari Embroidered Bridal Lehenga features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Multicolor Floral Print Lehenga Choli features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -2058,7 +2068,7 @@ export const products = [
   },
   {
     "id": 1011,
-    "title": "Coral Orange Bandhani Print Lehenga",
+    "title": "Lavender Purple Floral Print Lehenga",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -2075,7 +2085,7 @@ export const products = [
       "/lehengas/Lehengas/10/040A2714_700x.webp",
       "/lehengas/Lehengas/10/040A2716_700x.webp"
     ],
-    "description": "Discover Coral Orange Bandhani Print Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Lavender Purple Floral Print Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -2084,9 +2094,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.4",
+    "rating": 4.4,
     "reviewsCount": 131,
-    "descriptionLong": "Discover Coral Orange Bandhani Print Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Lavender Purple Floral Print Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Flared / A-line",
@@ -2097,7 +2107,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Coral Orange Bandhani Print Lehenga features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Lavender Purple Floral Print Lehenga features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -2156,7 +2166,7 @@ export const products = [
   },
   {
     "id": 1012,
-    "title": "Lavanya Peach Mirror Work Festive Lehenga",
+    "title": "Wine Maroon Mirror Work Brocade Lehenga",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -2173,7 +2183,7 @@ export const products = [
       "/lehengas/Lehengas/2/Lavanya71015_700x.webp",
       "/lehengas/Lehengas/2/Lavanya71017_700x.webp"
     ],
-    "description": "Discover Lavanya Peach Mirror Work Festive Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Wine Maroon Mirror Work Brocade Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -2182,9 +2192,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 154,
-    "descriptionLong": "Discover Lavanya Peach Mirror Work Festive Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Wine Maroon Mirror Work Brocade Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Flared / A-line",
@@ -2195,7 +2205,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Lavanya Peach Mirror Work Festive Lehenga features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Wine Maroon Mirror Work Brocade Lehenga features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -2254,7 +2264,7 @@ export const products = [
   },
   {
     "id": 1013,
-    "title": "Emerald Green Silk Banarasi Lehenga Choli",
+    "title": "Teal Blue Banarasi Brocade Lehenga Choli",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -2272,7 +2282,7 @@ export const products = [
       "/lehengas/Lehengas/3/040A3784_700x.webp",
       "/lehengas/Lehengas/3/040A3786_700x.webp"
     ],
-    "description": "Discover Emerald Green Silk Banarasi Lehenga Choli from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Teal Blue Banarasi Brocade Lehenga Choli from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -2281,9 +2291,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.6",
+    "rating": 4.6,
     "reviewsCount": 58,
-    "descriptionLong": "Discover Emerald Green Silk Banarasi Lehenga Choli from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Teal Blue Banarasi Brocade Lehenga Choli from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Flared / A-line",
@@ -2294,7 +2304,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Emerald Green Silk Banarasi Lehenga Choli features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Teal Blue Banarasi Brocade Lehenga Choli features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -2353,7 +2363,7 @@ export const products = [
   },
   {
     "id": 1014,
-    "title": "Midnight Blue Sequin Party Wear Lehenga",
+    "title": "Coral Orange Leheriya Print Lehenga Choli",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -2370,7 +2380,7 @@ export const products = [
       "/lehengas/Lehengas/4/040A1493_700x.webp",
       "/lehengas/Lehengas/4/040A1494_700x.webp"
     ],
-    "description": "Discover Midnight Blue Sequin Party Wear Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Coral Orange Leheriya Print Lehenga Choli from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -2379,9 +2389,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 103,
-    "descriptionLong": "Discover Midnight Blue Sequin Party Wear Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Coral Orange Leheriya Print Lehenga Choli from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Flared / A-line",
@@ -2392,7 +2402,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Midnight Blue Sequin Party Wear Lehenga features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Coral Orange Leheriya Print Lehenga Choli features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -2451,7 +2461,7 @@ export const products = [
   },
   {
     "id": 1015,
-    "title": "Blush Pink Organza Floral Lehenga Set",
+    "title": "Multicolor Mirror Work Festive Lehenga",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -2468,7 +2478,7 @@ export const products = [
       "/lehengas/Lehengas/5/LBL101KS650_8_700x.webp",
       "/lehengas/Lehengas/5/LBL101KS650_9_700x.webp"
     ],
-    "description": "Discover Blush Pink Organza Floral Lehenga Set from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Multicolor Mirror Work Festive Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -2477,9 +2487,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.3",
+    "rating": 4.3,
     "reviewsCount": 94,
-    "descriptionLong": "Discover Blush Pink Organza Floral Lehenga Set from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Multicolor Mirror Work Festive Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Flared / A-line",
@@ -2490,7 +2500,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Blush Pink Organza Floral Lehenga Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Multicolor Mirror Work Festive Lehenga features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -2549,7 +2559,7 @@ export const products = [
   },
   {
     "id": 1016,
-    "title": "Gold Tissue Reception Lehenga with Dupatta",
+    "title": "Ruby Red Embroidered Bridal Lehenga",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -2566,7 +2576,7 @@ export const products = [
       "/lehengas/Lehengas/6/LBL101KS616_6_700x.webp",
       "/lehengas/Lehengas/6/LBL101KS616_7_700x.webp"
     ],
-    "description": "Discover Gold Tissue Reception Lehenga with Dupatta from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Ruby Red Embroidered Bridal Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -2575,9 +2585,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 187,
-    "descriptionLong": "Discover Gold Tissue Reception Lehenga with Dupatta from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Ruby Red Embroidered Bridal Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Flared / A-line",
@@ -2588,7 +2598,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Gold Tissue Reception Lehenga with Dupatta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Ruby Red Embroidered Bridal Lehenga features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -2647,7 +2657,7 @@ export const products = [
   },
   {
     "id": 1017,
-    "title": "Wine Velvet A-Line Festive Lehenga",
+    "title": "Blush Rose Pink Gota Striped Lehenga",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -2661,7 +2671,7 @@ export const products = [
       "/lehengas/Lehengas/7/sku63_3_29b55751-1919-48dd-93ec-1597cc039aff_700x.webp",
       "/lehengas/Lehengas/7/sku63_4_ffa9963b-9d7b-485b-ad2b-3881813f291f_700x.webp"
     ],
-    "description": "Discover Wine Velvet A-Line Festive Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Blush Rose Pink Gota Striped Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -2670,9 +2680,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "5.0",
+    "rating": 5,
     "reviewsCount": 218,
-    "descriptionLong": "Discover Wine Velvet A-Line Festive Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Blush Rose Pink Gota Striped Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Flared / A-line",
@@ -2683,7 +2693,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Wine Velvet A-Line Festive Lehenga features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Blush Rose Pink Gota Striped Lehenga features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -2742,7 +2752,7 @@ export const products = [
   },
   {
     "id": 1018,
-    "title": "Teal Georgette Threadwork Lehenga",
+    "title": "Deep Teal Velvet Sequin Lehenga",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -2759,7 +2769,7 @@ export const products = [
       "/lehengas/Lehengas/8/LBL101KS588_6_700x.webp",
       "/lehengas/Lehengas/8/LBL101KS588_7_700x.webp"
     ],
-    "description": "Discover Teal Georgette Threadwork Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Deep Teal Velvet Sequin Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -2768,9 +2778,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 216,
-    "descriptionLong": "Discover Teal Georgette Threadwork Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Deep Teal Velvet Sequin Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Flared / A-line",
@@ -2781,7 +2791,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Teal Georgette Threadwork Lehenga features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Deep Teal Velvet Sequin Lehenga features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -2840,7 +2850,7 @@ export const products = [
   },
   {
     "id": 1019,
-    "title": "Ivory Cream Net Embroidered Lehenga",
+    "title": "Ruby Red Bandhani Print Lehenga",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -2856,7 +2866,7 @@ export const products = [
       "/lehengas/Lehengas/9/040A1708_700x.webp",
       "/lehengas/Lehengas/9/040A1719_700x.webp"
     ],
-    "description": "Discover Ivory Cream Net Embroidered Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Ruby Red Bandhani Print Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -2865,9 +2875,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.6",
+    "rating": 4.6,
     "reviewsCount": 59,
-    "descriptionLong": "Discover Ivory Cream Net Embroidered Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Ruby Red Bandhani Print Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Flared / A-line",
@@ -2878,7 +2888,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Ivory Cream Net Embroidered Lehenga features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Ruby Red Bandhani Print Lehenga features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -2937,7 +2947,7 @@ export const products = [
   },
   {
     "id": 1020,
-    "title": "Banarasi Gold Border Silk Saree",
+    "title": "Sage Green Sequin Border Saree",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -2966,7 +2976,7 @@ export const products = [
       "/sarees/Sarees/1/0T3A5581_700x.webp",
       "/sarees/Sarees/1/0T3A5586_700x.webp"
     ],
-    "description": "Discover Banarasi Gold Border Silk Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Sage Green Sequin Border Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -2975,9 +2985,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.6",
+    "rating": 4.6,
     "reviewsCount": 135,
-    "descriptionLong": "Discover Banarasi Gold Border Silk Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Sage Green Sequin Border Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular / Straight Fit",
@@ -2988,7 +2998,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Silk Blend for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Banarasi Gold Border Silk Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Sage Green Sequin Border Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -3047,7 +3057,7 @@ export const products = [
   },
   {
     "id": 1021,
-    "title": "Multicolor Ikat Silk Blend Saree",
+    "title": "Aqua Teal Pre-Draped Saree Gown",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -3063,7 +3073,7 @@ export const products = [
       "/sarees/Sarees/10/SV-20240903-2345_3d20251b-1a01-4645-8110-7900f2b40051_700x.webp",
       "/sarees/Sarees/10/SV-20240903-2372_9e2755d9-f729-4e27-b17c-59833dfaca15_700x.webp"
     ],
-    "description": "Discover Multicolor Ikat Silk Blend Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Aqua Teal Pre-Draped Saree Gown from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -3072,9 +3082,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 159,
-    "descriptionLong": "Discover Multicolor Ikat Silk Blend Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Aqua Teal Pre-Draped Saree Gown from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular / Straight Fit",
@@ -3085,7 +3095,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Silk Blend for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Multicolor Ikat Silk Blend Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Aqua Teal Pre-Draped Saree Gown features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -3144,7 +3154,7 @@ export const products = [
   },
   {
     "id": 1022,
-    "title": "Kanjivaram Temple Border Silk Saree",
+    "title": "Sky Blue Chiffon Saree",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -3161,7 +3171,7 @@ export const products = [
       "/sarees/Sarees/2/SV-20240903-1059_0f30f0ab-8e3f-4079-b584-826833e093c4_700x.webp",
       "/sarees/Sarees/2/SV-20240903-1255_cb5eebb8-f29b-4e19-a8a9-969e38666986_700x.webp"
     ],
-    "description": "Discover Kanjivaram Temple Border Silk Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Sky Blue Chiffon Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -3170,9 +3180,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.3",
+    "rating": 4.3,
     "reviewsCount": 212,
-    "descriptionLong": "Discover Kanjivaram Temple Border Silk Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Sky Blue Chiffon Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular / Straight Fit",
@@ -3183,7 +3193,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Silk Blend for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Kanjivaram Temple Border Silk Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Sky Blue Chiffon Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -3242,7 +3252,7 @@ export const products = [
   },
   {
     "id": 1023,
-    "title": "Pastel Green Chanderi Cotton Saree",
+    "title": "Peach Orange Sequin Chiffon Saree",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -3259,7 +3269,7 @@ export const products = [
       "/sarees/Sarees/3/SV-20240903-0806_6c3b0bab-a878-49df-853b-0f1153bf4080_700x.webp",
       "/sarees/Sarees/3/SV-20240903-0941_e251e1a6-d9e2-40cf-94a1-357ee03c4076_700x.webp"
     ],
-    "description": "Discover Pastel Green Chanderi Cotton Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Peach Orange Sequin Chiffon Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -3268,9 +3278,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.4",
+    "rating": 4.4,
     "reviewsCount": 174,
-    "descriptionLong": "Discover Pastel Green Chanderi Cotton Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Peach Orange Sequin Chiffon Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular / Straight Fit",
@@ -3281,7 +3291,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Silk Blend for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Pastel Green Chanderi Cotton Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Peach Orange Sequin Chiffon Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -3340,7 +3350,7 @@ export const products = [
   },
   {
     "id": 1024,
-    "title": "Red Bandhani Georgette Saree",
+    "title": "Aqua Teal Ombre Chiffon Saree",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -3358,7 +3368,7 @@ export const products = [
       "/sarees/Sarees/4/SV-20240903-1211_700x (1).webp",
       "/sarees/Sarees/4/SV-20240903-1211_700x.webp"
     ],
-    "description": "Discover Red Bandhani Georgette Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Aqua Teal Ombre Chiffon Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -3367,9 +3377,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.4",
+    "rating": 4.4,
     "reviewsCount": 56,
-    "descriptionLong": "Discover Red Bandhani Georgette Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Aqua Teal Ombre Chiffon Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular / Straight Fit",
@@ -3380,7 +3390,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Silk Blend for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Red Bandhani Georgette Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Aqua Teal Ombre Chiffon Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -3439,7 +3449,7 @@ export const products = [
   },
   {
     "id": 1025,
-    "title": "Navy Blue Printed Linen Saree",
+    "title": "Blush Rose Pink Ombre Saree",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -3455,7 +3465,7 @@ export const products = [
       "/sarees/Sarees/5/SV-20240903-1940_46f214fe-67a5-4bb3-acc7-e76c42551d9e_700x.webp",
       "/sarees/Sarees/5/SV-20240903-2611_f952014f-a248-49c3-b820-3031922d2eb1_700x.webp"
     ],
-    "description": "Discover Navy Blue Printed Linen Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Blush Rose Pink Ombre Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -3464,9 +3474,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.9",
+    "rating": 4.9,
     "reviewsCount": 51,
-    "descriptionLong": "Discover Navy Blue Printed Linen Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Blush Rose Pink Ombre Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular / Straight Fit",
@@ -3477,7 +3487,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Silk Blend for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Navy Blue Printed Linen Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Blush Rose Pink Ombre Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -3536,7 +3546,7 @@ export const products = [
   },
   {
     "id": 1026,
-    "title": "Mauve Organza Floral Saree",
+    "title": "Black Sequin Floral Saree",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -3553,7 +3563,7 @@ export const products = [
       "/sarees/Sarees/6/SV-20240903-2112_120621eb-0443-455f-86e0-35634f23a3a9_700x.webp",
       "/sarees/Sarees/6/SV-20240903-2392_4cca2f26-29c8-48f5-acf4-fe1b37e66bad_700x.webp"
     ],
-    "description": "Discover Mauve Organza Floral Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Black Sequin Floral Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -3562,9 +3572,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 104,
-    "descriptionLong": "Discover Mauve Organza Floral Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Black Sequin Floral Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular / Straight Fit",
@@ -3575,7 +3585,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Silk Blend for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Mauve Organza Floral Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Black Sequin Floral Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -3634,7 +3644,7 @@ export const products = [
   },
   {
     "id": 1027,
-    "title": "Black Gold Zari Party Wear Saree",
+    "title": "Emerald Green Pre-Stitched Saree",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -3653,7 +3663,7 @@ export const products = [
       "/sarees/Sarees/7/SV-20240903-1042_a6f9e80b-e94e-4760-9d0d-574ed15de1e3_700x.webp",
       "/sarees/Sarees/7/SV-20240903-1182_931e1c69-4d08-44b6-8984-b2af89230c4a_700x.webp"
     ],
-    "description": "Discover Black Gold Zari Party Wear Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Emerald Green Pre-Stitched Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -3662,9 +3672,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 200,
-    "descriptionLong": "Discover Black Gold Zari Party Wear Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Emerald Green Pre-Stitched Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular / Straight Fit",
@@ -3675,7 +3685,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Silk Blend for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Black Gold Zari Party Wear Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Emerald Green Pre-Stitched Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -3734,7 +3744,7 @@ export const products = [
   },
   {
     "id": 1028,
-    "title": "Mustard Handloom Cotton Saree",
+    "title": "Ruby Red Gold Border Silk Saree",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -3756,7 +3766,7 @@ export const products = [
       "/sarees/Sarees/8/0T3A5356_700x.webp",
       "/sarees/Sarees/8/0T3A5359_700x.webp"
     ],
-    "description": "Discover Mustard Handloom Cotton Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Ruby Red Gold Border Silk Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -3765,9 +3775,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.3",
+    "rating": 4.3,
     "reviewsCount": 146,
-    "descriptionLong": "Discover Mustard Handloom Cotton Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Ruby Red Gold Border Silk Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular / Straight Fit",
@@ -3778,7 +3788,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Silk Blend for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Mustard Handloom Cotton Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Ruby Red Gold Border Silk Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -3837,7 +3847,7 @@ export const products = [
   },
   {
     "id": 1029,
-    "title": "Peach Tissue Embroidered Saree",
+    "title": "Sage Green Floral Print Saree",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -3855,7 +3865,7 @@ export const products = [
       "/sarees/Sarees/9/L12.01.25_3532_43117b46-ab12-4269-8fed-0375305b5427_700x.webp",
       "/sarees/Sarees/9/L12.01.25_3547_33128c31-b45d-4240-b2c3-634c0659e06c_700x.webp"
     ],
-    "description": "Discover Peach Tissue Embroidered Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Sage Green Floral Print Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -3864,9 +3874,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.3",
+    "rating": 4.3,
     "reviewsCount": 102,
-    "descriptionLong": "Discover Peach Tissue Embroidered Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Sage Green Floral Print Saree from FlexFit Studio—where tradition meets contemporary design. This sarees is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular / Straight Fit",
@@ -3877,7 +3887,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Silk Blend for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Peach Tissue Embroidered Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Sage Green Floral Print Saree features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -3936,7 +3946,7 @@ export const products = [
   },
   {
     "id": 1030,
-    "title": "Ivory Embroidered Palazzo Suit Set",
+    "title": "Coral Red Floral Palazzo Suit Set",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -3954,7 +3964,7 @@ export const products = [
       "/suit-sets/Suit Sets/1/SV-20240406-1164_700x.webp",
       "/suit-sets/Suit Sets/1/SV-20240406-1468_700x.webp"
     ],
-    "description": "Discover Ivory Embroidered Palazzo Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Coral Red Floral Palazzo Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -3963,9 +3973,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.6",
+    "rating": 4.6,
     "reviewsCount": 44,
-    "descriptionLong": "Discover Ivory Embroidered Palazzo Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Coral Red Floral Palazzo Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -3976,7 +3986,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Ivory Embroidered Palazzo Suit Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Coral Red Floral Palazzo Suit Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -4035,7 +4045,7 @@ export const products = [
   },
   {
     "id": 1031,
-    "title": "Wine Maroon Velvet Party Suit Set",
+    "title": "Mustard Yellow Floral Sharara Suit Set",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -4051,7 +4061,7 @@ export const products = [
       "/suit-sets/Suit Sets/10/LBL101KS263_5_700x.webp",
       "/suit-sets/Suit Sets/10/LBL101KS263_6_1c664049-9b6a-4e9d-af95-45699f8c1409_700x.webp"
     ],
-    "description": "Discover Wine Maroon Velvet Party Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Mustard Yellow Floral Sharara Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -4060,9 +4070,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.3",
+    "rating": 4.3,
     "reviewsCount": 36,
-    "descriptionLong": "Discover Wine Maroon Velvet Party Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Mustard Yellow Floral Sharara Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -4073,7 +4083,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Wine Maroon Velvet Party Suit Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Mustard Yellow Floral Sharara Suit Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -4132,7 +4142,7 @@ export const products = [
   },
   {
     "id": 1032,
-    "title": "Sage Green Printed Sharara Suit Set",
+    "title": "Lime Green Anarkali Palazzo Suit Set",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -4153,7 +4163,7 @@ export const products = [
       "/suit-sets/Suit Sets/2/0T3A4439_a11d6591-3bce-48e0-b40a-5d700615adaf_700x.webp",
       "/suit-sets/Suit Sets/2/0T3A4441_41ebe5ee-8ae0-4bab-afb8-01fc1548a1c2_700x.webp"
     ],
-    "description": "Discover Sage Green Printed Sharara Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Lime Green Anarkali Palazzo Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -4162,9 +4172,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.6",
+    "rating": 4.6,
     "reviewsCount": 186,
-    "descriptionLong": "Discover Sage Green Printed Sharara Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Lime Green Anarkali Palazzo Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -4175,7 +4185,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Sage Green Printed Sharara Suit Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Lime Green Anarkali Palazzo Suit Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -4234,7 +4244,7 @@ export const products = [
   },
   {
     "id": 1033,
-    "title": "Rust Orange Georgette Anarkali Suit Set",
+    "title": "Mustard Yellow Anarkali Suit Set",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -4248,7 +4258,7 @@ export const products = [
       "/suit-sets/Suit Sets/3/yellow_leheriya_anarkali_suit_set_2_f2ed9c07-8d6f-467f-b7fc-5eb44737d0d8_700x.webp",
       "/suit-sets/Suit Sets/3/yellow_leheriya_anarkali_suit_set_3_3ea599f3-2286-4596-8454-201baec2ccf1_700x.webp"
     ],
-    "description": "Discover Rust Orange Georgette Anarkali Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Mustard Yellow Anarkali Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -4257,9 +4267,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.3",
+    "rating": 4.3,
     "reviewsCount": 143,
-    "descriptionLong": "Discover Rust Orange Georgette Anarkali Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Mustard Yellow Anarkali Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -4270,7 +4280,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Rust Orange Georgette Anarkali Suit Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Mustard Yellow Anarkali Suit Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -4329,7 +4339,7 @@ export const products = [
   },
   {
     "id": 1034,
-    "title": "Powder Blue Chanderi Three-Piece Suit",
+    "title": "Ruby Red Floral Dupatta Suit Set",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -4348,7 +4358,7 @@ export const products = [
       "/suit-sets/Suit Sets/4/0T3A4534_700x.webp",
       "/suit-sets/Suit Sets/4/0T3A4538_700x.webp"
     ],
-    "description": "Discover Powder Blue Chanderi Three-Piece Suit from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Ruby Red Floral Dupatta Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -4357,9 +4367,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.9",
+    "rating": 4.9,
     "reviewsCount": 59,
-    "descriptionLong": "Discover Powder Blue Chanderi Three-Piece Suit from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Ruby Red Floral Dupatta Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -4370,7 +4380,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Powder Blue Chanderi Three-Piece Suit features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Ruby Red Floral Dupatta Suit Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -4429,7 +4439,7 @@ export const products = [
   },
   {
     "id": 1035,
-    "title": "Magenta Silk Straight Kurta Suit Set",
+    "title": "Deep Teal Anarkali Gown Suit Set",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -4444,7 +4454,7 @@ export const products = [
       "/suit-sets/Suit Sets/5/4_3bf6d0ac-4b80-4372-8c5d-b0296a55f0c5_700x.webp",
       "/suit-sets/Suit Sets/5/SKU_3_1_635e1b35-4d4b-4349-b377-b8a4c980e8e2_700x.webp"
     ],
-    "description": "Discover Magenta Silk Straight Kurta Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Deep Teal Anarkali Gown Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -4453,9 +4463,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 42,
-    "descriptionLong": "Discover Magenta Silk Straight Kurta Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Deep Teal Anarkali Gown Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -4466,7 +4476,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Magenta Silk Straight Kurta Suit Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Deep Teal Anarkali Gown Suit Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -4525,7 +4535,7 @@ export const products = [
   },
   {
     "id": 1036,
-    "title": "Olive Green Cotton Kurta Pant Set",
+    "title": "Mustard Yellow Patiala Suit Set",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -4542,7 +4552,7 @@ export const products = [
       "/suit-sets/Suit Sets/6/LBL101KS704_7_700x.webp",
       "/suit-sets/Suit Sets/6/LBL101KS704_9_700x.webp"
     ],
-    "description": "Discover Olive Green Cotton Kurta Pant Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Mustard Yellow Patiala Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -4551,9 +4561,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "5.0",
+    "rating": 5,
     "reviewsCount": 144,
-    "descriptionLong": "Discover Olive Green Cotton Kurta Pant Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Mustard Yellow Patiala Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -4564,7 +4574,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Olive Green Cotton Kurta Pant Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Mustard Yellow Patiala Suit Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -4623,7 +4633,7 @@ export const products = [
   },
   {
     "id": 1037,
-    "title": "Lavender Mirror Work Festive Suit Set",
+    "title": "Blush Rose Pink Patiala Suit Set",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -4642,7 +4652,7 @@ export const products = [
       "/suit-sets/Suit Sets/7/LBL101KS706_7_700x.webp",
       "/suit-sets/Suit Sets/7/LBL101KS706_8_700x.webp"
     ],
-    "description": "Discover Lavender Mirror Work Festive Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Blush Rose Pink Patiala Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -4651,9 +4661,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.6",
+    "rating": 4.6,
     "reviewsCount": 105,
-    "descriptionLong": "Discover Lavender Mirror Work Festive Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Blush Rose Pink Patiala Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -4664,7 +4674,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Lavender Mirror Work Festive Suit Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Blush Rose Pink Patiala Suit Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -4723,7 +4733,7 @@ export const products = [
   },
   {
     "id": 1038,
-    "title": "Charcoal Grey Embroidered Salwar Suit Set",
+    "title": "Mustard Yellow Anarkali Suit Set",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -4737,7 +4747,7 @@ export const products = [
       "/suit-sets/Suit Sets/8/LBL101KS62_3_700x.webp",
       "/suit-sets/Suit Sets/8/LBL101KS62_4_700x.webp"
     ],
-    "description": "Discover Charcoal Grey Embroidered Salwar Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Mustard Yellow Anarkali Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -4746,9 +4756,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.9",
+    "rating": 4.9,
     "reviewsCount": 150,
-    "descriptionLong": "Discover Charcoal Grey Embroidered Salwar Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Mustard Yellow Anarkali Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -4759,7 +4769,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Charcoal Grey Embroidered Salwar Suit Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Mustard Yellow Anarkali Suit Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -4818,7 +4828,7 @@ export const products = [
   },
   {
     "id": 1039,
-    "title": "Yellow Floral Muslin Co-ord Suit Set",
+    "title": "Mustard Yellow Mirror Work Salwar Suit Set",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -4839,7 +4849,7 @@ export const products = [
       "/suit-sets/Suit Sets/9/L12.01.25_1955_7b917121-a01b-4258-99cb-90d137ef973e_700x.webp",
       "/suit-sets/Suit Sets/9/L12.01.25_1983_c04d8c4a-d760-46eb-addc-7ea975d07c19_700x.webp"
     ],
-    "description": "Discover Yellow Floral Muslin Co-ord Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Mustard Yellow Mirror Work Salwar Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -4848,9 +4858,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 186,
-    "descriptionLong": "Discover Yellow Floral Muslin Co-ord Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Mustard Yellow Mirror Work Salwar Suit Set from FlexFit Studio—where tradition meets contemporary design. This suit sets is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -4861,7 +4871,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Yellow Floral Muslin Co-ord Suit Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Mustard Yellow Mirror Work Salwar Suit Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -4920,7 +4930,7 @@ export const products = [
   },
   {
     "id": 1041,
-    "title": "Chic Sage Green Ruffled Satin Top",
+    "title": "Sage Mint Green Striped Peplum Top",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -4935,7 +4945,7 @@ export const products = [
       "/tops/1/4.webp",
       "/tops/1/5.webp"
     ],
-    "description": "Discover Chic Sage Green Ruffled Satin Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Sage Mint Green Striped Peplum Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -4944,9 +4954,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.9",
+    "rating": 4.9,
     "reviewsCount": 128,
-    "descriptionLong": "Discover Chic Sage Green Ruffled Satin Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Sage Mint Green Striped Peplum Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -4957,7 +4967,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Chic Sage Green Ruffled Satin Top features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Sage Mint Green Striped Peplum Top features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -5016,7 +5026,7 @@ export const products = [
   },
   {
     "id": 1042,
-    "title": "Ivory White Cotton Peplum Top",
+    "title": "Tan Brown Peplum Blazer Top",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -5028,7 +5038,7 @@ export const products = [
       "/tops/2/1.webp",
       "/tops/2/2.webp"
     ],
-    "description": "Discover Ivory White Cotton Peplum Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Tan Brown Peplum Blazer Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -5037,9 +5047,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 214,
-    "descriptionLong": "Discover Ivory White Cotton Peplum Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Tan Brown Peplum Blazer Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -5050,7 +5060,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Ivory White Cotton Peplum Top features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Tan Brown Peplum Blazer Top features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -5109,7 +5119,7 @@ export const products = [
   },
   {
     "id": 1043,
-    "title": "Black Ribbed Knit Slim Fit Top",
+    "title": "Wine Magenta Satin Puff Sleeve Top",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -5125,7 +5135,7 @@ export const products = [
       "/tops/3/5.webp",
       "/tops/3/6.webp"
     ],
-    "description": "Discover Black Ribbed Knit Slim Fit Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Wine Magenta Satin Puff Sleeve Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -5134,9 +5144,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.3",
+    "rating": 4.3,
     "reviewsCount": 87,
-    "descriptionLong": "Discover Black Ribbed Knit Slim Fit Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Wine Magenta Satin Puff Sleeve Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -5147,7 +5157,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Black Ribbed Knit Slim Fit Top features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Wine Magenta Satin Puff Sleeve Top features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -5206,7 +5216,7 @@ export const products = [
   },
   {
     "id": 1044,
-    "title": "Floral Print Georgette Puff Sleeve Top",
+    "title": "Mustard Yellow Puff Sleeve Peplum Top",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -5220,7 +5230,7 @@ export const products = [
       "/tops/4/3.webp",
       "/tops/4/4.webp"
     ],
-    "description": "Discover Floral Print Georgette Puff Sleeve Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Mustard Yellow Puff Sleeve Peplum Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -5229,9 +5239,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.6",
+    "rating": 4.6,
     "reviewsCount": 142,
-    "descriptionLong": "Discover Floral Print Georgette Puff Sleeve Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Mustard Yellow Puff Sleeve Peplum Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -5242,7 +5252,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Floral Print Georgette Puff Sleeve Top features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Mustard Yellow Puff Sleeve Peplum Top features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -5301,7 +5311,7 @@ export const products = [
   },
   {
     "id": 1045,
-    "title": "Mustard Yellow Linen Smart Casual Top",
+    "title": "Ivory White Textured Peplum Top",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -5315,7 +5325,7 @@ export const products = [
       "/tops/5/3.webp",
       "/tops/5/4.webp"
     ],
-    "description": "Discover Mustard Yellow Linen Smart Casual Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Ivory White Textured Peplum Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -5324,9 +5334,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 32,
-    "descriptionLong": "Discover Mustard Yellow Linen Smart Casual Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Ivory White Textured Peplum Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Linen",
       "Fit type": "Regular / Straight Fit",
@@ -5337,7 +5347,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Linen for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Mustard Yellow Linen Smart Casual Top features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Ivory White Textured Peplum Top features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -5396,7 +5406,7 @@ export const products = [
   },
   {
     "id": 1046,
-    "title": "Navy Blue Striped Off-Shoulder Top",
+    "title": "Blush Rose Pink Gingham Peplum Top",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -5409,7 +5419,7 @@ export const products = [
       "/tops/6/2.webp",
       "/tops/6/3.webp"
     ],
-    "description": "Discover Navy Blue Striped Off-Shoulder Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Blush Rose Pink Gingham Peplum Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -5418,9 +5428,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 117,
-    "descriptionLong": "Discover Navy Blue Striped Off-Shoulder Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Blush Rose Pink Gingham Peplum Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -5431,7 +5441,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Navy Blue Striped Off-Shoulder Top features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Blush Rose Pink Gingham Peplum Top features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -5490,7 +5500,7 @@ export const products = [
   },
   {
     "id": 1047,
-    "title": "Pastel Lavender Lace Detail Cami Top",
+    "title": "Lavender Purple Button-Down Peplum Top",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -5504,7 +5514,7 @@ export const products = [
       "/tops/7/3.webp",
       "/tops/7/4.webp"
     ],
-    "description": "Discover Pastel Lavender Lace Detail Cami Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Lavender Purple Button-Down Peplum Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -5513,9 +5523,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 160,
-    "descriptionLong": "Discover Pastel Lavender Lace Detail Cami Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Lavender Purple Button-Down Peplum Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -5526,7 +5536,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Pastel Lavender Lace Detail Cami Top features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Lavender Purple Button-Down Peplum Top features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -5585,7 +5595,7 @@ export const products = [
   },
   {
     "id": 1048,
-    "title": "Emerald Green High Neck Smocked Top",
+    "title": "Black Mandarin Collar Tunic Top",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -5599,7 +5609,7 @@ export const products = [
       "/tops/8/3.webp",
       "/tops/8/4.webp"
     ],
-    "description": "Discover Emerald Green High Neck Smocked Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Black Mandarin Collar Tunic Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -5608,9 +5618,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 52,
-    "descriptionLong": "Discover Emerald Green High Neck Smocked Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Black Mandarin Collar Tunic Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -5621,7 +5631,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Emerald Green High Neck Smocked Top features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Black Mandarin Collar Tunic Top features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -5680,7 +5690,7 @@ export const products = [
   },
   {
     "id": 1049,
-    "title": "Rust Orange Satin Wrap Tunic Top",
+    "title": "Ruby Red Smocked Glitter Top",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -5695,7 +5705,7 @@ export const products = [
       "/tops/9/4.webp",
       "/tops/9/5.webp"
     ],
-    "description": "Discover Rust Orange Satin Wrap Tunic Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Ruby Red Smocked Glitter Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -5704,9 +5714,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.6",
+    "rating": 4.6,
     "reviewsCount": 201,
-    "descriptionLong": "Discover Rust Orange Satin Wrap Tunic Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Ruby Red Smocked Glitter Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -5717,7 +5727,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Rust Orange Satin Wrap Tunic Top features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Ruby Red Smocked Glitter Top features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -5776,7 +5786,7 @@ export const products = [
   },
   {
     "id": 1050,
-    "title": "Crimson Red Smocked Cotton Top",
+    "title": "Powder Blue Gingham Tie-Front Peplum Top",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -5791,7 +5801,7 @@ export const products = [
       "/tops/10/4.webp",
       "/tops/10/5.webp"
     ],
-    "description": "Discover Crimson Red Smocked Cotton Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Powder Blue Gingham Tie-Front Peplum Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -5800,9 +5810,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 112,
-    "descriptionLong": "Discover Crimson Red Smocked Cotton Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Powder Blue Gingham Tie-Front Peplum Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -5813,7 +5823,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Crimson Red Smocked Cotton Top features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Powder Blue Gingham Tie-Front Peplum Top features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -5872,7 +5882,7 @@ export const products = [
   },
   {
     "id": 2001,
-    "title": "Emerald Green Floral Georgette Midi Dress",
+    "title": "Royal Purple Bow Detail Maxi Dress",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -5885,7 +5895,7 @@ export const products = [
       "/dresses/ws/dress/1/shopping (2).webp",
       "/dresses/ws/dress/1/shopping.webp"
     ],
-    "description": "Discover Emerald Green Floral Georgette Midi Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Royal Purple Bow Detail Maxi Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -5894,9 +5904,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 39,
-    "descriptionLong": "Discover Emerald Green Floral Georgette Midi Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Royal Purple Bow Detail Maxi Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -5907,7 +5917,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Emerald Green Floral Georgette Midi Dress features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Royal Purple Bow Detail Maxi Dress features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -5966,7 +5976,7 @@ export const products = [
   },
   {
     "id": 2002,
-    "title": "Ruby Crimson Silk Tiered A-Line Dress",
+    "title": "Ivory Navy Floral Block Print Maxi Dress",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -5980,7 +5990,7 @@ export const products = [
       "/dresses/ws/dress/2/shopping (3).webp",
       "/dresses/ws/dress/2/shopping.webp"
     ],
-    "description": "Discover Ruby Crimson Silk Tiered A-Line Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Ivory Navy Floral Block Print Maxi Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -5989,9 +5999,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 63,
-    "descriptionLong": "Discover Ruby Crimson Silk Tiered A-Line Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Ivory Navy Floral Block Print Maxi Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular / Straight Fit",
@@ -6002,7 +6012,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Silk Blend for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Ruby Crimson Silk Tiered A-Line Dress features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Ivory Navy Floral Block Print Maxi Dress features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -6061,7 +6071,7 @@ export const products = [
   },
   {
     "id": 2003,
-    "title": "Sunshine Gold Block Printed Flare Dress",
+    "title": "Blush Rose Pink Tiered Metallic Dress",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -6076,7 +6086,7 @@ export const products = [
       "/dresses/ws/dress/3/LBL101KS722_6_800x.webp",
       "/dresses/ws/dress/3/LBL101KS722_7_800x.webp"
     ],
-    "description": "Discover Sunshine Gold Block Printed Flare Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Blush Rose Pink Tiered Metallic Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -6085,9 +6095,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.6",
+    "rating": 4.6,
     "reviewsCount": 87,
-    "descriptionLong": "Discover Sunshine Gold Block Printed Flare Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Blush Rose Pink Tiered Metallic Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -6098,7 +6108,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Sunshine Gold Block Printed Flare Dress features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Blush Rose Pink Tiered Metallic Dress features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -6157,7 +6167,7 @@ export const products = [
   },
   {
     "id": 2004,
-    "title": "Sapphire Navy Cotton Maxi Dress",
+    "title": "Rose Pink Magenta Ruffle Tiered Dress",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -6168,7 +6178,7 @@ export const products = [
     "images": [
       "/dresses/ws/dress/4/LBL101KS141_1_800x.webp"
     ],
-    "description": "Discover Sapphire Navy Cotton Maxi Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Rose Pink Magenta Ruffle Tiered Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -6177,9 +6187,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 111,
-    "descriptionLong": "Discover Sapphire Navy Cotton Maxi Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Rose Pink Magenta Ruffle Tiered Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -6190,7 +6200,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Sapphire Navy Cotton Maxi Dress features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Rose Pink Magenta Ruffle Tiered Dress features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -6249,7 +6259,7 @@ export const products = [
   },
   {
     "id": 2005,
-    "title": "Classic Ivory Embroidered Tunic Dress",
+    "title": "Mustard Yellow Pleated Maxi Gown",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -6263,7 +6273,7 @@ export const products = [
       "/dresses/ws/dress/5/LBL101KS403_3_800x.webp",
       "/dresses/ws/dress/5/LBL101KS403_5_800x.webp"
     ],
-    "description": "Discover Classic Ivory Embroidered Tunic Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Mustard Yellow Pleated Maxi Gown from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -6272,9 +6282,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 135,
-    "descriptionLong": "Discover Classic Ivory Embroidered Tunic Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Mustard Yellow Pleated Maxi Gown from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -6285,7 +6295,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Classic Ivory Embroidered Tunic Dress features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Mustard Yellow Pleated Maxi Gown features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -6344,7 +6354,7 @@ export const products = [
   },
   {
     "id": 2006,
-    "title": "Sage Olive Linen Button-Down Midi Dress",
+    "title": "Powder Blue Blush Pink Wrap Cut-Out Dress",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -6360,7 +6370,7 @@ export const products = [
       "/dresses/ws/dress/6/LBL101KS630_5_800x.webp",
       "/dresses/ws/dress/6/LBL101KS630_6_800x.webp"
     ],
-    "description": "Discover Sage Olive Linen Button-Down Midi Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Powder Blue Blush Pink Wrap Cut-Out Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -6369,9 +6379,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 159,
-    "descriptionLong": "Discover Sage Olive Linen Button-Down Midi Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Powder Blue Blush Pink Wrap Cut-Out Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Linen",
       "Fit type": "Regular / Straight Fit",
@@ -6382,7 +6392,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Linen for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Sage Olive Linen Button-Down Midi Dress features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Powder Blue Blush Pink Wrap Cut-Out Dress features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -6441,7 +6451,7 @@ export const products = [
   },
   {
     "id": 2007,
-    "title": "Pastel Rose Pink Tiered Georgette Dress",
+    "title": "Blush Rose Pink Slit Maxi Dress",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -6457,7 +6467,7 @@ export const products = [
       "/dresses/ws/dress/7/LBL101KS633_6_800x.webp",
       "/dresses/ws/dress/7/LBL101KS633_7_800x.webp"
     ],
-    "description": "Discover Pastel Rose Pink Tiered Georgette Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Blush Rose Pink Slit Maxi Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -6466,9 +6476,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.9",
+    "rating": 4.9,
     "reviewsCount": 33,
-    "descriptionLong": "Discover Pastel Rose Pink Tiered Georgette Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Blush Rose Pink Slit Maxi Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -6479,7 +6489,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Pastel Rose Pink Tiered Georgette Dress features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Blush Rose Pink Slit Maxi Dress features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -6538,7 +6548,7 @@ export const products = [
   },
   {
     "id": 2008,
-    "title": "Midnight Violet Velvet Festive Dress",
+    "title": "Rose Pink Magenta Tiered Ruffle Gown",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -6556,7 +6566,7 @@ export const products = [
       "/dresses/ws/dress/8/LBL101KS674_7_800x.webp",
       "/dresses/ws/dress/8/LBL101KS674_8_800x.webp"
     ],
-    "description": "Discover Midnight Violet Velvet Festive Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Rose Pink Magenta Tiered Ruffle Gown from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -6565,9 +6575,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "5.0",
+    "rating": 5,
     "reviewsCount": 57,
-    "descriptionLong": "Discover Midnight Violet Velvet Festive Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Rose Pink Magenta Tiered Ruffle Gown from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -6578,7 +6588,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Midnight Violet Velvet Festive Dress features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Rose Pink Magenta Tiered Ruffle Gown features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -6637,7 +6647,7 @@ export const products = [
   },
   {
     "id": 2009,
-    "title": "Teal Blossom Hand Block Print Dress",
+    "title": "Coral Orange One-Shoulder Maxi Dress",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -6653,7 +6663,7 @@ export const products = [
       "/dresses/ws/dress/9/0T3A3046_6f4baf17-d2dd-472e-ba40-3515d95012e3_800x.webp",
       "/dresses/ws/dress/9/LBL101KS633_1_800x.webp"
     ],
-    "description": "Discover Teal Blossom Hand Block Print Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Coral Orange One-Shoulder Maxi Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -6662,9 +6672,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.4",
+    "rating": 4.4,
     "reviewsCount": 81,
-    "descriptionLong": "Discover Teal Blossom Hand Block Print Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Coral Orange One-Shoulder Maxi Dress from FlexFit Studio—where tradition meets contemporary design. This dresses is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -6675,7 +6685,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Teal Blossom Hand Block Print Dress features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Coral Orange One-Shoulder Maxi Dress features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -6734,7 +6744,7 @@ export const products = [
   },
   {
     "id": 2101,
-    "title": "Monochrome Stripe Premium Linen Co-ord Set",
+    "title": "Wine Maroon Linen Co-ord Set",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -6748,7 +6758,7 @@ export const products = [
       "/co-ords/co-ord_set/1/3.webp",
       "/co-ords/co-ord_set/1/4.webp"
     ],
-    "description": "Discover Monochrome Stripe Premium Linen Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Wine Maroon Linen Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -6757,9 +6767,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 38,
-    "descriptionLong": "Discover Monochrome Stripe Premium Linen Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Wine Maroon Linen Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Linen",
       "Fit type": "Regular / Straight Fit",
@@ -6770,7 +6780,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Linen for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Monochrome Stripe Premium Linen Co-ord Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Wine Maroon Linen Co-ord Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -6829,7 +6839,7 @@ export const products = [
   },
   {
     "id": 2102,
-    "title": "Sage Floral Printed Notch Collar Co-ord Set",
+    "title": "Blush Rose Pink Stripe Co-ord Set",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -6844,7 +6854,7 @@ export const products = [
       "/co-ords/co-ord_set/2/4.webp",
       "/co-ords/co-ord_set/2/5.webp"
     ],
-    "description": "Discover Sage Floral Printed Notch Collar Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Blush Rose Pink Stripe Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -6853,9 +6863,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.6",
+    "rating": 4.6,
     "reviewsCount": 56,
-    "descriptionLong": "Discover Sage Floral Printed Notch Collar Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Blush Rose Pink Stripe Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -6866,7 +6876,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Sage Floral Printed Notch Collar Co-ord Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Blush Rose Pink Stripe Co-ord Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -6925,7 +6935,7 @@ export const products = [
   },
   {
     "id": 2103,
-    "title": "Cobalt Blue High-Side Slit Linen Tunic Set",
+    "title": "Midnight Navy Polka Dot Co-ord Set",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -6940,7 +6950,7 @@ export const products = [
       "/co-ords/co-ord_set/3/4.webp",
       "/co-ords/co-ord_set/3/5.webp"
     ],
-    "description": "Discover Cobalt Blue High-Side Slit Linen Tunic Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Midnight Navy Polka Dot Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -6949,9 +6959,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 74,
-    "descriptionLong": "Discover Cobalt Blue High-Side Slit Linen Tunic Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Midnight Navy Polka Dot Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Linen",
       "Fit type": "Regular / Straight Fit",
@@ -6962,7 +6972,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Linen for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Cobalt Blue High-Side Slit Linen Tunic Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Midnight Navy Polka Dot Co-ord Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -7021,7 +7031,7 @@ export const products = [
   },
   {
     "id": 2104,
-    "title": "Pastel Peach Cotton Peplum Trouser Co-ord",
+    "title": "Rust Orange Block Print Co-ord Set",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -7037,7 +7047,7 @@ export const products = [
       "/co-ords/co-ord_set/4/5.webp",
       "/co-ords/co-ord_set/4/6.webp"
     ],
-    "description": "Discover Pastel Peach Cotton Peplum Trouser Co-ord from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Rust Orange Block Print Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -7046,9 +7056,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 92,
-    "descriptionLong": "Discover Pastel Peach Cotton Peplum Trouser Co-ord from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Rust Orange Block Print Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -7059,7 +7069,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Pastel Peach Cotton Peplum Trouser Co-ord features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Rust Orange Block Print Co-ord Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -7118,7 +7128,7 @@ export const products = [
   },
   {
     "id": 2105,
-    "title": "Midnight Forest Leaf Print Crepe Co-ord",
+    "title": "Mustard Yellow Chikankari Co-ord Set",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -7134,7 +7144,7 @@ export const products = [
       "/co-ords/co-ord_set/5/5.webp",
       "/co-ords/co-ord_set/5/6.webp"
     ],
-    "description": "Discover Midnight Forest Leaf Print Crepe Co-ord from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Mustard Yellow Chikankari Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -7143,9 +7153,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 110,
-    "descriptionLong": "Discover Midnight Forest Leaf Print Crepe Co-ord from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Mustard Yellow Chikankari Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -7156,7 +7166,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Midnight Forest Leaf Print Crepe Co-ord features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Mustard Yellow Chikankari Co-ord Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -7215,7 +7225,7 @@ export const products = [
   },
   {
     "id": 2106,
-    "title": "Lemon Mustard Linen Waistcoat & Pant Set",
+    "title": "Black Floral Embroidered Co-ord Set",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -7231,7 +7241,7 @@ export const products = [
       "/co-ords/co-ord_set/6/5.webp",
       "/co-ords/co-ord_set/6/6.webp"
     ],
-    "description": "Discover Lemon Mustard Linen Waistcoat & Pant Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Black Floral Embroidered Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -7240,9 +7250,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 128,
-    "descriptionLong": "Discover Lemon Mustard Linen Waistcoat & Pant Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Black Floral Embroidered Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Linen",
       "Fit type": "Regular / Straight Fit",
@@ -7253,7 +7263,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Linen for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Lemon Mustard Linen Waistcoat & Pant Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Black Floral Embroidered Co-ord Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -7312,7 +7322,7 @@ export const products = [
   },
   {
     "id": 2107,
-    "title": "Teal Georgette Pleated Blazer Style Co-ord",
+    "title": "Lime Green Leheriya Co-ord Set",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -7328,7 +7338,7 @@ export const products = [
       "/co-ords/co-ord_set/7/5.webp",
       "/co-ords/co-ord_set/7/6.webp"
     ],
-    "description": "Discover Teal Georgette Pleated Blazer Style Co-ord from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Lime Green Leheriya Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -7337,9 +7347,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 26,
-    "descriptionLong": "Discover Teal Georgette Pleated Blazer Style Co-ord from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Lime Green Leheriya Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -7350,7 +7360,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Teal Georgette Pleated Blazer Style Co-ord features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Lime Green Leheriya Co-ord Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -7409,7 +7419,7 @@ export const products = [
   },
   {
     "id": 2108,
-    "title": "Crimson Rose Satin Wrap Kimono Pant Set",
+    "title": "Ruby Red Ethnic Print Co-ord Set",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -7425,7 +7435,7 @@ export const products = [
       "/co-ords/co-ord_set/8/5.webp",
       "/co-ords/co-ord_set/8/6.webp"
     ],
-    "description": "Discover Crimson Rose Satin Wrap Kimono Pant Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Ruby Red Ethnic Print Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -7434,9 +7444,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.9",
+    "rating": 4.9,
     "reviewsCount": 44,
-    "descriptionLong": "Discover Crimson Rose Satin Wrap Kimono Pant Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Ruby Red Ethnic Print Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -7447,7 +7457,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Crimson Rose Satin Wrap Kimono Pant Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Ruby Red Ethnic Print Co-ord Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -7506,7 +7516,7 @@ export const products = [
   },
   {
     "id": 2109,
-    "title": "Indigo Block-Printed Summer Dobby Set",
+    "title": "Ivory White Elephant Motif Co-ord Set",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -7522,7 +7532,7 @@ export const products = [
       "/co-ords/co-ord_set/9/5.webp",
       "/co-ords/co-ord_set/9/6.webp"
     ],
-    "description": "Discover Indigo Block-Printed Summer Dobby Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Ivory White Elephant Motif Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -7531,9 +7541,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "5.0",
+    "rating": 5,
     "reviewsCount": 62,
-    "descriptionLong": "Discover Indigo Block-Printed Summer Dobby Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Ivory White Elephant Motif Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -7544,7 +7554,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Indigo Block-Printed Summer Dobby Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Ivory White Elephant Motif Co-ord Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -7603,7 +7613,7 @@ export const products = [
   },
   {
     "id": 2110,
-    "title": "Burgundy Linen Lounge Crop & Pants Co-ord",
+    "title": "Lavender Purple Floral Co-ord Set",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -7620,7 +7630,7 @@ export const products = [
       "/co-ords/co-ord_set/10/6.webp",
       "/co-ords/co-ord_set/10/7.webp"
     ],
-    "description": "Discover Burgundy Linen Lounge Crop & Pants Co-ord from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Lavender Purple Floral Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -7629,9 +7639,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 80,
-    "descriptionLong": "Discover Burgundy Linen Lounge Crop & Pants Co-ord from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Lavender Purple Floral Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This co-ords is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Linen",
       "Fit type": "Regular / Straight Fit",
@@ -7642,7 +7652,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Linen for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Burgundy Linen Lounge Crop & Pants Co-ord features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Lavender Purple Floral Co-ord Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -7701,7 +7711,7 @@ export const products = [
   },
   {
     "id": 2201,
-    "title": "Pastel Lavender Organic Cotton Crop T-Shirt",
+    "title": "Tan Brown Graphic Oversized T-Shirt",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -7713,7 +7723,7 @@ export const products = [
       "/t-shirts/t-shirt/1/1.webp",
       "/t-shirts/t-shirt/1/2.webp"
     ],
-    "description": "Discover Pastel Lavender Organic Cotton Crop T-Shirt from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Tan Brown Graphic Oversized T-Shirt from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -7722,9 +7732,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.4",
+    "rating": 4.4,
     "reviewsCount": 65,
-    "descriptionLong": "Discover Pastel Lavender Organic Cotton Crop T-Shirt from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Tan Brown Graphic Oversized T-Shirt from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -7735,7 +7745,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Pastel Lavender Organic Cotton Crop T-Shirt features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Tan Brown Graphic Oversized T-Shirt features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -7794,7 +7804,7 @@ export const products = [
   },
   {
     "id": 2202,
-    "title": "Sage Olive Graphic Printed Oversized Tee",
+    "title": "Ivory White California Bear Graphic Oversized Tee",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -7806,7 +7816,7 @@ export const products = [
       "/t-shirts/t-shirt/2/1.webp",
       "/t-shirts/t-shirt/2/2.webp"
     ],
-    "description": "Discover Sage Olive Graphic Printed Oversized Tee from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Ivory White California Bear Graphic Oversized Tee from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -7815,9 +7825,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.4",
+    "rating": 4.4,
     "reviewsCount": 100,
-    "descriptionLong": "Discover Sage Olive Graphic Printed Oversized Tee from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Ivory White California Bear Graphic Oversized Tee from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -7828,7 +7838,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Sage Olive Graphic Printed Oversized Tee features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Ivory White California Bear Graphic Oversized Tee features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -7887,7 +7897,7 @@ export const products = [
   },
   {
     "id": 2203,
-    "title": "Classic Ivory Ribbed Crewneck Slim T-Shirt",
+    "title": "Wine Maroon Peace & Love Graphic T-Shirt",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -7902,7 +7912,7 @@ export const products = [
       "/t-shirts/t-shirt/3/4.webp",
       "/t-shirts/t-shirt/3/5.webp"
     ],
-    "description": "Discover Classic Ivory Ribbed Crewneck Slim T-Shirt from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Wine Maroon Peace & Love Graphic T-Shirt from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -7911,9 +7921,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 135,
-    "descriptionLong": "Discover Classic Ivory Ribbed Crewneck Slim T-Shirt from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Wine Maroon Peace & Love Graphic T-Shirt from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -7924,7 +7934,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Classic Ivory Ribbed Crewneck Slim T-Shirt features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Wine Maroon Peace & Love Graphic T-Shirt features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -7983,7 +7993,7 @@ export const products = [
   },
   {
     "id": 2204,
-    "title": "Mustard Yellow Summer Slub Cotton Tee",
+    "title": "Midnight Navy Basic Crewneck T-Shirt",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -7997,7 +8007,7 @@ export const products = [
       "/t-shirts/t-shirt/4/3.webp",
       "/t-shirts/t-shirt/4/4.webp"
     ],
-    "description": "Discover Mustard Yellow Summer Slub Cotton Tee from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Midnight Navy Basic Crewneck T-Shirt from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -8006,9 +8016,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 170,
-    "descriptionLong": "Discover Mustard Yellow Summer Slub Cotton Tee from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Midnight Navy Basic Crewneck T-Shirt from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -8019,7 +8029,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Mustard Yellow Summer Slub Cotton Tee features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Midnight Navy Basic Crewneck T-Shirt features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -8078,7 +8088,7 @@ export const products = [
   },
   {
     "id": 2205,
-    "title": "Navy Nautical Stripe Sailor Fit T-Shirt",
+    "title": "Sage Green Ribbed Stripe T-Shirt",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -8092,7 +8102,7 @@ export const products = [
       "/t-shirts/t-shirt/5/3.webp",
       "/t-shirts/t-shirt/5/4.webp"
     ],
-    "description": "Discover Navy Nautical Stripe Sailor Fit T-Shirt from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Sage Green Ribbed Stripe T-Shirt from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -8101,9 +8111,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.6",
+    "rating": 4.6,
     "reviewsCount": 205,
-    "descriptionLong": "Discover Navy Nautical Stripe Sailor Fit T-Shirt from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Sage Green Ribbed Stripe T-Shirt from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -8114,7 +8124,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Navy Nautical Stripe Sailor Fit T-Shirt features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Sage Green Ribbed Stripe T-Shirt features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -8173,7 +8183,7 @@ export const products = [
   },
   {
     "id": 2206,
-    "title": "Rose Pink Embroidered Pocket Casual Tee",
+    "title": "Lime Yellow Have a Good Day Graphic Tee",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -8187,7 +8197,7 @@ export const products = [
       "/t-shirts/t-shirt/6/3.webp",
       "/t-shirts/t-shirt/6/4.webp"
     ],
-    "description": "Discover Rose Pink Embroidered Pocket Casual Tee from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Lime Yellow Have a Good Day Graphic Tee from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -8196,9 +8206,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 40,
-    "descriptionLong": "Discover Rose Pink Embroidered Pocket Casual Tee from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Lime Yellow Have a Good Day Graphic Tee from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -8209,7 +8219,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Rose Pink Embroidered Pocket Casual Tee features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Lime Yellow Have a Good Day Graphic Tee features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -8268,7 +8278,7 @@ export const products = [
   },
   {
     "id": 2207,
-    "title": "Midnight Black Drop Shoulder Boyfriend T-Shirt",
+    "title": "Sky Blue Contrast Collar Polo T-Shirt",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -8283,7 +8293,7 @@ export const products = [
       "/t-shirts/t-shirt/7/4.webp",
       "/t-shirts/t-shirt/7/5.webp"
     ],
-    "description": "Discover Midnight Black Drop Shoulder Boyfriend T-Shirt from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Sky Blue Contrast Collar Polo T-Shirt from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -8292,9 +8302,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 75,
-    "descriptionLong": "Discover Midnight Black Drop Shoulder Boyfriend T-Shirt from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Sky Blue Contrast Collar Polo T-Shirt from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -8305,7 +8315,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Midnight Black Drop Shoulder Boyfriend T-Shirt features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Sky Blue Contrast Collar Polo T-Shirt features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -8364,7 +8374,7 @@ export const products = [
   },
   {
     "id": 2208,
-    "title": "Burgundy V-Neck Premium Supima T-Shirt",
+    "title": "Ivory Beige Oversized Combo T-Shirt",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -8377,7 +8387,7 @@ export const products = [
       "/t-shirts/t-shirt/8/2.webp",
       "/t-shirts/t-shirt/8/3.webp"
     ],
-    "description": "Discover Burgundy V-Neck Premium Supima T-Shirt from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Ivory Beige Oversized Combo T-Shirt from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -8386,9 +8396,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 110,
-    "descriptionLong": "Discover Burgundy V-Neck Premium Supima T-Shirt from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Ivory Beige Oversized Combo T-Shirt from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -8399,7 +8409,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Burgundy V-Neck Premium Supima T-Shirt features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Ivory Beige Oversized Combo T-Shirt features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -8458,7 +8468,7 @@ export const products = [
   },
   {
     "id": 2209,
-    "title": "Emerald Green Mockneck Ribbed T-Shirt",
+    "title": "Black Classic Polo T-Shirt",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -8474,7 +8484,7 @@ export const products = [
       "/t-shirts/t-shirt/9/5.webp",
       "/t-shirts/t-shirt/9/6.webp"
     ],
-    "description": "Discover Emerald Green Mockneck Ribbed T-Shirt from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Black Classic Polo T-Shirt from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -8483,9 +8493,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 145,
-    "descriptionLong": "Discover Emerald Green Mockneck Ribbed T-Shirt from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Black Classic Polo T-Shirt from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -8496,7 +8506,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Emerald Green Mockneck Ribbed T-Shirt features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Black Classic Polo T-Shirt features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -8555,7 +8565,7 @@ export const products = [
   },
   {
     "id": 2210,
-    "title": "Mint Lime Floral Motif Lightweight Tee",
+    "title": "Wine Maroon Ribbed Long Sleeve Top",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -8571,7 +8581,7 @@ export const products = [
       "/t-shirts/t-shirt/10/5.webp",
       "/t-shirts/t-shirt/10/6.webp"
     ],
-    "description": "Discover Mint Lime Floral Motif Lightweight Tee from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Wine Maroon Ribbed Long Sleeve Top from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -8580,9 +8590,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.9",
+    "rating": 4.9,
     "reviewsCount": 180,
-    "descriptionLong": "Discover Mint Lime Floral Motif Lightweight Tee from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Wine Maroon Ribbed Long Sleeve Top from FlexFit Studio—where tradition meets contemporary design. This t-shirts is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -8593,7 +8603,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Mint Lime Floral Motif Lightweight Tee features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Wine Maroon Ribbed Long Sleeve Top features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -8652,7 +8662,7 @@ export const products = [
   },
   {
     "id": 2301,
-    "title": "Ivory White Wide-Leg Linen Trousers",
+    "title": "Black Flared High-Waist Leggings",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -8665,7 +8675,7 @@ export const products = [
       "/bottoms/bottom_wear/1/2.webp",
       "/bottoms/bottom_wear/1/3.webp"
     ],
-    "description": "Discover Ivory White Wide-Leg Linen Trousers from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Black Flared High-Waist Leggings from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -8674,9 +8684,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 40,
-    "descriptionLong": "Discover Ivory White Wide-Leg Linen Trousers from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Black Flared High-Waist Leggings from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Linen",
       "Fit type": "Regular / Straight Fit",
@@ -8687,7 +8697,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Linen for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Ivory White Wide-Leg Linen Trousers features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Black Flared High-Waist Leggings features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -8746,7 +8756,7 @@ export const products = [
   },
   {
     "id": 2302,
-    "title": "Sage Olive High-Waisted Tailored Cigarette Pants",
+    "title": "Ivory White Pleated Wide-Leg Trousers",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -8761,7 +8771,7 @@ export const products = [
       "/bottoms/bottom_wear/2/4.webp",
       "/bottoms/bottom_wear/2/5.webp"
     ],
-    "description": "Discover Sage Olive High-Waisted Tailored Cigarette Pants from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Ivory White Pleated Wide-Leg Trousers from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -8770,9 +8780,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 62,
-    "descriptionLong": "Discover Sage Olive High-Waisted Tailored Cigarette Pants from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Ivory White Pleated Wide-Leg Trousers from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -8783,7 +8793,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Sage Olive High-Waisted Tailored Cigarette Pants features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Ivory White Pleated Wide-Leg Trousers features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -8842,7 +8852,7 @@ export const products = [
   },
   {
     "id": 2303,
-    "title": "Midnight Blue Flared Cotton Palazzo Pants",
+    "title": "Sage Mint Green Wide-Leg Palazzo Pants",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -8857,7 +8867,7 @@ export const products = [
       "/bottoms/bottom_wear/3/4.webp",
       "/bottoms/bottom_wear/3/5.webp"
     ],
-    "description": "Discover Midnight Blue Flared Cotton Palazzo Pants from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Sage Mint Green Wide-Leg Palazzo Pants from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -8866,9 +8876,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.6",
+    "rating": 4.6,
     "reviewsCount": 84,
-    "descriptionLong": "Discover Midnight Blue Flared Cotton Palazzo Pants from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Sage Mint Green Wide-Leg Palazzo Pants from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -8879,7 +8889,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Midnight Blue Flared Cotton Palazzo Pants features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Sage Mint Green Wide-Leg Palazzo Pants features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -8938,7 +8948,7 @@ export const products = [
   },
   {
     "id": 2304,
-    "title": "Crimson Rose Silk Blend Culottes",
+    "title": "Emerald Green Cigarette Ankle Pants",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -8953,7 +8963,7 @@ export const products = [
       "/bottoms/bottom_wear/4/5.webp",
       "/bottoms/bottom_wear/4/6.webp"
     ],
-    "description": "Discover Crimson Rose Silk Blend Culottes from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Emerald Green Cigarette Ankle Pants from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -8962,9 +8972,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.6",
+    "rating": 4.6,
     "reviewsCount": 106,
-    "descriptionLong": "Discover Crimson Rose Silk Blend Culottes from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Emerald Green Cigarette Ankle Pants from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular / Straight Fit",
@@ -8975,7 +8985,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Silk Blend for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Crimson Rose Silk Blend Culottes features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Emerald Green Cigarette Ankle Pants features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -9034,7 +9044,7 @@ export const products = [
   },
   {
     "id": 2305,
-    "title": "Teal Leaf Print Elasticated Summer Pants",
+    "title": "Sky Blue Wide-Leg Denim Jeans",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -9047,7 +9057,7 @@ export const products = [
       "/bottoms/bottom_wear/5/2.webp",
       "/bottoms/bottom_wear/5/3.webp"
     ],
-    "description": "Discover Teal Leaf Print Elasticated Summer Pants from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Sky Blue Wide-Leg Denim Jeans from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -9056,9 +9066,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 128,
-    "descriptionLong": "Discover Teal Leaf Print Elasticated Summer Pants from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Sky Blue Wide-Leg Denim Jeans from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -9069,7 +9079,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Teal Leaf Print Elasticated Summer Pants features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Sky Blue Wide-Leg Denim Jeans features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -9128,7 +9138,7 @@ export const products = [
   },
   {
     "id": 2306,
-    "title": "Burgundy Linen Tailored Ankle-Length Trousers",
+    "title": "Royal Blue Flared High-Waist Jeans",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -9142,7 +9152,7 @@ export const products = [
       "/bottoms/bottom_wear/6/3.webp",
       "/bottoms/bottom_wear/6/4.webp"
     ],
-    "description": "Discover Burgundy Linen Tailored Ankle-Length Trousers from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Royal Blue Flared High-Waist Jeans from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -9151,9 +9161,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 150,
-    "descriptionLong": "Discover Burgundy Linen Tailored Ankle-Length Trousers from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Royal Blue Flared High-Waist Jeans from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Linen",
       "Fit type": "Regular / Straight Fit",
@@ -9164,7 +9174,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Linen for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Burgundy Linen Tailored Ankle-Length Trousers features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Royal Blue Flared High-Waist Jeans features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -9223,7 +9233,7 @@ export const products = [
   },
   {
     "id": 2307,
-    "title": "Mustard Yellow Khadi Cotton Dhoti Salwar",
+    "title": "Mustard Yellow Vintage Wash Wide-Leg Jeans",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -9238,7 +9248,7 @@ export const products = [
       "/bottoms/bottom_wear/7/4.webp",
       "/bottoms/bottom_wear/7/5.webp"
     ],
-    "description": "Discover Mustard Yellow Khadi Cotton Dhoti Salwar from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Mustard Yellow Vintage Wash Wide-Leg Jeans from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -9247,9 +9257,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 32,
-    "descriptionLong": "Discover Mustard Yellow Khadi Cotton Dhoti Salwar from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Mustard Yellow Vintage Wash Wide-Leg Jeans from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -9260,7 +9270,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Mustard Yellow Khadi Cotton Dhoti Salwar features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Mustard Yellow Vintage Wash Wide-Leg Jeans features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -9319,7 +9329,7 @@ export const products = [
   },
   {
     "id": 2308,
-    "title": "Pastel Peach Soft Crepe Relaxed Jogger Pants",
+    "title": "Sky Blue Ripped Wide-Leg Jeans",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -9333,7 +9343,7 @@ export const products = [
       "/bottoms/bottom_wear/8/3.webp",
       "/bottoms/bottom_wear/8/4.webp"
     ],
-    "description": "Discover Pastel Peach Soft Crepe Relaxed Jogger Pants from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Sky Blue Ripped Wide-Leg Jeans from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -9342,9 +9352,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 54,
-    "descriptionLong": "Discover Pastel Peach Soft Crepe Relaxed Jogger Pants from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Sky Blue Ripped Wide-Leg Jeans from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -9355,7 +9365,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Pastel Peach Soft Crepe Relaxed Jogger Pants features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Sky Blue Ripped Wide-Leg Jeans features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -9414,7 +9424,7 @@ export const products = [
   },
   {
     "id": 2309,
-    "title": "Classic Black Pleated Palazzo Trousers",
+    "title": "Midnight Navy Skinny Denim Jeans",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -9428,7 +9438,7 @@ export const products = [
       "/bottoms/bottom_wear/9/3.webp",
       "/bottoms/bottom_wear/9/4.webp"
     ],
-    "description": "Discover Classic Black Pleated Palazzo Trousers from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Midnight Navy Skinny Denim Jeans from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -9437,9 +9447,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.9",
+    "rating": 4.9,
     "reviewsCount": 76,
-    "descriptionLong": "Discover Classic Black Pleated Palazzo Trousers from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Midnight Navy Skinny Denim Jeans from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -9450,7 +9460,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Classic Black Pleated Palazzo Trousers features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Midnight Navy Skinny Denim Jeans features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -9509,7 +9519,7 @@ export const products = [
   },
   {
     "id": 2310,
-    "title": "Linen Khaki Straight-Fit Utility Pants",
+    "title": "Sky Blue Drawstring Wide-Leg Culottes",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -9522,7 +9532,7 @@ export const products = [
       "/bottoms/bottom_wear/10/2.webp",
       "/bottoms/bottom_wear/10/3.webp"
     ],
-    "description": "Discover Linen Khaki Straight-Fit Utility Pants from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Sky Blue Drawstring Wide-Leg Culottes from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "XS",
       "S",
@@ -9531,9 +9541,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.9",
+    "rating": 4.9,
     "reviewsCount": 98,
-    "descriptionLong": "Discover Linen Khaki Straight-Fit Utility Pants from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Sky Blue Drawstring Wide-Leg Culottes from FlexFit Studio—where tradition meets contemporary design. This bottoms is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Linen",
       "Fit type": "Regular / Straight Fit",
@@ -9544,7 +9554,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Linen for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Linen Khaki Straight-Fit Utility Pants features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Sky Blue Drawstring Wide-Leg Culottes features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -9603,7 +9613,7 @@ export const products = [
   },
   {
     "id": 3001,
-    "title": "Midnight Black Premium Athletic Trackpants",
+    "title": "Light Grey Neon Stripe Trackpants",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -9616,7 +9626,7 @@ export const products = [
       "/mens/trackpants/TRackpents/T1/xl-dd19-l-grey-01-mack-jonney-original-imahkvyfddzkgdtz.webp",
       "/mens/trackpants/TRackpents/T1/xxl-dd19-l-grey-01-mack-jonney-original-imahkvyffhgmghjs.webp"
     ],
-    "description": "FlexFit Studio presents Midnight Black Premium Athletic Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Light Grey Neon Stripe Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -9624,9 +9634,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.4",
+    "rating": 4.4,
     "reviewsCount": 45,
-    "descriptionLong": "FlexFit Studio presents Midnight Black Premium Athletic Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Light Grey Neon Stripe Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -9636,7 +9646,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Midnight Black Premium Athletic Trackpants is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Light Grey Neon Stripe Trackpants is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -9689,7 +9699,7 @@ export const products = [
   },
   {
     "id": 3002,
-    "title": "Slate Grey Quick-Dry Sports Jogger",
+    "title": "Black Quick-Dry Sports Jogger",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -9702,7 +9712,7 @@ export const products = [
       "/mens/trackpants/TRackpents/T2/m-dd19-black-01-mack-jonney-original-imahkvyfmznjzrgd.webp",
       "/mens/trackpants/TRackpents/T2/s-dd19-black-01-mack-jonney-original-imahkvyfhwu8rggf.webp"
     ],
-    "description": "FlexFit Studio presents Slate Grey Quick-Dry Sports Jogger—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Black Quick-Dry Sports Jogger—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -9710,9 +9720,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.4",
+    "rating": 4.4,
     "reviewsCount": 65,
-    "descriptionLong": "FlexFit Studio presents Slate Grey Quick-Dry Sports Jogger—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Black Quick-Dry Sports Jogger—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -9722,7 +9732,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Slate Grey Quick-Dry Sports Jogger is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Black Quick-Dry Sports Jogger is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -9775,7 +9785,7 @@ export const products = [
   },
   {
     "id": 3003,
-    "title": "Navy Blue Breathable Performance Trackpants",
+    "title": "Black Side-Stripe Trackpants",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -9788,7 +9798,7 @@ export const products = [
       "/mens/trackpants/TRackpents/T3/m-09-gro-wh-p-modeshift-original-imahhyuhvmgg39yj.webp",
       "/mens/trackpants/TRackpents/T3/m-09-gro-wh-p-modeshift-original-imahhyuhyaxaztng.webp"
     ],
-    "description": "FlexFit Studio presents Navy Blue Breathable Performance Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Black Side-Stripe Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -9796,9 +9806,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 85,
-    "descriptionLong": "FlexFit Studio presents Navy Blue Breathable Performance Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Black Side-Stripe Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -9808,7 +9818,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Navy Blue Breathable Performance Trackpants is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Black Side-Stripe Trackpants is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -9861,7 +9871,7 @@ export const products = [
   },
   {
     "id": 3004,
-    "title": "Olive Green Cargo Utility Jogger Pants",
+    "title": "Khaki Black Side-Stripe Trackpants",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -9873,7 +9883,7 @@ export const products = [
       "/mens/trackpants/TRackpents/T4/32-wt42e-rajovati-original-imahexcdthraz6k7.webp",
       "/mens/trackpants/TRackpents/T4/34-wt42e-rajovati-original-imahexcdcmyj5xzh.webp"
     ],
-    "description": "FlexFit Studio presents Olive Green Cargo Utility Jogger Pants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Khaki Black Side-Stripe Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -9881,9 +9891,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 105,
-    "descriptionLong": "FlexFit Studio presents Olive Green Cargo Utility Jogger Pants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Khaki Black Side-Stripe Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -9893,7 +9903,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Olive Green Cargo Utility Jogger Pants is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Khaki Black Side-Stripe Trackpants is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -9946,7 +9956,7 @@ export const products = [
   },
   {
     "id": 3005,
-    "title": "Charcoal Melange Soft Lounge Trackpants",
+    "title": "Light Grey Triple Stripe Trackpants",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -9959,7 +9969,7 @@ export const products = [
       "/mens/trackpants/TRackpents/T5/xl-trk-005-foxter-original-imahgmshgzwgw4vf.webp",
       "/mens/trackpants/TRackpents/T5/xl-trk-005-foxter-original-imahgmshzjggympv.webp"
     ],
-    "description": "FlexFit Studio presents Charcoal Melange Soft Lounge Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Light Grey Triple Stripe Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -9967,9 +9977,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.6",
+    "rating": 4.6,
     "reviewsCount": 125,
-    "descriptionLong": "FlexFit Studio presents Charcoal Melange Soft Lounge Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Light Grey Triple Stripe Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -9979,7 +9989,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Charcoal Melange Soft Lounge Trackpants is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Light Grey Triple Stripe Trackpants is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -10032,7 +10042,7 @@ export const products = [
   },
   {
     "id": 3006,
-    "title": "Camouflage Printed Active Gym Pants",
+    "title": "Black Red Stripe Trackpants",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -10045,7 +10055,7 @@ export const products = [
       "/mens/trackpants/TRackpents/T6/xxl-cotton-trackpant-diwazzo-original-imahfvxsqffawpsm.webp",
       "/mens/trackpants/TRackpents/T6/xxl-cotton-trackpant-diwazzo-original-imahfvxswhuaznv7.webp"
     ],
-    "description": "FlexFit Studio presents Camouflage Printed Active Gym Pants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Black Red Stripe Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -10053,9 +10063,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 145,
-    "descriptionLong": "FlexFit Studio presents Camouflage Printed Active Gym Pants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Black Red Stripe Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -10065,7 +10075,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Camouflage Printed Active Gym Pants is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Black Red Stripe Trackpants is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -10118,7 +10128,7 @@ export const products = [
   },
   {
     "id": 3007,
-    "title": "Desert Sand Lightweight Cargo Trackpants",
+    "title": "Heather Grey Side-Piping Trackpants",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -10131,7 +10141,7 @@ export const products = [
       "/mens/trackpants/TRackpents/T7/-original-imahjyt3e4dajx63.webp",
       "/mens/trackpants/TRackpents/T7/3xl-gg-404-pant-gray-3xl-feel-track-original-imahhfdcfjdvdhsc.webp"
     ],
-    "description": "FlexFit Studio presents Desert Sand Lightweight Cargo Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Heather Grey Side-Piping Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -10139,9 +10149,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 165,
-    "descriptionLong": "FlexFit Studio presents Desert Sand Lightweight Cargo Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Heather Grey Side-Piping Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -10151,7 +10161,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Desert Sand Lightweight Cargo Trackpants is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Heather Grey Side-Piping Trackpants is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -10204,7 +10214,7 @@ export const products = [
   },
   {
     "id": 3008,
-    "title": "Royal Blue Stripped Performance Joggers",
+    "title": "Sky Blue Straight Relaxed Trackpants",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -10217,7 +10227,7 @@ export const products = [
       "/mens/trackpants/TRackpents/T8/m-men-straight-relaxed-fit-track-pants-foxter-original-imah8qfm4qf8uzzx.webp",
       "/mens/trackpants/TRackpents/T8/m-men-straight-relaxed-fit-track-pants-foxter-original-imah8qfmyguxq4mn.webp"
     ],
-    "description": "FlexFit Studio presents Royal Blue Stripped Performance Joggers—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Sky Blue Straight Relaxed Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -10225,9 +10235,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 35,
-    "descriptionLong": "FlexFit Studio presents Royal Blue Stripped Performance Joggers—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Sky Blue Straight Relaxed Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -10237,7 +10247,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Royal Blue Stripped Performance Joggers is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Sky Blue Straight Relaxed Trackpants is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -10290,7 +10300,7 @@ export const products = [
   },
   {
     "id": 3009,
-    "title": "Forest Green Organic Cotton Trackpants",
+    "title": "Midnight Navy Beige Side-Stripe Trackpants",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -10303,7 +10313,7 @@ export const products = [
       "/mens/trackpants/TRackpents/T9/xl-06trackblue-hvbk-original-imahk2zqhepcrtvx.webp",
       "/mens/trackpants/TRackpents/T9/xl-06trackblue-hvbk-original-imahk2zqpcrc6xhn.webp"
     ],
-    "description": "FlexFit Studio presents Forest Green Organic Cotton Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Midnight Navy Beige Side-Stripe Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -10311,9 +10321,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 55,
-    "descriptionLong": "FlexFit Studio presents Forest Green Organic Cotton Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Midnight Navy Beige Side-Stripe Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "Premium Cotton",
       "Fit type": "Regular Fit",
@@ -10323,7 +10333,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Forest Green Organic Cotton Trackpants is crafted from a Premium Cotton blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Midnight Navy Beige Side-Stripe Trackpants is crafted from a Premium Cotton blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -10376,7 +10386,7 @@ export const products = [
   },
   {
     "id": 3010,
-    "title": "Classic Heather Grey Sports Joggers",
+    "title": "Black Elastic Cuff Jogger Trackpants",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -10389,7 +10399,7 @@ export const products = [
       "/mens/trackpants/TRackpents/T10/xl-tr1050-2-combraided-original-imahkns9gfdrgqhf.webp",
       "/mens/trackpants/TRackpents/T10/xl-tr1050-2-combraided-original-imahknsaapgtbjkp.webp"
     ],
-    "description": "FlexFit Studio presents Classic Heather Grey Sports Joggers—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Black Elastic Cuff Jogger Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -10397,9 +10407,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.3",
+    "rating": 4.3,
     "reviewsCount": 75,
-    "descriptionLong": "FlexFit Studio presents Classic Heather Grey Sports Joggers—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Black Elastic Cuff Jogger Trackpants—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -10409,7 +10419,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Classic Heather Grey Sports Joggers is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Black Elastic Cuff Jogger Trackpants is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -10462,7 +10472,7 @@ export const products = [
   },
   {
     "id": 3101,
-    "title": "Raw Tan Premium Biker Leather Jacket",
+    "title": "Olive Green Lightweight Puffer Jacket",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -10475,7 +10485,7 @@ export const products = [
       "/mens/jackets/jacketmen/j1/2.webp",
       "/mens/jackets/jacketmen/j1/3.webp"
     ],
-    "description": "Raw Tan Premium Biker Leather Jacket pairs sharp looks with practical 60% Cotton, 40% Polyester construction—ideal when you want style without sacrificing comfort.",
+    "description": "Olive Green Lightweight Puffer Jacket pairs sharp looks with practical 60% Cotton, 40% Polyester construction—ideal when you want style without sacrificing comfort.",
     "sizes": [
       "S",
       "M",
@@ -10485,7 +10495,7 @@ export const products = [
     ],
     "rating": 4.4,
     "reviewsCount": 45,
-    "descriptionLong": "Raw Tan Premium Biker Leather Jacket pairs sharp looks with practical 60% Cotton, 40% Polyester construction—ideal when you want style without sacrificing comfort.",
+    "descriptionLong": "Olive Green Lightweight Puffer Jacket pairs sharp looks with practical 60% Cotton, 40% Polyester construction—ideal when you want style without sacrificing comfort.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Colour": "As shown",
@@ -10496,11 +10506,11 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Raw Tan Premium Biker Leather Jacket uses 60% Cotton, 40% Polyester for a breathable, easy-care finish—suitable for long days and repeat wear.",
+      "MATERIAL & FABRIC: Olive Green Lightweight Puffer Jacket uses 60% Cotton, 40% Polyester for a breathable, easy-care finish—suitable for long days and repeat wear.",
       "DESIGNED TO MOVE: The cut allows natural movement while keeping a neat line—pair with denim, chinos or co-ord bottoms from trendkaari.",
       "COLOUR & FINISH: As shown tone is selected to stay versatile across seasons; quality stitching supports daily rotation.",
       "CARE: Follow garment label—gentle machine wash cold for cotton blends; dry flat or line dry in shade to protect colour.",
-      "VERSATILE WEAR: Dress up with loafers or keep it relaxed with sneakers—Raw Tan Premium Biker Leather Jacket adapts to your schedule."
+      "VERSATILE WEAR: Dress up with loafers or keep it relaxed with sneakers—Olive Green Lightweight Puffer Jacket adapts to your schedule."
     ],
     "additionalInfo": {
       "Manufacturer": "trendkaari, India",
@@ -10553,7 +10563,7 @@ export const products = [
   },
   {
     "id": 3102,
-    "title": "Rugged Indigo Stonewashed Denim Jacket",
+    "title": "Royal Blue Color-Block Hooded Jacket",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -10565,7 +10575,7 @@ export const products = [
       "/mens/jackets/jacketmen/j2/1.webp",
       "/mens/jackets/jacketmen/j2/2.webp"
     ],
-    "description": "trendkaari presents Rugged Indigo Stonewashed Denim Jacket in As shown—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
+    "description": "trendkaari presents Royal Blue Color-Block Hooded Jacket in As shown—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
     "sizes": [
       "S",
       "M",
@@ -10575,7 +10585,7 @@ export const products = [
     ],
     "rating": 4.4,
     "reviewsCount": 65,
-    "descriptionLong": "trendkaari presents Rugged Indigo Stonewashed Denim Jacket in As shown—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
+    "descriptionLong": "trendkaari presents Royal Blue Color-Block Hooded Jacket in As shown—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Colour": "As shown",
@@ -10586,11 +10596,11 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Rugged Indigo Stonewashed Denim Jacket uses 60% Cotton, 40% Polyester for a breathable, easy-care finish—suitable for long days and repeat wear.",
+      "MATERIAL & FABRIC: Royal Blue Color-Block Hooded Jacket uses 60% Cotton, 40% Polyester for a breathable, easy-care finish—suitable for long days and repeat wear.",
       "DESIGNED TO MOVE: The cut allows natural movement while keeping a neat line—pair with denim, chinos or co-ord bottoms from trendkaari.",
       "COLOUR & FINISH: As shown tone is selected to stay versatile across seasons; quality stitching supports daily rotation.",
       "CARE: Follow garment label—gentle machine wash cold for cotton blends; dry flat or line dry in shade to protect colour.",
-      "VERSATILE WEAR: Dress up with loafers or keep it relaxed with sneakers—Rugged Indigo Stonewashed Denim Jacket adapts to your schedule."
+      "VERSATILE WEAR: Dress up with loafers or keep it relaxed with sneakers—Royal Blue Color-Block Hooded Jacket adapts to your schedule."
     ],
     "additionalInfo": {
       "Manufacturer": "trendkaari, India",
@@ -10643,7 +10653,7 @@ export const products = [
   },
   {
     "id": 3103,
-    "title": "Olive Drab Heavyweight Field Utility Jacket",
+    "title": "Charcoal Grey Quilted Puffer Jacket",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -10656,7 +10666,7 @@ export const products = [
       "/mens/jackets/jacketmen/j3/RFJ1105_5.webp",
       "/mens/jackets/jacketmen/j3/RFJ1105_6.webp"
     ],
-    "description": "Meet Olive Drab Heavyweight Field Utility Jacket: a jackets essential from trendkaari, tailored in 60% Cotton, 40% Polyester for modern Indian wardrobes.",
+    "description": "Meet Charcoal Grey Quilted Puffer Jacket: a jackets essential from trendkaari, tailored in 60% Cotton, 40% Polyester for modern Indian wardrobes.",
     "sizes": [
       "S",
       "M",
@@ -10666,7 +10676,7 @@ export const products = [
     ],
     "rating": 4.5,
     "reviewsCount": 85,
-    "descriptionLong": "Meet Olive Drab Heavyweight Field Utility Jacket: a jackets essential from trendkaari, tailored in 60% Cotton, 40% Polyester for modern Indian wardrobes.",
+    "descriptionLong": "Meet Charcoal Grey Quilted Puffer Jacket: a jackets essential from trendkaari, tailored in 60% Cotton, 40% Polyester for modern Indian wardrobes.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Colour": "Green",
@@ -10677,7 +10687,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "FABRIC FEEL: Olive Drab Heavyweight Field Utility Jacket is cut in 60% Cotton, 40% Polyester chosen for softness, shape retention and a clean drape on the body.",
+      "FABRIC FEEL: Charcoal Grey Quilted Puffer Jacket is cut in 60% Cotton, 40% Polyester chosen for softness, shape retention and a clean drape on the body.",
       "FIT & SILHOUETTE: Regular Outerwear Fit gives balanced room through chest and waist—works for office-casual, travel and weekend plans.",
       "STYLE NOTE: Green shade complements both neutral and bold layering pieces in your closet.",
       "CARE: Follow garment label—gentle machine wash cold for cotton blends; dry flat or line dry in shade to protect colour.",
@@ -10734,7 +10744,7 @@ export const products = [
   },
   {
     "id": 3104,
-    "title": "Midnight Black Urban Puffer Jacket",
+    "title": "Midnight Navy Zip-Up Sport Jacket",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -10747,7 +10757,7 @@ export const products = [
       "/mens/jackets/jacketmen/j4/RFJ0284M_2.webp",
       "/mens/jackets/jacketmen/j4/RFJ0284M_3.webp"
     ],
-    "description": "trendkaari presents Midnight Black Urban Puffer Jacket in Black—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
+    "description": "trendkaari presents Midnight Navy Zip-Up Sport Jacket in Black—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
     "sizes": [
       "S",
       "M",
@@ -10757,7 +10767,7 @@ export const products = [
     ],
     "rating": 4.5,
     "reviewsCount": 105,
-    "descriptionLong": "trendkaari presents Midnight Black Urban Puffer Jacket in Black—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
+    "descriptionLong": "trendkaari presents Midnight Navy Zip-Up Sport Jacket in Black—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Colour": "Black",
@@ -10768,7 +10778,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "FABRIC FEEL: Midnight Black Urban Puffer Jacket is cut in 60% Cotton, 40% Polyester chosen for softness, shape retention and a clean drape on the body.",
+      "FABRIC FEEL: Midnight Navy Zip-Up Sport Jacket is cut in 60% Cotton, 40% Polyester chosen for softness, shape retention and a clean drape on the body.",
       "FIT & SILHOUETTE: Regular Outerwear Fit gives balanced room through chest and waist—works for office-casual, travel and weekend plans.",
       "STYLE NOTE: Black shade complements both neutral and bold layering pieces in your closet.",
       "CARE: Follow garment label—gentle machine wash cold for cotton blends; dry flat or line dry in shade to protect colour.",
@@ -10825,7 +10835,7 @@ export const products = [
   },
   {
     "id": 3105,
-    "title": "Classic Navy Premium Varsity Bomber Jacket",
+    "title": "Medium Grey Athletic Zip-Up Jacket",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -10838,7 +10848,7 @@ export const products = [
       "/mens/jackets/jacketmen/j5/xl-1-no-pm86-technosport-original-imahhhhus7kzrmgu.webp",
       "/mens/jackets/jacketmen/j5/xl-1-no-pm86-technosport-original-imahhhhuzrztseax.webp"
     ],
-    "description": "trendkaari presents Classic Navy Premium Varsity Bomber Jacket in Blue—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
+    "description": "trendkaari presents Medium Grey Athletic Zip-Up Jacket in Blue—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
     "sizes": [
       "S",
       "M",
@@ -10848,7 +10858,7 @@ export const products = [
     ],
     "rating": 4.6,
     "reviewsCount": 125,
-    "descriptionLong": "trendkaari presents Classic Navy Premium Varsity Bomber Jacket in Blue—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
+    "descriptionLong": "trendkaari presents Medium Grey Athletic Zip-Up Jacket in Blue—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Colour": "Blue",
@@ -10859,11 +10869,11 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Classic Navy Premium Varsity Bomber Jacket uses 60% Cotton, 40% Polyester for a breathable, easy-care finish—suitable for long days and repeat wear.",
+      "MATERIAL & FABRIC: Medium Grey Athletic Zip-Up Jacket uses 60% Cotton, 40% Polyester for a breathable, easy-care finish—suitable for long days and repeat wear.",
       "DESIGNED TO MOVE: The cut allows natural movement while keeping a neat line—pair with denim, chinos or co-ord bottoms from trendkaari.",
       "COLOUR & FINISH: Blue tone is selected to stay versatile across seasons; quality stitching supports daily rotation.",
       "CARE: Follow garment label—gentle machine wash cold for cotton blends; dry flat or line dry in shade to protect colour.",
-      "VERSATILE WEAR: Dress up with loafers or keep it relaxed with sneakers—Classic Navy Premium Varsity Bomber Jacket adapts to your schedule."
+      "VERSATILE WEAR: Dress up with loafers or keep it relaxed with sneakers—Medium Grey Athletic Zip-Up Jacket adapts to your schedule."
     ],
     "additionalInfo": {
       "Manufacturer": "trendkaari, India",
@@ -10916,7 +10926,7 @@ export const products = [
   },
   {
     "id": 3106,
-    "title": "Suede Camel Luxury Trucker Jacket",
+    "title": "Mustard Yellow Quilted Puffer Jacket",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -10929,7 +10939,7 @@ export const products = [
       "/mens/jackets/jacketmen/j6/RFJ0099M_2.webp",
       "/mens/jackets/jacketmen/j6/RFJ0099M_3.webp"
     ],
-    "description": "Suede Camel Luxury Trucker Jacket pairs sharp looks with practical 60% Cotton, 40% Polyester construction—ideal when you want style without sacrificing comfort.",
+    "description": "Mustard Yellow Quilted Puffer Jacket pairs sharp looks with practical 60% Cotton, 40% Polyester construction—ideal when you want style without sacrificing comfort.",
     "sizes": [
       "S",
       "M",
@@ -10939,7 +10949,7 @@ export const products = [
     ],
     "rating": 4.7,
     "reviewsCount": 145,
-    "descriptionLong": "Suede Camel Luxury Trucker Jacket pairs sharp looks with practical 60% Cotton, 40% Polyester construction—ideal when you want style without sacrificing comfort.",
+    "descriptionLong": "Mustard Yellow Quilted Puffer Jacket pairs sharp looks with practical 60% Cotton, 40% Polyester construction—ideal when you want style without sacrificing comfort.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Colour": "As shown",
@@ -10950,7 +10960,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "FABRIC FEEL: Suede Camel Luxury Trucker Jacket is cut in 60% Cotton, 40% Polyester chosen for softness, shape retention and a clean drape on the body.",
+      "FABRIC FEEL: Mustard Yellow Quilted Puffer Jacket is cut in 60% Cotton, 40% Polyester chosen for softness, shape retention and a clean drape on the body.",
       "FIT & SILHOUETTE: Regular Outerwear Fit gives balanced room through chest and waist—works for office-casual, travel and weekend plans.",
       "STYLE NOTE: As shown shade complements both neutral and bold layering pieces in your closet.",
       "CARE: Follow garment label—gentle machine wash cold for cotton blends; dry flat or line dry in shade to protect colour.",
@@ -11007,7 +11017,7 @@ export const products = [
   },
   {
     "id": 3107,
-    "title": "Charcoal Windproof Performance Hooded Jacket",
+    "title": "Light Grey Hooded Puffer Jacket",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -11020,7 +11030,7 @@ export const products = [
       "/mens/jackets/jacketmen/j7/RFJ1096_2.webp",
       "/mens/jackets/jacketmen/j7/RFJ1096_3.webp"
     ],
-    "description": "Meet Charcoal Windproof Performance Hooded Jacket: a jackets essential from trendkaari, tailored in 60% Cotton, 40% Polyester for modern Indian wardrobes.",
+    "description": "Meet Light Grey Hooded Puffer Jacket: a jackets essential from trendkaari, tailored in 60% Cotton, 40% Polyester for modern Indian wardrobes.",
     "sizes": [
       "S",
       "M",
@@ -11030,7 +11040,7 @@ export const products = [
     ],
     "rating": 4.7,
     "reviewsCount": 165,
-    "descriptionLong": "Meet Charcoal Windproof Performance Hooded Jacket: a jackets essential from trendkaari, tailored in 60% Cotton, 40% Polyester for modern Indian wardrobes.",
+    "descriptionLong": "Meet Light Grey Hooded Puffer Jacket: a jackets essential from trendkaari, tailored in 60% Cotton, 40% Polyester for modern Indian wardrobes.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Colour": "As shown",
@@ -11041,11 +11051,11 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Charcoal Windproof Performance Hooded Jacket uses 60% Cotton, 40% Polyester for a breathable, easy-care finish—suitable for long days and repeat wear.",
+      "MATERIAL & FABRIC: Light Grey Hooded Puffer Jacket uses 60% Cotton, 40% Polyester for a breathable, easy-care finish—suitable for long days and repeat wear.",
       "DESIGNED TO MOVE: The cut allows natural movement while keeping a neat line—pair with denim, chinos or co-ord bottoms from trendkaari.",
       "COLOUR & FINISH: As shown tone is selected to stay versatile across seasons; quality stitching supports daily rotation.",
       "CARE: Follow garment label—gentle machine wash cold for cotton blends; dry flat or line dry in shade to protect colour.",
-      "VERSATILE WEAR: Dress up with loafers or keep it relaxed with sneakers—Charcoal Windproof Performance Hooded Jacket adapts to your schedule."
+      "VERSATILE WEAR: Dress up with loafers or keep it relaxed with sneakers—Light Grey Hooded Puffer Jacket adapts to your schedule."
     ],
     "additionalInfo": {
       "Manufacturer": "trendkaari, India",
@@ -11098,7 +11108,7 @@ export const products = [
   },
   {
     "id": 3108,
-    "title": "Burgundy Satin Flight Bomber Jacket",
+    "title": "Midnight Navy Sage Green Hooded Parka",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -11111,7 +11121,7 @@ export const products = [
       "/mens/jackets/jacketmen/j8/RFJ1100_1.webp",
       "/mens/jackets/jacketmen/j8/RFJ1100_3.webp"
     ],
-    "description": "trendkaari presents Burgundy Satin Flight Bomber Jacket in As shown—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
+    "description": "trendkaari presents Midnight Navy Sage Green Hooded Parka in As shown—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
     "sizes": [
       "S",
       "M",
@@ -11121,7 +11131,7 @@ export const products = [
     ],
     "rating": 4.8,
     "reviewsCount": 35,
-    "descriptionLong": "trendkaari presents Burgundy Satin Flight Bomber Jacket in As shown—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
+    "descriptionLong": "trendkaari presents Midnight Navy Sage Green Hooded Parka in As shown—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Colour": "As shown",
@@ -11132,11 +11142,11 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Burgundy Satin Flight Bomber Jacket uses 60% Cotton, 40% Polyester for a breathable, easy-care finish—suitable for long days and repeat wear.",
+      "MATERIAL & FABRIC: Midnight Navy Sage Green Hooded Parka uses 60% Cotton, 40% Polyester for a breathable, easy-care finish—suitable for long days and repeat wear.",
       "DESIGNED TO MOVE: The cut allows natural movement while keeping a neat line—pair with denim, chinos or co-ord bottoms from trendkaari.",
       "COLOUR & FINISH: As shown tone is selected to stay versatile across seasons; quality stitching supports daily rotation.",
       "CARE: Follow garment label—gentle machine wash cold for cotton blends; dry flat or line dry in shade to protect colour.",
-      "VERSATILE WEAR: Dress up with loafers or keep it relaxed with sneakers—Burgundy Satin Flight Bomber Jacket adapts to your schedule."
+      "VERSATILE WEAR: Dress up with loafers or keep it relaxed with sneakers—Midnight Navy Sage Green Hooded Parka adapts to your schedule."
     ],
     "additionalInfo": {
       "Manufacturer": "trendkaari, India",
@@ -11189,7 +11199,7 @@ export const products = [
   },
   {
     "id": 3109,
-    "title": "Khaki Canvas Winter Sherpa-Lined Jacket",
+    "title": "Black Mock Neck Bomber Jacket",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -11202,7 +11212,7 @@ export const products = [
       "/mens/jackets/jacketmen/j9/RFJ1041M_2.webp",
       "/mens/jackets/jacketmen/j9/RFJ1041M_3.webp"
     ],
-    "description": "trendkaari presents Khaki Canvas Winter Sherpa-Lined Jacket in As shown—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
+    "description": "trendkaari presents Black Mock Neck Bomber Jacket in As shown—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
     "sizes": [
       "S",
       "M",
@@ -11212,7 +11222,7 @@ export const products = [
     ],
     "rating": 4.8,
     "reviewsCount": 55,
-    "descriptionLong": "trendkaari presents Khaki Canvas Winter Sherpa-Lined Jacket in As shown—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
+    "descriptionLong": "trendkaari presents Black Mock Neck Bomber Jacket in As shown—built for everyday confidence with 60% Cotton, 40% Polyester comfort.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Colour": "As shown",
@@ -11223,7 +11233,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "FABRIC FEEL: Khaki Canvas Winter Sherpa-Lined Jacket is cut in 60% Cotton, 40% Polyester chosen for softness, shape retention and a clean drape on the body.",
+      "FABRIC FEEL: Black Mock Neck Bomber Jacket is cut in 60% Cotton, 40% Polyester chosen for softness, shape retention and a clean drape on the body.",
       "FIT & SILHOUETTE: Regular Outerwear Fit gives balanced room through chest and waist—works for office-casual, travel and weekend plans.",
       "STYLE NOTE: As shown shade complements both neutral and bold layering pieces in your closet.",
       "CARE: Follow garment label—gentle machine wash cold for cotton blends; dry flat or line dry in shade to protect colour.",
@@ -11280,7 +11290,7 @@ export const products = [
   },
   {
     "id": 3110,
-    "title": "Slate Grey Waterproof Outdoor Raincoat",
+    "title": "Black Leather Biker Jacket",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -11293,7 +11303,7 @@ export const products = [
       "/mens/jackets/jacketmen/j10/s-4-no-bkrjkt-fashnexx-original-imahgaemhv7qfx64.webp",
       "/mens/jackets/jacketmen/j10/s-4-no-bkrjkt-fashnexx-original-imahgaemy4ryvd7m.webp"
     ],
-    "description": "Meet Slate Grey Waterproof Outdoor Raincoat: a jackets essential from trendkaari, tailored in 60% Cotton, 40% Polyester for modern Indian wardrobes.",
+    "description": "Meet Black Leather Biker Jacket: a jackets essential from trendkaari, tailored in 60% Cotton, 40% Polyester for modern Indian wardrobes.",
     "sizes": [
       "S",
       "M",
@@ -11303,7 +11313,7 @@ export const products = [
     ],
     "rating": 4.3,
     "reviewsCount": 75,
-    "descriptionLong": "Meet Slate Grey Waterproof Outdoor Raincoat: a jackets essential from trendkaari, tailored in 60% Cotton, 40% Polyester for modern Indian wardrobes.",
+    "descriptionLong": "Meet Black Leather Biker Jacket: a jackets essential from trendkaari, tailored in 60% Cotton, 40% Polyester for modern Indian wardrobes.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Colour": "As shown",
@@ -11314,11 +11324,11 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Slate Grey Waterproof Outdoor Raincoat uses 60% Cotton, 40% Polyester for a breathable, easy-care finish—suitable for long days and repeat wear.",
+      "MATERIAL & FABRIC: Black Leather Biker Jacket uses 60% Cotton, 40% Polyester for a breathable, easy-care finish—suitable for long days and repeat wear.",
       "DESIGNED TO MOVE: The cut allows natural movement while keeping a neat line—pair with denim, chinos or co-ord bottoms from trendkaari.",
       "COLOUR & FINISH: As shown tone is selected to stay versatile across seasons; quality stitching supports daily rotation.",
       "CARE: Follow garment label—gentle machine wash cold for cotton blends; dry flat or line dry in shade to protect colour.",
-      "VERSATILE WEAR: Dress up with loafers or keep it relaxed with sneakers—Slate Grey Waterproof Outdoor Raincoat adapts to your schedule."
+      "VERSATILE WEAR: Dress up with loafers or keep it relaxed with sneakers—Black Leather Biker Jacket adapts to your schedule."
     ],
     "additionalInfo": {
       "Manufacturer": "trendkaari, India",
@@ -11371,7 +11381,7 @@ export const products = [
   },
   {
     "id": 3201,
-    "title": "Carbon Black Premium Heavyweight Hoodie",
+    "title": "Deep Teal Premium Heavyweight Hoodie",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -11384,7 +11394,7 @@ export const products = [
       "/mens/hoodies/Hoodiesmen/h1/2.webp",
       "/mens/hoodies/Hoodiesmen/h1/3.webp"
     ],
-    "description": "FlexFit Studio presents Carbon Black Premium Heavyweight Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Deep Teal Premium Heavyweight Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -11392,9 +11402,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.4",
+    "rating": 4.4,
     "reviewsCount": 45,
-    "descriptionLong": "FlexFit Studio presents Carbon Black Premium Heavyweight Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Deep Teal Premium Heavyweight Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -11404,7 +11414,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Carbon Black Premium Heavyweight Hoodie is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Deep Teal Premium Heavyweight Hoodie is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -11457,7 +11467,7 @@ export const products = [
   },
   {
     "id": 3202,
-    "title": "Burgundy Crimson Fleece Lounge Pullover",
+    "title": "Sky Blue Dragon Graphic Hoodie",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -11470,7 +11480,7 @@ export const products = [
       "/mens/hoodies/Hoodiesmen/h2/2.webp",
       "/mens/hoodies/Hoodiesmen/h2/3.webp"
     ],
-    "description": "FlexFit Studio presents Burgundy Crimson Fleece Lounge Pullover—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Sky Blue Dragon Graphic Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -11478,9 +11488,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.4",
+    "rating": 4.4,
     "reviewsCount": 65,
-    "descriptionLong": "FlexFit Studio presents Burgundy Crimson Fleece Lounge Pullover—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Sky Blue Dragon Graphic Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -11490,7 +11500,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Burgundy Crimson Fleece Lounge Pullover is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Sky Blue Dragon Graphic Hoodie is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -11543,7 +11553,7 @@ export const products = [
   },
   {
     "id": 3203,
-    "title": "Classic Navy Relaxed Kangaroo Pocket Hoodie",
+    "title": "Black Being Creative Graphic Hoodie",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -11556,7 +11566,7 @@ export const products = [
       "/mens/hoodies/Hoodiesmen/h3/2.webp",
       "/mens/hoodies/Hoodiesmen/h3/3.webp"
     ],
-    "description": "FlexFit Studio presents Classic Navy Relaxed Kangaroo Pocket Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Black Being Creative Graphic Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -11564,9 +11574,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 85,
-    "descriptionLong": "FlexFit Studio presents Classic Navy Relaxed Kangaroo Pocket Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Black Being Creative Graphic Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -11576,7 +11586,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Classic Navy Relaxed Kangaroo Pocket Hoodie is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Black Being Creative Graphic Hoodie is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -11629,7 +11639,7 @@ export const products = [
   },
   {
     "id": 3204,
-    "title": "Sage Olive Organic French Terry Hoodie",
+    "title": "Light Grey Monster Graphic Hoodie",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -11641,7 +11651,7 @@ export const products = [
       "/mens/hoodies/Hoodiesmen/h4/1.webp",
       "/mens/hoodies/Hoodiesmen/h4/2.webp"
     ],
-    "description": "FlexFit Studio presents Sage Olive Organic French Terry Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Light Grey Monster Graphic Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -11649,9 +11659,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 105,
-    "descriptionLong": "FlexFit Studio presents Sage Olive Organic French Terry Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Light Grey Monster Graphic Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -11661,7 +11671,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Sage Olive Organic French Terry Hoodie is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Light Grey Monster Graphic Hoodie is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -11714,7 +11724,7 @@ export const products = [
   },
   {
     "id": 3205,
-    "title": "Heather Grey Premium Ribbed Fleece Pullover",
+    "title": "Ruby Red Graphic Chest Print Hoodie",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -11728,7 +11738,7 @@ export const products = [
       "/mens/hoodies/Hoodiesmen/h5/3.webp",
       "/mens/hoodies/Hoodiesmen/h5/4.webp"
     ],
-    "description": "FlexFit Studio presents Heather Grey Premium Ribbed Fleece Pullover—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Ruby Red Graphic Chest Print Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -11736,9 +11746,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.6",
+    "rating": 4.6,
     "reviewsCount": 125,
-    "descriptionLong": "FlexFit Studio presents Heather Grey Premium Ribbed Fleece Pullover—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Ruby Red Graphic Chest Print Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -11748,7 +11758,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Heather Grey Premium Ribbed Fleece Pullover is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Ruby Red Graphic Chest Print Hoodie is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -11801,7 +11811,7 @@ export const products = [
   },
   {
     "id": 3206,
-    "title": "Mustard Yellow Cozy Fleece Winter Hoodie",
+    "title": "Olive Green Graphic Fleece Hoodie",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -11814,7 +11824,7 @@ export const products = [
       "/mens/hoodies/Hoodiesmen/h6/2.webp",
       "/mens/hoodies/Hoodiesmen/h6/3.webp"
     ],
-    "description": "FlexFit Studio presents Mustard Yellow Cozy Fleece Winter Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Olive Green Graphic Fleece Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -11822,9 +11832,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 145,
-    "descriptionLong": "FlexFit Studio presents Mustard Yellow Cozy Fleece Winter Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Olive Green Graphic Fleece Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -11834,7 +11844,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Mustard Yellow Cozy Fleece Winter Hoodie is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Olive Green Graphic Fleece Hoodie is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -11887,7 +11897,7 @@ export const products = [
   },
   {
     "id": 3207,
-    "title": "Dusty Rose Pastel Cotton Terry Hoodie",
+    "title": "Wine Maroon New York Graphic Hoodie",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -11899,7 +11909,7 @@ export const products = [
       "/mens/hoodies/Hoodiesmen/h7/1.webp",
       "/mens/hoodies/Hoodiesmen/h7/2.webp"
     ],
-    "description": "FlexFit Studio presents Dusty Rose Pastel Cotton Terry Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Wine Maroon New York Graphic Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -11907,9 +11917,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 165,
-    "descriptionLong": "FlexFit Studio presents Dusty Rose Pastel Cotton Terry Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Wine Maroon New York Graphic Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "Premium Cotton",
       "Fit type": "Regular Fit",
@@ -11919,7 +11929,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Dusty Rose Pastel Cotton Terry Hoodie is crafted from a Premium Cotton blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Wine Maroon New York Graphic Hoodie is crafted from a Premium Cotton blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -11972,7 +11982,7 @@ export const products = [
   },
   {
     "id": 3208,
-    "title": "Teal Blue Performance Zip-Up Hoodie",
+    "title": "Mint Green Being Wanted Graphic Hoodie",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -11985,7 +11995,7 @@ export const products = [
       "/mens/hoodies/Hoodiesmen/h8/2.webp",
       "/mens/hoodies/Hoodiesmen/h8/3.webp"
     ],
-    "description": "FlexFit Studio presents Teal Blue Performance Zip-Up Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Mint Green Being Wanted Graphic Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -11993,9 +12003,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 35,
-    "descriptionLong": "FlexFit Studio presents Teal Blue Performance Zip-Up Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Mint Green Being Wanted Graphic Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -12005,7 +12015,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Teal Blue Performance Zip-Up Hoodie is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Mint Green Being Wanted Graphic Hoodie is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -12058,7 +12068,7 @@ export const products = [
   },
   {
     "id": 3209,
-    "title": "Off-White Luxury Soft Cotton Hoodie",
+    "title": "Lavender Purple Soft Cotton Hoodie",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -12071,7 +12081,7 @@ export const products = [
       "/mens/hoodies/Hoodiesmen/h9/2.webp",
       "/mens/hoodies/Hoodiesmen/h9/3.webp"
     ],
-    "description": "FlexFit Studio presents Off-White Luxury Soft Cotton Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Lavender Purple Soft Cotton Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -12079,9 +12089,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 55,
-    "descriptionLong": "FlexFit Studio presents Off-White Luxury Soft Cotton Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Lavender Purple Soft Cotton Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "Premium Cotton",
       "Fit type": "Regular Fit",
@@ -12091,7 +12101,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Off-White Luxury Soft Cotton Hoodie is crafted from a Premium Cotton blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Lavender Purple Soft Cotton Hoodie is crafted from a Premium Cotton blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -12144,7 +12154,7 @@ export const products = [
   },
   {
     "id": 3210,
-    "title": "Forest Green Winter Thermal Fleece Pullover",
+    "title": "Blush Rose Pink Oversized Hoodie",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -12157,7 +12167,7 @@ export const products = [
       "/mens/hoodies/Hoodiesmen/h10/2.webp",
       "/mens/hoodies/Hoodiesmen/h10/3.webp"
     ],
-    "description": "FlexFit Studio presents Forest Green Winter Thermal Fleece Pullover—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Blush Rose Pink Oversized Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -12165,9 +12175,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.3",
+    "rating": 4.3,
     "reviewsCount": 75,
-    "descriptionLong": "FlexFit Studio presents Forest Green Winter Thermal Fleece Pullover—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Blush Rose Pink Oversized Hoodie—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -12177,7 +12187,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Forest Green Winter Thermal Fleece Pullover is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Blush Rose Pink Oversized Hoodie is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -12315,7 +12325,7 @@ export const products = [
   },
   {
     "id": 3302,
-    "title": "Textured Charcoal Linen Smart Casual Blazer",
+    "title": "Black Formal Slim-Fit Blazer",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -12328,7 +12338,7 @@ export const products = [
       "/mens/blazers/Blezermen/b2/2.webp",
       "/mens/blazers/Blezermen/b2/3.webp"
     ],
-    "description": "FlexFit Studio presents Textured Charcoal Linen Smart Casual Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Linen construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Black Formal Slim-Fit Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Linen construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -12336,9 +12346,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.4",
+    "rating": 4.4,
     "reviewsCount": 65,
-    "descriptionLong": "FlexFit Studio presents Textured Charcoal Linen Smart Casual Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Linen construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Black Formal Slim-Fit Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Linen construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "Premium Linen",
       "Fit type": "Regular Fit",
@@ -12348,7 +12358,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Textured Charcoal Linen Smart Casual Blazer is crafted from a Premium Linen blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Black Formal Slim-Fit Blazer is crafted from a Premium Linen blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -12401,7 +12411,7 @@ export const products = [
   },
   {
     "id": 3303,
-    "title": "Classic Black Royal Velvet Evening Blazer",
+    "title": "Black Royal Velvet Evening Blazer",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -12414,7 +12424,7 @@ export const products = [
       "/mens/blazers/Blezermen/b3/2.webp",
       "/mens/blazers/Blezermen/b3/3.webp"
     ],
-    "description": "FlexFit Studio presents Classic Black Royal Velvet Evening Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Black Royal Velvet Evening Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -12422,9 +12432,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 85,
-    "descriptionLong": "FlexFit Studio presents Classic Black Royal Velvet Evening Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Black Royal Velvet Evening Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -12434,7 +12444,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Classic Black Royal Velvet Evening Blazer is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Black Royal Velvet Evening Blazer is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -12487,7 +12497,7 @@ export const products = [
   },
   {
     "id": 3304,
-    "title": "Tan Tweed Wool-Blend Ceremonial Blazer",
+    "title": "Charcoal Grey Plaid Double-Breasted Blazer",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -12500,7 +12510,7 @@ export const products = [
       "/mens/blazers/Blezermen/b4/2.webp",
       "/mens/blazers/Blezermen/b4/3.webp"
     ],
-    "description": "FlexFit Studio presents Tan Tweed Wool-Blend Ceremonial Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Charcoal Grey Plaid Double-Breasted Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -12508,9 +12518,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 105,
-    "descriptionLong": "FlexFit Studio presents Tan Tweed Wool-Blend Ceremonial Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Charcoal Grey Plaid Double-Breasted Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -12520,7 +12530,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Tan Tweed Wool-Blend Ceremonial Blazer is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Charcoal Grey Plaid Double-Breasted Blazer is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -12573,7 +12583,7 @@ export const products = [
   },
   {
     "id": 3305,
-    "title": "Olive Green Double-Breasted Notch Blazer",
+    "title": "Charcoal Grey Formal Slim-Fit Blazer",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -12586,7 +12596,7 @@ export const products = [
       "/mens/blazers/Blezermen/b5/b2.webp",
       "/mens/blazers/Blezermen/b5/b3.webp"
     ],
-    "description": "FlexFit Studio presents Olive Green Double-Breasted Notch Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Charcoal Grey Formal Slim-Fit Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -12594,9 +12604,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.6",
+    "rating": 4.6,
     "reviewsCount": 125,
-    "descriptionLong": "FlexFit Studio presents Olive Green Double-Breasted Notch Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Charcoal Grey Formal Slim-Fit Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -12606,7 +12616,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Olive Green Double-Breasted Notch Blazer is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Charcoal Grey Formal Slim-Fit Blazer is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -12659,7 +12669,7 @@ export const products = [
   },
   {
     "id": 3306,
-    "title": "Emerald Velvet Royal Bandhgala Blazer",
+    "title": "Midnight Navy Velvet Bandhgala Blazer",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -12672,7 +12682,7 @@ export const products = [
       "/mens/blazers/Blezermen/b6/2.webp",
       "/mens/blazers/Blezermen/b6/3.webp"
     ],
-    "description": "FlexFit Studio presents Emerald Velvet Royal Bandhgala Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Midnight Navy Velvet Bandhgala Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -12680,9 +12690,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 145,
-    "descriptionLong": "FlexFit Studio presents Emerald Velvet Royal Bandhgala Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Midnight Navy Velvet Bandhgala Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -12692,7 +12702,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Emerald Velvet Royal Bandhgala Blazer is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Midnight Navy Velvet Bandhgala Blazer is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -12745,7 +12755,7 @@ export const products = [
   },
   {
     "id": 3307,
-    "title": "Light Grey Summer Cotton Unstructured Blazer",
+    "title": "Emerald Green Formal Slim-Fit Blazer",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -12758,7 +12768,7 @@ export const products = [
       "/mens/blazers/Blezermen/b7/2.webp",
       "/mens/blazers/Blezermen/b7/3.webp"
     ],
-    "description": "FlexFit Studio presents Light Grey Summer Cotton Unstructured Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Emerald Green Formal Slim-Fit Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -12766,9 +12776,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 165,
-    "descriptionLong": "FlexFit Studio presents Light Grey Summer Cotton Unstructured Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Emerald Green Formal Slim-Fit Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "Premium Cotton",
       "Fit type": "Regular Fit",
@@ -12778,7 +12788,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Light Grey Summer Cotton Unstructured Blazer is crafted from a Premium Cotton blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Emerald Green Formal Slim-Fit Blazer is crafted from a Premium Cotton blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -12831,7 +12841,7 @@ export const products = [
   },
   {
     "id": 3308,
-    "title": "Burgundy Wine Premium Wedding Blazer",
+    "title": "Midnight Navy Bandhgala Formal Jacket",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -12844,7 +12854,7 @@ export const products = [
       "/mens/blazers/Blezermen/b8/2.webp",
       "/mens/blazers/Blezermen/b8/3.webp"
     ],
-    "description": "FlexFit Studio presents Burgundy Wine Premium Wedding Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Midnight Navy Bandhgala Formal Jacket—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -12852,9 +12862,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 35,
-    "descriptionLong": "FlexFit Studio presents Burgundy Wine Premium Wedding Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Midnight Navy Bandhgala Formal Jacket—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -12864,7 +12874,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Burgundy Wine Premium Wedding Blazer is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Midnight Navy Bandhgala Formal Jacket is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -12917,7 +12927,7 @@ export const products = [
   },
   {
     "id": 3309,
-    "title": "Champagne Gold Textured Silk Nehru Blazer",
+    "title": "Black Bandhgala Jodhpuri Suit",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -12930,7 +12940,7 @@ export const products = [
       "/mens/blazers/Blezermen/b9/2.webp",
       "/mens/blazers/Blezermen/b9/3.webp"
     ],
-    "description": "FlexFit Studio presents Champagne Gold Textured Silk Nehru Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Silk Blend construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Black Bandhgala Jodhpuri Suit—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Silk Blend construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -12938,9 +12948,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 55,
-    "descriptionLong": "FlexFit Studio presents Champagne Gold Textured Silk Nehru Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Silk Blend construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Black Bandhgala Jodhpuri Suit—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Silk Blend construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular Fit",
@@ -12950,7 +12960,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Champagne Gold Textured Silk Nehru Blazer is crafted from a Silk Blend blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Black Bandhgala Jodhpuri Suit is crafted from a Silk Blend blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -13003,7 +13013,7 @@ export const products = [
   },
   {
     "id": 3310,
-    "title": "Royal Blue Satin-Lapel Evening Tuxedo Jacket",
+    "title": "Forest Green Textured Slim-Fit Blazer",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -13016,7 +13026,7 @@ export const products = [
       "/mens/blazers/Blezermen/b10/2.webp",
       "/mens/blazers/Blezermen/b10/3.webp"
     ],
-    "description": "FlexFit Studio presents Royal Blue Satin-Lapel Evening Tuxedo Jacket—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Forest Green Textured Slim-Fit Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -13024,9 +13034,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.3",
+    "rating": 4.3,
     "reviewsCount": 75,
-    "descriptionLong": "FlexFit Studio presents Royal Blue Satin-Lapel Evening Tuxedo Jacket—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Forest Green Textured Slim-Fit Blazer—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -13036,7 +13046,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Royal Blue Satin-Lapel Evening Tuxedo Jacket is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Forest Green Textured Slim-Fit Blazer is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -13089,7 +13099,7 @@ export const products = [
   },
   {
     "id": 3401,
-    "title": "Sage Green Linen Shirt & Trouser Set",
+    "title": "Black Contrast Stripe Co-ord Set",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -13101,7 +13111,7 @@ export const products = [
       "/mens/coords/co-ordset men/co1/1.webp",
       "/mens/coords/co-ordset men/co1/2.webp"
     ],
-    "description": "Discover Sage Green Linen Shirt & Trouser Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Black Contrast Stripe Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -13109,9 +13119,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.4",
+    "rating": 4.4,
     "reviewsCount": 45,
-    "descriptionLong": "Discover Sage Green Linen Shirt & Trouser Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Black Contrast Stripe Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Linen",
       "Fit type": "Regular / Straight Fit",
@@ -13122,7 +13132,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Linen for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Sage Green Linen Shirt & Trouser Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Black Contrast Stripe Co-ord Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -13181,7 +13191,7 @@ export const products = [
   },
   {
     "id": 3402,
-    "title": "Midnight Navy Resort Waffle Knit Co-ord",
+    "title": "Ivory White Graphic Graffiti Print Co-ord Set",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -13194,7 +13204,7 @@ export const products = [
       "/mens/coords/co-ordset men/co2/2.webp",
       "/mens/coords/co-ordset men/co2/3.webp"
     ],
-    "description": "Discover Midnight Navy Resort Waffle Knit Co-ord from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Ivory White Graphic Graffiti Print Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -13202,9 +13212,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.4",
+    "rating": 4.4,
     "reviewsCount": 65,
-    "descriptionLong": "Discover Midnight Navy Resort Waffle Knit Co-ord from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Ivory White Graphic Graffiti Print Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -13215,7 +13225,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Midnight Navy Resort Waffle Knit Co-ord features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Ivory White Graphic Graffiti Print Co-ord Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -13274,7 +13284,7 @@ export const products = [
   },
   {
     "id": 3403,
-    "title": "Pastel Peach Summer Camp-Collar Shorts Set",
+    "title": "Midnight Navy Paisley Print Resort Co-ord Set",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -13287,7 +13297,7 @@ export const products = [
       "/mens/coords/co-ordset men/co3/2.webp",
       "/mens/coords/co-ordset men/co3/3.webp"
     ],
-    "description": "Discover Pastel Peach Summer Camp-Collar Shorts Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Midnight Navy Paisley Print Resort Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -13295,9 +13305,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 85,
-    "descriptionLong": "Discover Pastel Peach Summer Camp-Collar Shorts Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Midnight Navy Paisley Print Resort Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -13308,7 +13318,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Pastel Peach Summer Camp-Collar Shorts Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Midnight Navy Paisley Print Resort Co-ord Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -13367,7 +13377,7 @@ export const products = [
   },
   {
     "id": 3404,
-    "title": "Khaki Utility Pocket Cotton Co-ord Set",
+    "title": "Light Grey Geometric Print Co-ord Set",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -13380,7 +13390,7 @@ export const products = [
       "/mens/coords/co-ordset men/co4/2.webp",
       "/mens/coords/co-ordset men/co4/3.webp"
     ],
-    "description": "Discover Khaki Utility Pocket Cotton Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Light Grey Geometric Print Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -13388,9 +13398,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 105,
-    "descriptionLong": "Discover Khaki Utility Pocket Cotton Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Light Grey Geometric Print Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -13401,7 +13411,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Khaki Utility Pocket Cotton Co-ord Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Light Grey Geometric Print Co-ord Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -13460,7 +13470,7 @@ export const products = [
   },
   {
     "id": 3405,
-    "title": "Monochrome Stripe Relaxed Lounge Co-ord",
+    "title": "Teal Navy Geometric Print Co-ord Set",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -13473,7 +13483,7 @@ export const products = [
       "/mens/coords/co-ordset men/co5/2.webp",
       "/mens/coords/co-ordset men/co5/3.webp"
     ],
-    "description": "Discover Monochrome Stripe Relaxed Lounge Co-ord from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Teal Navy Geometric Print Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -13481,9 +13491,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.6",
+    "rating": 4.6,
     "reviewsCount": 125,
-    "descriptionLong": "Discover Monochrome Stripe Relaxed Lounge Co-ord from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Teal Navy Geometric Print Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -13494,7 +13504,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Monochrome Stripe Relaxed Lounge Co-ord features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Teal Navy Geometric Print Co-ord Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -13553,7 +13563,7 @@ export const products = [
   },
   {
     "id": 3406,
-    "title": "Indigo Shibori Printed Resort Shirt & Shorts",
+    "title": "Black Gold Flame Print Co-ord Set",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -13566,7 +13576,7 @@ export const products = [
       "/mens/coords/co-ordset men/co6/2.webp",
       "/mens/coords/co-ordset men/co6/3.webp"
     ],
-    "description": "Discover Indigo Shibori Printed Resort Shirt & Shorts from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Black Gold Flame Print Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -13574,9 +13584,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 145,
-    "descriptionLong": "Discover Indigo Shibori Printed Resort Shirt & Shorts from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Black Gold Flame Print Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -13587,7 +13597,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Indigo Shibori Printed Resort Shirt & Shorts features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Black Gold Flame Print Co-ord Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -13646,7 +13656,7 @@ export const products = [
   },
   {
     "id": 3407,
-    "title": "Crimson Rose Silk Blend Lounge Kaftan Set",
+    "title": "Chocolate Brown Graffiti Print Co-ord Set",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -13659,7 +13669,7 @@ export const products = [
       "/mens/coords/co-ordset men/co7/2.webp",
       "/mens/coords/co-ordset men/co7/3.webp"
     ],
-    "description": "Discover Crimson Rose Silk Blend Lounge Kaftan Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Chocolate Brown Graffiti Print Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -13667,9 +13677,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 165,
-    "descriptionLong": "Discover Crimson Rose Silk Blend Lounge Kaftan Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Chocolate Brown Graffiti Print Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular / Straight Fit",
@@ -13680,7 +13690,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Silk Blend for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Crimson Rose Silk Blend Lounge Kaftan Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Chocolate Brown Graffiti Print Co-ord Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -13739,7 +13749,7 @@ export const products = [
   },
   {
     "id": 3408,
-    "title": "Emerald Green Dobby Textured Tunic & Pant Set",
+    "title": "Light Grey Neon Graphic Cargo Co-ord Set",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -13753,7 +13763,7 @@ export const products = [
       "/mens/coords/co-ordset men/co8/3.webp",
       "/mens/coords/co-ordset men/co8/4.webp"
     ],
-    "description": "Discover Emerald Green Dobby Textured Tunic & Pant Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Light Grey Neon Graphic Cargo Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -13761,9 +13771,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 35,
-    "descriptionLong": "Discover Emerald Green Dobby Textured Tunic & Pant Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Light Grey Neon Graphic Cargo Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -13774,7 +13784,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Emerald Green Dobby Textured Tunic & Pant Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Light Grey Neon Graphic Cargo Co-ord Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -13833,7 +13843,7 @@ export const products = [
   },
   {
     "id": 3409,
-    "title": "Desert Sand Organic Cotton Summer Co-ord",
+    "title": "Charcoal Grey Linen Blend Co-ord Set",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -13846,7 +13856,7 @@ export const products = [
       "/mens/coords/co-ordset men/co9/2.avif",
       "/mens/coords/co-ordset men/co9/3.avif"
     ],
-    "description": "Discover Desert Sand Organic Cotton Summer Co-ord from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Charcoal Grey Linen Blend Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -13854,9 +13864,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 55,
-    "descriptionLong": "Discover Desert Sand Organic Cotton Summer Co-ord from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Charcoal Grey Linen Blend Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -13867,7 +13877,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Desert Sand Organic Cotton Summer Co-ord features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Charcoal Grey Linen Blend Co-ord Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -13926,7 +13936,7 @@ export const products = [
   },
   {
     "id": 3410,
-    "title": "Burgundy Wine Waffle Hooded Joggers Set",
+    "title": "Ivory Cream Tropical Leaf Print Co-ord Set",
     "price": 249,
     "originalPrice": 498,
     "discount": "50% OFF",
@@ -13939,7 +13949,7 @@ export const products = [
       "/mens/coords/co-ordset men/co10/2.webp",
       "/mens/coords/co-ordset men/co10/3.webp"
     ],
-    "description": "Discover Burgundy Wine Waffle Hooded Joggers Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Ivory Cream Tropical Leaf Print Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -13947,9 +13957,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.3",
+    "rating": 4.3,
     "reviewsCount": 75,
-    "descriptionLong": "Discover Burgundy Wine Waffle Hooded Joggers Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Ivory Cream Tropical Leaf Print Co-ord Set from FlexFit Studio—where tradition meets contemporary design. This gents co-ords is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -13960,7 +13970,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Burgundy Wine Waffle Hooded Joggers Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Ivory Cream Tropical Leaf Print Co-ord Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -14019,7 +14029,7 @@ export const products = [
   },
   {
     "id": 3501,
-    "title": "Classic Pure White Cotton Oxford Shirt",
+    "title": "Midnight Navy Pure Cotton Oxford Shirt",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -14034,7 +14044,7 @@ export const products = [
       "/mens/shirts/shirt/shirt 1/l-kcsh-ffo-1647-navy-fubar-original-imahj23qjz6wbrgy.webp",
       "/mens/shirts/shirt/shirt 1/m-kcsh-ffo-1647-navy-fubar-original-imahj23q8yfqc93x.webp"
     ],
-    "description": "FlexFit Studio presents Classic Pure White Cotton Oxford Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Midnight Navy Pure Cotton Oxford Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -14042,9 +14052,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.4",
+    "rating": 4.4,
     "reviewsCount": 45,
-    "descriptionLong": "FlexFit Studio presents Classic Pure White Cotton Oxford Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Midnight Navy Pure Cotton Oxford Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "Premium Cotton",
       "Fit type": "Regular Fit",
@@ -14054,7 +14064,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Classic Pure White Cotton Oxford Shirt is crafted from a Premium Cotton blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Midnight Navy Pure Cotton Oxford Shirt is crafted from a Premium Cotton blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -14107,7 +14117,7 @@ export const products = [
   },
   {
     "id": 3502,
-    "title": "Sage Green Relaxed Summer Linen Shirt",
+    "title": "Slate Grey Formal Button-Down Shirt",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -14122,7 +14132,7 @@ export const products = [
       "/mens/shirts/shirt/shirt 2/s-frml-st2-vebnor-original-imahmy7bsbdxuqqf.webp",
       "/mens/shirts/shirt/shirt 2/s-frml-st2-vebnor-original-imahmy7byknhmqhd.webp"
     ],
-    "description": "FlexFit Studio presents Sage Green Relaxed Summer Linen Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Linen construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Slate Grey Formal Button-Down Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Linen construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -14130,9 +14140,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.4",
+    "rating": 4.4,
     "reviewsCount": 65,
-    "descriptionLong": "FlexFit Studio presents Sage Green Relaxed Summer Linen Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Linen construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Slate Grey Formal Button-Down Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Linen construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "Premium Linen",
       "Fit type": "Regular Fit",
@@ -14142,7 +14152,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Sage Green Relaxed Summer Linen Shirt is crafted from a Premium Linen blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Slate Grey Formal Button-Down Shirt is crafted from a Premium Linen blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -14195,7 +14205,7 @@ export const products = [
   },
   {
     "id": 3503,
-    "title": "Indigo Blue Dobby Micro-Print Shirt",
+    "title": "Wine Maroon Dobby Micro-Print Shirt",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -14209,7 +14219,7 @@ export const products = [
       "/mens/shirts/shirt/shirt 3/l-mens-shirts-jagrutifashion-original-imahfxb5hdea2nct.webp",
       "/mens/shirts/shirt/shirt 3/l-mens-shirts-jagrutifashion-original-imahfxb5rzzxvdsu.webp"
     ],
-    "description": "FlexFit Studio presents Indigo Blue Dobby Micro-Print Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Wine Maroon Dobby Micro-Print Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -14217,9 +14227,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 85,
-    "descriptionLong": "FlexFit Studio presents Indigo Blue Dobby Micro-Print Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Wine Maroon Dobby Micro-Print Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -14229,7 +14239,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Indigo Blue Dobby Micro-Print Shirt is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Wine Maroon Dobby Micro-Print Shirt is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -14282,7 +14292,7 @@ export const products = [
   },
   {
     "id": 3504,
-    "title": "Mustard Yellow Mandarain Collar Cotton Shirt",
+    "title": "Chocolate Brown Solid Casual Shirt",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -14297,7 +14307,7 @@ export const products = [
       "/mens/shirts/shirt/shirt 4/m-r-stbrg-r-stbrg-coffee-stoneberg-original-imahhv5ftchu8ny9.webp",
       "/mens/shirts/shirt/shirt 4/m-r-stbrg-r-stbrg-coffee-stoneberg-original-imahhv5fw3fvqyaf.webp"
     ],
-    "description": "FlexFit Studio presents Mustard Yellow Mandarain Collar Cotton Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Chocolate Brown Solid Casual Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -14305,9 +14315,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 105,
-    "descriptionLong": "FlexFit Studio presents Mustard Yellow Mandarain Collar Cotton Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Chocolate Brown Solid Casual Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "Premium Cotton",
       "Fit type": "Regular Fit",
@@ -14317,7 +14327,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Mustard Yellow Mandarain Collar Cotton Shirt is crafted from a Premium Cotton blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Chocolate Brown Solid Casual Shirt is crafted from a Premium Cotton blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -14370,7 +14380,7 @@ export const products = [
   },
   {
     "id": 3505,
-    "title": "Nautical Navy Stripe Semi-Formal Shirt",
+    "title": "Sky Blue Vertical Stripe Casual Shirt",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -14383,7 +14393,7 @@ export const products = [
       "/mens/shirts/shirt/shirt 5/s-frilll-solbiza-original-imahk433ggjwdhez.webp",
       "/mens/shirts/shirt/shirt 5/xxl-frilll-solbiza-original-imahk433j7nvgzbz.webp"
     ],
-    "description": "FlexFit Studio presents Nautical Navy Stripe Semi-Formal Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Sky Blue Vertical Stripe Casual Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -14391,9 +14401,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.6",
+    "rating": 4.6,
     "reviewsCount": 125,
-    "descriptionLong": "FlexFit Studio presents Nautical Navy Stripe Semi-Formal Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Sky Blue Vertical Stripe Casual Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -14403,7 +14413,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Nautical Navy Stripe Semi-Formal Shirt is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Sky Blue Vertical Stripe Casual Shirt is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -14456,7 +14466,7 @@ export const products = [
   },
   {
     "id": 3506,
-    "title": "Burgundy Crimson Luxury Satin Party Shirt",
+    "title": "Black Tropical Print Party Shirt",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -14471,7 +14481,7 @@ export const products = [
       "/mens/shirts/shirt/shirt 6/-original-imahjyz2yfe8yhjy.webp",
       "/mens/shirts/shirt/shirt 6/-original-imahkyktfeuhfym5.webp"
     ],
-    "description": "FlexFit Studio presents Burgundy Crimson Luxury Satin Party Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Black Tropical Print Party Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -14479,9 +14489,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 145,
-    "descriptionLong": "FlexFit Studio presents Burgundy Crimson Luxury Satin Party Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Black Tropical Print Party Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -14491,7 +14501,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Burgundy Crimson Luxury Satin Party Shirt is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Black Tropical Print Party Shirt is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -14544,7 +14554,7 @@ export const products = [
   },
   {
     "id": 3507,
-    "title": "Olive Drab Double-Pocket Cargo Utility Shirt",
+    "title": "Sage Green Tropical Print Camp Shirt",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -14558,7 +14568,7 @@ export const products = [
       "/mens/shirts/shirt/shirt 7/xl-tl-79-truloom-original-imahg9fcgfxmhwhz.webp",
       "/mens/shirts/shirt/shirt 7/xl-tl-79-truloom-original-imahg9fcw9wqcpqs.webp"
     ],
-    "description": "FlexFit Studio presents Olive Drab Double-Pocket Cargo Utility Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Sage Green Tropical Print Camp Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -14566,9 +14576,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 165,
-    "descriptionLong": "FlexFit Studio presents Olive Drab Double-Pocket Cargo Utility Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Sage Green Tropical Print Camp Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -14578,7 +14588,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Olive Drab Double-Pocket Cargo Utility Shirt is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Sage Green Tropical Print Camp Shirt is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -14631,7 +14641,7 @@ export const products = [
   },
   {
     "id": 3508,
-    "title": "Pastel Rose Pink Premium Cotton Gingham Shirt",
+    "title": "Mustard Yellow Summer Time Graphic Shirt",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -14646,7 +14656,7 @@ export const products = [
       "/mens/shirts/shirt/shirt 8/m-ps-59-s-stenfia-original-imahmm36u3n8zgsw.webp",
       "/mens/shirts/shirt/shirt 8/m-ps-59-s-stenfia-original-imahmm36zt85z3az.webp"
     ],
-    "description": "FlexFit Studio presents Pastel Rose Pink Premium Cotton Gingham Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Mustard Yellow Summer Time Graphic Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -14654,9 +14664,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 35,
-    "descriptionLong": "FlexFit Studio presents Pastel Rose Pink Premium Cotton Gingham Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Mustard Yellow Summer Time Graphic Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "Premium Cotton",
       "Fit type": "Regular Fit",
@@ -14666,7 +14676,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Pastel Rose Pink Premium Cotton Gingham Shirt is crafted from a Premium Cotton blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Mustard Yellow Summer Time Graphic Shirt is crafted from a Premium Cotton blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -14719,7 +14729,7 @@ export const products = [
   },
   {
     "id": 3509,
-    "title": "Carbon Black Premium Satin Evening Dress Shirt",
+    "title": "Sky Blue Tropical Beach Print Shirt",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -14733,7 +14743,7 @@ export const products = [
       "/mens/shirts/shirt/shirt 9/s-ps-37-s-stenfia-original-imahkd8afctzvpfq.webp",
       "/mens/shirts/shirt/shirt 9/xxl-ps-37-s-stenfia-original-imahkd8atwr2fqgm.webp"
     ],
-    "description": "FlexFit Studio presents Carbon Black Premium Satin Evening Dress Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Sky Blue Tropical Beach Print Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -14741,9 +14751,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 55,
-    "descriptionLong": "FlexFit Studio presents Carbon Black Premium Satin Evening Dress Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Sky Blue Tropical Beach Print Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -14753,7 +14763,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Carbon Black Premium Satin Evening Dress Shirt is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Sky Blue Tropical Beach Print Shirt is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -14806,7 +14816,7 @@ export const products = [
   },
   {
     "id": 3510,
-    "title": "Sky Blue Chambray Tailored Casual Shirt",
+    "title": "Ivory Cream Tropical Palm Camp Shirt",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -14820,7 +14830,7 @@ export const products = [
       "/mens/shirts/shirt/shirt 10/s-ps-36-s-stenfia-original-imahkffew3uehhhc.webp",
       "/mens/shirts/shirt/shirt 10/s-ps-36-s-stenfia-original-imahkffeztdfbyhj.webp"
     ],
-    "description": "FlexFit Studio presents Sky Blue Chambray Tailored Casual Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Ivory Cream Tropical Palm Camp Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -14828,9 +14838,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.3",
+    "rating": 4.3,
     "reviewsCount": 75,
-    "descriptionLong": "FlexFit Studio presents Sky Blue Chambray Tailored Casual Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Ivory Cream Tropical Palm Camp Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -14840,7 +14850,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Sky Blue Chambray Tailored Casual Shirt is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Ivory Cream Tropical Palm Camp Shirt is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -14893,7 +14903,7 @@ export const products = [
   },
   {
     "id": 3601,
-    "title": "Classic Black Organic Long-Staple Crewneck",
+    "title": "Ivory White Ribbed Long-Sleeve Tee",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -14907,7 +14917,7 @@ export const products = [
       "/mens/tshirts/t-shirt/1/s-white-sweater-sky-magic-original-imahmjwfgfynfafu.webp",
       "/mens/tshirts/t-shirt/1/xl-white-sweater-sky-magic-original-imahmjwf72gux6yu.webp"
     ],
-    "description": "FlexFit Studio presents Classic Black Organic Long-Staple Crewneck—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Ivory White Ribbed Long-Sleeve Tee—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -14915,9 +14925,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.4",
+    "rating": 4.4,
     "reviewsCount": 45,
-    "descriptionLong": "FlexFit Studio presents Classic Black Organic Long-Staple Crewneck—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Ivory White Ribbed Long-Sleeve Tee—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -14927,7 +14937,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Classic Black Organic Long-Staple Crewneck is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Ivory White Ribbed Long-Sleeve Tee is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -14980,7 +14990,7 @@ export const products = [
   },
   {
     "id": 3602,
-    "title": "Ivory White Premium Ribbed Muscle Tee",
+    "title": "Ruby Red Boston Color-Block Polo Tee",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -14993,7 +15003,7 @@ export const products = [
       "/mens/tshirts/t-shirt/2/11-12-years-hr-polo-tshirt-red-82-1p-fast-cry-original-imahguhukfdszckh.webp",
       "/mens/tshirts/t-shirt/2/11-12-years-hr-polo-tshirt-red-82-1p-fast-cry-original-imahguhuswndz8e4.webp"
     ],
-    "description": "FlexFit Studio presents Ivory White Premium Ribbed Muscle Tee—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Ruby Red Boston Color-Block Polo Tee—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -15001,9 +15011,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.4",
+    "rating": 4.4,
     "reviewsCount": 65,
-    "descriptionLong": "FlexFit Studio presents Ivory White Premium Ribbed Muscle Tee—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Ruby Red Boston Color-Block Polo Tee—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -15013,7 +15023,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Ivory White Premium Ribbed Muscle Tee is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Ruby Red Boston Color-Block Polo Tee is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -15066,7 +15076,7 @@ export const products = [
   },
   {
     "id": 3603,
-    "title": "Navy Blue Classic Pique Polo T-Shirt",
+    "title": "White Black Excellent Graphic T-Shirt",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -15080,7 +15090,7 @@ export const products = [
       "/mens/tshirts/t-shirt/3/s-4-mk-digital-original-imahmkztgnusz8ff.webp",
       "/mens/tshirts/t-shirt/3/xxl-4-mk-digital-original-imahmkztvaz9gtfe.webp"
     ],
-    "description": "FlexFit Studio presents Navy Blue Classic Pique Polo T-Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents White Black Excellent Graphic T-Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -15088,9 +15098,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 85,
-    "descriptionLong": "FlexFit Studio presents Navy Blue Classic Pique Polo T-Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents White Black Excellent Graphic T-Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -15100,7 +15110,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Navy Blue Classic Pique Polo T-Shirt is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: White Black Excellent Graphic T-Shirt is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -15153,7 +15163,7 @@ export const products = [
   },
   {
     "id": 3604,
-    "title": "Mustard Yellow Casual Summer Pocket Tee",
+    "title": "Tan Brown New York Graphic Pocket Tee",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -15167,7 +15177,7 @@ export const products = [
       "/mens/tshirts/t-shirt/4/m-m4-madilyn-original-imahm5d6karm3bqh.webp",
       "/mens/tshirts/t-shirt/4/xs-m4-madilyn-original-imahm5d6rfypt56m.webp"
     ],
-    "description": "FlexFit Studio presents Mustard Yellow Casual Summer Pocket Tee—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Tan Brown New York Graphic Pocket Tee—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -15175,9 +15185,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 105,
-    "descriptionLong": "FlexFit Studio presents Mustard Yellow Casual Summer Pocket Tee—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Tan Brown New York Graphic Pocket Tee—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -15187,7 +15197,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Mustard Yellow Casual Summer Pocket Tee is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Tan Brown New York Graphic Pocket Tee is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -15240,7 +15250,7 @@ export const products = [
   },
   {
     "id": 3605,
-    "title": "Sage Olive Oversized Drop-Shoulder T-Shirt",
+    "title": "Olive Green Oversized Drop-Shoulder T-Shirt",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -15254,7 +15264,7 @@ export const products = [
       "/mens/tshirts/t-shirt/5/xl-mt1624-ol-bichara-original-imahkyyyk9szhgtp.webp",
       "/mens/tshirts/t-shirt/5/xxl-mt1624-ol-bichara-original-imahkyyy5txnsb8z.webp"
     ],
-    "description": "FlexFit Studio presents Sage Olive Oversized Drop-Shoulder T-Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Olive Green Oversized Drop-Shoulder T-Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -15262,9 +15272,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.6",
+    "rating": 4.6,
     "reviewsCount": 125,
-    "descriptionLong": "FlexFit Studio presents Sage Olive Oversized Drop-Shoulder T-Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Olive Green Oversized Drop-Shoulder T-Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -15274,7 +15284,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Sage Olive Oversized Drop-Shoulder T-Shirt is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Olive Green Oversized Drop-Shoulder T-Shirt is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -15327,7 +15337,7 @@ export const products = [
   },
   {
     "id": 3606,
-    "title": "Heather Grey Athletics V-Neck Tee",
+    "title": "Forest Green Oversized Drop-Shoulder T-Shirt",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -15342,7 +15352,7 @@ export const products = [
       "/mens/tshirts/t-shirt/6/m-mt1500-bg-bichara-original-imahkyffzht5rgdj.webp",
       "/mens/tshirts/t-shirt/6/s-mt1500-bg-bichara-original-imahkyffsznnmvux.webp"
     ],
-    "description": "FlexFit Studio presents Heather Grey Athletics V-Neck Tee—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Forest Green Oversized Drop-Shoulder T-Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -15350,9 +15360,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 145,
-    "descriptionLong": "FlexFit Studio presents Heather Grey Athletics V-Neck Tee—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Forest Green Oversized Drop-Shoulder T-Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -15362,7 +15372,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Heather Grey Athletics V-Neck Tee is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Forest Green Oversized Drop-Shoulder T-Shirt is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -15415,7 +15425,7 @@ export const products = [
   },
   {
     "id": 3607,
-    "title": "Pastel Rose Soft Cotton Slub T-Shirt",
+    "title": "Lavender Purple Textured Crew Neck T-Shirt",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -15428,7 +15438,7 @@ export const products = [
       "/mens/tshirts/t-shirt/7/l-fm-m-ds01-p1-pur-fadmark-original-imahghguqky6pgsj.webp",
       "/mens/tshirts/t-shirt/7/xxl-fm-m-ds01-p1-pur-fadmark-original-imahghguvhzawzms.webp"
     ],
-    "description": "FlexFit Studio presents Pastel Rose Soft Cotton Slub T-Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Lavender Purple Textured Crew Neck T-Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -15436,9 +15446,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 165,
-    "descriptionLong": "FlexFit Studio presents Pastel Rose Soft Cotton Slub T-Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Lavender Purple Textured Crew Neck T-Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The Premium Cotton construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "Premium Cotton",
       "Fit type": "Regular Fit",
@@ -15448,7 +15458,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Pastel Rose Soft Cotton Slub T-Shirt is crafted from a Premium Cotton blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Lavender Purple Textured Crew Neck T-Shirt is crafted from a Premium Cotton blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -15501,7 +15511,7 @@ export const products = [
   },
   {
     "id": 3608,
-    "title": "Burgundy Wine Premium Supima Tee",
+    "title": "Black Quarter-Zip Long-Sleeve Polo Tee",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -15515,7 +15525,7 @@ export const products = [
       "/mens/tshirts/t-shirt/8/s-ts118-vebnor-original-imahneqfqpg3azsz.webp",
       "/mens/tshirts/t-shirt/8/s-ts118-vebnor-original-imahneqfrff4xb9m.webp"
     ],
-    "description": "FlexFit Studio presents Burgundy Wine Premium Supima Tee—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Black Quarter-Zip Long-Sleeve Polo Tee—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -15523,9 +15533,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 35,
-    "descriptionLong": "FlexFit Studio presents Burgundy Wine Premium Supima Tee—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Black Quarter-Zip Long-Sleeve Polo Tee—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -15535,7 +15545,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Burgundy Wine Premium Supima Tee is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Black Quarter-Zip Long-Sleeve Polo Tee is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -15588,7 +15598,7 @@ export const products = [
   },
   {
     "id": 3609,
-    "title": "Nautical Stripe Classic Sailor Polo Shirt",
+    "title": "Blush Rose Pink Ribbed Long Sleeve Tee",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -15601,7 +15611,7 @@ export const products = [
       "/mens/tshirts/t-shirt/9/l-vpinkfultshirt-vcanee-original-imah9eh8zmh5ug5h.webp",
       "/mens/tshirts/t-shirt/9/l-vpinkfultshirt-vcanee-original-imah9j2bvtd9qh9b.webp"
     ],
-    "description": "FlexFit Studio presents Nautical Stripe Classic Sailor Polo Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Blush Rose Pink Ribbed Long Sleeve Tee—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -15609,9 +15619,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 55,
-    "descriptionLong": "FlexFit Studio presents Nautical Stripe Classic Sailor Polo Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Blush Rose Pink Ribbed Long Sleeve Tee—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -15621,7 +15631,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Nautical Stripe Classic Sailor Polo Shirt is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Blush Rose Pink Ribbed Long Sleeve Tee is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -15674,7 +15684,7 @@ export const products = [
   },
   {
     "id": 3610,
-    "title": "Forest Green Minimal Chest Embroidered Tee",
+    "title": "Olive Green Minimal Crewneck Sweatshirt",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -15687,7 +15697,7 @@ export const products = [
       "/mens/tshirts/t-shirt/10/l-bw-rn-wanted-sweater-ogr-being-wanted-original-imahcgsjxpj648jh.webp",
       "/mens/tshirts/t-shirt/10/xl-bw-rn-plain-sweater-ogr-being-wanted-original-imahcgtkrrfzxzjd.webp"
     ],
-    "description": "FlexFit Studio presents Forest Green Minimal Chest Embroidered Tee—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Olive Green Minimal Crewneck Sweatshirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -15695,9 +15705,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.3",
+    "rating": 4.3,
     "reviewsCount": 75,
-    "descriptionLong": "FlexFit Studio presents Forest Green Minimal Chest Embroidered Tee—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Olive Green Minimal Crewneck Sweatshirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -15707,7 +15717,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Forest Green Minimal Chest Embroidered Tee is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Olive Green Minimal Crewneck Sweatshirt is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -15760,7 +15770,7 @@ export const products = [
   },
   {
     "id": 3701,
-    "title": "Structured Tan Tailored Cigarette Chinos",
+    "title": "Cream Beige Slim Formal Trousers",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -15774,7 +15784,7 @@ export const products = [
       "/mens/pants/Pants/1/32-cot-ly-el-cielo-original-imahbgzurzgnprfz.webp",
       "/mens/pants/Pants/1/32-cot-ly-el-cielo-original-imahbgzuzzgesuuh.webp"
     ],
-    "description": "Discover Structured Tan Tailored Cigarette Chinos from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Cream Beige Slim Formal Trousers from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -15782,9 +15792,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.4",
+    "rating": 4.4,
     "reviewsCount": 45,
-    "descriptionLong": "Discover Structured Tan Tailored Cigarette Chinos from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Cream Beige Slim Formal Trousers from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -15795,7 +15805,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Structured Tan Tailored Cigarette Chinos features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Cream Beige Slim Formal Trousers features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -15854,7 +15864,7 @@ export const products = [
   },
   {
     "id": 3702,
-    "title": "Classic Navy Straight-Fit Cotton Trousers",
+    "title": "Sage Green Straight-Fit Cotton Trousers",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -15868,7 +15878,7 @@ export const products = [
       "/mens/pants/Pants/2/38-el-p-cot-el-cielo-original-imahed6ddfdbfsmp.webp",
       "/mens/pants/Pants/2/38-el-p-cot-el-cielo-original-imahed6dwyxszmam.webp"
     ],
-    "description": "Discover Classic Navy Straight-Fit Cotton Trousers from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Sage Green Straight-Fit Cotton Trousers from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -15876,9 +15886,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.4",
+    "rating": 4.4,
     "reviewsCount": 65,
-    "descriptionLong": "Discover Classic Navy Straight-Fit Cotton Trousers from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Sage Green Straight-Fit Cotton Trousers from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -15889,7 +15899,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Classic Navy Straight-Fit Cotton Trousers features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Sage Green Straight-Fit Cotton Trousers features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -15948,7 +15958,7 @@ export const products = [
   },
   {
     "id": 3703,
-    "title": "Slate Grey Pleated Smart Office Pants",
+    "title": "Black Pleated Smart Office Pants",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -15961,7 +15971,7 @@ export const products = [
       "/mens/pants/Pants/3/30-8502-blk-broadstar-original-imahfuvxmyzqhg5g.webp",
       "/mens/pants/Pants/3/30-8502-blk-broadstar-original-imahfuvxzfkfk7zf.webp"
     ],
-    "description": "Discover Slate Grey Pleated Smart Office Pants from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Black Pleated Smart Office Pants from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -15969,9 +15979,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 85,
-    "descriptionLong": "Discover Slate Grey Pleated Smart Office Pants from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Black Pleated Smart Office Pants from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -15982,7 +15992,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Slate Grey Pleated Smart Office Pants features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Black Pleated Smart Office Pants features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -16041,7 +16051,7 @@ export const products = [
   },
   {
     "id": 3704,
-    "title": "Olive Green Utility Cargo Cotton Trousers",
+    "title": "Light Grey Pleated Slim Formal Trousers",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -16055,7 +16065,7 @@ export const products = [
       "/mens/pants/Pants/4/34-sstr-19-019-dennison-original-imahcdhcwhys3dg5.webp",
       "/mens/pants/Pants/4/34-sstr-19-019-dennison-original-imahcdhcym43zr5m.webp"
     ],
-    "description": "Discover Olive Green Utility Cargo Cotton Trousers from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Light Grey Pleated Slim Formal Trousers from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -16063,9 +16073,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 105,
-    "descriptionLong": "Discover Olive Green Utility Cargo Cotton Trousers from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Light Grey Pleated Slim Formal Trousers from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -16076,7 +16086,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Olive Green Utility Cargo Cotton Trousers features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Light Grey Pleated Slim Formal Trousers features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -16135,7 +16145,7 @@ export const products = [
   },
   {
     "id": 3705,
-    "title": "Off-White Breathable French Linen Trousers",
+    "title": "Beige Pleated Wide-Leg Trousers",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -16149,7 +16159,7 @@ export const products = [
       "/mens/pants/Pants/5/34-koreantrou-khaki-urbano-fashion-original-imahmh2xjhhkzvfw.webp",
       "/mens/pants/Pants/5/34-koreantrou-khaki-urbano-fashion-original-imahmh2xrgq5zzv9.webp"
     ],
-    "description": "Discover Off-White Breathable French Linen Trousers from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Beige Pleated Wide-Leg Trousers from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -16157,9 +16167,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.6",
+    "rating": 4.6,
     "reviewsCount": 125,
-    "descriptionLong": "Discover Off-White Breathable French Linen Trousers from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Beige Pleated Wide-Leg Trousers from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Linen",
       "Fit type": "Regular / Straight Fit",
@@ -16170,7 +16180,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Linen for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Off-White Breathable French Linen Trousers features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Beige Pleated Wide-Leg Trousers features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -16229,7 +16239,7 @@ export const products = [
   },
   {
     "id": 3706,
-    "title": "Burgundy Wine Tailored Slim Trousers",
+    "title": "Black Slim Fit Jeans",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -16242,7 +16252,7 @@ export const products = [
       "/mens/pants/Pants/6/-original-imahkfgpzhaqhsqu.webp",
       "/mens/pants/Pants/6/30-singlebutton-black-combraided-original-imah8yzmncmumx35.webp"
     ],
-    "description": "Discover Burgundy Wine Tailored Slim Trousers from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Black Slim Fit Jeans from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -16250,9 +16260,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 145,
-    "descriptionLong": "Discover Burgundy Wine Tailored Slim Trousers from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Black Slim Fit Jeans from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -16263,7 +16273,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Burgundy Wine Tailored Slim Trousers features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Black Slim Fit Jeans features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -16322,7 +16332,7 @@ export const products = [
   },
   {
     "id": 3707,
-    "title": "Khaki Canvas Straight-Fit Casual Chinos",
+    "title": "Deep Teal Slim-Fit Chinos",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -16336,7 +16346,7 @@ export const products = [
       "/mens/pants/Pants/7/30-epnchino-27-peacock-urbano-fashion-original-imahh5frpy7mcncc.webp",
       "/mens/pants/Pants/7/30-epnchino-27-peacock-urbano-fashion-original-imahh5frzngvbzpz.webp"
     ],
-    "description": "Discover Khaki Canvas Straight-Fit Casual Chinos from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Deep Teal Slim-Fit Chinos from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -16344,9 +16354,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 165,
-    "descriptionLong": "Discover Khaki Canvas Straight-Fit Casual Chinos from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Deep Teal Slim-Fit Chinos from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -16357,7 +16367,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Khaki Canvas Straight-Fit Casual Chinos features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Deep Teal Slim-Fit Chinos features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -16416,7 +16426,7 @@ export const products = [
   },
   {
     "id": 3708,
-    "title": "Charcoal Grey Ankle-Length Smart Pants",
+    "title": "Black Flared Bootcut Formal Trousers",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -16430,7 +16440,7 @@ export const products = [
       "/mens/pants/Pants/8/32-p-synthetic-pant-bootcut-black-plus91-original-imahky2nyuq5m7g7.webp",
       "/mens/pants/Pants/8/34-p-synthetic-pant-bootcut-black-plus91-original-imahky2njfbquzhy.webp"
     ],
-    "description": "Discover Charcoal Grey Ankle-Length Smart Pants from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Black Flared Bootcut Formal Trousers from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -16438,9 +16448,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 35,
-    "descriptionLong": "Discover Charcoal Grey Ankle-Length Smart Pants from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Black Flared Bootcut Formal Trousers from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -16451,7 +16461,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Charcoal Grey Ankle-Length Smart Pants features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Black Flared Bootcut Formal Trousers features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -16510,7 +16520,7 @@ export const products = [
   },
   {
     "id": 3709,
-    "title": "Sage Green Elasticated Summer Jogger Pants",
+    "title": "Olive Green Slim Ankle Formal Trousers",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -16523,7 +16533,7 @@ export const products = [
       "/mens/pants/Pants/9/36-r-tr-50-green-r-code-by-the-roadster-life-co-original-imahjqkdsgbzu5at.webp",
       "/mens/pants/Pants/9/38-r-tr-50-green-r-code-by-the-roadster-life-co-original-imahjqkdkhbrg3kp.webp"
     ],
-    "description": "Discover Sage Green Elasticated Summer Jogger Pants from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Olive Green Slim Ankle Formal Trousers from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -16531,9 +16541,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 55,
-    "descriptionLong": "Discover Sage Green Elasticated Summer Jogger Pants from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Olive Green Slim Ankle Formal Trousers from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -16544,7 +16554,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Sage Green Elasticated Summer Jogger Pants features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Olive Green Slim Ankle Formal Trousers features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -16603,7 +16613,7 @@ export const products = [
   },
   {
     "id": 3710,
-    "title": "Classic Black Tailored Formal Trousers",
+    "title": "Mint Green Slim Fit Chinos",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -16617,7 +16627,7 @@ export const products = [
       "/mens/pants/Pants/10/38-epnchino-16-pewter-urbano-fashion-original-imahhhyhavpzmzcp.webp",
       "/mens/pants/Pants/10/38-epnchino-16-pewter-urbano-fashion-original-imahhhyhh5wevjqc.webp"
     ],
-    "description": "Discover Classic Black Tailored Formal Trousers from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Mint Green Slim Fit Chinos from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -16625,9 +16635,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.3",
+    "rating": 4.3,
     "reviewsCount": 75,
-    "descriptionLong": "Discover Classic Black Tailored Formal Trousers from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Mint Green Slim Fit Chinos from FlexFit Studio—where tradition meets contemporary design. This pants is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -16638,7 +16648,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Classic Black Tailored Formal Trousers features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Mint Green Slim Fit Chinos features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -16697,7 +16707,7 @@ export const products = [
   },
   {
     "id": 3801,
-    "title": "Classic Midnight Blue Deep Indigo Jeans",
+    "title": "Charcoal Grey Washed Baggy Jeans",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -16713,7 +16723,7 @@ export const products = [
       "/mens/jeans/jeans/1/36-elevate-your-outfit-with-a-bomber-jacket-and-high-top-for-a-original-imah8fqzszfqgjzn.webp",
       "/mens/jeans/jeans/1/36-elevate-your-outfit-with-a-bomber-jacket-and-high-top-for-a-original-imah8fqzzn6ttfvt.webp"
     ],
-    "description": "FlexFit Studio presents Classic Midnight Blue Deep Indigo Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Charcoal Grey Washed Baggy Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -16721,9 +16731,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.4",
+    "rating": 4.4,
     "reviewsCount": 45,
-    "descriptionLong": "FlexFit Studio presents Classic Midnight Blue Deep Indigo Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Charcoal Grey Washed Baggy Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -16733,7 +16743,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Classic Midnight Blue Deep Indigo Jeans is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Charcoal Grey Washed Baggy Jeans is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -16786,7 +16796,7 @@ export const products = [
   },
   {
     "id": 3802,
-    "title": "Raw Indigo Stonewashed Baggy Jeans",
+    "title": "Indigo Blue Cargo Pocket Denim Jeans",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -16801,7 +16811,7 @@ export const products = [
       "/mens/jeans/jeans/2/38-jeanlscargo-mblue-01-urbano-fashion-original-imahgjzsvcnuuqhw.webp",
       "/mens/jeans/jeans/2/38-jeanlscargo-mblue-01-urbano-fashion-original-imahgjzszvygqey2.webp"
     ],
-    "description": "FlexFit Studio presents Raw Indigo Stonewashed Baggy Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Indigo Blue Cargo Pocket Denim Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -16809,9 +16819,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.4",
+    "rating": 4.4,
     "reviewsCount": 65,
-    "descriptionLong": "FlexFit Studio presents Raw Indigo Stonewashed Baggy Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Indigo Blue Cargo Pocket Denim Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -16821,7 +16831,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Raw Indigo Stonewashed Baggy Jeans is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Indigo Blue Cargo Pocket Denim Jeans is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -16874,7 +16884,7 @@ export const products = [
   },
   {
     "id": 3803,
-    "title": "Slate Grey Distress Tapered Fit Jeans",
+    "title": "Sky Blue Wide-Leg Baggy Jeans",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -16888,7 +16898,7 @@ export const products = [
       "/mens/jeans/jeans/3/32-dl-men-baggy-07-denim-look-original-imahy9eymr8hztec.webp",
       "/mens/jeans/jeans/3/32-dl-men-baggy-07-denim-look-original-imahy9eytwthtzzz.webp"
     ],
-    "description": "FlexFit Studio presents Slate Grey Distress Tapered Fit Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Sky Blue Wide-Leg Baggy Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -16896,9 +16906,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 85,
-    "descriptionLong": "FlexFit Studio presents Slate Grey Distress Tapered Fit Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Sky Blue Wide-Leg Baggy Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -16908,7 +16918,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Slate Grey Distress Tapered Fit Jeans is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Sky Blue Wide-Leg Baggy Jeans is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -16961,7 +16971,7 @@ export const products = [
   },
   {
     "id": 3804,
-    "title": "Carbon Black Vintage Whisker Denim Jeans",
+    "title": "Black Acid Wash Baggy Jeans",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -16975,7 +16985,7 @@ export const products = [
       "/mens/jeans/jeans/4/38-jeanlswhsk-02-black-urbano-fashion-original-imahgef6zfrzn286.webp",
       "/mens/jeans/jeans/4/40-jeanlswhsk-02-black-urbano-fashion-original-imahgef6ggzwsuqn.webp"
     ],
-    "description": "FlexFit Studio presents Carbon Black Vintage Whisker Denim Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Black Acid Wash Baggy Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -16983,9 +16993,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 105,
-    "descriptionLong": "FlexFit Studio presents Carbon Black Vintage Whisker Denim Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Black Acid Wash Baggy Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -16995,7 +17005,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Carbon Black Vintage Whisker Denim Jeans is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Black Acid Wash Baggy Jeans is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -17048,7 +17058,7 @@ export const products = [
   },
   {
     "id": 3805,
-    "title": "Ice Grey Premium Loose-Fit Denim Jeans",
+    "title": "Indigo Blue Slim Fit Faded Jeans",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -17063,7 +17073,7 @@ export const products = [
       "/mens/jeans/jeans/5/38-panjean22-106-coblue-urbano-fashion-original-imahh5frryxtcxdg.webp",
       "/mens/jeans/jeans/5/38-panjean22-106-coblue-urbano-fashion-original-imahh5frzhuqfjd3.webp"
     ],
-    "description": "FlexFit Studio presents Ice Grey Premium Loose-Fit Denim Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Indigo Blue Slim Fit Faded Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -17071,9 +17081,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.6",
+    "rating": 4.6,
     "reviewsCount": 125,
-    "descriptionLong": "FlexFit Studio presents Ice Grey Premium Loose-Fit Denim Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Indigo Blue Slim Fit Faded Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -17083,7 +17093,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Ice Grey Premium Loose-Fit Denim Jeans is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Indigo Blue Slim Fit Faded Jeans is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -17136,7 +17146,7 @@ export const products = [
   },
   {
     "id": 3806,
-    "title": "Sage Olive Cargo Pocket Denim Utility Jeans",
+    "title": "Charcoal Grey Cargo Pocket Utility Jeans",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -17150,7 +17160,7 @@ export const products = [
       "/mens/jeans/jeans/6/36-jeanlscargo-mgrey-urbano-fashion-original-imagy95vv35kcvcq.webp",
       "/mens/jeans/jeans/6/38-jeanlscargo-mgrey-01-urbano-fashion-original-imahkfyt6zhb3ce5.webp"
     ],
-    "description": "FlexFit Studio presents Sage Olive Cargo Pocket Denim Utility Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Charcoal Grey Cargo Pocket Utility Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -17158,9 +17168,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 145,
-    "descriptionLong": "FlexFit Studio presents Sage Olive Cargo Pocket Denim Utility Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Charcoal Grey Cargo Pocket Utility Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -17170,7 +17180,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Sage Olive Cargo Pocket Denim Utility Jeans is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Charcoal Grey Cargo Pocket Utility Jeans is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -17223,7 +17233,7 @@ export const products = [
   },
   {
     "id": 3807,
-    "title": "Light Wash Aqua Blue Summer Relaxed Jeans",
+    "title": "Chocolate Brown Straight Streetwear Jeans",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -17237,7 +17247,7 @@ export const products = [
       "/mens/jeans/jeans/7/40-jeanloose-03-dbrown-urbano-fashion-original-imahgrvk9ppz4hff.webp",
       "/mens/jeans/jeans/7/40-jeanloose-03-dbrown-urbano-fashion-original-imahgrvkhncf6dut.webp"
     ],
-    "description": "FlexFit Studio presents Light Wash Aqua Blue Summer Relaxed Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Chocolate Brown Straight Streetwear Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -17245,9 +17255,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 165,
-    "descriptionLong": "FlexFit Studio presents Light Wash Aqua Blue Summer Relaxed Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Chocolate Brown Straight Streetwear Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -17257,7 +17267,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Light Wash Aqua Blue Summer Relaxed Jeans is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Chocolate Brown Straight Streetwear Jeans is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -17310,7 +17320,7 @@ export const products = [
   },
   {
     "id": 3808,
-    "title": "Desert Brown Loose Baggy Streetwear Jeans",
+    "title": "Medium Wash Blue Slim Straight Jeans",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -17324,7 +17334,7 @@ export const products = [
       "/mens/jeans/jeans/8/34-pjdncnstpp35112-peter-england-original-imahhd6sxgexsmpx.webp",
       "/mens/jeans/jeans/8/40-pjdncnstpp35112-peter-england-original-imahhd6syq7dymyn.webp"
     ],
-    "description": "FlexFit Studio presents Desert Brown Loose Baggy Streetwear Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Medium Wash Blue Slim Straight Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -17332,9 +17342,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 35,
-    "descriptionLong": "FlexFit Studio presents Desert Brown Loose Baggy Streetwear Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Medium Wash Blue Slim Straight Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -17344,7 +17354,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Desert Brown Loose Baggy Streetwear Jeans is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Medium Wash Blue Slim Straight Jeans is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -17397,7 +17407,7 @@ export const products = [
   },
   {
     "id": 3809,
-    "title": "Classic Charcoal Black Slim Straight Jeans",
+    "title": "Ice Grey Plus Size Slim Straight Jeans",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -17411,7 +17421,7 @@ export const products = [
       "/mens/jeans/jeans/9/44-plusjeanslmtwlp-icegrey-urbano-plus-original-imahj9ftuzc9qs7r.webp",
       "/mens/jeans/jeans/9/44-plusjeanslmtwlp-icegrey-urbano-plus-original-imahj9ftzq3zbaxz.webp"
     ],
-    "description": "FlexFit Studio presents Classic Charcoal Black Slim Straight Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Ice Grey Plus Size Slim Straight Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -17419,9 +17429,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 55,
-    "descriptionLong": "FlexFit Studio presents Classic Charcoal Black Slim Straight Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Ice Grey Plus Size Slim Straight Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -17431,7 +17441,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Classic Charcoal Black Slim Straight Jeans is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Ice Grey Plus Size Slim Straight Jeans is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -17484,7 +17494,7 @@ export const products = [
   },
   {
     "id": 3810,
-    "title": "Deep Cobalt Worn-In Textured Denim Jeans",
+    "title": "Charcoal Grey Slim Fit Denim Jeans",
     "price": 199,
     "originalPrice": 398,
     "discount": "50% OFF",
@@ -17499,7 +17509,7 @@ export const products = [
       "/mens/jeans/jeans/10/30-cfjean-001-lgrey-urbano-fashion-original-imahhd5xp6mphrvg.webp",
       "/mens/jeans/jeans/10/30-cfjean-001-lgrey-urbano-fashion-original-imahhd5xvun7hvzf.webp"
     ],
-    "description": "FlexFit Studio presents Deep Cobalt Worn-In Textured Denim Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "description": "FlexFit Studio presents Charcoal Grey Slim Fit Denim Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "sizes": [
       "S",
       "M",
@@ -17507,9 +17517,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.3",
+    "rating": 4.3,
     "reviewsCount": 75,
-    "descriptionLong": "FlexFit Studio presents Deep Cobalt Worn-In Textured Denim Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+    "descriptionLong": "FlexFit Studio presents Charcoal Grey Slim Fit Denim Jeans—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
     "highlights": {
       "Material composition": "60% Cotton, 40% Polyester",
       "Fit type": "Regular Fit",
@@ -17519,7 +17529,7 @@ export const products = [
       "Country of Origin": "India"
     },
     "aboutItems": [
-      "MATERIAL & FABRIC: Deep Cobalt Worn-In Textured Denim Jeans is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+      "MATERIAL & FABRIC: Charcoal Grey Slim Fit Denim Jeans is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
       "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
       "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
       "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
@@ -17572,7 +17582,7 @@ export const products = [
   },
   {
     "id": 3901,
-    "title": "Majestic Emerald Green Hand-Embroidered Kurta",
+    "title": "Royal Purple Geometric Print Kurta",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -17587,7 +17597,7 @@ export const products = [
       "/mens/kurtas/kurta/1/l-pkt410-vebnor-original-imahnybz2epxkcjk.webp",
       "/mens/kurtas/kurta/1/l-pkt410-vebnor-original-imahnybzw2f7gunh.webp"
     ],
-    "description": "Discover Majestic Emerald Green Hand-Embroidered Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Royal Purple Geometric Print Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -17595,9 +17605,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.4",
+    "rating": 4.4,
     "reviewsCount": 45,
-    "descriptionLong": "Discover Majestic Emerald Green Hand-Embroidered Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Royal Purple Geometric Print Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -17608,7 +17618,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Majestic Emerald Green Hand-Embroidered Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Royal Purple Geometric Print Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -17667,7 +17677,7 @@ export const products = [
   },
   {
     "id": 3902,
-    "title": "Classic Royal Purple Traditional Cotton Kurta",
+    "title": "Emerald Green Sequined Festive Kurta",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -17681,7 +17691,7 @@ export const products = [
       "/mens/kurtas/kurta/2/xxl-kuuoo-5169olive-jompers-original-imahcjrzhmszepgw.webp",
       "/mens/kurtas/kurta/2/xxl-kuuoo-5169olive-jompers-original-imahcjrzhzjd3wfp.webp"
     ],
-    "description": "Discover Classic Royal Purple Traditional Cotton Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Emerald Green Sequined Festive Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -17689,9 +17699,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.4",
+    "rating": 4.4,
     "reviewsCount": 65,
-    "descriptionLong": "Discover Classic Royal Purple Traditional Cotton Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Emerald Green Sequined Festive Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -17702,7 +17712,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Classic Royal Purple Traditional Cotton Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Emerald Green Sequined Festive Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -17761,7 +17771,7 @@ export const products = [
   },
   {
     "id": 3903,
-    "title": "Pastel Sage Olive Hand-Block Printed Kurta",
+    "title": "Lime Green Geometric Print Kurta",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -17776,7 +17786,7 @@ export const products = [
       "/mens/kurtas/kurta/3/xl-sdmkt1486-see-designs-original-imah88e5jyzs7ybp.webp",
       "/mens/kurtas/kurta/3/xl-sdmkt1486-see-designs-original-imah88e5unynxsxf.webp"
     ],
-    "description": "Discover Pastel Sage Olive Hand-Block Printed Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Lime Green Geometric Print Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -17784,9 +17794,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 85,
-    "descriptionLong": "Discover Pastel Sage Olive Hand-Block Printed Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Lime Green Geometric Print Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -17797,7 +17807,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Pastel Sage Olive Hand-Block Printed Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Lime Green Geometric Print Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -17856,7 +17866,7 @@ export const products = [
   },
   {
     "id": 3904,
-    "title": "Indigo Blue Authentic Khadi Weave Kurta",
+    "title": "Ivory White Peacock Border Embroidered Kurta",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -17869,7 +17879,7 @@ export const products = [
       "/mens/kurtas/kurta/4/xxl-dmm-daswani-exports-original-imahmgj4r2evzddc.webp",
       "/mens/kurtas/kurta/4/xxl-dmm-daswani-exports-original-imahmgj4rpaky4c9.webp"
     ],
-    "description": "Discover Indigo Blue Authentic Khadi Weave Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Ivory White Peacock Border Embroidered Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -17877,9 +17887,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.5",
+    "rating": 4.5,
     "reviewsCount": 105,
-    "descriptionLong": "Discover Indigo Blue Authentic Khadi Weave Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Ivory White Peacock Border Embroidered Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -17890,7 +17900,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Indigo Blue Authentic Khadi Weave Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Ivory White Peacock Border Embroidered Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -17949,7 +17959,7 @@ export const products = [
   },
   {
     "id": 3905,
-    "title": "Sunset Mustard Linen Festive Bandhgala Kurta",
+    "title": "Lavender Purple Embroidered Festive Kurta",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -17965,7 +17975,7 @@ export const products = [
       "/mens/kurtas/kurta/5/xxl-koo-5140purple-jompers-original-imahedhhuvvqq3f7.webp",
       "/mens/kurtas/kurta/5/xxl-mjokp-p-5140purple-jompers-original-imahec8w8bp89z6z.webp"
     ],
-    "description": "Discover Sunset Mustard Linen Festive Bandhgala Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Lavender Purple Embroidered Festive Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -17973,9 +17983,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.6",
+    "rating": 4.6,
     "reviewsCount": 125,
-    "descriptionLong": "Discover Sunset Mustard Linen Festive Bandhgala Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Lavender Purple Embroidered Festive Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Linen for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Linen",
       "Fit type": "Regular / Straight Fit",
@@ -17986,7 +17996,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Linen for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Sunset Mustard Linen Festive Bandhgala Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Lavender Purple Embroidered Festive Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -18045,7 +18055,7 @@ export const products = [
   },
   {
     "id": 3906,
-    "title": "Ivory White Premium Silk Ceremonial Kurta",
+    "title": "Wine Maroon Embroidered Ceremonial Kurta Set",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -18059,7 +18069,7 @@ export const products = [
       "/mens/kurtas/kurta/6/xl-ko-d-5088purple-jompers-original-imahhd85frupu75w.webp",
       "/mens/kurtas/kurta/6/xl-ko-d-5088purple-jompers-original-imahhd85xqzhdgcn.webp"
     ],
-    "description": "Discover Ivory White Premium Silk Ceremonial Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Wine Maroon Embroidered Ceremonial Kurta Set from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -18067,9 +18077,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 145,
-    "descriptionLong": "Discover Ivory White Premium Silk Ceremonial Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Wine Maroon Embroidered Ceremonial Kurta Set from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular / Straight Fit",
@@ -18080,7 +18090,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Silk Blend for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Ivory White Premium Silk Ceremonial Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Wine Maroon Embroidered Ceremonial Kurta Set features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -18139,7 +18149,7 @@ export const products = [
   },
   {
     "id": 3907,
-    "title": "Midnight Black Cotton Threadwork Pathani Kurta",
+    "title": "Royal Purple Cotton Threadwork Pathani Kurta",
     "price": 99,
     "originalPrice": 198,
     "discount": "50% OFF",
@@ -18153,7 +18163,7 @@ export const products = [
       "/mens/kurtas/kurta/7/xxl-jokp-p-5131purple-jompers-original-imah7ey4dpyjxdzs.webp",
       "/mens/kurtas/kurta/7/xxl-jokp-p-5131purple-jompers-original-imah7ey4sxxaqbhh.webp"
     ],
-    "description": "Discover Midnight Black Cotton Threadwork Pathani Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Royal Purple Cotton Threadwork Pathani Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -18161,9 +18171,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.7",
+    "rating": 4.7,
     "reviewsCount": 165,
-    "descriptionLong": "Discover Midnight Black Cotton Threadwork Pathani Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Royal Purple Cotton Threadwork Pathani Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -18174,7 +18184,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Midnight Black Cotton Threadwork Pathani Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Royal Purple Cotton Threadwork Pathani Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -18233,7 +18243,7 @@ export const products = [
   },
   {
     "id": 3908,
-    "title": "Ruby Crimson Handcrafted Silk Blend Kurta",
+    "title": "Mustard Yellow Elephant Border Print Kurta",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -18247,7 +18257,7 @@ export const products = [
       "/mens/kurtas/kurta/8/xxl-ki-3417-bg1-kraft-india-original-imaheehrcpbsrh8h.webp",
       "/mens/kurtas/kurta/8/xxl-ki-3417-bg1-kraft-india-original-imaheehrhpf2bgye.webp"
     ],
-    "description": "Discover Ruby Crimson Handcrafted Silk Blend Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Mustard Yellow Elephant Border Print Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -18255,9 +18265,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 35,
-    "descriptionLong": "Discover Ruby Crimson Handcrafted Silk Blend Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Mustard Yellow Elephant Border Print Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Silk Blend for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Silk Blend",
       "Fit type": "Regular / Straight Fit",
@@ -18268,7 +18278,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Silk Blend for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Ruby Crimson Handcrafted Silk Blend Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Mustard Yellow Elephant Border Print Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -18327,7 +18337,7 @@ export const products = [
   },
   {
     "id": 3909,
-    "title": "Lemon Yellow Micro-Dobby Casual Kurta",
+    "title": "Bright Yellow Kalamkari Print Kurta",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -18340,7 +18350,7 @@ export const products = [
       "/mens/kurtas/kurta/9/l-roye01-rainbow-cloths-original-imahj4gg9u6tntzh.webp",
       "/mens/kurtas/kurta/9/l-roye01-rainbow-cloths-original-imahj4ggfyn2dvsm.webp"
     ],
-    "description": "Discover Lemon Yellow Micro-Dobby Casual Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Bright Yellow Kalamkari Print Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -18348,9 +18358,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.8",
+    "rating": 4.8,
     "reviewsCount": 55,
-    "descriptionLong": "Discover Lemon Yellow Micro-Dobby Casual Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Bright Yellow Kalamkari Print Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Viscose / Muslin Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -18361,7 +18371,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Lemon Yellow Micro-Dobby Casual Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Bright Yellow Kalamkari Print Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
@@ -18420,7 +18430,7 @@ export const products = [
   },
   {
     "id": 3910,
-    "title": "Mint Green Soft Cotton Summer Tunic Kurta",
+    "title": "Black Red Embroidered Festive Kurta",
     "price": 149,
     "originalPrice": 298,
     "discount": "50% OFF",
@@ -18434,7 +18444,7 @@ export const products = [
       "/mens/kurtas/kurta/10/m-fountain-01-asha-fashion-original-imahhgzuvj4mh6tr.webp",
       "/mens/kurtas/kurta/10/m-fountain-01-asha-fashion-original-imahhgzuzbdgjbpz.webp"
     ],
-    "description": "Discover Mint Green Soft Cotton Summer Tunic Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "description": "Discover Black Red Embroidered Festive Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "sizes": [
       "S",
       "M",
@@ -18442,9 +18452,9 @@ export const products = [
       "XL",
       "XXL"
     ],
-    "rating": "4.3",
+    "rating": 4.3,
     "reviewsCount": 75,
-    "descriptionLong": "Discover Mint Green Soft Cotton Summer Tunic Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+    "descriptionLong": "Discover Black Red Embroidered Festive Kurta from FlexFit Studio—where tradition meets contemporary design. This gents kurtas is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
     "highlights": {
       "Material composition": "Premium Cotton",
       "Fit type": "Regular / Straight Fit",
@@ -18455,7 +18465,7 @@ export const products = [
     },
     "aboutItems": [
       "PREMIUM FABRIC: Handpicked Premium Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
-      "DESIGN & CRAFT: Mint Green Soft Cotton Summer Tunic Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+      "DESIGN & CRAFT: Black Red Embroidered Festive Kurta features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
       "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
       "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
       "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
