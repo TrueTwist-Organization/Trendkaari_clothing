@@ -3,7 +3,7 @@ import Header from './components/Header';
 import HeroSlider from './components/HeroSlider';
 import TrendsSection from './components/TrendsSection';
 import OfferSection from './components/OfferSection';
-import AdSlotEmbed from './components/AdSlotEmbed';
+import SiteTopAdStrip from './components/SiteTopAdStrip';
 import HomeAdSlot from './components/HomeAdSlot';
 import GiftCollectionSection from './components/GiftCollectionSection';
 import CategoriesSection from './components/CategoriesSection';
@@ -603,7 +603,11 @@ export default function App() {
         }}
       />
 
-      <AdSlotEmbed html={adCodes.global_banner} className="ad-slot-embed--global" />
+      <SiteTopAdStrip
+        globalCode={adCodes.global_banner}
+        homeBelowHeaderCode={adCodes.home_below_header}
+        showHomeSlot={viewMode === 'home' && !isCategoryPage}
+      />
 
       {/* Main Page Layout */}
       <main className="main-content">
@@ -629,8 +633,6 @@ export default function App() {
               />
             ) : (
               <>
-                <HomeAdSlot code={adCodes.home_below_header} label="home_below_header" />
-
                 <HeroSlider onSelectCategory={handleSelectCategory} />
                 <HomeAdSlot code={adCodes.home_after_hero} label="home_after_hero" />
 
