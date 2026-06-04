@@ -81,10 +81,32 @@ export function fetchAdminAdSlots() {
   return apiFetch('/api/admin/ad-slots');
 }
 
+function encodeSlotsForWire(slots = {}) {
+  const encoded = {};
+  let clientFilledCount = 0;
+  for (const [placement, code] of Object.entries(slots)) {
+    const text = String(code || '').trim();
+    if (!text) continue;
+    clientFilledCount += 1;
+    encoded[placement] = btoa(
+      encodeURIComponent(text).replace(/%([0-9A-F]{2})/g, (_, hex) =>
+        String.fromCharCode(parseInt(hex, 16))
+      )
+    );
+  }
+  return { slots: encoded, slotsEncoded: true, clientFilledCount };
+}
+
 export function saveAdminAdSlots(slots) {
+  const inner = encodeSlotsForWire(slots);
+  const payloadB64 = btoa(
+    encodeURIComponent(JSON.stringify(inner)).replace(/%([0-9A-F]{2})/g, (_, hex) =>
+      String.fromCharCode(parseInt(hex, 16))
+    )
+  );
   return apiFetch('/api/admin/ad-slots', {
     method: 'PUT',
-    body: JSON.stringify({ slots }),
+    body: JSON.stringify({ payloadB64 }),
   });
 }
 

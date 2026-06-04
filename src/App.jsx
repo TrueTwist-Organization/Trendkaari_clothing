@@ -226,12 +226,16 @@ export default function App() {
     fetchStoreSettings().then((s) => {
       if (s) setSiteSettings(applySiteSettingsToDocument(s));
     });
-    fetchStoreAdSlots().then((list) => {
-      if (list?.length) setAdCodes(adSlotsToCodeMap(list));
-    });
+    const loadAds = () =>
+      fetchStoreAdSlots().then((list) => {
+        setAdCodes(adSlotsToCodeMap(list || []));
+      });
+    loadAds();
+    const adRetry = window.setTimeout(loadAds, 2500);
     fetchStoreGiftCombos().then((list) => {
       if (list?.length) setGiftCombos(list);
     });
+    return () => window.clearTimeout(adRetry);
   }, []);
 
   // Restore user session from token
@@ -346,7 +350,7 @@ export default function App() {
         setPendingCheckout(true);
         setAuthModalMode('login');
         setIsAuthModalOpen(true);
-        throw new Error('Please sign in to place your order.');
+        throw new Error(err?.message || 'Please sign in to place your order.');
       }
       throw new Error(
         err?.message || 'We could not complete your order due to a technical issue. Please try again.'

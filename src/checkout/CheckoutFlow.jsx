@@ -310,7 +310,12 @@ export default function CheckoutFlow({
     };
 
     if (authMode === 'guest') {
-      persist({ guest: true });
+      const guestEmail = stored.login?.email?.trim();
+      if (guestEmail && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(guestEmail)) {
+        persist({ guest: true, shipping: { ...stored.shipping, email: guestEmail } });
+      } else {
+        persist({ guest: true });
+      }
       finishLogin();
       return true;
     }
@@ -350,6 +355,10 @@ export default function CheckoutFlow({
     const s = stored.shipping || {};
     const errs = {};
     if (!s.fullName?.trim()) errs.fullName = 'Required';
+    const email = s.email?.trim() || stored.login?.email?.trim() || '';
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      errs.email = 'Valid email required for order confirmation';
+    }
     if (!s.phone?.trim() || s.phone.replace(/\D/g, '').length < 10) errs.phone = 'Valid phone required';
     if (Object.keys(errs).length) {
       setFieldErrors(errs);
@@ -357,6 +366,14 @@ export default function CheckoutFlow({
       triggerShake();
       return false;
     }
+    persist({
+      shipping: {
+        ...s,
+        email,
+        fullName: s.fullName?.trim(),
+        phone: s.phone?.trim(),
+      },
+    });
     setFieldErrors({});
     setError('');
     goStep(9);
@@ -424,6 +441,13 @@ export default function CheckoutFlow({
     }
     if (!stored.payment?.codConfirmed) {
       setError('Please confirm COD terms');
+      return;
+    }
+    const orderEmail =
+      stored.shipping?.email?.trim() || stored.login?.email?.trim() || user?.email?.trim() || '';
+    if (!orderEmail) {
+      setError('Add your email on the phone step, then try again.');
+      goStep(8);
       return;
     }
     setPaymentProcessing(true);

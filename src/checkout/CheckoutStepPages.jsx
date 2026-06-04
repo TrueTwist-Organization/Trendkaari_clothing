@@ -440,8 +440,19 @@ export default function CheckoutStepPages({ step, ctx }) {
   if (step === 8) {
     return wrapStep(8, (
       <div className={cardClass}>
-        <h2 className="co-step-heading">Contact phone 📱</h2>
-        <p className="co-step-sub">For delivery updates · {stored.shipping?.fullName}</p>
+        <h2 className="co-step-heading">Contact details 📱</h2>
+        <p className="co-step-sub">For delivery & order confirmation · {stored.shipping?.fullName}</p>
+        <div className="co-field">
+          <Mail size={18} className="co-field-icon" />
+          <input
+            type="email"
+            placeholder=" "
+            value={stored.shipping?.email || stored.login?.email || ''}
+            onChange={(e) => updateShipping('email', e.target.value)}
+          />
+          <label>Email</label>
+          {fieldErrors.email && <p className="co-field-error">{fieldErrors.email}</p>}
+        </div>
         <div className="co-field">
           <Phone size={18} className="co-field-icon" />
           <input

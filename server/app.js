@@ -1,21 +1,46 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
+import jwt from 'jsonwebtoken';
 import adminRoutes from './routes/admin.js';
 import authRoutes from './routes/auth.js';
 import storeRoutes from './routes/store.js';
-import { ensureSeeded } from './lib/seed.js';
-import { syncCatalogFromSource } from './lib/catalog.js';
-import { readStore, initStore, getPersistenceMode } from './lib/store.js';
+import { initStore, getPersistenceMode, resolveStoreAdSlots } from './lib/store.js';
+import { getActiveAdSlots } from './lib/siteConfig.js';
 import { runAutoConfirmJob } from './lib/orderAutoConfirm.js';
 
 const app = express();
+const JWT_SECRET = process.env.JWT_SECRET || 'flexfit-admin-secret-change-in-production';
+
+/** Fast session check — does not load the ~1MB store blob */
+app.get('/api/admin/auth/me', (req, res) => {
+  const header = req.headers.authorization || '';
+  const token = header.startsWith('Bearer ') ? header.slice(7) : null;
+  if (!token) return res.status(401).json({ error: 'Authentication required' });
+  try {
+    const admin = jwt.verify(token, JWT_SECRET);
+    res.json({
+      admin: { email: admin.email, name: admin.name || 'Admin' },
+    });
+  } catch {
+    res.status(401).json({ error: 'Invalid or expired session' });
+  }
+});
 
 app.use(cors({ origin: true, credentials: true }));
 app.use(express.json({ limit: '2mb' }));
 app.use(express.urlencoded({ extended: true }));
 
+function isFastReadPath(req) {
+  const path = req.path || '';
+  if (req.method !== 'GET') return false;
+  if (path === '/api/health') return true;
+  if (path.endsWith('/auth/me')) return true;
+  return false;
+}
+
 app.use(async (req, res, next) => {
+  if (isFastReadPath(req)) return next();
   try {
     await initStore();
     next();
@@ -29,40 +54,22 @@ app.use('/api/store', storeRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/admin', adminRoutes);
 
-app.get('/api/health', (_req, res) => {
+app.get('/api/health', async (_req, res) => {
+  let activeAdSlots = 0;
+  try {
+    await initStore();
+    const adSlots = await resolveStoreAdSlots();
+    activeAdSlots = getActiveAdSlots({ adSlots }).length;
+  } catch {
+    activeAdSlots = 0;
+  }
   res.json({
     ok: true,
     service: 'trendkaari-api',
     persistence: getPersistenceMode(),
     persistWrites: getPersistenceMode() !== 'memory-only',
+    activeAdSlots,
   });
-});
-
-let bootstrapped = false;
-
-async function bootstrapStore() {
-  if (bootstrapped) return;
-  bootstrapped = true;
-  await initStore();
-  await ensureSeeded();
-  const storeAfterSeed = readStore();
-  if (!storeAfterSeed.products?.length) {
-    try {
-      const result = await syncCatalogFromSource();
-      console.log(`[startup] Catalog synced: ${result.count} products`);
-    } catch (err) {
-      console.warn('[startup] Catalog sync failed:', err.message);
-    }
-  }
-}
-
-app.use(async (req, res, next) => {
-  try {
-    await bootstrapStore();
-    next();
-  } catch (err) {
-    next(err);
-  }
 });
 
 const AUTO_CONFIRM_INTERVAL_MS = 15 * 60 * 1000;

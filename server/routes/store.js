@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { readStore, updateStore } from '../lib/store.js';
+import { readStore, updateStore, resolveStoreAdSlots } from '../lib/store.js';
 import { sendOrderConfirmationEmail } from '../lib/orderEmail.js';
-import { requireUser } from '../middleware/userAuth.js';
+import { optionalUser } from '../middleware/userAuth.js';
 import { getStoreSettings, getActiveAdSlots } from '../lib/siteConfig.js';
 import { getPublicGiftCombos } from '../lib/giftCombos.js';
 
@@ -22,10 +22,10 @@ router.get('/settings', (req, res) => {
   res.json({ settings: getStoreSettings(store) });
 });
 
-router.get('/ad-slots', (req, res) => {
-  const store = readStore();
+router.get('/ad-slots', async (req, res) => {
   const placement = req.query.placement || null;
-  res.json({ adSlots: getActiveAdSlots(store, placement || null) });
+  const adSlots = await resolveStoreAdSlots(readStore().adSlots);
+  res.json({ adSlots: getActiveAdSlots({ adSlots }, placement || null) });
 });
 
 router.get('/gift-combos', (req, res) => {
@@ -33,21 +33,30 @@ router.get('/gift-combos', (req, res) => {
   res.json({ giftCombos: getPublicGiftCombos(store) });
 });
 
-router.post('/orders', requireUser, async (req, res) => {
+router.post('/orders', optionalUser, async (req, res) => {
   const orderDetails = req.body;
   if (!orderDetails?.items?.length) {
     return res.status(400).json({ error: 'Order must include items' });
   }
 
   const store = readStore();
-  const user = (store.users || []).find((u) => u.id === req.user.id);
+  const user = req.user ? (store.users || []).find((u) => u.id === req.user.id) : null;
+  const guestEmail = String(orderDetails.email || '').trim();
+  const guestPhone = String(orderDetails.phone || '').trim();
+
+  if (!user && !guestEmail) {
+    return res.status(400).json({ error: 'Email is required to place your order' });
+  }
+  if (!user && guestPhone.replace(/\D/g, '').length < 10) {
+    return res.status(400).json({ error: 'Valid phone number is required' });
+  }
 
   const newOrder = {
     id: 'ORD-' + Math.floor(100000 + Math.random() * 900000),
-    userId: req.user.id,
+    userId: user?.id || null,
     customerName: orderDetails.name || user?.name,
-    email: user?.email || '',
-    phone: orderDetails.phone || user?.phone,
+    email: guestEmail || user?.email || '',
+    phone: guestPhone || user?.phone,
     address: orderDetails.address,
     items: orderDetails.items,
     subtotal: orderDetails.subtotal,

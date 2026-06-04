@@ -6,10 +6,25 @@ export function signUserToken(payload) {
   return jwt.sign(payload, JWT_SECRET, { expiresIn: '30d' });
 }
 
-export function requireUser(req, res, next) {
+function readUserToken(req) {
   const header = req.headers.authorization || '';
-  const token = header.startsWith('Bearer ') ? header.slice(7) : null;
+  return header.startsWith('Bearer ') ? header.slice(7) : null;
+}
 
+export function optionalUser(req, res, next) {
+  const token = readUserToken(req);
+  if (!token) return next();
+  try {
+    const decoded = jwt.verify(token, JWT_SECRET);
+    if (decoded.role === 'user') req.user = decoded;
+  } catch {
+    /* guest checkout — ignore invalid token */
+  }
+  next();
+}
+
+export function requireUser(req, res, next) {
+  const token = readUserToken(req);
   if (!token) {
     return res.status(401).json({ error: 'Please login to continue' });
   }

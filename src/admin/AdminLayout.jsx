@@ -29,9 +29,13 @@ export default function AdminLayout({ admin, activePage, onNavigate, onLogout, c
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
-    checkApiHealth().then(setApiOnline);
-    const id = setInterval(() => checkApiHealth().then(setApiOnline), 15000);
-    return () => clearInterval(id);
+    const run = () => checkApiHealth().then(setApiOnline);
+    const start = window.setTimeout(run, 3000);
+    const id = window.setInterval(run, 60000);
+    return () => {
+      window.clearTimeout(start);
+      window.clearInterval(id);
+    };
   }, []);
 
   useEffect(() => {

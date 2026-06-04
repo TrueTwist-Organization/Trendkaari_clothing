@@ -25,10 +25,14 @@ export default function AdminApp() {
       setChecking(false);
       return;
     }
+    const timeout = window.setTimeout(() => setChecking(false), 8000);
     adminMe()
       .then((d) => setAdmin(d.admin))
       .catch(() => setAdminToken(null))
-      .finally(() => setChecking(false));
+      .finally(() => {
+        window.clearTimeout(timeout);
+        setChecking(false);
+      });
   }, []);
 
   const showToast = (message, type = 'success') => setToast({ message, type });
@@ -39,15 +43,22 @@ export default function AdminApp() {
     window.location.href = '/admin';
   };
 
-  if (checking) {
-    return (
-      <div className="admin-cyber-boot">
-        <span className="admin-chrome-loader admin-chrome-loader--lg" />
-      </div>
-    );
-  }
-
   if (!admin) {
+    if (checking && getAdminToken()) {
+      return (
+        <div className="admin-cyber-boot">
+          <span className="admin-chrome-loader admin-chrome-loader--lg" />
+          <p style={{ marginTop: 16, color: 'var(--admin-text-soft)', fontSize: 14 }}>Signing in…</p>
+        </div>
+      );
+    }
+    if (checking) {
+      return (
+        <div className="admin-cyber-boot">
+          <span className="admin-chrome-loader admin-chrome-loader--lg" />
+        </div>
+      );
+    }
     return <AdminLogin onSuccess={setAdmin} />;
   }
 

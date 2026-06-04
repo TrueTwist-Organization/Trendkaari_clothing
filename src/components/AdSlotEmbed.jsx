@@ -1,4 +1,6 @@
 import { useEffect, useRef } from 'react';
+import { fillAdsbygoogleIn } from '../utils/adsbygoogle';
+import { displayGptAdsIn } from '../utils/googletag';
 import './AdSlotEmbed.css';
 
 /** Inject admin HTML/scripts so &lt;script&gt; tags actually execute */
@@ -18,6 +20,11 @@ export default function AdSlotEmbed({ html, className = '' }) {
     host.appendChild(wrap);
 
     wrap.querySelectorAll('script').forEach((oldScript) => {
+      const src = oldScript.getAttribute('src') || '';
+      if (src.includes('pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')) {
+        oldScript.remove();
+        return;
+      }
       const script = document.createElement('script');
       [...oldScript.attributes].forEach((attr) => {
         script.setAttribute(attr.name, attr.value);
@@ -25,6 +32,9 @@ export default function AdSlotEmbed({ html, className = '' }) {
       script.textContent = oldScript.textContent;
       oldScript.parentNode.replaceChild(script, oldScript);
     });
+
+    void fillAdsbygoogleIn(wrap);
+    void displayGptAdsIn(wrap);
   }, [html]);
 
   if (!String(html || '').trim()) return null;

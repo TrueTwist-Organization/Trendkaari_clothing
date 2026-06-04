@@ -40,9 +40,21 @@ export default function AdSlotsPage({ onToast }) {
         acc[row.placement] = row.code;
         return acc;
       }, {});
-      await saveAdminAdSlots(slots);
-      onToast('All ad slots saved — live on storefront');
-      await load();
+      const filledOnForm = Object.values(slots).filter((c) => String(c || '').trim()).length;
+      const result = await saveAdminAdSlots(slots);
+      const saved = result?.saved ?? result?.activeAdSlots ?? 0;
+      if (saved > 0) {
+        onToast(`${saved} ad slot(s) saved — persists across refreshes`);
+        setRows(mergeAdSlotsForAdmin(result?.adSlots || []));
+      } else if (filledOnForm > 0) {
+        onToast(
+          result?.error ||
+            'Save failed: hosting blocked the ad scripts. Hard-refresh (Ctrl+F5) and save again.',
+          'error'
+        );
+      } else {
+        onToast(result?.error || 'No slots had code — paste your ad HTML first', 'error');
+      }
     } catch (err) {
       onToast(err.message, 'error');
     } finally {
@@ -80,10 +92,15 @@ export default function AdSlotsPage({ onToast }) {
       )}
 
       <div className="admin-ad-waf-banner glass-panel">
-        <strong>Script-friendly save</strong>
+        <strong>Important — avoid losing ads</strong>
         <p>
-          Paste Google Ad Manager, Tag Manager, or any HTML/script into each box below. Code is
-          Base64-encoded when saved so hosting firewalls are less likely to block it.
+          After opening this page, wait until your saved codes appear in the boxes below before
+          saving. If boxes look empty, <strong>reload the page</strong> first — do not click Save
+          with empty boxes (that can wipe live ads). Check{' '}
+          <a href="/api/health" target="_blank" rel="noreferrer">
+            /api/health
+          </a>{' '}
+          — <code>activeAdSlots</code> should stay &gt; 0 after save.
         </p>
       </div>
 

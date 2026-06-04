@@ -6,6 +6,7 @@ const defaultState = () => ({
   login: { email: '', password: '', phone: '', otp: '', mode: 'email' },
   shipping: {
     fullName: '',
+    email: '',
     phone: '',
     address: '',
     apartment: '',

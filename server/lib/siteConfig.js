@@ -65,14 +65,18 @@ export function getAdSlotsForAdmin(store) {
   }));
 }
 
-export function buildAdSlotsFromPayload(slotsPayload = {}) {
+export function buildAdSlotsFromPayload(slotsPayload = {}, { wireEncoded = false } = {}) {
   const entries = Object.entries(slotsPayload);
   const next = [];
   const now = new Date().toISOString();
 
-  entries.forEach(([placement, plainCode]) => {
-    const text = String(plainCode || '').trim();
+  entries.forEach(([placement, rawValue]) => {
+    let text = String(rawValue || '').trim();
     if (!text) return;
+    if (wireEncoded) {
+      text = decodeAdCode(text, true).trim();
+      if (!text) return;
+    }
     next.push({
       placement,
       code: encodeAdCode(text),

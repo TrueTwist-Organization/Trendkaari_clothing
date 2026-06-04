@@ -8,6 +8,16 @@ import {
   useGitHubPersistence,
 } from './githubStore.js';
 import { loadStoreFromRedis, saveStoreToRedis, useRedisPersistence } from './redisStore.js';
+import {
+  loadPersistedAdSlots,
+  resolveStoreAdSlots,
+  primeAdSlotsCache,
+  mergeAndPersistAdSlots,
+} from './adSlotsPersistence.js';
+import { ensureSeeded } from './seed.js';
+import { syncCatalogFromSource } from './catalog.js';
+
+export { resolveStoreAdSlots };
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.join(__dirname, '../data');
@@ -32,6 +42,23 @@ const DEFAULT_STORE = {
 let storeCache = null;
 let initPromise = null;
 let lastPersistError = null;
+let backgroundSeedStarted = false;
+
+function startBackgroundSeed() {
+  if (backgroundSeedStarted) return;
+  backgroundSeedStarted = true;
+  void (async () => {
+    try {
+      await ensureSeeded();
+      if (!storeCache?.products?.length) {
+        const result = await syncCatalogFromSource();
+        console.log(`[store] Catalog synced: ${result.count} products`);
+      }
+    } catch (err) {
+      console.warn('[store] background seed failed:', err.message);
+    }
+  })();
+}
 
 function useBlobPersistence() {
   return Boolean(process.env.BLOB_READ_WRITE_TOKEN);
@@ -79,14 +106,16 @@ function saveToLocal(store) {
 async function loadFromBlob() {
   if (!useBlobPersistence()) return null;
   try {
-    const { list } = await import('@vercel/blob');
-    const { blobs } = await list({ prefix: 'trendkaari/', limit: 20 });
-    const match = blobs.find((b) => b.pathname === BLOB_PATHNAME);
-    if (!match?.url) return null;
-    const res = await fetch(match.url);
+    const { head } = await import('@vercel/blob');
+    const meta = await head(BLOB_PATHNAME);
+    if (!meta?.url) return null;
+    const res = await fetch(meta.url);
     if (!res.ok) return null;
     return JSON.parse(await res.text());
   } catch (err) {
+    if (err?.name === 'BlobNotFoundError' || err?.message?.includes('not found')) {
+      return null;
+    }
     console.warn('[store] blob load failed:', err.message);
     return null;
   }
@@ -95,7 +124,9 @@ async function loadFromBlob() {
 async function saveToBlob(store) {
   if (!useBlobPersistence()) return;
   const { put } = await import('@vercel/blob');
-  await put(BLOB_PATHNAME, JSON.stringify(store), {
+  const mainPayload = { ...store };
+  delete mainPayload.adSlots;
+  await put(BLOB_PATHNAME, JSON.stringify(mainPayload), {
     access: 'private',
     addRandomSuffix: false,
     allowOverwrite: true,
@@ -166,13 +197,25 @@ export async function initStore() {
   if (initPromise) return initPromise;
 
   initPromise = (async () => {
-    const remote = await loadFromRemote();
+    const [remote, adSlots] = await Promise.all([
+      loadFromRemote(),
+      loadPersistedAdSlots({ bypassCache: true }),
+    ]);
+
     if (remote) {
       storeCache = remote;
-      return storeCache;
+    } else {
+      storeCache = loadFromLocal();
     }
 
-    storeCache = loadFromLocal();
+    storeCache.adSlots =
+      adSlots !== undefined ? adSlots : Array.isArray(storeCache.adSlots) ? storeCache.adSlots : [];
+
+    startBackgroundSeed();
+
+    if (remote) {
+      return storeCache;
+    }
 
     if (useRedisPersistence()) {
       try {
@@ -215,9 +258,31 @@ export function readStore() {
 }
 
 export async function writeStore(store) {
+  const persisted = await loadPersistedAdSlots({ bypassCache: true });
+  const keepAds =
+    store.adSlots?.length > 0
+      ? store.adSlots
+      : persisted?.length > 0
+        ? persisted
+        : storeCache?.adSlots?.length > 0
+          ? storeCache.adSlots
+          : [];
+
+  store.adSlots = keepAds;
   storeCache = structuredClone(store);
+  primeAdSlotsCache(keepAds);
+
   saveToLocal(storeCache);
   await saveToRemote(storeCache);
+}
+
+/** Save ad slots to dedicated storage — merges with existing, never wipes by accident */
+export async function replaceAdSlots(adSlots) {
+  await initStore();
+  const merged = await mergeAndPersistAdSlots(adSlots ?? []);
+  storeCache.adSlots = structuredClone(merged);
+  primeAdSlotsCache(merged);
+  return merged;
 }
 
 export async function updateStore(mutator) {

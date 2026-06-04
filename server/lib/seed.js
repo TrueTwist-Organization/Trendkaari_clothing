@@ -2,13 +2,17 @@ import bcrypt from 'bcryptjs';
 import { initStore, readStore, writeStore } from './store.js';
 import { normalizeProduct } from './catalog.js';
 
-export async function ensureSeeded() {
-  await initStore();
-  const store = readStore();
-  let changed = false;
+export function getAdminCredentials() {
+  return {
+    email: process.env.ADMIN_EMAIL || 'admin@gmail.com',
+    password: process.env.ADMIN_PASSWORD || 'Admin@123',
+  };
+}
 
-  const adminEmail = process.env.ADMIN_EMAIL || 'admin@gmail.com';
-  const adminPassword = process.env.ADMIN_PASSWORD || 'Admin@123';
+/** Keep admin login aligned with ADMIN_EMAIL / ADMIN_PASSWORD (or defaults). */
+export async function syncAdminCredentials(store) {
+  const { email: adminEmail, password: adminPassword } = getAdminCredentials();
+  let changed = false;
 
   if (!store.admin) {
     store.admin = {
@@ -16,12 +20,31 @@ export async function ensureSeeded() {
       passwordHash: await bcrypt.hash(adminPassword, 10),
       name: 'Admin',
     };
-    changed = true;
-  } else if (store.admin.email !== adminEmail) {
+    return { store, changed: true };
+  }
+
+  const passwordMatches = store.admin.passwordHash
+    ? await bcrypt.compare(adminPassword, store.admin.passwordHash)
+    : false;
+
+  if (store.admin.email !== adminEmail || !passwordMatches) {
     store.admin.email = adminEmail;
     store.admin.passwordHash = await bcrypt.hash(adminPassword, 10);
+    store.admin.name = store.admin.name || 'Admin';
     changed = true;
   }
+
+  return { store, changed };
+}
+
+export async function ensureSeeded() {
+  await initStore();
+  const store = readStore();
+  let changed = false;
+
+  const adminSync = await syncAdminCredentials(store);
+  Object.assign(store, adminSync.store);
+  if (adminSync.changed) changed = true;
 
   if (!store.products?.length) {
     try {

@@ -1,4 +1,4 @@
-import { publicApiFetch, userApiFetch } from './client';
+import { publicApiFetch, getUserToken } from './client';
 
 export async function fetchStoreProducts() {
   try {
@@ -19,8 +19,12 @@ export async function fetchStoreCoupons() {
 }
 
 export async function submitStoreOrder(orderDetails) {
-  return userApiFetch('/api/store/orders', {
+  const headers = {};
+  const token = getUserToken();
+  if (token) headers.Authorization = `Bearer ${token}`;
+  return publicApiFetch('/api/store/orders', {
     method: 'POST',
+    headers,
     body: JSON.stringify(orderDetails),
   });
 }
