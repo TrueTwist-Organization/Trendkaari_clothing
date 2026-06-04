@@ -694,9 +694,15 @@ export default function App() {
                   onOpenQuickView={handleOpenQuickView}
                   products={productsList}
                 />
-                <HomeAdSlot code={adCodes.home_after_categories} label="home_after_categories" />
+                <HomeAdSlot
+                  code={
+                    adCodes.home_between_categories_gift ||
+                    adCodes.home_after_categories ||
+                    adCodes.home_before_gift
+                  }
+                  label="home_between_categories_gift"
+                />
 
-                <HomeAdSlot code={adCodes.home_before_gift} label="home_before_gift" />
                 <GiftCollectionSection
                   onSelectCategory={handleSelectCategory}
                   onSelectProduct={handleOpenQuickView}

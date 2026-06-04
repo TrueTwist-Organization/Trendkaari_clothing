@@ -50,16 +50,11 @@ const HOME_SLOTS = [
     placeholder: 'Paste ad HTML/script…',
   },
   {
-    key: 'home_after_categories',
-    title: 'Home — After Categories',
-    description: 'Below the category circles section.',
-    placeholder: 'Paste ad HTML/script…',
-  },
-  {
-    key: 'home_before_gift',
-    title: 'Home — Before Gift Section',
-    description: 'Above the gift collection / unbox section.',
-    placeholder: 'Paste ad HTML/script…',
+    key: 'home_between_categories_gift',
+    title: 'Home — Between Categories & Gift',
+    description:
+      'Homepage — exactly between “Shop by Categories” (circle icons) and “Gift Collection” (unbox boxes). Full-width strip in that gap.',
+    placeholder: 'Paste ad HTML/script (banner, AdSense, image ad)…',
   },
   {
     key: 'home_after_gift',

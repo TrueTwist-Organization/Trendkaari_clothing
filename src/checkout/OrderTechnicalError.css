@@ -1,4 +1,4 @@
-/* Technical error — matches checkout overlay (plum glass + gold accent) */
+/* Technical error — matches checkout light theme (white + brand plum) */
 
 .checkout-flow-root .co-fail-root {
   width: 100%;
@@ -26,12 +26,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--co-accent);
-  background: linear-gradient(145deg, rgba(122, 30, 72, 0.55) 0%, rgba(42, 0, 25, 0.9) 100%);
-  border: 2px solid var(--co-border-glow);
-  box-shadow:
-    0 0 0 6px rgba(212, 180, 131, 0.12),
-    0 12px 32px rgba(0, 0, 0, 0.35);
+  color: var(--co-primary);
+  background: var(--co-bg-soft);
+  border: 2px solid var(--co-primary);
+  box-shadow: 0 4px 16px rgba(96, 11, 69, 0.12);
 }
 
 .checkout-flow-root .co-fail-eyebrow {
@@ -39,18 +37,18 @@
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--co-accent);
+  color: var(--co-primary);
   margin: 0 0 10px;
-  font-family: var(--co-font-heading);
+  font-family: var(--co-font-body);
 }
 
 .checkout-flow-root .co-fail-title {
-  font-family: var(--co-font-heading);
+  font-family: var(--co-font-body);
   font-size: clamp(1.85rem, 4.5vw, 2.35rem);
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0.02em;
   margin: 0 0 14px;
-  color: var(--co-text);
+  color: var(--co-primary);
   line-height: 1.15;
 }
 
@@ -63,7 +61,7 @@
 }
 
 .checkout-flow-root .co-fail-lead strong {
-  color: var(--co-accent);
+  color: var(--co-primary);
   font-weight: 600;
 }
 
@@ -71,38 +69,37 @@
   margin: 14px auto 0;
   font-size: 13px;
   line-height: 1.55;
-  color: rgba(255, 180, 180, 0.95);
+  color: var(--error, #c0392b);
   max-width: 400px;
 }
 
 .checkout-flow-root .co-fail-card {
-  background: var(--co-card-strong);
+  background: var(--co-bg);
   border: 1px solid var(--co-border-glow);
-  border-radius: 18px;
+  border-radius: 0;
   padding: 20px 22px;
   margin-bottom: 16px;
-  backdrop-filter: blur(14px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28);
+  box-shadow: var(--shadow-md, 0 4px 12px rgba(0, 0, 0, 0.08));
 }
 
 .checkout-flow-root .co-fail-card--next {
-  border-left: 3px solid var(--co-accent);
+  border-left: 3px solid var(--co-primary);
 }
 
 .checkout-flow-root .co-fail-card__head {
   margin: 0 0 16px;
   padding-bottom: 14px;
-  border-bottom: 1px solid rgba(212, 180, 131, 0.2);
+  border-bottom: 1px solid var(--co-border-glow);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--co-accent);
+  color: var(--co-primary);
   font-family: var(--co-font-body);
 }
 
 .checkout-flow-root .co-fail-card__head--gold {
-  color: var(--co-accent-hover);
+  color: var(--co-primary);
 }
 
 .checkout-flow-root .co-fail-list {
@@ -116,7 +113,7 @@
   gap: 14px;
   align-items: flex-start;
   padding: 14px 0;
-  border-bottom: 1px solid rgba(212, 180, 131, 0.15);
+  border-bottom: 1px solid var(--co-border-glow);
 }
 
 .checkout-flow-root .co-fail-list__item:last-child {
@@ -136,10 +133,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--co-text);
-  background: linear-gradient(135deg, var(--co-primary) 0%, #9a2860 100%);
-  border: 1px solid var(--co-border-glow);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  color: var(--co-cta-text);
+  background: var(--co-primary);
+  border: 1px solid var(--co-primary);
+  box-shadow: none;
 }
 
 .checkout-flow-root .co-fail-list__item strong {
@@ -170,7 +167,7 @@
 }
 
 .checkout-flow-root .co-fail-steps li::marker {
-  color: var(--co-accent);
+  color: var(--co-primary);
   font-weight: 700;
 }
 
