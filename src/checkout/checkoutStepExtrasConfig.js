@@ -13,14 +13,14 @@ export const CHECKOUT_STEP_EXTRAS = {
     tip: {
       tone: 'gold',
       title: 'Your style, delivered',
-      text: 'Items in your bag are reserved while you checkout. Finish in a few quick steps.',
+      text: 'Items in your bag are held while you checkout. Complete the steps below to place your order.',
     },
   },
   savings: {
     tip: {
       tone: 'spark',
       title: 'Unlock extra savings',
-      text: 'Apply a promo code now — discounts are locked in before payment.',
+      text: 'Apply a promo code now — your discount is locked in before you pay.',
     },
     perks: [
       { icon: 'tag', label: 'Best offers', sub: 'Auto-applied deals' },
@@ -31,7 +31,7 @@ export const CHECKOUT_STEP_EXTRAS = {
     tip: {
       tone: 'calm',
       title: 'No hidden charges',
-      text: 'What you see is what you pay — free shipping included on this order.',
+      text: 'What you see is what you pay. Shipping is included on this order.',
     },
     perks: [
       { icon: 'wallet', label: 'Pay on delivery', sub: 'COD accepted' },
@@ -42,14 +42,14 @@ export const CHECKOUT_STEP_EXTRAS = {
     tip: {
       tone: 'calm',
       title: 'Faster next time',
-      text: 'Create an account to save addresses, track orders, and checkout in one tap.',
+      text: 'Sign in to save addresses, track orders, and checkout faster on your next visit.',
     },
   },
   contact: {
     tip: {
       tone: 'calm',
-      title: 'Stay in the loop',
-      text: 'We’ll send order updates and delivery alerts to your phone & email.',
+      title: 'Stay updated',
+      text: 'We will send order confirmations and delivery updates to your phone and email.',
     },
   },
   address: {
@@ -69,8 +69,8 @@ export const CHECKOUT_STEP_EXTRAS = {
   review: {
     tip: {
       tone: 'spark',
-      title: 'Double-check your picks',
-      text: 'Review sizes and quantities — you can go back to edit anytime.',
+      title: 'Review your order',
+      text: 'Check sizes and quantities carefully. You can go back to edit anytime.',
     },
     perks: [
       { icon: 'truck', label: 'Free shipping', sub: 'Included' },
@@ -83,15 +83,15 @@ export const CHECKOUT_STEP_EXTRAS = {
     suggestionsSubtitle: 'Popular right now',
     tip: {
       tone: 'gold',
-      title: 'Ready to ship',
-      text: 'Your order summary looks great — one more step to place it.',
+      title: 'Almost there',
+      text: 'Your order summary is ready. One final step to place your order.',
     },
   },
   payment: {
     tip: {
       tone: 'calm',
-      title: 'Safe & secure',
-      text: 'Pay on delivery — no online payment needed. Your data stays protected.',
+      title: 'Pay with confidence',
+      text: 'Cash on delivery is available. Your information stays secure throughout checkout.',
     },
     perks: [
       { icon: 'shield', label: '256-bit secure', sub: 'Encrypted checkout' },
