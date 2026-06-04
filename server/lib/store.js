@@ -10,6 +10,7 @@ import {
 import { loadStoreFromRedis, saveStoreToRedis, useRedisPersistence } from './redisStore.js';
 import {
   loadPersistedAdSlots,
+  savePersistedAdSlots,
   resolveStoreAdSlots,
   primeAdSlotsCache,
   mergeAndPersistAdSlots,
@@ -276,8 +277,26 @@ export async function writeStore(store) {
   await saveToRemote(storeCache);
 }
 
-/** Save ad slots to dedicated storage — merges with existing, never wipes by accident */
+/** Save ad slots from admin — replaces store with all filled slots in the save payload */
 export async function replaceAdSlots(adSlots) {
+  await initStore();
+  const list = Array.isArray(adSlots) ? adSlots : [];
+
+  if (list.length === 0) {
+    const existing = await loadPersistedAdSlots({ bypassCache: true });
+    if (existing?.length > 0) {
+      throw new Error('Save would remove all ads — reload the admin page and try again.');
+    }
+  }
+
+  await savePersistedAdSlots(list, { allowEmpty: list.length === 0 });
+  storeCache.adSlots = structuredClone(list);
+  primeAdSlotsCache(list);
+  return list;
+}
+
+/** Merge incoming slots into existing — used when saving one slot at a time */
+export async function mergeAdSlots(adSlots) {
   await initStore();
   const merged = await mergeAndPersistAdSlots(adSlots ?? []);
   storeCache.adSlots = structuredClone(merged);

@@ -13,6 +13,10 @@
   border-bottom: none;
 }
 
+.site-top-ad-strip .ad-slot-embed {
+  margin: 0;
+}
+
 .ad-slot-embed--fullwidth {
   grid-column: 1 / -1;
   margin: 16px 0 8px;

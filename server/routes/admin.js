@@ -4,7 +4,7 @@ import multer from 'multer';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
-import { readStore, updateStore, replaceAdSlots, resolveStoreAdSlots } from '../lib/store.js';
+import { readStore, updateStore, replaceAdSlots, mergeAdSlots, resolveStoreAdSlots } from '../lib/store.js';
 import { syncAdminCredentials, getAdminCredentials } from '../lib/seed.js';
 import { syncCatalogFromSource } from '../lib/catalog.js';
 import { saveUploadedProductImages } from '../lib/imageProcess.js';
@@ -506,27 +506,37 @@ function parseAdSlotsBody(body = {}) {
   if (body.payloadB64) {
     try {
       const json = Buffer.from(String(body.payloadB64), 'base64').toString('utf8');
-      return JSON.parse(json);
+      const parsed = JSON.parse(json);
+      if (parsed?.slots && typeof parsed.slots === 'object' && !Array.isArray(parsed.slots)) {
+        return parsed;
+      }
     } catch {
-      return null;
+      /* try direct body next */
     }
   }
+
+  if (body?.slots && typeof body.slots === 'object' && !Array.isArray(body.slots)) {
+    return body;
+  }
+
   return body;
 }
 
 router.put('/ad-slots', requireAdmin, async (req, res) => {
-  const parsed = parseAdSlotsBody(req.body) || req.body || {};
-  const { slots, slotsEncoded, clientFilledCount } = parsed;
-  if (!slots || typeof slots !== 'object') {
-    return res.status(400).json({ error: 'slots object required (placement → HTML code)' });
+  const parsed = parseAdSlotsBody(req.body || {});
+  const { slots, slotsEncoded, clientFilledCount, merge: mergeMode } = parsed;
+  if (!slots || typeof slots !== 'object' || Array.isArray(slots)) {
+    return res.status(400).json({
+      error: 'Could not read ad slots from request. Reload the page and save again.',
+    });
   }
-  const filledOnWire = Number(clientFilledCount) || 0;
+  const filledOnWire = Number(clientFilledCount) || Object.keys(slots).length;
   const next = buildAdSlotsFromPayload(slots, { wireEncoded: Boolean(slotsEncoded) });
 
   if (filledOnWire > 0 && next.length === 0) {
     return res.status(400).json({
       error:
-        'Ad code was blocked while saving (hosting firewall). Refresh the page and save again — the app now uses safe encoding.',
+        'Ad code was blocked while saving (hosting firewall). The app will retry slot-by-slot — click Save again.',
       saved: 0,
       clientFilledCount: filledOnWire,
     });
@@ -544,8 +554,9 @@ router.put('/ad-slots', requireAdmin, async (req, res) => {
     }
   }
 
+  let merged;
   try {
-    const merged = await replaceAdSlots(next);
+    merged = mergeMode ? await mergeAdSlots(next) : await replaceAdSlots(next);
   } catch (err) {
     console.error('[ad-slots] save failed:', err);
     return res.status(err.message?.includes('wipe') || err.message?.includes('remove') ? 400 : 503).json({

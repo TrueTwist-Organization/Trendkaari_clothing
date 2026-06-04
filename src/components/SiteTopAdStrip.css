@@ -2,7 +2,7 @@
 .site-top-ad-strip {
   --site-announcement-h: 34px;
   --site-main-header-h: 100px;
-  --site-header-total: calc(var(--site-announcement-h) + var(--site-main-header-h));
+  --site-header-total: calc(var(--site-announcement-h) + var(--site-main-header-h) - 6px);
 
   margin-top: var(--site-header-total);
   width: 100%;
@@ -16,7 +16,7 @@
 .site-top-ad-strip .ad-slot-embed--global,
 .site-top-ad-strip .page-ad-slot-wrap--global-top {
   margin: 0 auto;
-  padding: 10px 16px;
+  padding: 2px 12px;
   max-width: 1100px;
   width: 100%;
   box-sizing: border-box;
@@ -31,18 +31,24 @@
   border-top: 1px solid var(--border-color, #efefef);
 }
 
+.site-top-ad-strip .ad-slot-embed {
+  margin: 0;
+  min-height: 0;
+}
+
 .site-top-ad-strip .ad-slot-embed--global,
 .site-top-ad-strip .ad-slot-embed--page {
-  min-height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  line-height: 0;
 }
 
 .site-top-ad-strip iframe,
 .site-top-ad-strip ins.adsbygoogle,
 .site-top-ad-strip [id^='div-gpt-ad-'] {
+  display: block;
   max-width: 100% !important;
   margin-left: auto !important;
   margin-right: auto !important;
@@ -63,7 +69,7 @@
 
   .site-top-ad-strip .ad-slot-embed--global,
   .site-top-ad-strip .page-ad-slot-wrap--global-top {
-    padding: 8px 12px;
+    padding: 2px 10px;
   }
 }
 
@@ -74,13 +80,7 @@
   }
 }
 
-/* Hero already sits below ad strip — drop duplicate header clearance */
+/* Hero already sits below ad strip — no extra gap */
 .site-top-ad-strip[data-has-ads='true'] + .main-content .hero-slider-section {
-  padding-top: 24px;
-}
-
-@media (max-width: 768px) {
-  .site-top-ad-strip[data-has-ads='true'] + .main-content .hero-slider-section {
-    padding-top: 16px;
-  }
+  padding-top: 0;
 }

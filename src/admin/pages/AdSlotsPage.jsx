@@ -58,22 +58,35 @@ export default function AdSlotsPage({ onToast }) {
   };
 
   const handleSaveAll = async () => {
+    const filledRows = rows.filter((row) => String(row.code || '').trim());
+    if (!filledRows.length) {
+      onToast('No slots had code — paste your ad HTML first', 'error');
+      return;
+    }
+
     setSaving(true);
     try {
       const slots = rows.reduce((acc, row) => {
         acc[row.placement] = row.code;
         return acc;
       }, {});
-      const filledOnForm = Object.values(slots).filter((c) => String(c || '').trim()).length;
+      const filledOnForm = filledRows.length;
       const result = await saveAdminAdSlots(slots);
       const saved = result?.saved ?? result?.activeAdSlots ?? 0;
       if (saved > 0) {
-        onToast(`${saved} ad slot(s) saved — persists across refreshes`);
+        if (saved < filledOnForm) {
+          onToast(
+            `Only ${saved} of ${filledOnForm} slot(s) saved — check for blocked script tags and try again.`,
+            'error'
+          );
+        } else {
+          onToast(`${saved} ad slot(s) saved — persists across refreshes`);
+        }
         setRows(mergeAdSlotsForAdmin(result?.adSlots || []));
       } else if (filledOnForm > 0) {
         onToast(
           result?.error ||
-            'Save failed: hosting blocked the ad scripts. Hard-refresh (Ctrl+F5) and save again.',
+            'Save failed — reload the page (Ctrl+F5) and try Save All again.',
           'error'
         );
       } else {
