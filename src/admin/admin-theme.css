@@ -1402,10 +1402,29 @@
 }
 
 .admin-ad-waf-banner p {
-  margin: 0;
+  margin: 0 0 8px;
   font-size: 13px;
   line-height: 1.5;
   color: var(--admin-text-muted);
+}
+
+.admin-ad-waf-banner p:last-of-type {
+  margin-bottom: 0;
+}
+
+.admin-ad-bulk-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.admin-ad-bulk-actions .admin-cyber-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  padding: 8px 12px;
 }
 
 .admin-ad-placement-list {

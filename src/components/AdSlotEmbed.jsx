@@ -1,10 +1,11 @@
 import { useEffect, useRef } from 'react';
 import { fillAdsbygoogleIn } from '../utils/adsbygoogle';
 import { displayGptAdsIn } from '../utils/googletag';
+import { destroyGptSlotsForKey, prepareAdHtmlForSlot } from '../utils/adHtml';
 import './AdSlotEmbed.css';
 
 /** Inject admin HTML/scripts so &lt;script&gt; tags actually execute */
-export default function AdSlotEmbed({ html, className = '' }) {
+export default function AdSlotEmbed({ html, className = '', slotKey = '' }) {
   const hostRef = useRef(null);
 
   useEffect(() => {
@@ -15,8 +16,9 @@ export default function AdSlotEmbed({ html, className = '' }) {
     const text = String(html || '').trim();
     if (!text) return;
 
+    const prepared = slotKey ? prepareAdHtmlForSlot(text, slotKey) : text;
     const wrap = document.createElement('div');
-    wrap.innerHTML = text;
+    wrap.innerHTML = prepared;
     host.appendChild(wrap);
 
     wrap.querySelectorAll('script').forEach((oldScript) => {
@@ -35,7 +37,11 @@ export default function AdSlotEmbed({ html, className = '' }) {
 
     void fillAdsbygoogleIn(wrap);
     void displayGptAdsIn(wrap);
-  }, [html]);
+
+    return () => {
+      if (slotKey) destroyGptSlotsForKey(slotKey);
+    };
+  }, [html, slotKey]);
 
   if (!String(html || '').trim()) return null;
 

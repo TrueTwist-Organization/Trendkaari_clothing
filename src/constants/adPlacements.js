@@ -286,6 +286,20 @@ const CHECKOUT_SLOTS = [
     description: 'Checkout overlay when cart is empty (technical / empty state).',
     placeholder: 'Paste ad HTML/script…',
   },
+  {
+    key: 'checkout_all_steps_top',
+    title: 'Checkout — All Steps (Top Fallback)',
+    description:
+      'Shown at the top of every checkout step when that step’s own top slot is empty. Paste once here instead of all 15 steps.',
+    placeholder: 'Paste ad HTML/script for all checkout steps (top)…',
+  },
+  {
+    key: 'checkout_all_steps_bottom',
+    title: 'Checkout — All Steps (Bottom Fallback)',
+    description:
+      'Shown at the bottom of every checkout step when that step’s own bottom slot is empty.',
+    placeholder: 'Paste ad HTML/script for all checkout steps (bottom)…',
+  },
   ...CHECKOUT_STEP_PAGE_SLOTS,
 ];
 

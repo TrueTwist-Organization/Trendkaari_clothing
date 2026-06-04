@@ -1,10 +1,14 @@
 import { useEffect, useState } from 'react';
-import { Save } from 'lucide-react';
+import { Copy, Save } from 'lucide-react';
 import { fetchAdminAdSlots, saveAdminAdSlots } from '../../api/adminApi';
 import { AD_PLACEMENT_DEFINITIONS, mergeAdSlotsForAdmin } from '../../utils/adSlots';
 
 function buildDefaultRows() {
   return mergeAdSlotsForAdmin([]);
+}
+
+function isCheckoutStepPlacement(key) {
+  return key.startsWith('checkout_step_');
 }
 
 export default function AdSlotsPage({ onToast }) {
@@ -31,6 +35,26 @@ export default function AdSlotsPage({ onToast }) {
 
   const patchCode = (placement, code) => {
     setRows((prev) => prev.map((r) => (r.placement === placement ? { ...r, code } : r)));
+  };
+
+  const applyCheckoutFallbackToAllSteps = (position) => {
+    const sourceKey =
+      position === 'bottom' ? 'checkout_all_steps_bottom' : 'checkout_all_steps_top';
+    const source = rows.find((r) => r.placement === sourceKey);
+    const code = String(source?.code || '').trim();
+    if (!code) {
+      onToast(`Paste ad code in "${sourceKey}" first`, 'error');
+      return;
+    }
+    setRows((prev) =>
+      prev.map((row) => {
+        if (!isCheckoutStepPlacement(row.placement)) return row;
+        if (position === 'bottom' && !row.placement.endsWith('_bottom')) return row;
+        if (position === 'top' && !row.placement.endsWith('_top')) return row;
+        return { ...row, code };
+      })
+    );
+    onToast(`Copied to all checkout step ${position} slots`);
   };
 
   const handleSaveAll = async () => {
@@ -102,6 +126,27 @@ export default function AdSlotsPage({ onToast }) {
           </a>{' '}
           — <code>activeAdSlots</code> should stay &gt; 0 after save.
         </p>
+        <p>
+          <strong>Checkout tip:</strong> paste once in <code>checkout_all_steps_top</code> /{' '}
+          <code>checkout_all_steps_bottom</code> — it shows on every step automatically. Or use
+          the buttons below to copy to all per-step slots.
+        </p>
+        <div className="admin-ad-bulk-actions">
+          <button
+            type="button"
+            className="admin-cyber-btn"
+            onClick={() => applyCheckoutFallbackToAllSteps('top')}
+          >
+            <Copy size={14} /> Copy fallback top → all checkout steps
+          </button>
+          <button
+            type="button"
+            className="admin-cyber-btn"
+            onClick={() => applyCheckoutFallbackToAllSteps('bottom')}
+          >
+            <Copy size={14} /> Copy fallback bottom → all checkout steps
+          </button>
+        </div>
       </div>
 
       <div className="admin-ad-placement-list">

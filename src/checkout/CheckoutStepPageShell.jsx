@@ -9,14 +9,35 @@ export function checkoutAdKeysForStep(stepIndex) {
   };
 }
 
+function resolveCheckoutAd(ad, key, fallbackKey) {
+  const code = ad(key);
+  if (String(code || '').trim()) return { code, label: key };
+  const fallback = ad(fallbackKey);
+  if (String(fallback || '').trim()) return { code: fallback, label: fallbackKey };
+  return { code: '', label: key };
+}
+
 /** Two ad slots (top + bottom) for each checkout step page. */
 export default function CheckoutStepPageShell({ step, ad, children }) {
   const keys = checkoutAdKeysForStep(step);
+  const top = resolveCheckoutAd(ad, keys.top, 'checkout_all_steps_top');
+  const bottom = resolveCheckoutAd(ad, keys.bottom, 'checkout_all_steps_bottom');
+
   return (
     <div className="co-step-page-with-ads">
-      <PageAdSlot code={ad(keys.top)} label={keys.top} variant="checkout" />
+      <PageAdSlot
+        key={`${step}-${top.label}`}
+        code={top.code}
+        label={top.label}
+        variant="checkout"
+      />
       {children}
-      <PageAdSlot code={ad(keys.bottom)} label={keys.bottom} variant="checkout" />
+      <PageAdSlot
+        key={`${step}-${bottom.label}`}
+        code={bottom.code}
+        label={bottom.label}
+        variant="checkout"
+      />
     </div>
   );
 }

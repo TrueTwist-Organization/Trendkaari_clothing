@@ -28,7 +28,7 @@ app.get('/api/admin/auth/me', (req, res) => {
 });
 
 app.use(cors({ origin: true, credentials: true }));
-app.use(express.json({ limit: '2mb' }));
+app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 
 function isFastReadPath(req) {

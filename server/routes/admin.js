@@ -520,7 +520,6 @@ router.put('/ad-slots', requireAdmin, async (req, res) => {
   if (!slots || typeof slots !== 'object') {
     return res.status(400).json({ error: 'slots object required (placement → HTML code)' });
   }
-
   const filledOnWire = Number(clientFilledCount) || 0;
   const next = buildAdSlotsFromPayload(slots, { wireEncoded: Boolean(slotsEncoded) });
 

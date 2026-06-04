@@ -10,7 +10,11 @@ export default function PageAdSlot({ code, label, variant = 'section' }) {
       className={`page-ad-slot-wrap page-ad-slot-wrap--${variant}`}
       data-ad-slot={label || undefined}
     >
-      <AdSlotEmbed html={code} className={`ad-slot-embed--page ad-slot-embed--${variant}`} />
+      <AdSlotEmbed
+        html={code}
+        slotKey={label || undefined}
+        className={`ad-slot-embed--page ad-slot-embed--${variant}`}
+      />
     </div>
   );
 }
