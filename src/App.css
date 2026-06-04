@@ -10,3 +10,20 @@
 .main-content {
   flex-grow: 1;
 }
+
+.product-not-found {
+  padding: 48px 16px 80px;
+  text-align: center;
+  max-width: 520px;
+}
+
+.product-not-found h1 {
+  font-size: 1.5rem;
+  color: var(--brand-plum, #600b45);
+  margin-bottom: 12px;
+}
+
+.product-not-found p {
+  color: #565959;
+  margin-bottom: 24px;
+}

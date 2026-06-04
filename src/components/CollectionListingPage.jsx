@@ -12,6 +12,8 @@ import {
 import { findMenuGroupForTag, MENU_MEN_GROUPS, MENU_WOMEN_GROUPS } from '../data/navCategories';
 import PageBackButton from './PageBackButton';
 import PlacedAdSlot from './PlacedAdSlot';
+import ProductImage from './ProductImage';
+import { getAdCode } from '../utils/resolveAdCode';
 
 const MOBILE_TABS_MQ = '(max-width: 768px)';
 
@@ -36,6 +38,9 @@ export default function CollectionListingPage({
   products = [],
   adCodes = {},
 }) {
+  const hasGridAd = Boolean(
+    getAdCode(adCodes, 'ads_every_2_products', [], { allowGlobal: true }),
+  );
   const [selectedSizes, setSelectedSizes] = useState({});
   const [sortBy, setSortBy] = useState('featured');
   const [filters, setFilters] = useState({
@@ -699,7 +704,7 @@ export default function CollectionListingPage({
                 const hasSecondaryImage = product.images && product.images.length > 1;
                 const hoverImage = hasSecondaryImage ? product.images[1] : product.image;
                 const showMidGridAd =
-                  ad('ads_every_2_products') &&
+                  hasGridAd &&
                   (index + 1) % 2 === 0 &&
                   index < sortedItems.length - 1;
 
@@ -714,7 +719,7 @@ export default function CollectionListingPage({
                       style={{ cursor: 'pointer' }}
                     >
                       {/* Primary Image */}
-                      <img
+                      <ProductImage
                         src={product.image}
                         alt={product.title}
                         className="card-img-element main-photo"
@@ -722,7 +727,7 @@ export default function CollectionListingPage({
                       
                       {/* Secondary Hover Image (swaps smoothly on hover) */}
                       {hasSecondaryImage && (
-                        <img
+                        <ProductImage
                           src={hoverImage}
                           alt={`${product.title} Alternate View`}
                           className="card-img-element hover-swap-photo"

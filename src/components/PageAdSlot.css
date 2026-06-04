@@ -60,8 +60,9 @@
 }
 
 .page-ad-slot-wrap--pdp-gallery {
-  margin-top: 16px;
+  margin-top: 0;
   width: 100%;
+  flex-shrink: 0;
 }
 
 .page-ad-slot-wrap--pdp-suggestions-full {

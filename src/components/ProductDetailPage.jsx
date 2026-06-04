@@ -7,6 +7,7 @@ import ProductDiscountChip from './ProductDiscountChip';
 import PageBackButton from './PageBackButton';
 import StoreCouponsPromo from './StoreCouponsPromo';
 import PlacedAdSlot from './PlacedAdSlot';
+import ProductImage from './ProductImage';
 import { getAdCode } from '../utils/resolveAdCode';
 
 export default function ProductDetailPage({ 
@@ -92,35 +93,36 @@ export default function ProductDetailPage({
         
         {/* LEFT — sticky gallery (page scroll only) */}
         <div className="pdp-gallery-col left-image-section">
-          {/* Vertical Thumbnails List */}
-          <div className="pdp-thumbnails-list">
-            {pImages.map((imgUrl, idx) => (
-              <div 
-                key={idx}
-                className={`pdp-thumb-wrapper ${activeImageIndex === idx ? 'active' : ''}`}
-                onClick={() => setActiveImageIndex(idx)}
-              >
-                <div className="pdp-thumb-crop">
-                  <img 
-                    src={imgUrl} 
-                    alt={`${product.title} view ${idx + 1}`}
-                    className="pdp-thumb-img"
-                    loading="lazy"
-                  />
+          <div className="pdp-gallery-media">
+            <div className="pdp-thumbnails-list">
+              {pImages.map((imgUrl, idx) => (
+                <div
+                  key={idx}
+                  className={`pdp-thumb-wrapper ${activeImageIndex === idx ? 'active' : ''}`}
+                  onClick={() => setActiveImageIndex(idx)}
+                >
+                  <div className="pdp-thumb-crop">
+                    <ProductImage
+                      src={imgUrl}
+                      alt={`${product.title} view ${idx + 1}`}
+                      className="pdp-thumb-img"
+                    />
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
 
-          {/* Main Large Display View */}
-          <div className="pdp-main-display">
-            <span className="pdp-discount-tag-label">{product.discount || "SPECIAL OFFER"}</span>
-            <div className="pdp-main-image-viewport">
-              <img 
-                src={pImages[activeImageIndex] || product.image} 
-                alt={product.title} 
-                className="pdp-main-img" 
-              />
+            <div className="pdp-main-display">
+              <span className="pdp-discount-tag-label">{product.discount || 'SPECIAL OFFER'}</span>
+              <div className="pdp-main-image-viewport">
+                <ProductImage
+                  key={pImages[activeImageIndex] || product.image}
+                  src={pImages[activeImageIndex] || product.image}
+                  alt={product.title}
+                  className="pdp-main-img"
+                  loading="eager"
+                />
+              </div>
             </div>
           </div>
 

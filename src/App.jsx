@@ -39,56 +39,16 @@ import { getUserToken, setUserToken } from './api/client';
 import CheckoutFlow from './checkout/CheckoutFlow';
 import { saveCheckoutState } from './checkout/checkoutStorage';
 import { normalizeCheckoutSlug } from './checkout/checkoutRoutes';
+import {
+  mergeProductForDetail,
+  parseRouteFromPath,
+  resolveProductPage,
+} from './utils/resolveProductPage';
 import './App.css';
 
-export default function App() {
-  // Global synchronized states
-  const [productsList, setProductsList] = useState(initialProducts);
-
-  // Helper to parse URL route
-  const getRouteInfo = () => {
-    if (typeof window !== 'undefined') {
-      const segments = window.location.pathname.split('/').filter(Boolean);
-      if (segments[0] === 'category') {
-        return {
-          viewMode: 'home',
-          activeCategory: decodeURIComponent(segments[1] || 'all'),
-          selectedProduct: null,
-          isCategoryPage: true,
-          infoSlug: null,
-        };
-      } else if (segments[0] === 'product') {
-        const prodId = parseInt(segments[1]);
-        const found = initialProducts.find(p => p.id === prodId);
-        return {
-          viewMode: 'product-detail',
-          activeCategory: 'all',
-          selectedProduct: found || null,
-          isCategoryPage: false,
-          infoSlug: null,
-        };
-      } else if (segments[0] === 'checkout') {
-        const slug = normalizeCheckoutSlug(segments[1] || 'bag');
-        return {
-          viewMode: 'checkout',
-          checkoutSlug: slug,
-          activeCategory: 'all',
-          selectedProduct: null,
-          isCategoryPage: false,
-          infoSlug: null,
-        };
-      } else if (segments[0] === 'info' && segments[1]) {
-        const slug = decodeURIComponent(segments[1]);
-        return {
-          viewMode: getInfoPage(slug) ? 'info' : 'home',
-          activeCategory: 'all',
-          selectedProduct: null,
-          isCategoryPage: false,
-          infoSlug: getInfoPage(slug) ? slug : null,
-          checkoutSlug: null,
-        };
-      }
-    }
+function resolveAppRoute(pathname, productsList, giftCombos = []) {
+  const route = parseRouteFromPath(pathname);
+  if (route.viewMode === 'info' && route.infoSlug && !getInfoPage(route.infoSlug)) {
     return {
       viewMode: 'home',
       activeCategory: 'all',
@@ -97,16 +57,42 @@ export default function App() {
       infoSlug: null,
       checkoutSlug: null,
     };
+  }
+  if (route.viewMode === 'checkout') {
+    route.checkoutSlug = normalizeCheckoutSlug(route.checkoutSlug || 'bag');
+  }
+  if (route.productId) {
+    route.selectedProduct = resolveProductPage(route.productId, productsList, giftCombos, {
+      preferGiftCombo: true,
+    });
+  }
+  return route;
+}
+
+export default function App() {
+  // Global synchronized states
+  const [productsList, setProductsList] = useState(initialProducts);
+
+  const [giftCombos, setGiftCombos] = useState([]);
+
+  const getRouteInfo = () => {
+    if (typeof window === 'undefined') {
+      return resolveAppRoute('/', initialProducts, []);
+    }
+    return resolveAppRoute(window.location.pathname, productsList, giftCombos);
   };
 
-  const initialRoute = getRouteInfo();
+  const bootRoute =
+    typeof window !== 'undefined'
+      ? resolveAppRoute(window.location.pathname, initialProducts, [])
+      : resolveAppRoute('/', initialProducts, []);
 
-  const [activeCategory, setActiveCategory] = useState(initialRoute.activeCategory);
-  const [selectedProduct, setSelectedProduct] = useState(initialRoute.selectedProduct);
-  const [viewMode, setViewMode] = useState(initialRoute.viewMode);
-  const [isCategoryPage, setIsCategoryPage] = useState(initialRoute.isCategoryPage);
-  const [infoSlug, setInfoSlug] = useState(initialRoute.infoSlug ?? null);
-  const [checkoutSlug, setCheckoutSlug] = useState(initialRoute.checkoutSlug ?? 'bag');
+  const [activeCategory, setActiveCategory] = useState(bootRoute.activeCategory);
+  const [selectedProduct, setSelectedProduct] = useState(bootRoute.selectedProduct);
+  const [viewMode, setViewMode] = useState(bootRoute.viewMode);
+  const [isCategoryPage, setIsCategoryPage] = useState(bootRoute.isCategoryPage);
+  const [infoSlug, setInfoSlug] = useState(bootRoute.infoSlug ?? null);
+  const [checkoutSlug, setCheckoutSlug] = useState(bootRoute.checkoutSlug ?? 'bag');
 
   const [cartItems, setCartItems] = useState([]);
   const [wishlistItems, setWishlistItems] = useState(() => loadWishlist());
@@ -178,7 +164,6 @@ export default function App() {
   ]);
   const [siteSettings, setSiteSettings] = useState(null);
   const [adCodes, setAdCodes] = useState({});
-  const [giftCombos, setGiftCombos] = useState([]);
 
   // Router Nav Handlers
   const navigateToRoute = (routePath, isNewTab = false) => {
@@ -200,8 +185,10 @@ export default function App() {
       setInfoSlug(null);
       window.scrollTo(0, 0);
     } else if (segments[0] === 'product') {
-      const prodId = parseInt(segments[1]);
-      const found = productsList.find(p => p.id === prodId);
+      const prodId = parseInt(segments[1], 10);
+      const found = resolveProductPage(prodId, productsList, giftCombos, {
+        preferGiftCombo: false,
+      });
       setSelectedProduct(found || null);
       setViewMode('product-detail');
       setIsCategoryPage(false);
@@ -259,6 +246,19 @@ export default function App() {
     });
   }, []);
 
+  // Resolve PDP after catalog / gift combos load (direct URL, refresh)
+  useEffect(() => {
+    if (viewMode !== 'product-detail') return;
+    const route = parseRouteFromPath(window.location.pathname);
+    if (!route.productId) return;
+    if (selectedProduct?.id === route.productId) return;
+
+    const resolved = resolveProductPage(route.productId, productsList, giftCombos, {
+      preferGiftCombo: true,
+    });
+    if (resolved) setSelectedProduct(resolved);
+  }, [productsList, giftCombos, viewMode, selectedProduct?.id]);
+
   const reloadAdCodes = () =>
     fetchStoreAdSlots().then((list) => {
       if (list?.length) setAdCodes(adSlotsToCodeMap(list));
@@ -301,7 +301,7 @@ export default function App() {
 
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
-  }, [productsList]);
+  }, [productsList, giftCombos]);
 
   useEffect(() => {
     document.body.classList.toggle('category-page', isCategoryPage);
@@ -465,75 +465,11 @@ export default function App() {
     }
   };
 
-  const findCatalogProduct = (id) => {
-    if (id == null || id === '') return null;
-    const num = Number(id);
-    return productsList.find(
-      (p) => p.id === id || p.id === num || String(p.id) === String(id),
-    );
-  };
-
-  const mergeProductForDetail = (payload) => {
-    const id = payload?.id ?? payload?.productId;
-    if (!id && !payload?.isGiftCombo) return null;
-
-    const base = findCatalogProduct(id);
-    const hero = payload.heroImage || payload.image;
-    const fromPayload = payload.images?.length ? [...payload.images] : null;
-
-    if (!base) {
-      if (!payload?.isGiftCombo) return null;
-      const images = fromPayload?.length
-        ? fromPayload
-        : hero
-          ? [hero]
-          : [];
-      return {
-        ...payload,
-        id: payload.id ?? payload.productId,
-        title: payload.title || payload.name,
-        image: images[0] || hero || '',
-        images: images.length ? images : hero ? [hero] : [],
-        sizes: payload.sizes?.length ? payload.sizes : ['S', 'M', 'L', 'XL'],
-      };
-    }
-
-    const catalog = base.images?.length ? [...base.images] : [base.image];
-    const mergedList = fromPayload?.length
-      ? fromPayload
-      : hero
-        ? [hero, ...catalog.filter((url) => url && url !== hero)]
-        : catalog;
-    const uniqueImages = [...new Set(mergedList.filter(Boolean))];
-
-    return {
-      ...base,
-      title: payload.name || payload.title || base.title,
-      description: payload.description || base.description,
-      descriptionLong: payload.descriptionLong || payload.description || base.descriptionLong,
-      price: payload.price ?? base.price,
-      originalPrice: payload.originalPrice ?? base.originalPrice,
-      discount: payload.discount ?? base.discount,
-      image: uniqueImages[0] || base.image,
-      images: uniqueImages.length ? uniqueImages : [base.image],
-      aboutItems: payload.aboutItems?.length ? payload.aboutItems : base.aboutItems,
-      highlights:
-        payload.highlights && Object.keys(payload.highlights).length
-          ? payload.highlights
-          : base.highlights,
-      isGiftCombo: payload.isGiftCombo ?? false,
-      comboBadge: payload.comboBadge,
-      comboIncludes: payload.comboIncludes,
-      partnerProduct: payload.partnerProduct ?? null,
-      comboGiftId: payload.comboGiftId,
-    };
-  };
-
   const handleOpenQuickView = (payload) => {
     const id = payload?.id ?? payload?.productId;
     if (!id) return;
 
-    const merged = mergeProductForDetail(payload);
+    const merged = mergeProductForDetail(payload, productsList);
     if (merged) {
       setSelectedProduct(merged);
       setViewMode('product-detail');
@@ -736,6 +672,14 @@ export default function App() {
               </>
             )}
           </>
+        ) : viewMode === 'product-detail' && !selectedProduct ? (
+          <div className="product-not-found container">
+            <h1>Product not found</h1>
+            <p>This item may have been removed or the link is incorrect.</p>
+            <button type="button" className="btn btn-primary" onClick={() => navigateToRoute('/')}>
+              Back to home
+            </button>
+          </div>
         ) : (
           <ProductDetailPage
             product={selectedProduct}
