@@ -68,6 +68,35 @@ async function readFromDisk() {
   return Array.isArray(parsed) ? parsed : [];
 }
 
+/** Default slots shipped in repo — used when production blob/redis is still empty. */
+function readBundledAdSlots() {
+  try {
+    if (!fs.existsSync(LOCAL_AD_SLOTS_PATH)) return [];
+    const parsed = JSON.parse(fs.readFileSync(LOCAL_AD_SLOTS_PATH, 'utf8'));
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+async function seedPersistedAdSlotsIfEmpty(list) {
+  if (list.length > 0) return list;
+
+  const bundled = readBundledAdSlots();
+  if (!bundled.length) return list;
+
+  if (useRedisPersistence() || useBlobPersistence()) {
+    try {
+      await savePersistedAdSlots(bundled);
+      return bundled;
+    } catch (err) {
+      console.warn('[ad-slots] seed to remote storage failed, using bundled fallback:', err.message);
+    }
+  }
+
+  return bundled;
+}
+
 /** Load ad slots from durable storage. Returns [] only when file/key truly empty. */
 export async function loadPersistedAdSlots({ bypassCache = false } = {}) {
   if (!bypassCache && memCacheLoaded) {
@@ -78,6 +107,7 @@ export async function loadPersistedAdSlots({ bypassCache = false } = {}) {
     let list = [];
     if (useRedisPersistence()) {
       list = await readFromRedis();
+      list = await seedPersistedAdSlotsIfEmpty(list);
     } else if (useBlobPersistence()) {
       try {
         list = await readFromBlob();
@@ -88,6 +118,7 @@ export async function loadPersistedAdSlots({ bypassCache = false } = {}) {
           throw err;
         }
       }
+      list = await seedPersistedAdSlotsIfEmpty(list);
     } else if (canWriteLocalFile()) {
       list = await readFromDisk();
     } else {
