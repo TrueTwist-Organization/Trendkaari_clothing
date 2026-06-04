@@ -143,6 +143,7 @@ export default function CheckoutFlow({
   const [shipLoading, setShipLoading] = useState(false);
   const [reservedMinutes, setReservedMinutes] = useState(12);
   const panelRef = useRef(null);
+  const checkoutWasOpenRef = useRef(false);
 
   const persist = useCallback((partial) => {
     const next = saveCheckoutState(partial);
@@ -172,18 +173,29 @@ export default function CheckoutFlow({
   }, []);
 
   useEffect(() => {
-    if (!isOpen) return;
+    if (!isOpen) {
+      checkoutWasOpenRef.current = false;
+      document.body.style.overflow = '';
+      return;
+    }
+
+    const opening = !checkoutWasOpenRef.current;
+    checkoutWasOpenRef.current = true;
+
     const saved = loadCheckoutState();
     const payment =
       saved.payment?.method === 'cod'
         ? saved.payment
         : { ...saved.payment, method: 'cod', codConfirmed: false };
-    let normalized = payment !== saved.payment ? { ...saved, payment } : saved;
+    const normalized = payment !== saved.payment ? { ...saved, payment } : saved;
     setCouponCode(normalized.coupon?.code || '');
     setAppliedCoupon(normalized.coupon?.applied || null);
-    setCompletedOrder(null);
-    setOrderFailed(false);
-    setOrderFailMessage('');
+
+    if (opening) {
+      setCompletedOrder(null);
+      setOrderFailed(false);
+      setOrderFailMessage('');
+    }
 
     setStored(normalized);
     if (payment !== saved.payment) saveCheckoutState({ payment: normalized.payment });
@@ -199,12 +211,11 @@ export default function CheckoutFlow({
       });
     }
 
-    persist({ step });
     document.body.style.overflow = 'hidden';
     return () => {
       document.body.style.overflow = '';
     };
-  }, [isOpen, user, persist, step]);
+  }, [isOpen, user, persist]);
 
   useEffect(() => {
     if (!isOpen || step >= SUCCESS_STEP_INDEX) return;
@@ -219,7 +230,7 @@ export default function CheckoutFlow({
   }, [isOpen, step, stored.payment?.method, persist]);
 
   useEffect(() => {
-    if (!isOpen || !onNavigateCheckout) return;
+    if (!isOpen || !onNavigateCheckout || orderFailed) return;
     if (step === SUCCESS_STEP_INDEX && !completedOrder) {
       onNavigateCheckout(checkoutPathForStep(0));
       return;
@@ -227,7 +238,7 @@ export default function CheckoutFlow({
     if (cartItems.length === 0 && step !== 0 && step !== SUCCESS_STEP_INDEX) {
       onNavigateCheckout(checkoutPathForStep(0));
     }
-  }, [isOpen, step, cartItems.length, completedOrder, onNavigateCheckout]);
+  }, [isOpen, step, cartItems.length, completedOrder, orderFailed, onNavigateCheckout]);
 
   useEffect(() => {
     const onKey = (e) => {
@@ -494,6 +505,7 @@ export default function CheckoutFlow({
       onClearCart?.();
       clearCheckoutState();
       setOrderFailed(true);
+      onNavigateCheckout?.('/checkout/error');
       window.scrollTo?.(0, 0);
     } finally {
       setPaymentProcessing(false);

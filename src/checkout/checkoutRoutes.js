@@ -32,6 +32,7 @@ export function isCheckoutPath(pathname) {
 }
 
 export function normalizeCheckoutSlug(slug) {
+  if (slug === 'error') return 'error';
   const idx = stepIndexFromSlug(slug);
   return slugFromStepIndex(idx);
 }
