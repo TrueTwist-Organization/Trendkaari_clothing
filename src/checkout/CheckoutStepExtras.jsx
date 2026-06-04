@@ -205,18 +205,20 @@ export default function CheckoutStepExtras({
 
   return (
     <div className={`co-step-extras ${showSuggest ? 'co-step-extras--wide' : ''}`}>
-      {step === 0 && cartItems.length > 0 && <CheckoutFreeShipBar subtotal={subtotal} />}
-      {extras.tip && <CheckoutTipBanner tip={extras.tip} />}
       {extras.perks?.length > 0 && <CheckoutPerksStrip perks={extras.perks} />}
+      {extras.tip && <CheckoutTipBanner tip={extras.tip} />}
       {showSuggest && (
-        <CheckoutProductSuggestions
+        <>
+          <p className="co-extra-scroll-hint">Scroll for more picks ↓</p>
+          <CheckoutProductSuggestions
           title={extras.suggestionsTitle}
           subtitle={extras.suggestionsSubtitle}
           products={allProducts}
           cartItems={cartItems}
           onAddToCart={onAddToCart}
           onSelectProduct={onSelectProduct}
-        />
+          />
+        </>
       )}
     </div>
   );

@@ -19,6 +19,7 @@ import {
 import OrderSummary from './OrderSummary';
 import OrderSuccess from './OrderSuccess';
 import CheckoutStepPageShell from './CheckoutStepPageShell';
+import { CheckoutFreeShipBar } from './CheckoutStepExtras';
 import { SUCCESS_STEP_INDEX } from './checkoutSteps';
 import { formatCouponDiscountShort } from '../utils/couponDiscount';
 
@@ -190,6 +191,7 @@ export default function CheckoutStepPages({ step, ctx }) {
               </div>
             ))}
           </div>
+          <CheckoutFreeShipBar subtotal={subtotal} />
           <div className="co-bag-total-strip">
             <div className="co-bag-total-strip__row">
               <span>Bag subtotal</span>
