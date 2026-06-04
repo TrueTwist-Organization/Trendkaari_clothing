@@ -4,7 +4,8 @@ import { userLogin, userRegister } from '../api/userApi';
 import { setUserToken } from '../api/client';
 import OrderTechnicalError from './OrderTechnicalError';
 import CheckoutStepPages from './CheckoutStepPages';
-import { SUCCESS_STEP_INDEX } from './checkoutSteps';
+import { SUCCESS_STEP_INDEX, CHECKOUT_STEPS } from './checkoutSteps';
+import { getCheckoutStepExtras } from './checkoutStepExtrasConfig';
 import { checkoutPathForStep, stepIndexFromSlug } from './checkoutRoutes';
 import {
   loadCheckoutState,
@@ -115,6 +116,9 @@ export default function CheckoutFlow({
   onUpdateQty,
   onRemoveItem,
   onClearCart,
+  allProducts = [],
+  onAddToCart,
+  onSelectProduct,
 }) {
   const ad = (key) => adCodes[key] || '';
   const step = stepIndexFromSlug(stepSlug);
@@ -600,11 +604,16 @@ export default function CheckoutFlow({
     triggerShake,
     setFieldErrors,
     clearCheckoutState,
+    allProducts,
+    onAddToCart,
+    onSelectProduct,
   };
 
   if (!isOpen) return null;
 
   const showTechnicalError = orderFailed;
+  const stepExtras = getCheckoutStepExtras(step, CHECKOUT_STEPS);
+  const wideCheckout = Boolean(stepExtras?.showSuggestions);
 
   if (showTechnicalError) {
     return (
@@ -613,7 +622,11 @@ export default function CheckoutFlow({
           <X size={22} />
         </button>
         <div className="co-body co-body--fail">
-          <PageAdSlot code={ad('checkout_empty_cart')} label="checkout_empty_cart" variant="checkout" />
+          <PageAdSlot
+            code={ad('checkout_step_error_top') || ad('checkout_all_steps_top')}
+            label="checkout_step_error_top"
+            variant="checkout"
+          />
           <OrderTechnicalError
             detailMessage={orderFailMessage}
             onSelectProductsAgain={() => {
@@ -627,6 +640,11 @@ export default function CheckoutFlow({
               handleClose();
               onReviewCart?.();
             }}
+          />
+          <PageAdSlot
+            code={ad('checkout_step_error_bottom') || ad('checkout_all_steps_bottom')}
+            label="checkout_step_error_bottom"
+            variant="checkout"
           />
         </div>
       </div>
@@ -681,8 +699,8 @@ export default function CheckoutFlow({
         </div>
       )}
 
-      <div className={`co-layout co-layout--cards ${step === SUCCESS_STEP_INDEX ? 'co-layout--success' : ''}`}>
-        <div className={`co-body co-body--pages ${step === SUCCESS_STEP_INDEX ? 'co-body--success' : ''}`}>
+      <div className={`co-layout co-layout--cards ${step === SUCCESS_STEP_INDEX ? 'co-layout--success' : ''} ${wideCheckout ? 'co-layout--wide' : ''}`}>
+        <div className={`co-body co-body--pages ${step === SUCCESS_STEP_INDEX ? 'co-body--success' : ''} ${wideCheckout ? 'co-body--wide' : ''}`}>
           <div className={`co-main-panel co-main-panel--page ${step === SUCCESS_STEP_INDEX ? 'co-main-panel--success' : ''} ${transition}`}>
             <CheckoutStepPages step={step} ctx={stepCtx} />
           </div>

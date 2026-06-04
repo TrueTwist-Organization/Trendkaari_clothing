@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Copy, Save } from 'lucide-react';
 import { fetchAdminAdSlots, saveAdminAdSlots } from '../../api/adminApi';
-import { AD_PLACEMENT_DEFINITIONS, mergeAdSlotsForAdmin } from '../../utils/adSlots';
+import { AD_PLACEMENT_DEFINITIONS, AD_PLACEMENT_SECTIONS } from '../../constants/adPlacements';
+import { mergeAdSlotsForAdmin } from '../../utils/adSlots';
+import { CHECKOUT_STEPS } from '../../checkout/checkoutSteps';
 
 function buildDefaultRows() {
   return mergeAdSlotsForAdmin([]);
@@ -109,6 +111,34 @@ export default function AdSlotsPage({ onToast }) {
     }
   };
 
+  const rowByPlacement = Object.fromEntries(rows.map((row) => [row.placement, row]));
+
+  const renderPlacementCard = (row) => (
+    <div key={row.placement} className="glass-panel admin-ad-placement-card">
+      <div className="admin-ad-placement-card__head">
+        <h3>{row.title}</h3>
+        <span className="admin-ad-placement-card__key">{row.placement}</span>
+      </div>
+      <p className="admin-ad-placement-card__desc">{row.description}</p>
+      <label className="admin-cyber-label admin-ad-code-label">
+        Ad HTML / script
+        <textarea
+          className="admin-cyber-input admin-ad-code-textarea"
+          rows={8}
+          value={row.code}
+          onChange={(e) => patchCode(row.placement, e.target.value)}
+          placeholder={row.placeholder}
+          spellCheck={false}
+        />
+      </label>
+      {row.updatedAt && (
+        <span className="admin-ad-placement-card__meta">
+          Last saved: {new Date(row.updatedAt).toLocaleString('en-IN')}
+        </span>
+      )}
+    </div>
+  );
+
   return (
     <div className="admin-cyber-page admin-ad-slots-page">
       <header className="admin-cyber-page__head admin-cyber-page__head--row">
@@ -151,8 +181,8 @@ export default function AdSlotsPage({ onToast }) {
         </p>
         <p>
           <strong>Checkout tip:</strong> paste once in <code>checkout_all_steps_top</code> /{' '}
-          <code>checkout_all_steps_bottom</code> — it shows on every step automatically. Or use
-          the buttons below to copy to all per-step slots.
+          <code>checkout_all_steps_bottom</code> — shows on every checkout page automatically. Or use
+          the buttons below to copy to all per-page slots ({CHECKOUT_STEPS.length} pages + error).
         </p>
         <div className="admin-ad-bulk-actions">
           <button
@@ -173,31 +203,26 @@ export default function AdSlotsPage({ onToast }) {
       </div>
 
       <div className="admin-ad-placement-list">
-        {rows.map((row) => (
-          <div key={row.placement} className="glass-panel admin-ad-placement-card">
-            <div className="admin-ad-placement-card__head">
-              <h3>{row.title}</h3>
-              <span className="admin-ad-placement-card__key">{row.placement}</span>
-            </div>
-            <p className="admin-ad-placement-card__desc">{row.description}</p>
-            <label className="admin-cyber-label admin-ad-code-label">
-              Ad HTML / script
-              <textarea
-                className="admin-cyber-input admin-ad-code-textarea"
-                rows={8}
-                value={row.code}
-                onChange={(e) => patchCode(row.placement, e.target.value)}
-                placeholder={row.placeholder}
-                spellCheck={false}
-              />
-            </label>
-            {row.updatedAt && (
-              <span className="admin-ad-placement-card__meta">
-                Last saved: {new Date(row.updatedAt).toLocaleString('en-IN')}
-              </span>
-            )}
-          </div>
-        ))}
+        {AD_PLACEMENT_SECTIONS.map((section) => {
+          const sectionRows = section.keys
+            .map((key) => rowByPlacement[key])
+            .filter(Boolean);
+          if (!sectionRows.length) return null;
+
+          return (
+            <section key={section.id} className="admin-ad-placement-section">
+              <header className="admin-ad-placement-section__head">
+                <h2>{section.title}</h2>
+                <span className="admin-ad-placement-section__count">
+                  {sectionRows.length} slot{sectionRows.length === 1 ? '' : 's'}
+                </span>
+              </header>
+              <div className="admin-ad-placement-section__grid">
+                {sectionRows.map(renderPlacementCard)}
+              </div>
+            </section>
+          );
+        })}
       </div>
     </div>
   );

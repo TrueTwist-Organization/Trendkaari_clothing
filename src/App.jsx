@@ -644,7 +644,8 @@ export default function App() {
       />
 
       <SiteTopAdStrip
-        globalCode={adCodes.global_banner}
+        globalCode={adCodes.site_common_ad || adCodes.global_banner}
+        globalSlotKey={adCodes.site_common_ad ? 'site_common_ad' : 'global_banner'}
         homeBelowHeaderCode={adCodes.home_below_header}
         showHomeSlot={viewMode === 'home' && !isCategoryPage}
       />
@@ -800,6 +801,9 @@ export default function App() {
           handleExitCheckout();
           setIsCartOpen(true);
         }}
+        allProducts={productsList}
+        onAddToCart={handleAddToCart}
+        onSelectProduct={(p) => navigateToRoute(`/product/${p.id}`)}
       />
 
       <UserAuthModal

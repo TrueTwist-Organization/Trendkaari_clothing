@@ -1,6 +1,16 @@
 /** Fixed ad placements — admin pastes HTML/JS; storefront injects per slot */
 
-import { CHECKOUT_STEPS } from '../checkout/checkoutSteps.js';
+import { CHECKOUT_BASE, CHECKOUT_STEPS } from '../checkout/checkoutSteps.js';
+
+const COMMON_SLOTS = [
+  {
+    key: 'site_common_ad',
+    title: 'All Pages — Common Ad',
+    description:
+      'Paste ad code once — shows below the site header on every page (home, category, product, info). One slot for the whole site.',
+    placeholder: 'Paste ad HTML/script (e.g. Google AdSense)…',
+  },
+];
 
 const HOME_SLOTS = [
   {
@@ -262,16 +272,31 @@ const CHECKOUT_STEP_PAGE_SLOTS = CHECKOUT_STEPS.flatMap((step) => [
   {
     key: `checkout_step_${step.id}_top`,
     title: `Checkout — ${step.label} (Top Ad)`,
-    description: `Step ${step.label} — ad slot above page content.`,
+    description: `${CHECKOUT_BASE}/${step.path} — ad above the checkout card.`,
     placeholder: 'Paste ad HTML/script…',
   },
   {
     key: `checkout_step_${step.id}_bottom`,
     title: `Checkout — ${step.label} (Bottom Ad)`,
-    description: `Step ${step.label} — ad slot below content, above Next/Back.`,
+    description: `${CHECKOUT_BASE}/${step.path} — ad below the card, above Back/Continue.`,
     placeholder: 'Paste ad HTML/script…',
   },
 ]);
+
+const CHECKOUT_ERROR_PAGE_SLOTS = [
+  {
+    key: 'checkout_step_error_top',
+    title: 'Checkout — Technical Error (Top Ad)',
+    description: `${CHECKOUT_BASE}/error — order failed / technical error screen.`,
+    placeholder: 'Paste ad HTML/script…',
+  },
+  {
+    key: 'checkout_step_error_bottom',
+    title: 'Checkout — Technical Error (Bottom Ad)',
+    description: `${CHECKOUT_BASE}/error — bottom ad on technical error page.`,
+    placeholder: 'Paste ad HTML/script…',
+  },
+];
 
 const CHECKOUT_SLOTS = [
   {
@@ -281,26 +306,27 @@ const CHECKOUT_SLOTS = [
     placeholder: 'Paste ad HTML/script…',
   },
   {
-    key: 'checkout_empty_cart',
-    title: 'Checkout — Empty Bag',
-    description: 'Checkout overlay when cart is empty (technical / empty state).',
-    placeholder: 'Paste ad HTML/script…',
-  },
-  {
     key: 'checkout_all_steps_top',
     title: 'Checkout — All Steps (Top Fallback)',
     description:
-      'Shown at the top of every checkout step when that step’s own top slot is empty. Paste once here instead of all 15 steps.',
-    placeholder: 'Paste ad HTML/script for all checkout steps (top)…',
+      'Fallback top ad on every checkout page when that page’s own top slot is empty. Paste once here instead of all per-page slots.',
+    placeholder: 'Paste ad HTML/script for all checkout pages (top)…',
   },
   {
     key: 'checkout_all_steps_bottom',
     title: 'Checkout — All Steps (Bottom Fallback)',
     description:
-      'Shown at the bottom of every checkout step when that step’s own bottom slot is empty.',
-    placeholder: 'Paste ad HTML/script for all checkout steps (bottom)…',
+      'Fallback bottom ad on every checkout page when that page’s own bottom slot is empty.',
+    placeholder: 'Paste ad HTML/script for all checkout pages (bottom)…',
   },
   ...CHECKOUT_STEP_PAGE_SLOTS,
+  ...CHECKOUT_ERROR_PAGE_SLOTS,
+  {
+    key: 'checkout_empty_cart',
+    title: 'Checkout — Empty Bag',
+    description: `${CHECKOUT_BASE}/bag when the cart is empty.`,
+    placeholder: 'Paste ad HTML/script…',
+  },
 ];
 
 const OTHER_SLOTS = [
@@ -312,14 +338,19 @@ const OTHER_SLOTS = [
   },
 ];
 
-/** Homepage → Category → Product → Checkout → other */
+/** Common → Checkout → Homepage → Category → Product → other */
 export const AD_PLACEMENT_DEFINITIONS = [
+  ...COMMON_SLOTS,
+  ...CHECKOUT_SLOTS,
   ...HOME_SLOTS,
   ...CATEGORY_SLOTS,
   ...PRODUCT_SLOTS,
-  ...CHECKOUT_SLOTS,
   ...OTHER_SLOTS,
 ];
+
+export const COMMON_AD_PLACEMENT_KEYS = COMMON_SLOTS.map((d) => d.key);
+
+export const CHECKOUT_AD_PLACEMENT_KEYS = CHECKOUT_SLOTS.map((d) => d.key);
 
 export const HOME_AD_PLACEMENT_KEYS = HOME_SLOTS.map((d) => d.key);
 
@@ -327,6 +358,16 @@ export const CATEGORY_AD_PLACEMENT_KEYS = CATEGORY_SLOTS.map((d) => d.key);
 
 export const PRODUCT_AD_PLACEMENT_KEYS = PRODUCT_SLOTS.map((d) => d.key);
 
-export const CHECKOUT_AD_PLACEMENT_KEYS = CHECKOUT_SLOTS.map((d) => d.key);
+export const OTHER_AD_PLACEMENT_KEYS = OTHER_SLOTS.map((d) => d.key);
+
+/** Admin panel section order */
+export const AD_PLACEMENT_SECTIONS = [
+  { id: 'common', title: 'Common — All Pages', keys: COMMON_AD_PLACEMENT_KEYS },
+  { id: 'checkout', title: 'Checkout — Every Page', keys: CHECKOUT_AD_PLACEMENT_KEYS },
+  { id: 'home', title: 'Homepage', keys: HOME_AD_PLACEMENT_KEYS },
+  { id: 'category', title: 'Category Listing', keys: CATEGORY_AD_PLACEMENT_KEYS },
+  { id: 'product', title: 'Product Detail', keys: PRODUCT_AD_PLACEMENT_KEYS },
+  { id: 'other', title: 'Other', keys: OTHER_AD_PLACEMENT_KEYS },
+];
 
 export const AD_PLACEMENT_KEYS = AD_PLACEMENT_DEFINITIONS.map((d) => d.key);

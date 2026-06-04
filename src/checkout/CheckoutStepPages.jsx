@@ -14,6 +14,7 @@ import {
   Trash2,
   Sparkles,
   Tag,
+  ShoppingBag,
 } from 'lucide-react';
 import OrderSummary from './OrderSummary';
 import OrderSuccess from './OrderSuccess';
@@ -21,9 +22,9 @@ import CheckoutStepPageShell from './CheckoutStepPageShell';
 import { SUCCESS_STEP_INDEX } from './checkoutSteps';
 import { formatCouponDiscountShort } from '../utils/couponDiscount';
 
-function wrapStep(stepIndex, node, ad) {
+function wrapStep(stepIndex, node, ad, shellProps = {}) {
   return (
-    <CheckoutStepPageShell step={stepIndex} ad={ad}>
+    <CheckoutStepPageShell step={stepIndex} ad={ad} {...shellProps}>
       {node}
     </CheckoutStepPageShell>
   );
@@ -101,7 +102,18 @@ export default function CheckoutStepPages({ step, ctx }) {
     PAY_METHODS,
     AssistantIllustration,
     MapUnfoldIllustration,
+    allProducts = [],
+    onAddToCart,
+    onSelectProduct,
   } = ctx;
+
+  const shellProps = {
+    cartItems,
+    subtotal,
+    allProducts,
+    onAddToCart,
+    onSelectProduct,
+  };
 
   const saleCoupon = coupons.find((c) => c.code === 'SALE100') || coupons[0];
   const promoMin = saleCoupon?.minPurchase ?? 199;
@@ -123,7 +135,8 @@ export default function CheckoutStepPages({ step, ctx }) {
             </button>
           </div>
         ),
-        ad
+        ad,
+        shellProps
       );
     }
     return wrapStep(
@@ -177,10 +190,20 @@ export default function CheckoutStepPages({ step, ctx }) {
               </div>
             ))}
           </div>
+          <div className="co-bag-total-strip">
+            <div className="co-bag-total-strip__row">
+              <span>Bag subtotal</span>
+              <strong>₹{subtotal}</strong>
+            </div>
+            <p className="co-bag-total-strip__note">
+              <ShoppingBag size={14} aria-hidden /> Free shipping on this order
+            </p>
+          </div>
           <NavRow onNext={() => goStep(1)} nextLabel="Continue to savings" />
         </div>
       ),
-      ad
+      ad,
+      shellProps
     );
   }
 
@@ -249,7 +272,8 @@ export default function CheckoutStepPages({ step, ctx }) {
           <NavRow onBack={() => goStep(0)} onNext={() => goStep(2)} nextLabel="View order total" />
         </div>
       ),
-      ad
+      ad,
+      shellProps
     );
   }
 
@@ -288,7 +312,8 @@ export default function CheckoutStepPages({ step, ctx }) {
           <NavRow onBack={() => goStep(1)} onNext={() => goStep(3)} nextLabel="Continue — account" />
         </div>
       ),
-      ad
+      ad,
+      shellProps
     );
   }
 
@@ -440,7 +465,8 @@ export default function CheckoutStepPages({ step, ctx }) {
           />
         </div>
       ),
-      ad
+      ad,
+      shellProps
     );
   }
 
@@ -491,7 +517,8 @@ export default function CheckoutStepPages({ step, ctx }) {
           <NavRow onBack={() => goStep(3)} onNext={validateShippingContact} nextLabel="Continue — address" />
         </div>
       ),
-      ad
+      ad,
+      shellProps
     );
   }
 
@@ -615,7 +642,8 @@ export default function CheckoutStepPages({ step, ctx }) {
           />
         </div>
       ),
-      ad
+      ad,
+      shellProps
     );
   }
 
@@ -648,7 +676,8 @@ export default function CheckoutStepPages({ step, ctx }) {
           <NavRow onBack={() => goStep(5)} onNext={() => goStep(7)} nextLabel="Continue — summary" />
         </div>
       ),
-      ad
+      ad,
+      shellProps
     );
   }
 
@@ -696,7 +725,8 @@ export default function CheckoutStepPages({ step, ctx }) {
           <NavRow onBack={() => goStep(6)} onNext={() => goStep(8)} nextLabel="Proceed to payment" />
         </div>
       ),
-      ad
+      ad,
+      shellProps
     );
   }
 
@@ -759,7 +789,8 @@ export default function CheckoutStepPages({ step, ctx }) {
           />
         </div>
       ),
-      ad
+      ad,
+      shellProps
     );
   }
 
@@ -784,7 +815,8 @@ export default function CheckoutStepPages({ step, ctx }) {
           }}
         />
       ),
-      ad
+      ad,
+      shellProps
     );
   }
 
