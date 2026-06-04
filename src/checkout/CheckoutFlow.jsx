@@ -15,6 +15,7 @@ import {
 } from './checkoutStorage';
 import { computeCouponDiscountAmount } from '../utils/couponDiscount';
 import PlacedAdSlot from '../components/PlacedAdSlot';
+import { refreshAllGptSlots } from '../utils/googletag';
 import './CheckoutFlow.css';
 
 const PAY_METHODS = [
@@ -147,6 +148,16 @@ export default function CheckoutFlow({
   const [reservedMinutes, setReservedMinutes] = useState(12);
   const panelRef = useRef(null);
   const checkoutWasOpenRef = useRef(false);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const t1 = window.setTimeout(refreshAllGptSlots, 450);
+    const t2 = window.setTimeout(refreshAllGptSlots, 1800);
+    return () => {
+      window.clearTimeout(t1);
+      window.clearTimeout(t2);
+    };
+  }, [isOpen, stepSlug, adCodes]);
 
   const persist = useCallback((partial) => {
     const next = saveCheckoutState(partial);
@@ -645,6 +656,7 @@ export default function CheckoutFlow({
             adCodes={adCodes}
             placement="checkout_step_error_bottom"
             allowGlobal
+            allowDuplicateSource
             variant="checkout"
           />
         </div>

@@ -93,6 +93,12 @@ function flushGptSlotsInCmd() {
     if (!el) return;
 
     try {
+      const existing = findSlotByElementId(config.id);
+      if (existing) {
+        window.googletag.pubads().refresh([existing]);
+        displayedIds.add(config.id);
+        return;
+      }
       window.googletag.display(config.id);
       displayedIds.add(config.id);
       const slot = findSlotByElementId(config.id);
@@ -138,6 +144,12 @@ export async function displayGptAdsIn(root, preparedHtml = '') {
     if (config?.id) slotRegistry.set(config.id, config);
   });
 
+  scheduleGptFlush();
+}
+
+/** Re-display / refresh every GPT slot currently in the DOM (checkout drawer, late mounts). */
+export function refreshAllGptSlots() {
+  if (typeof window === 'undefined' || slotRegistry.size === 0) return;
   scheduleGptFlush();
 }
 
