@@ -1,5 +1,7 @@
 /** Make GPT / display ad HTML safe for SPA remounts (unique div ids per slot). */
 
+import { destroyGptSlotsBySuffix } from './googletag.js';
+
 function slotSuffix(slotKey) {
   return String(slotKey || 'ad')
     .replace(/[^a-zA-Z0-9_-]/g, '_')
@@ -40,15 +42,6 @@ export function prepareAdHtmlForSlot(html, slotKey) {
 }
 
 export function destroyGptSlotsForKey(slotKey) {
-  if (typeof window === 'undefined' || !window.googletag?.pubads || !slotKey) return;
-
-  const suffix = slotSuffix(slotKey);
-  window.googletag.cmd.push(() => {
-    const slots = window.googletag.pubads().getSlots?.() || [];
-    const toDestroy = slots.filter((slot) => {
-      const id = slot.getSlotElementId?.() || '';
-      return id.includes(`__${suffix}`);
-    });
-    if (toDestroy.length) window.googletag.destroySlots(toDestroy);
-  });
+  if (typeof window === 'undefined' || !slotKey) return;
+  destroyGptSlotsBySuffix(slotSuffix(slotKey));
 }

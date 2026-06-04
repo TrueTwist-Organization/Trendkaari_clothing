@@ -1,8 +1,9 @@
 .ad-slot-embed {
   width: 100%;
   margin: 12px 0;
-  overflow: hidden;
+  overflow: visible;
   text-align: center;
+  min-height: 50px;
 }
 
 .ad-slot-embed--global {

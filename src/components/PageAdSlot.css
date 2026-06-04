@@ -36,6 +36,7 @@
 .ad-slot-embed [id^='div-gpt-ad-'] {
   min-height: 90px;
   margin: 0 auto;
+  display: block;
 }
 
 .ad-slot-embed--sidebar {

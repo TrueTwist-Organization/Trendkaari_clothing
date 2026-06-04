@@ -242,7 +242,7 @@ export default function App() {
     }
   };
 
-  // Load catalog from API when backend is available
+  // Load catalog + ad slots from API
   useEffect(() => {
     fetchStoreProducts().then((list) => {
       if (list?.length) setProductsList(list);
@@ -253,17 +253,30 @@ export default function App() {
     fetchStoreSettings().then((s) => {
       if (s) setSiteSettings(applySiteSettingsToDocument(s));
     });
-    const loadAds = () =>
-      fetchStoreAdSlots().then((list) => {
-        setAdCodes(adSlotsToCodeMap(list || []));
-      });
-    loadAds();
-    const adRetry = window.setTimeout(loadAds, 2500);
     fetchStoreGiftCombos().then((list) => {
       if (list?.length) setGiftCombos(list);
     });
-    return () => window.clearTimeout(adRetry);
   }, []);
+
+  const reloadAdCodes = () =>
+    fetchStoreAdSlots().then((list) => {
+      if (list?.length) setAdCodes(adSlotsToCodeMap(list));
+    });
+
+  useEffect(() => {
+    reloadAdCodes();
+    const retry1 = window.setTimeout(reloadAdCodes, 2500);
+    const retry2 = window.setTimeout(reloadAdCodes, 8000);
+    return () => {
+      window.clearTimeout(retry1);
+      window.clearTimeout(retry2);
+    };
+  }, []);
+
+  // Refresh ads when navigating (checkout, category, product) so slots mount with codes ready
+  useEffect(() => {
+    reloadAdCodes();
+  }, [viewMode, isCategoryPage, checkoutSlug, selectedProduct?.id]);
 
   // Restore user session from token
   useEffect(() => {

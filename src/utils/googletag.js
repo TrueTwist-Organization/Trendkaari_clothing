@@ -2,6 +2,10 @@ const GPT_SRC = 'https://securepubads.g.doubleclick.net/tag/js/gpt.js';
 
 let loadPromise = null;
 let servicesEnabled = false;
+let flushTimer = null;
+
+/** elementId → slot config — batched so enableServices runs after all defineSlot calls */
+const slotRegistry = new Map();
 
 function loadGptScript() {
   if (document.querySelector(`script[src="${GPT_SRC}"]`)) {
@@ -13,6 +17,7 @@ function loadGptScript() {
     const script = document.createElement('script');
     script.async = true;
     script.src = GPT_SRC;
+    script.crossOrigin = 'anonymous';
     script.onload = () => resolve();
     script.onerror = () => reject(new Error('GPT script failed to load'));
     document.head.appendChild(script);
@@ -55,31 +60,58 @@ function findSlotByElementId(id) {
   return slots.find((slot) => slot.getSlotElementId?.() === id);
 }
 
-function registerAndDisplaySlot(config) {
-  if (!config?.id) return;
+function scheduleGptFlush() {
+  if (flushTimer !== null) return;
+  flushTimer = window.setTimeout(() => {
+    flushTimer = null;
+    void flushGptSlots();
+  }, 50);
+}
 
-  let slot = findSlotByElementId(config.id);
+function flushGptSlotsInCmd() {
+  const configs = [...slotRegistry.values()].filter((c) => document.getElementById(c.id));
 
-  if (!slot && config.adUnitPath && config.sizes) {
-    slot = window.googletag
-      .defineSlot(config.adUnitPath, config.sizes, config.id)
-      ?.addService(window.googletag.pubads());
-  }
+  configs.forEach((config) => {
+    if (!config?.id || findSlotByElementId(config.id)) return;
+    if (config.adUnitPath && config.sizes) {
+      window.googletag
+        .defineSlot(config.adUnitPath, config.sizes, config.id)
+        ?.addService(window.googletag.pubads());
+    }
+  });
 
-  if (!servicesEnabled) {
+  if (!servicesEnabled && configs.length > 0) {
     window.googletag.pubads().enableSingleRequest();
+    window.googletag.pubads().collapseEmptyDivs();
     window.googletag.enableServices();
     servicesEnabled = true;
   }
 
-  window.googletag.display(config.id);
-
-  if (servicesEnabled && slot) {
-    try {
-      window.googletag.pubads().refresh([slot]);
-    } catch {
-      /* refresh optional */
+  configs.forEach((config) => {
+    if (!document.getElementById(config.id)) return;
+    window.googletag.display(config.id);
+    const slot = findSlotByElementId(config.id);
+    if (slot) {
+      try {
+        window.googletag.pubads().refresh([slot]);
+      } catch {
+        /* refresh optional */
+      }
     }
+  });
+}
+
+async function flushGptSlots() {
+  if (slotRegistry.size === 0) return;
+
+  try {
+    await loadGptScript();
+    window.googletag = window.googletag || { cmd: [] };
+    window.googletag.cmd.push(() => {
+      flushGptSlotsInCmd();
+    });
+  } catch (err) {
+    console.warn('[gpt]', err);
   }
 }
 
@@ -92,19 +124,33 @@ export async function displayGptAdsIn(root, preparedHtml = '') {
 
   const html = preparedHtml || root.innerHTML;
 
-  try {
-    await loadGptScript();
-    window.googletag = window.googletag || { cmd: [] };
+  divs.forEach((el) => {
+    const config = parseGptSlotConfig(html, el.id);
+    if (config?.id) slotRegistry.set(config.id, config);
+  });
 
-    divs.forEach((el) => {
-      const config = parseGptSlotConfig(html, el.id);
-      window.googletag.cmd.push(() => {
-        registerAndDisplaySlot(config);
-      });
-    });
-  } catch (err) {
-    console.warn('[gpt]', err);
+  scheduleGptFlush();
+}
+
+/** Remove slots tied to a placement key (SPA unmount). */
+export function destroyGptSlotsBySuffix(suffix) {
+  if (!suffix || typeof window === 'undefined') return;
+
+  const toRemove = [];
+  for (const [id] of slotRegistry) {
+    if (id.includes(`__${suffix}`)) {
+      slotRegistry.delete(id);
+      toRemove.push(id);
+    }
   }
+
+  if (!toRemove.length || !window.googletag?.pubads) return;
+
+  window.googletag.cmd.push(() => {
+    const slots = window.googletag.pubads().getSlots?.() || [];
+    const destroy = slots.filter((slot) => toRemove.includes(slot.getSlotElementId?.() || ''));
+    if (destroy.length) window.googletag.destroySlots(destroy);
+  });
 }
 
 export function isGptBootstrapScript(scriptEl) {

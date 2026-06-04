@@ -661,6 +661,24 @@ export default function CollectionListingPage({
             variant="container"
           />
 
+          <div className="category-mobile-sidebar-ads" aria-label="Promotions">
+            <PageAdSlot
+              code={ad('category_sidebar_top')}
+              label="category_sidebar_top_mobile"
+              variant="container"
+            />
+            <PageAdSlot
+              code={ad('category_sidebar_middle')}
+              label="category_sidebar_middle_mobile"
+              variant="container"
+            />
+            <PageAdSlot
+              code={ad('category_sidebar_bottom')}
+              label="category_sidebar_bottom_mobile"
+              variant="container"
+            />
+          </div>
+
           {/* Listing Grid */}
           {sortedItems.length > 0 ? (
             <div className="collection-products-grid">
