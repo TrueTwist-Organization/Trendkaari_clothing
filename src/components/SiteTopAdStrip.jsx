@@ -1,35 +1,28 @@
 import AdSlotEmbed from './AdSlotEmbed';
-import PageAdSlot from './PageAdSlot';
+import { claimAdSource } from '../utils/adDedupe';
 import './SiteTopAdStrip.css';
 
-/** Full-width ad strip below fixed header — avoids logo overlap on ads. */
+/** One ad below header — homepage uses home_below_header when set, else site common. */
 export default function SiteTopAdStrip({
   globalCode,
   globalSlotKey = 'site_common_ad',
   homeBelowHeaderCode,
   showHomeSlot = false,
 }) {
-  const hasGlobal = Boolean(String(globalCode || '').trim());
-  const hasHome = showHomeSlot && Boolean(String(homeBelowHeaderCode || '').trim());
+  const homeCode = String(homeBelowHeaderCode || '').trim();
+  const commonCode = String(globalCode || '').trim();
 
-  if (!hasGlobal && !hasHome) return null;
+  const useHome = showHomeSlot && homeCode;
+  const code = useHome ? homeCode : commonCode;
+  const slotKey = useHome ? 'home_below_header' : globalSlotKey;
+  const sourceKey = useHome ? 'home_below_header' : globalSlotKey;
+
+  if (!code) return null;
+  if (!claimAdSource(sourceKey)) return null;
 
   return (
     <div className="site-top-ad-strip" data-has-ads="true">
-      {hasGlobal && (
-        <AdSlotEmbed
-          html={globalCode}
-          slotKey={globalSlotKey}
-          className="ad-slot-embed--global"
-        />
-      )}
-      {hasHome && (
-        <PageAdSlot
-          code={homeBelowHeaderCode}
-          label="home_below_header"
-          variant="global-top"
-        />
-      )}
+      <AdSlotEmbed html={code} slotKey={slotKey} className="ad-slot-embed--global" />
     </div>
   );
 }

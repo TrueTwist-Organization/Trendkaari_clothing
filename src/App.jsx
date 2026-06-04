@@ -33,7 +33,7 @@ import {
 } from './api/storeApi';
 import { applySiteSettingsToDocument } from './utils/siteSettings';
 import { adSlotsToCodeMap } from './utils/adSlots';
-import { getAdCode } from './utils/resolveAdCode';
+import { resetAdDedupe } from './utils/adDedupe';
 import { userMe } from './api/userApi';
 import { getUserToken, setUserToken } from './api/client';
 import CheckoutFlow from './checkout/CheckoutFlow';
@@ -638,6 +638,18 @@ export default function App() {
     setTimeout(scroll, 350);
   };
 
+  const adPageKey =
+    viewMode === 'checkout'
+      ? `checkout-${checkoutSlug}`
+      : viewMode === 'product-detail'
+        ? `product-${selectedProduct?.id || 'none'}`
+        : isCategoryPage
+          ? `category-${activeCategory}`
+          : viewMode === 'info'
+            ? `info-${infoSlug}`
+            : 'home';
+  resetAdDedupe(adPageKey);
+
   return (
     <div className="app-container">
       
@@ -659,9 +671,9 @@ export default function App() {
 
       {viewMode !== 'checkout' && (
         <SiteTopAdStrip
-          globalCode={getAdCode(adCodes, 'site_common_ad')}
-          globalSlotKey="site_common_ad"
-          homeBelowHeaderCode={getAdCode(adCodes, 'home_below_header')}
+          globalCode={adCodes.site_common_ad || adCodes.global_banner}
+          globalSlotKey={adCodes.site_common_ad ? 'site_common_ad' : 'global_banner'}
+          homeBelowHeaderCode={adCodes.home_below_header}
           showHomeSlot={viewMode === 'home' && !isCategoryPage}
         />
       )}
@@ -691,16 +703,16 @@ export default function App() {
             ) : (
               <>
                 <HeroSlider onSelectCategory={handleSelectCategory} />
-                <HomeAdSlot code={getAdCode(adCodes, 'home_after_hero')} label="home_after_hero" />
+                <HomeAdSlot adCodes={adCodes} placement="home_after_hero" />
 
                 <TrendsSection onSelectCategory={handleSelectCategory} />
-                <HomeAdSlot code={getAdCode(adCodes, 'home_after_trends')} label="home_after_trends" />
+                <HomeAdSlot adCodes={adCodes} placement="home_after_trends" />
 
                 <OfferSection onSelectCategory={handleSelectCategory} />
-                <HomeAdSlot code={getAdCode(adCodes, 'home_main')} label="home_main" />
-                <HomeAdSlot code={getAdCode(adCodes, 'home_after_promo')} label="home_after_promo" />
+                <HomeAdSlot adCodes={adCodes} placement="home_main" />
+                <HomeAdSlot adCodes={adCodes} placement="home_after_promo" />
 
-                <HomeAdSlot code={getAdCode(adCodes, 'home_before_categories')} label="home_before_categories" />
+                <HomeAdSlot adCodes={adCodes} placement="home_before_categories" />
                 <CategoriesSection
                   activeCategory={activeCategory}
                   onSelectCategory={handleSelectCategory}
@@ -708,10 +720,7 @@ export default function App() {
                   onOpenQuickView={handleOpenQuickView}
                   products={productsList}
                 />
-                <HomeAdSlot
-                  code={getAdCode(adCodes, 'home_between_categories_gift')}
-                  label="home_between_categories_gift"
-                />
+                <HomeAdSlot adCodes={adCodes} placement="home_between_categories_gift" />
 
                 <GiftCollectionSection
                   onSelectCategory={handleSelectCategory}
@@ -719,11 +728,11 @@ export default function App() {
                   products={productsList}
                   giftCombos={giftCombos}
                 />
-                <HomeAdSlot code={getAdCode(adCodes, 'home_after_gift')} label="home_after_gift" />
+                <HomeAdSlot adCodes={adCodes} placement="home_after_gift" />
 
-                <HomeAdSlot code={getAdCode(adCodes, 'home_before_reviews')} label="home_before_reviews" />
+                <HomeAdSlot adCodes={adCodes} placement="home_before_reviews" />
                 <ReviewsSection />
-                <HomeAdSlot code={getAdCode(adCodes, 'home_after_reviews')} label="home_after_reviews" />
+                <HomeAdSlot adCodes={adCodes} placement="home_after_reviews" />
               </>
             )}
           </>
@@ -785,7 +794,7 @@ export default function App() {
         coupons={coupons}
         onOpenCheckout={handleOpenCheckout}
         user={user}
-        adAboveCheckout={getAdCode(adCodes, 'cart_above_checkout')}
+        adAboveCheckout={adCodes.cart_above_checkout || adCodes.site_common_ad}
       />
 
       <WishlistDrawer
