@@ -15,6 +15,7 @@ import {
 } from './checkoutStorage';
 import { computeCouponDiscountAmount } from '../utils/couponDiscount';
 import PageAdSlot from '../components/PageAdSlot';
+import { makeAdResolver } from '../utils/resolveAdCode';
 import './CheckoutFlow.css';
 
 const PAY_METHODS = [
@@ -120,7 +121,7 @@ export default function CheckoutFlow({
   onAddToCart,
   onSelectProduct,
 }) {
-  const ad = (key) => adCodes[key] || '';
+  const ad = makeAdResolver(adCodes);
   const step = stepIndexFromSlug(stepSlug);
   const [stored, setStored] = useState(loadCheckoutState);
   const [authMode, setAuthMode] = useState('login');

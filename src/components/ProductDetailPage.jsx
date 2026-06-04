@@ -7,6 +7,7 @@ import ProductDiscountChip from './ProductDiscountChip';
 import PageBackButton from './PageBackButton';
 import StoreCouponsPromo from './StoreCouponsPromo';
 import PageAdSlot from './PageAdSlot';
+import { makeAdResolver } from '../utils/resolveAdCode';
 
 export default function ProductDetailPage({ 
   product, 
@@ -20,7 +21,7 @@ export default function ProductDetailPage({
   coupons = [],
   adCodes = {},
 }) {
-  const ad = (key) => adCodes[key] || '';
+  const ad = makeAdResolver(adCodes);
   if (!product) return null;
 
   const [selectedSize, setSelectedSize] = useState(product.sizes ? product.sizes[0] : '');

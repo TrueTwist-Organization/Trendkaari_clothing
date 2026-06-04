@@ -12,6 +12,7 @@ import {
 import { findMenuGroupForTag, MENU_MEN_GROUPS, MENU_WOMEN_GROUPS } from '../data/navCategories';
 import PageBackButton from './PageBackButton';
 import PageAdSlot from './PageAdSlot';
+import { makeAdResolver } from '../utils/resolveAdCode';
 
 const MOBILE_TABS_MQ = '(max-width: 768px)';
 
@@ -36,7 +37,7 @@ export default function CollectionListingPage({
   products = [],
   adCodes = {},
 }) {
-  const ad = (key) => adCodes[key] || '';
+  const ad = makeAdResolver(adCodes);
   const [selectedSizes, setSelectedSizes] = useState({});
   const [sortBy, setSortBy] = useState('featured');
   const [filters, setFilters] = useState({

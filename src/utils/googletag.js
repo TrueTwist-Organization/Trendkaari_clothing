@@ -4,8 +4,9 @@ let loadPromise = null;
 let servicesEnabled = false;
 let flushTimer = null;
 
-/** elementId → slot config — batched so enableServices runs after all defineSlot calls */
+/** elementId → slot config */
 const slotRegistry = new Map();
+const displayedIds = new Set();
 
 function loadGptScript() {
   if (document.querySelector(`script[src="${GPT_SRC}"]`)) {
@@ -61,15 +62,16 @@ function findSlotByElementId(id) {
 }
 
 function scheduleGptFlush() {
-  if (flushTimer !== null) return;
+  clearTimeout(flushTimer);
   flushTimer = window.setTimeout(() => {
     flushTimer = null;
     void flushGptSlots();
-  }, 50);
+  }, 120);
 }
 
 function flushGptSlotsInCmd() {
   const configs = [...slotRegistry.values()].filter((c) => document.getElementById(c.id));
+  if (!configs.length) return;
 
   configs.forEach((config) => {
     if (!config?.id || findSlotByElementId(config.id)) return;
@@ -80,25 +82,32 @@ function flushGptSlotsInCmd() {
     }
   });
 
-  if (!servicesEnabled && configs.length > 0) {
+  if (!servicesEnabled) {
     window.googletag.pubads().enableSingleRequest();
-    window.googletag.pubads().collapseEmptyDivs();
     window.googletag.enableServices();
     servicesEnabled = true;
   }
 
   configs.forEach((config) => {
-    if (!document.getElementById(config.id)) return;
-    window.googletag.display(config.id);
-    const slot = findSlotByElementId(config.id);
-    if (slot) {
-      try {
+    const el = document.getElementById(config.id);
+    if (!el) return;
+
+    try {
+      window.googletag.display(config.id);
+      displayedIds.add(config.id);
+      const slot = findSlotByElementId(config.id);
+      if (slot) {
         window.googletag.pubads().refresh([slot]);
-      } catch {
-        /* refresh optional */
       }
+    } catch (err) {
+      console.warn('[gpt] display failed', config.id, err);
     }
   });
+
+  const needsRetry = [...slotRegistry.values()].some(
+    (c) => document.getElementById(c.id) && !displayedIds.has(c.id)
+  );
+  if (needsRetry) scheduleGptFlush();
 }
 
 async function flushGptSlots() {
@@ -115,7 +124,7 @@ async function flushGptSlots() {
   }
 }
 
-/** Register + display GPT slots injected via admin HTML (supports multiple slots per page). */
+/** Register + display GPT slots injected via admin HTML. */
 export async function displayGptAdsIn(root, preparedHtml = '') {
   if (!root) return;
 
@@ -132,6 +141,12 @@ export async function displayGptAdsIn(root, preparedHtml = '') {
   scheduleGptFlush();
 }
 
+/** Re-request display when slot scrolls into view (sidebar, checkout, below fold). */
+export function refreshGptAdsIn(root, preparedHtml = '') {
+  if (!root) return;
+  displayGptAdsIn(root, preparedHtml);
+}
+
 /** Remove slots tied to a placement key (SPA unmount). */
 export function destroyGptSlotsBySuffix(suffix) {
   if (!suffix || typeof window === 'undefined') return;
@@ -140,6 +155,7 @@ export function destroyGptSlotsBySuffix(suffix) {
   for (const [id] of slotRegistry) {
     if (id.includes(`__${suffix}`)) {
       slotRegistry.delete(id);
+      displayedIds.delete(id);
       toRemove.push(id);
     }
   }

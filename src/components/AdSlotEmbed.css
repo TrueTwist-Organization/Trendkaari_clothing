@@ -3,7 +3,11 @@
   margin: 12px 0;
   overflow: visible;
   text-align: center;
-  min-height: 50px;
+  min-height: 90px;
+}
+
+.ad-slot-embed:empty {
+  min-height: 0;
 }
 
 .ad-slot-embed--global {

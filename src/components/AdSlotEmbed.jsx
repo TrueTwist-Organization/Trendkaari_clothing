@@ -1,12 +1,14 @@
 import { useEffect, useRef } from 'react';
 import { fillAdsbygoogleIn } from '../utils/adsbygoogle';
-import { displayGptAdsIn, isGptBootstrapScript } from '../utils/googletag';
+import { displayGptAdsIn, isGptBootstrapScript, refreshGptAdsIn } from '../utils/googletag';
 import { destroyGptSlotsForKey, prepareAdHtmlForSlot } from '../utils/adHtml';
 import './AdSlotEmbed.css';
 
 /** Inject admin HTML/scripts so &lt;script&gt; tags actually execute */
 export default function AdSlotEmbed({ html, className = '', slotKey = '' }) {
   const hostRef = useRef(null);
+  const wrapRef = useRef(null);
+  const preparedRef = useRef('');
 
   useEffect(() => {
     const host = hostRef.current;
@@ -17,9 +19,11 @@ export default function AdSlotEmbed({ html, className = '', slotKey = '' }) {
     if (!text) return;
 
     const prepared = slotKey ? prepareAdHtmlForSlot(text, slotKey) : text;
+    preparedRef.current = prepared;
     const wrap = document.createElement('div');
     wrap.innerHTML = prepared;
     host.appendChild(wrap);
+    wrapRef.current = wrap;
 
     wrap.querySelectorAll('script').forEach((oldScript) => {
       const src = oldScript.getAttribute('src') || '';
@@ -42,7 +46,22 @@ export default function AdSlotEmbed({ html, className = '', slotKey = '' }) {
     void fillAdsbygoogleIn(wrap);
     void displayGptAdsIn(wrap, prepared);
 
+    const observer =
+      typeof IntersectionObserver !== 'undefined'
+        ? new IntersectionObserver(
+            (entries) => {
+              if (entries.some((e) => e.isIntersecting) && wrapRef.current) {
+                refreshGptAdsIn(wrapRef.current, preparedRef.current);
+              }
+            },
+            { rootMargin: '80px', threshold: 0.01 }
+          )
+        : null;
+
+    if (observer) observer.observe(host);
+
     return () => {
+      observer?.disconnect();
       if (slotKey) destroyGptSlotsForKey(slotKey);
     };
   }, [html, slotKey]);
