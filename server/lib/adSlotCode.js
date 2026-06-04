@@ -16,3 +16,23 @@ export function decodeAdCode(stored = '', encoded = true) {
     return raw;
   }
 }
+
+function looksLikeAdHtml(text = '') {
+  return /<(script|div|ins|iframe)/i.test(String(text || ''));
+}
+
+/** Unwrap accidental double-base64 saves back to HTML/plain ad code. */
+export function normalizeAdPlaintext(raw = '', { encoded = false } = {}) {
+  let text = String(raw || '').trim();
+  if (!text) return '';
+  if (encoded) {
+    text = decodeAdCode(text, true).trim();
+    if (!text) return '';
+  }
+  for (let i = 0; i < 2 && !looksLikeAdHtml(text); i += 1) {
+    const next = decodeAdCode(text, true).trim();
+    if (!next || next === text) break;
+    text = next;
+  }
+  return text;
+}

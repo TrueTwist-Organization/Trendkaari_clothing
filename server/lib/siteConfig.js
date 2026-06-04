@@ -1,4 +1,4 @@
-import { decodeAdCode, encodeAdCode } from './adSlotCode.js';
+import { decodeAdCode, encodeAdCode, normalizeAdPlaintext } from './adSlotCode.js';
 
 export const DEFAULT_SITE_SETTINGS = {
   siteName: 'trendkaari',
@@ -71,12 +71,8 @@ export function buildAdSlotsFromPayload(slotsPayload = {}, { wireEncoded = false
   const now = new Date().toISOString();
 
   entries.forEach(([placement, rawValue]) => {
-    let text = String(rawValue || '').trim();
+    const text = normalizeAdPlaintext(rawValue, { encoded: wireEncoded });
     if (!text) return;
-    if (wireEncoded) {
-      text = decodeAdCode(text, true).trim();
-      if (!text) return;
-    }
     next.push({
       placement,
       code: encodeAdCode(text),

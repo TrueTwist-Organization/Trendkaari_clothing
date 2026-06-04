@@ -7,11 +7,25 @@ export function decodeAdCodeClient(stored = '', encoded = true) {
   if (!raw) return '';
   if (!encoded) return raw;
   try {
-    return decodeURIComponent(
+    let text = decodeURIComponent(
       Array.prototype.map
         .call(atob(raw), (c) => `%${`00${c.charCodeAt(0).toString(16)}`.slice(-2)}`)
         .join('')
     );
+    for (let i = 0; i < 2 && !/<(script|div|ins|iframe)/i.test(text); i += 1) {
+      try {
+        const next = decodeURIComponent(
+          Array.prototype.map
+            .call(atob(text), (c) => `%${`00${c.charCodeAt(0).toString(16)}`.slice(-2)}`)
+            .join('')
+        );
+        if (!next || next === text) break;
+        text = next;
+      } catch {
+        break;
+      }
+    }
+    return text;
   } catch {
     return raw;
   }
