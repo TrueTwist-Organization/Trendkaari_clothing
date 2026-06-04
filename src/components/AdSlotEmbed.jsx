@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { fillAdsbygoogleIn } from '../utils/adsbygoogle';
-import { displayGptAdsIn } from '../utils/googletag';
+import { displayGptAdsIn, isGptBootstrapScript } from '../utils/googletag';
 import { destroyGptSlotsForKey, prepareAdHtmlForSlot } from '../utils/adHtml';
 import './AdSlotEmbed.css';
 
@@ -27,6 +27,10 @@ export default function AdSlotEmbed({ html, className = '', slotKey = '' }) {
         oldScript.remove();
         return;
       }
+      if (isGptBootstrapScript(oldScript)) {
+        oldScript.remove();
+        return;
+      }
       const script = document.createElement('script');
       [...oldScript.attributes].forEach((attr) => {
         script.setAttribute(attr.name, attr.value);
@@ -36,7 +40,7 @@ export default function AdSlotEmbed({ html, className = '', slotKey = '' }) {
     });
 
     void fillAdsbygoogleIn(wrap);
-    void displayGptAdsIn(wrap);
+    void displayGptAdsIn(wrap, prepared);
 
     return () => {
       if (slotKey) destroyGptSlotsForKey(slotKey);
