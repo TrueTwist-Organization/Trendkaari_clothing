@@ -498,7 +498,7 @@ router.patch('/settings', requireAdmin, async (req, res) => {
 });
 
 router.get('/ad-slots', requireAdmin, async (req, res) => {
-  const adSlots = await resolveStoreAdSlots(readStore().adSlots);
+  const adSlots = await resolveStoreAdSlots(readStore().adSlots, { includeDefaults: false });
   res.json({ adSlots: getAdSlotsForAdmin({ adSlots }) });
 });
 
@@ -524,7 +524,7 @@ function parseAdSlotsBody(body = {}) {
 
 router.put('/ad-slots', requireAdmin, async (req, res) => {
   const parsed = parseAdSlotsBody(req.body || {});
-  const { slots, slotsEncoded, clientFilledCount, merge: mergeMode } = parsed;
+  const { slots, slotsEncoded, clientFilledCount, merge: mergeMode, replaceAll } = parsed;
   if (!slots || typeof slots !== 'object' || Array.isArray(slots)) {
     return res.status(400).json({
       error: 'Could not read ad slots from request. Reload the page and save again.',
@@ -532,6 +532,7 @@ router.put('/ad-slots', requireAdmin, async (req, res) => {
   }
   const filledOnWire = Number(clientFilledCount) || Object.keys(slots).length;
   const next = buildAdSlotsFromPayload(slots, { wireEncoded: Boolean(slotsEncoded) });
+  const useReplace = replaceAll !== false && !mergeMode;
 
   if (filledOnWire > 0 && next.length === 0) {
     return res.status(400).json({
@@ -542,8 +543,8 @@ router.put('/ad-slots', requireAdmin, async (req, res) => {
     });
   }
 
-  if (filledOnWire === 0 && next.length === 0) {
-    const existing = await resolveStoreAdSlots();
+  if (useReplace && filledOnWire === 0 && next.length === 0) {
+    const existing = await resolveStoreAdSlots(undefined, { includeDefaults: false });
     if (existing.length > 0) {
       return res.status(400).json({
         error:
@@ -556,7 +557,7 @@ router.put('/ad-slots', requireAdmin, async (req, res) => {
 
   let merged;
   try {
-    merged = mergeMode ? await mergeAdSlots(next) : await replaceAdSlots(next);
+    merged = useReplace ? await replaceAdSlots(next) : await mergeAdSlots(next);
   } catch (err) {
     console.error('[ad-slots] save failed:', err);
     return res.status(err.message?.includes('wipe') || err.message?.includes('remove') ? 400 : 503).json({
@@ -565,12 +566,11 @@ router.put('/ad-slots', requireAdmin, async (req, res) => {
     });
   }
 
-  const adSlots = await resolveStoreAdSlots(merged);
   res.json({
     message: 'Ad slots saved',
     saved: merged.length,
-    activeAdSlots: adSlots.length,
-    adSlots: getAdSlotsForAdmin({ adSlots }),
+    activeAdSlots: merged.length,
+    adSlots: getAdSlotsForAdmin({ adSlots: merged }),
   });
 });
 

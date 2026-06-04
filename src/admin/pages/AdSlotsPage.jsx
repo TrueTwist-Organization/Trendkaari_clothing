@@ -59,8 +59,16 @@ export default function AdSlotsPage({ onToast }) {
 
   const handleSaveAll = async () => {
     const filledRows = rows.filter((row) => String(row.code || '').trim());
-    if (!filledRows.length) {
+    const previouslySaved = rows.filter((row) => row.updatedAt);
+    const removedCount = previouslySaved.filter((row) => !String(row.code || '').trim()).length;
+
+    if (!filledRows.length && !previouslySaved.length) {
       onToast('No slots had code — paste your ad HTML first', 'error');
+      return;
+    }
+
+    if (!filledRows.length) {
+      onToast('To remove all ads, clear every box and save — or keep at least one slot filled', 'error');
       return;
     }
 
@@ -79,6 +87,8 @@ export default function AdSlotsPage({ onToast }) {
             `Only ${saved} of ${filledOnForm} slot(s) saved — check for blocked script tags and try again.`,
             'error'
           );
+        } else if (removedCount > 0) {
+          onToast(`${saved} slot(s) saved — ${removedCount} removed from live site`);
         } else {
           onToast(`${saved} ad slot(s) saved — persists across refreshes`);
         }

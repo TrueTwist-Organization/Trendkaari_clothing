@@ -100,13 +100,13 @@ function encodeSlotsForWire(slots = {}) {
     clientFilledCount += 1;
     encoded[placement] = utf8ToBase64(text);
   }
-  return { slots: encoded, slotsEncoded: true, clientFilledCount };
+  return { slots: encoded, slotsEncoded: true, clientFilledCount, replaceAll: true };
 }
 
 async function putAdSlots(body) {
   return apiFetch('/api/admin/ad-slots', {
     method: 'PUT',
-    body: JSON.stringify(body),
+    body: JSON.stringify({ replaceAll: true, ...body }),
   });
 }
 
@@ -114,46 +114,22 @@ function isSaveBlocked(err) {
   return err?.status === 400;
 }
 
-/** Save filled ad slots — encoded payload avoids hosting WAF blocking script tags. */
+/** Save ad slots — replaceAll so cleared boxes are removed from storage. */
 export async function saveAdminAdSlots(slots) {
   const inner = encodeSlotsForWire(slots);
   const filled = Object.entries(slots).filter(([, code]) => String(code || '').trim());
 
   if (!filled.length) {
-    return putAdSlots(inner);
+    return putAdSlots({ ...inner, replaceAll: true });
   }
 
-  // 1) Encoded bulk payload (safest on Vercel / production WAF)
   try {
     return await putAdSlots({ payloadB64: utf8ToBase64(JSON.stringify(inner)) });
   } catch (bulkEncodedErr) {
     if (!isSaveBlocked(bulkEncodedErr)) throw bulkEncodedErr;
   }
 
-  // 2) Direct encoded body (works on local dev)
-  try {
-    return await putAdSlots(inner);
-  } catch (bulkDirectErr) {
-    if (!isSaveBlocked(bulkDirectErr)) throw bulkDirectErr;
-  }
-
-  // 3) One slot at a time — small payloads bypass firewall limits
-  let lastResult = null;
-  for (const [placement, code] of filled) {
-    const single = encodeSlotsForWire({ [placement]: code });
-    const payload = { ...single, merge: true };
-    try {
-      lastResult = await putAdSlots({ payloadB64: utf8ToBase64(JSON.stringify(payload)) });
-    } catch {
-      lastResult = await putAdSlots(payload);
-    }
-  }
-
-  return {
-    ...lastResult,
-    saved: filled.length,
-    message: `${filled.length} ad slot(s) saved one-by-one`,
-  };
+  return putAdSlots(inner);
 }
 
 export function fetchAdminGiftCombos() {

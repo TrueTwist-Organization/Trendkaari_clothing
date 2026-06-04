@@ -183,12 +183,17 @@ export async function savePersistedAdSlots(adSlots, { allowEmpty = false } = {})
 }
 
 /** Always read fresh from durable storage for public/admin APIs */
-export async function resolveStoreAdSlots(fallback = []) {
+export async function resolveStoreAdSlots(fallback = [], { includeDefaults = true } = {}) {
   const persisted = await loadPersistedAdSlots({ bypassCache: true });
-  if (persisted?.length) return persisted;
 
-  const defaults = getDefaultAdSlots();
-  if (defaults.length) return defaults;
+  if (persisted !== undefined && persisted.length > 0) {
+    return persisted;
+  }
+
+  if (includeDefaults) {
+    const defaults = getDefaultAdSlots();
+    if (defaults.length) return defaults;
+  }
 
   if (memCacheLoaded && memCache?.length) return memCache;
   return Array.isArray(fallback) ? fallback : [];
