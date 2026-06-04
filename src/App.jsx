@@ -37,6 +37,7 @@ import { userMe } from './api/userApi';
 import { getUserToken, setUserToken } from './api/client';
 import CheckoutFlow from './checkout/CheckoutFlow';
 import { saveCheckoutState } from './checkout/checkoutStorage';
+import { normalizeCheckoutSlug } from './checkout/checkoutRoutes';
 import './App.css';
 
 export default function App() {
@@ -65,6 +66,16 @@ export default function App() {
           isCategoryPage: false,
           infoSlug: null,
         };
+      } else if (segments[0] === 'checkout') {
+        const slug = normalizeCheckoutSlug(segments[1] || 'bag');
+        return {
+          viewMode: 'checkout',
+          checkoutSlug: slug,
+          activeCategory: 'all',
+          selectedProduct: null,
+          isCategoryPage: false,
+          infoSlug: null,
+        };
       } else if (segments[0] === 'info' && segments[1]) {
         const slug = decodeURIComponent(segments[1]);
         return {
@@ -73,6 +84,7 @@ export default function App() {
           selectedProduct: null,
           isCategoryPage: false,
           infoSlug: getInfoPage(slug) ? slug : null,
+          checkoutSlug: null,
         };
       }
     }
@@ -82,6 +94,7 @@ export default function App() {
       selectedProduct: null,
       isCategoryPage: false,
       infoSlug: null,
+      checkoutSlug: null,
     };
   };
 
@@ -92,6 +105,7 @@ export default function App() {
   const [viewMode, setViewMode] = useState(initialRoute.viewMode);
   const [isCategoryPage, setIsCategoryPage] = useState(initialRoute.isCategoryPage);
   const [infoSlug, setInfoSlug] = useState(initialRoute.infoSlug ?? null);
+  const [checkoutSlug, setCheckoutSlug] = useState(initialRoute.checkoutSlug ?? 'bag');
 
   const [cartItems, setCartItems] = useState([]);
   const [wishlistItems, setWishlistItems] = useState(() => loadWishlist());
@@ -107,7 +121,6 @@ export default function App() {
   const [authModalMode, setAuthModalMode] = useState('login');
   const [isAccountOpen, setIsAccountOpen] = useState(false);
   const [pendingCheckout, setPendingCheckout] = useState(false);
-  const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
 
   // Simulated Orders database (synced with API when server running)
   const [orders, setOrders] = useState([
@@ -193,6 +206,19 @@ export default function App() {
       setIsCategoryPage(false);
       setInfoSlug(null);
       window.scrollTo(0, 0);
+    } else if (segments[0] === 'checkout') {
+      const slug = normalizeCheckoutSlug(segments[1] || 'bag');
+      if (!segments[1]) {
+        window.history.replaceState({}, '', `/checkout/${slug}`);
+      }
+      setCheckoutSlug(slug);
+      setViewMode('checkout');
+      setActiveCategory('all');
+      setSelectedProduct(null);
+      setIsCategoryPage(false);
+      setInfoSlug(null);
+      setIsCartOpen(false);
+      window.scrollTo(0, 0);
     } else if (segments[0] === 'info' && segments[1]) {
       const slug = decodeURIComponent(segments[1]);
       if (getInfoPage(slug)) {
@@ -211,6 +237,7 @@ export default function App() {
       setSelectedProduct(null);
       setIsCategoryPage(false);
       setInfoSlug(null);
+      setCheckoutSlug('bag');
       window.scrollTo(0, 0);
     }
   };
@@ -255,6 +282,7 @@ export default function App() {
       setSelectedProduct(route.selectedProduct);
       setIsCategoryPage(route.isCategoryPage);
       setInfoSlug(route.infoSlug ?? null);
+      setCheckoutSlug(route.checkoutSlug ?? 'bag');
     };
 
     window.addEventListener('popstate', handlePopState);
@@ -264,9 +292,11 @@ export default function App() {
   useEffect(() => {
     document.body.classList.toggle('category-page', isCategoryPage);
     document.body.classList.toggle('info-page', viewMode === 'info');
+    document.body.classList.toggle('checkout-page', viewMode === 'checkout');
     return () => {
       document.body.classList.remove('category-page');
       document.body.classList.remove('info-page');
+      document.body.classList.remove('checkout-page');
     };
   }, [isCategoryPage, viewMode]);
 
@@ -315,7 +345,17 @@ export default function App() {
     }
     saveCheckoutState(partial);
     setIsCartOpen(false);
-    setIsCheckoutOpen(true);
+    navigateToRoute('/checkout/bag');
+  };
+
+  const handleExitCheckout = () => {
+    navigateToRoute('/');
+  };
+
+  const handleNavigateCheckout = (path) => {
+    if (typeof path === 'string' && path.startsWith('/')) {
+      navigateToRoute(path);
+    }
   };
 
   const handleCheckoutPlaceOrder = async (orderDetails) => {
@@ -503,7 +543,7 @@ export default function App() {
     setUser(loggedInUser);
     if (pendingCheckout) {
       setPendingCheckout(false);
-      setIsCheckoutOpen(true);
+      navigateToRoute('/checkout/bag');
     }
   };
 
@@ -739,8 +779,10 @@ export default function App() {
       />
 
       <CheckoutFlow
-        isOpen={isCheckoutOpen}
-        onClose={() => setIsCheckoutOpen(false)}
+        isOpen={viewMode === 'checkout'}
+        stepSlug={checkoutSlug}
+        onNavigateCheckout={handleNavigateCheckout}
+        onClose={handleExitCheckout}
         cartItems={cartItems}
         coupons={coupons}
         user={user}
@@ -751,11 +793,11 @@ export default function App() {
         onRemoveItem={handleRemoveItem}
         onClearCart={handleClearCart}
         onContinueShopping={() => {
-          setIsCheckoutOpen(false);
+          handleExitCheckout();
           navigateToRoute('/');
         }}
         onReviewCart={() => {
-          setIsCheckoutOpen(false);
+          handleExitCheckout();
           setIsCartOpen(true);
         }}
       />

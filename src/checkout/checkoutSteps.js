@@ -1,22 +1,45 @@
-/** Full checkout journey: 15 pages (indices 0–14). */
-export const CHECKOUT_STEP_COUNT = 15;
+/** Checkout journey — 10 pages with URL paths under /checkout/:slug */
+export const CHECKOUT_BASE = '/checkout';
+export const CHECKOUT_STEP_COUNT = 10;
 
-export const CHECKOUT_STEPS = [
-  { id: 'bag', icon: '🛍️', label: 'My Bag' },
-  { id: 'promo', icon: '✨', label: 'Offers' },
-  { id: 'coupon', icon: '🏷️', label: 'Promo Code' },
-  { id: 'totals', icon: '🧾', label: 'Bill' },
-  { id: 'welcome', icon: '👋', label: 'Welcome' },
-  { id: 'auth', icon: '🔐', label: 'Account' },
-  { id: 'signin', icon: '📧', label: 'Sign In' },
-  { id: 'contact', icon: '👤', label: 'Name' },
-  { id: 'phone', icon: '📱', label: 'Phone' },
-  { id: 'address', icon: '📍', label: 'Address' },
-  { id: 'delivery', icon: '🏙️', label: 'Delivery' },
-  { id: 'review', icon: '🛍️', label: 'Items' },
-  { id: 'summary', icon: '📋', label: 'Summary' },
-  { id: 'payment', icon: '💳', label: 'Payment' },
-  { id: 'success', icon: '✅', label: 'Done' },
+export const CHECKOUT_PHASES = [
+  { id: 'bag', label: 'My Bag' },
+  { id: 'savings', label: 'Savings' },
+  { id: 'account', label: 'Account' },
+  { id: 'delivery', label: 'Delivery' },
+  { id: 'review', label: 'Review Items' },
+  { id: 'summary', label: 'Order Summary' },
+  { id: 'payment', label: 'Payment' },
+  { id: 'done', label: 'Done' },
 ];
 
-export const SUCCESS_STEP_INDEX = 14;
+export const CHECKOUT_STEPS = [
+  { id: 'bag', path: 'bag', label: 'Shopping bag', phase: 0 },
+  { id: 'savings', path: 'savings', label: 'Offers & promo', phase: 1 },
+  { id: 'totals', path: 'total', label: 'Order total', phase: 1 },
+  { id: 'account', path: 'account', label: 'Account', phase: 2 },
+  { id: 'contact', path: 'contact', label: 'Contact details', phase: 3 },
+  { id: 'address', path: 'address', label: 'Delivery address', phase: 3 },
+  { id: 'review', path: 'review', label: 'Review items', phase: 4 },
+  { id: 'summary', path: 'summary', label: 'Order summary', phase: 5 },
+  { id: 'payment', path: 'payment', label: 'Payment', phase: 6 },
+  { id: 'success', path: 'success', label: 'Order placed', phase: 7 },
+];
+
+export const SUCCESS_STEP_INDEX = 9;
+export const DEFAULT_CHECKOUT_SLUG = 'bag';
+
+export function getPhaseIndex(stepIndex) {
+  return CHECKOUT_STEPS[stepIndex]?.phase ?? 0;
+}
+
+export function stepsInPhase(phaseIndex) {
+  return CHECKOUT_STEPS.filter((s) => s.phase === phaseIndex).length;
+}
+
+export function stepIndexInPhase(stepIndex) {
+  const phase = getPhaseIndex(stepIndex);
+  const stepsInP = CHECKOUT_STEPS.filter((s) => s.phase === phase);
+  const id = CHECKOUT_STEPS[stepIndex]?.id;
+  return Math.max(0, stepsInP.findIndex((s) => s.id === id));
+}

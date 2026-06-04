@@ -3,9 +3,9 @@ import { X, WifiOff, RefreshCw } from 'lucide-react';
 import { userLogin, userRegister } from '../api/userApi';
 import { setUserToken } from '../api/client';
 import OrderTechnicalError from './OrderTechnicalError';
-import CheckoutProgress from './CheckoutProgress';
 import CheckoutStepPages from './CheckoutStepPages';
 import { SUCCESS_STEP_INDEX } from './checkoutSteps';
+import { checkoutPathForStep, stepIndexFromSlug } from './checkoutRoutes';
 import {
   loadCheckoutState,
   saveCheckoutState,
@@ -101,6 +101,8 @@ function passwordStrength(pw) {
 
 export default function CheckoutFlow({
   isOpen,
+  stepSlug = 'bag',
+  onNavigateCheckout,
   onClose,
   cartItems = [],
   coupons = [],
@@ -115,7 +117,7 @@ export default function CheckoutFlow({
   onClearCart,
 }) {
   const ad = (key) => adCodes[key] || '';
-  const [step, setStep] = useState(0);
+  const step = stepIndexFromSlug(stepSlug);
   const [stored, setStored] = useState(loadCheckoutState);
   const [authMode, setAuthMode] = useState('login');
   const [loginTab, setLoginTab] = useState('email');
@@ -150,16 +152,13 @@ export default function CheckoutFlow({
 
   const handleClose = useCallback(() => {
     if (step >= SUCCESS_STEP_INDEX) {
-      const saved = loadCheckoutState();
       saveCheckoutState({ step: 0 });
-      setStep(0);
-      setStored({ ...saved, step: 0 });
     }
     setCompletedOrder(null);
     setOrderFailed(false);
     setOrderFailMessage('');
     onClose?.();
-  }, [step, user, onClose]);
+  }, [step, onClose]);
 
   useEffect(() => {
     const on = () => setOffline(false);
@@ -186,22 +185,11 @@ export default function CheckoutFlow({
     setOrderFailed(false);
     setOrderFailMessage('');
 
-    // Stale success step from a previous order leaves a blank screen (success UI needs completedOrder).
-    let initialStep = Number(normalized.step) || 0;
-    if (initialStep >= SUCCESS_STEP_INDEX || initialStep > 13) {
-      initialStep = 0;
-      normalized = { ...normalized, step: initialStep };
-      saveCheckoutState({ step: initialStep, payment: normalized.payment });
-    }
-
     setStored(normalized);
     if (payment !== saved.payment) saveCheckoutState({ payment: normalized.payment });
 
     if (user) {
-      const stepForUser = Math.max(initialStep, 4);
-      setStep(stepForUser);
       persist({
-        step: stepForUser,
         shipping: {
           ...normalized.shipping,
           fullName: normalized.shipping.fullName || user.name || '',
@@ -209,15 +197,14 @@ export default function CheckoutFlow({
         },
         login: { ...normalized.login, email: user.email || normalized.login.email },
       });
-    } else {
-      setStep(initialStep);
-      if (initialStep !== normalized.step) persist({ step: initialStep });
     }
+
+    persist({ step });
     document.body.style.overflow = 'hidden';
     return () => {
       document.body.style.overflow = '';
     };
-  }, [isOpen, user, persist]);
+  }, [isOpen, user, persist, step]);
 
   useEffect(() => {
     if (!isOpen || step >= SUCCESS_STEP_INDEX) return;
@@ -226,10 +213,21 @@ export default function CheckoutFlow({
   }, [isOpen, step]);
 
   useEffect(() => {
-    if (!isOpen || step !== 13) return;
+    if (!isOpen || step !== 8) return;
     if (stored.payment?.method === 'cod') return;
     persist({ payment: { ...stored.payment, method: 'cod' } });
   }, [isOpen, step, stored.payment?.method, persist]);
+
+  useEffect(() => {
+    if (!isOpen || !onNavigateCheckout) return;
+    if (step === SUCCESS_STEP_INDEX && !completedOrder) {
+      onNavigateCheckout(checkoutPathForStep(0));
+      return;
+    }
+    if (cartItems.length === 0 && step !== 0 && step !== SUCCESS_STEP_INDEX) {
+      onNavigateCheckout(checkoutPathForStep(0));
+    }
+  }, [isOpen, step, cartItems.length, completedOrder, onNavigateCheckout]);
 
   useEffect(() => {
     const onKey = (e) => {
@@ -247,10 +245,10 @@ export default function CheckoutFlow({
 
   const goStep = (n, anim) => {
     setTransition(anim || 'co-step-enter');
-    setStep(n);
     persist({ step: n });
     setError('');
     setFieldErrors({});
+    onNavigateCheckout?.(checkoutPathForStep(n));
     if (n === SUCCESS_STEP_INDEX) {
       setSuccessPause(true);
       setTimeout(() => setSuccessPause(false), 320);
@@ -305,7 +303,7 @@ export default function CheckoutFlow({
       setLoginSuccess(true);
       setTimeout(() => {
         setLoginSuccess(false);
-        goStep(7);
+        goStep(4);
       }, 900);
     };
 
@@ -376,21 +374,7 @@ export default function CheckoutFlow({
     });
     setFieldErrors({});
     setError('');
-    goStep(9);
-    return true;
-  };
-
-  const validateShippingStreet = () => {
-    const s = stored.shipping || {};
-    if (!s.address?.trim()) {
-      setFieldErrors({ address: 'Street address is required' });
-      setError('');
-      triggerShake();
-      return false;
-    }
-    setFieldErrors({});
-    setError('');
-    goStep(10);
+    goStep(5);
     return true;
   };
 
@@ -405,7 +389,7 @@ export default function CheckoutFlow({
     if (Object.keys(errs).length) {
       setFieldErrors(errs);
       if (errs.address) {
-        setError('Go back to Address step and fill your street / building details.');
+        setError('Please fill in your street address above.');
       } else {
         setError('Please complete all delivery fields below.');
       }
@@ -425,7 +409,7 @@ export default function CheckoutFlow({
     setShipLoading(true);
     setTimeout(() => {
       setShipLoading(false);
-      goStep(11);
+      goStep(6);
     }, 700);
     return true;
   };
@@ -446,8 +430,8 @@ export default function CheckoutFlow({
     const orderEmail =
       stored.shipping?.email?.trim() || stored.login?.email?.trim() || user?.email?.trim() || '';
     if (!orderEmail) {
-      setError('Add your email on the phone step, then try again.');
-      goStep(8);
+      setError('Add your email on the contact step, then try again.');
+      goStep(4);
       return;
     }
     setPaymentProcessing(true);
@@ -581,7 +565,6 @@ export default function CheckoutFlow({
     strength,
     goStep,
     validateShippingContact,
-    validateShippingStreet,
     validateShippingAddress,
     updateShipping,
     selectedAddressId,
@@ -670,8 +653,6 @@ export default function CheckoutFlow({
         <X size={22} />
       </button>
 
-      {!orderFailed && step < SUCCESS_STEP_INDEX && <CheckoutProgress currentStep={step} />}
-
       {offline && (
         <div className="co-alert-banner offline" style={{ margin: '0 24px 8px', maxWidth: 1052, marginLeft: 'auto', marginRight: 'auto' }}>
           <WifiOff size={18} />
@@ -682,15 +663,17 @@ export default function CheckoutFlow({
         </div>
       )}
 
-      {reservedMinutes > 0 && step === 13 && (
+      {reservedMinutes > 0 && step === 8 && (
         <div className="co-alert-banner warn" style={{ margin: '0 24px 8px', maxWidth: 1052, marginLeft: 'auto', marginRight: 'auto' }}>
           Items reserved for {reservedMinutes} min — complete checkout soon.
         </div>
       )}
 
-      <div className={`co-body co-body--pages ${step === SUCCESS_STEP_INDEX ? 'co-body--success' : ''}`}>
-        <div className={`co-main-panel co-main-panel--page ${step === SUCCESS_STEP_INDEX ? 'co-main-panel--success' : ''} ${transition}`}>
-          <CheckoutStepPages step={step} ctx={stepCtx} />
+      <div className={`co-layout co-layout--cards ${step === SUCCESS_STEP_INDEX ? 'co-layout--success' : ''}`}>
+        <div className={`co-body co-body--pages ${step === SUCCESS_STEP_INDEX ? 'co-body--success' : ''}`}>
+          <div className={`co-main-panel co-main-panel--page ${step === SUCCESS_STEP_INDEX ? 'co-main-panel--success' : ''} ${transition}`}>
+            <CheckoutStepPages step={step} ctx={stepCtx} />
+          </div>
         </div>
       </div>
     </div>
