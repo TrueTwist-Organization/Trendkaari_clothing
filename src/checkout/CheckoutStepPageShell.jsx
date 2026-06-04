@@ -1,4 +1,4 @@
-import PageAdSlot from '../components/PageAdSlot';
+import PlacedAdSlot from '../components/PlacedAdSlot';
 import CheckoutStepExtras from './CheckoutStepExtras';
 import { CHECKOUT_STEPS } from './checkoutSteps';
 
@@ -10,18 +10,10 @@ export function checkoutAdKeysForStep(stepIndex) {
   };
 }
 
-function resolveCheckoutAd(ad, key, fallbackKey) {
-  const code = ad(key);
-  if (String(code || '').trim()) return { code, label: key };
-  const fallback = ad(fallbackKey);
-  if (String(fallback || '').trim()) return { code: fallback, label: fallbackKey };
-  return { code: '', label: key };
-}
-
 /** Two ad slots (top + bottom) for each checkout step page. */
 export default function CheckoutStepPageShell({
   step,
-  ad,
+  adCodes = {},
   children,
   cartItems = [],
   subtotal = 0,
@@ -30,15 +22,13 @@ export default function CheckoutStepPageShell({
   onSelectProduct,
 }) {
   const keys = checkoutAdKeysForStep(step);
-  const top = resolveCheckoutAd(ad, keys.top, 'checkout_all_steps_top');
-  const bottom = resolveCheckoutAd(ad, keys.bottom, 'checkout_all_steps_bottom');
 
   return (
     <div className="co-step-page-with-ads">
-      <PageAdSlot
-        key={`${step}-${top.label}`}
-        code={top.code}
-        label={top.label}
+      <PlacedAdSlot
+        adCodes={adCodes}
+        placement={keys.top}
+        allowGlobal
         variant="checkout"
       />
       <div className="co-step-page-stack">
@@ -52,10 +42,10 @@ export default function CheckoutStepPageShell({
           onSelectProduct={onSelectProduct}
         />
       </div>
-      <PageAdSlot
-        key={`${step}-${bottom.label}`}
-        code={bottom.code}
-        label={bottom.label}
+      <PlacedAdSlot
+        adCodes={adCodes}
+        placement={keys.bottom}
+        allowGlobal
         variant="checkout"
       />
     </div>

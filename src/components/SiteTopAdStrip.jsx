@@ -18,7 +18,7 @@ export default function SiteTopAdStrip({
   const sourceKey = useHome ? 'home_below_header' : globalSlotKey;
 
   if (!code) return null;
-  if (!claimAdSource(sourceKey)) return null;
+  if (!claimAdSource(sourceKey, slotKey)) return null;
 
   return (
     <div className="site-top-ad-strip" data-has-ads="true">

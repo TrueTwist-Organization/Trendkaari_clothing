@@ -11,8 +11,7 @@ import {
 } from '../utils/priceFilters';
 import { findMenuGroupForTag, MENU_MEN_GROUPS, MENU_WOMEN_GROUPS } from '../data/navCategories';
 import PageBackButton from './PageBackButton';
-import PageAdSlot from './PageAdSlot';
-import { makeAdResolver } from '../utils/resolveAdCode';
+import PlacedAdSlot from './PlacedAdSlot';
 
 const MOBILE_TABS_MQ = '(max-width: 768px)';
 
@@ -37,7 +36,6 @@ export default function CollectionListingPage({
   products = [],
   adCodes = {},
 }) {
-  const ad = makeAdResolver(adCodes);
   const [selectedSizes, setSelectedSizes] = useState({});
   const [sortBy, setSortBy] = useState('featured');
   const [filters, setFilters] = useState({
@@ -357,7 +355,7 @@ export default function CollectionListingPage({
 
   return (
     <div className="collection-listing-page-wrapper">
-      <PageAdSlot code={ad('category_top')} label="category_top" variant="section" />
+      <PlacedAdSlot adCodes={adCodes} placement="category_top" allowGlobal variant="section" />
 
       {/* 1. Header Banner & Editorial Section */}
       <div className="collection-banner-header">
@@ -391,9 +389,9 @@ export default function CollectionListingPage({
         </div>
       </div>
 
-      <PageAdSlot code={ad('category_after_banner')} label="category_after_banner" variant="section" />
+      <PlacedAdSlot adCodes={adCodes} placement="category_after_banner" allowGlobal variant="section" />
 
-      <PageAdSlot code={ad('category_before_quick_tabs')} label="category_before_quick_tabs" variant="section" />
+      <PlacedAdSlot adCodes={adCodes} placement="category_before_quick_tabs" allowGlobal variant="section" />
 
       {/* 2. Quick Navigation Tabs — mobile: auto-scroll; desktop: manual scroll */}
       <div className={`collection-quick-tabs-bar${isMobileTabs ? ' collection-quick-tabs-bar--auto' : ''}`}>
@@ -417,7 +415,7 @@ export default function CollectionListingPage({
         </div>
       </div>
 
-      <PageAdSlot code={ad('category_after_quick_tabs')} label="category_after_quick_tabs" variant="section" />
+      <PlacedAdSlot adCodes={adCodes} placement="category_after_quick_tabs" allowGlobal variant="section" />
 
       {/* 3. Main Workspace: left sidebar filters & right product listing */}
       <div className="container collection-main-workspace-grid">
@@ -450,9 +448,10 @@ export default function CollectionListingPage({
             </button>
           </div>
 
-          <PageAdSlot
-            code={ad('category_sidebar_top')}
-            label="category_sidebar_top"
+          <PlacedAdSlot
+            adCodes={adCodes}
+            placement="category_sidebar_top"
+            allowGlobal
             variant="sidebar"
           />
 
@@ -604,15 +603,17 @@ export default function CollectionListingPage({
             </div>
           </div>
 
-          <PageAdSlot
-            code={ad('category_sidebar_middle')}
-            label="category_sidebar_middle"
+          <PlacedAdSlot
+            adCodes={adCodes}
+            placement="category_sidebar_middle"
+            allowGlobal
             variant="sidebar"
           />
 
-          <PageAdSlot
-            code={ad('category_sidebar_bottom')}
-            label="category_sidebar_bottom"
+          <PlacedAdSlot
+            adCodes={adCodes}
+            placement="category_sidebar_bottom"
+            allowGlobal
             variant="sidebar"
           />
 
@@ -626,9 +627,10 @@ export default function CollectionListingPage({
 
         {/* ==================== RIGHT PRODUCT LISTING SECTION ==================== */}
         <main className="collection-listing-main-content">
-          <PageAdSlot
-            code={ad('category_above_sort')}
-            label="category_above_sort"
+          <PlacedAdSlot
+            adCodes={adCodes}
+            placement="category_above_sort"
+            allowGlobal
             variant="container"
           />
 
@@ -656,26 +658,33 @@ export default function CollectionListingPage({
             </div>
           </div>
 
-          <PageAdSlot
-            code={ad('category_below_sort')}
-            label="category_below_sort"
+          <PlacedAdSlot
+            adCodes={adCodes}
+            placement="category_below_sort"
+            allowGlobal
             variant="container"
           />
 
           <div className="category-mobile-sidebar-ads" aria-label="Promotions">
-            <PageAdSlot
-              code={ad('category_sidebar_top')}
-              label="category_sidebar_top_mobile"
+            <PlacedAdSlot
+              adCodes={adCodes}
+              placement="category_sidebar_top"
+              ownerKey="category_sidebar_top_mobile"
+              allowGlobal
               variant="container"
             />
-            <PageAdSlot
-              code={ad('category_sidebar_middle')}
-              label="category_sidebar_middle_mobile"
+            <PlacedAdSlot
+              adCodes={adCodes}
+              placement="category_sidebar_middle"
+              ownerKey="category_sidebar_middle_mobile"
+              allowGlobal
               variant="container"
             />
-            <PageAdSlot
-              code={ad('category_sidebar_bottom')}
-              label="category_sidebar_bottom_mobile"
+            <PlacedAdSlot
+              adCodes={adCodes}
+              placement="category_sidebar_bottom"
+              ownerKey="category_sidebar_bottom_mobile"
+              allowGlobal
               variant="container"
             />
           </div>
@@ -787,9 +796,12 @@ export default function CollectionListingPage({
 
                   </div>
                   {showMidGridAd && (
-                    <PageAdSlot
-                      code={ad('ads_every_2_products')}
-                      label="ads_every_2_products"
+                    <PlacedAdSlot
+                      adCodes={adCodes}
+                      placement="ads_every_2_products"
+                      ownerKey={`ads_every_2_products_${index}`}
+                      allowGlobal
+                      allowDuplicateSource
                       variant="grid-full"
                     />
                   )}
@@ -800,9 +812,10 @@ export default function CollectionListingPage({
           ) : null}
 
           {sortedItems.length > 0 && (
-            <PageAdSlot
-              code={ad('category_after_grid')}
-              label="category_after_grid"
+            <PlacedAdSlot
+              adCodes={adCodes}
+              placement="category_after_grid"
+              allowGlobal
               variant="container"
             />
           )}
@@ -826,7 +839,7 @@ export default function CollectionListingPage({
 
       </div>
 
-      <PageAdSlot code={ad('category_page_bottom')} label="category_page_bottom" variant="section" />
+      <PlacedAdSlot adCodes={adCodes} placement="category_page_bottom" allowGlobal variant="section" />
     </div>
   );
 }

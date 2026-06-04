@@ -14,8 +14,7 @@ import {
   pincodeServiceable,
 } from './checkoutStorage';
 import { computeCouponDiscountAmount } from '../utils/couponDiscount';
-import PageAdSlot from '../components/PageAdSlot';
-import { makeAdResolver } from '../utils/resolveAdCode';
+import PlacedAdSlot from '../components/PlacedAdSlot';
 import './CheckoutFlow.css';
 
 const PAY_METHODS = [
@@ -121,7 +120,6 @@ export default function CheckoutFlow({
   onAddToCart,
   onSelectProduct,
 }) {
-  const ad = makeAdResolver(adCodes);
   const step = stepIndexFromSlug(stepSlug);
   const [stored, setStored] = useState(loadCheckoutState);
   const [authMode, setAuthMode] = useState('login');
@@ -550,7 +548,7 @@ export default function CheckoutFlow({
     transition,
     cartItems,
     coupons,
-    ad,
+    adCodes,
     stored,
     subtotal,
     discount,
@@ -623,9 +621,10 @@ export default function CheckoutFlow({
           <X size={22} />
         </button>
         <div className="co-body co-body--fail">
-          <PageAdSlot
-            code={ad('checkout_step_error_top') || ad('checkout_all_steps_top')}
-            label="checkout_step_error_top"
+          <PlacedAdSlot
+            adCodes={adCodes}
+            placement="checkout_step_error_top"
+            allowGlobal
             variant="checkout"
           />
           <OrderTechnicalError
@@ -642,9 +641,10 @@ export default function CheckoutFlow({
               onReviewCart?.();
             }}
           />
-          <PageAdSlot
-            code={ad('checkout_step_error_bottom') || ad('checkout_all_steps_bottom')}
-            label="checkout_step_error_bottom"
+          <PlacedAdSlot
+            adCodes={adCodes}
+            placement="checkout_step_error_bottom"
+            allowGlobal
             variant="checkout"
           />
         </div>

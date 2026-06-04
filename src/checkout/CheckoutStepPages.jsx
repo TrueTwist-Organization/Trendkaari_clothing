@@ -23,9 +23,9 @@ import { CheckoutFreeShipBar } from './CheckoutStepExtras';
 import { SUCCESS_STEP_INDEX } from './checkoutSteps';
 import { formatCouponDiscountShort } from '../utils/couponDiscount';
 
-function wrapStep(stepIndex, node, ad, shellProps = {}) {
+function wrapStep(stepIndex, node, adCodes, shellProps = {}) {
   return (
-    <CheckoutStepPageShell step={stepIndex} ad={ad} {...shellProps}>
+    <CheckoutStepPageShell step={stepIndex} adCodes={adCodes} {...shellProps}>
       {node}
     </CheckoutStepPageShell>
   );
@@ -56,7 +56,7 @@ export default function CheckoutStepPages({ step, ctx }) {
     transition,
     cartItems,
     coupons,
-    ad,
+    adCodes,
     stored,
     subtotal,
     discount,
@@ -136,7 +136,7 @@ export default function CheckoutStepPages({ step, ctx }) {
             </button>
           </div>
         ),
-        ad,
+        adCodes,
         shellProps
       );
     }
@@ -204,7 +204,7 @@ export default function CheckoutStepPages({ step, ctx }) {
           <NavRow onNext={() => goStep(1)} nextLabel="Continue to savings" />
         </div>
       ),
-      ad,
+      adCodes,
       shellProps
     );
   }
@@ -274,7 +274,7 @@ export default function CheckoutStepPages({ step, ctx }) {
           <NavRow onBack={() => goStep(0)} onNext={() => goStep(2)} nextLabel="View order total" />
         </div>
       ),
-      ad,
+      adCodes,
       shellProps
     );
   }
@@ -314,7 +314,7 @@ export default function CheckoutStepPages({ step, ctx }) {
           <NavRow onBack={() => goStep(1)} onNext={() => goStep(3)} nextLabel="Continue — account" />
         </div>
       ),
-      ad,
+      adCodes,
       shellProps
     );
   }
@@ -467,7 +467,7 @@ export default function CheckoutStepPages({ step, ctx }) {
           />
         </div>
       ),
-      ad,
+      adCodes,
       shellProps
     );
   }
@@ -519,7 +519,7 @@ export default function CheckoutStepPages({ step, ctx }) {
           <NavRow onBack={() => goStep(3)} onNext={validateShippingContact} nextLabel="Continue — address" />
         </div>
       ),
-      ad,
+      adCodes,
       shellProps
     );
   }
@@ -644,7 +644,7 @@ export default function CheckoutStepPages({ step, ctx }) {
           />
         </div>
       ),
-      ad,
+      adCodes,
       shellProps
     );
   }
@@ -678,7 +678,7 @@ export default function CheckoutStepPages({ step, ctx }) {
           <NavRow onBack={() => goStep(5)} onNext={() => goStep(7)} nextLabel="Continue — summary" />
         </div>
       ),
-      ad,
+      adCodes,
       shellProps
     );
   }
@@ -727,7 +727,7 @@ export default function CheckoutStepPages({ step, ctx }) {
           <NavRow onBack={() => goStep(6)} onNext={() => goStep(8)} nextLabel="Proceed to payment" />
         </div>
       ),
-      ad,
+      adCodes,
       shellProps
     );
   }
@@ -791,7 +791,7 @@ export default function CheckoutStepPages({ step, ctx }) {
           />
         </div>
       ),
-      ad,
+      adCodes,
       shellProps
     );
   }
@@ -817,7 +817,7 @@ export default function CheckoutStepPages({ step, ctx }) {
           }}
         />
       ),
-      ad,
+      adCodes,
       shellProps
     );
   }

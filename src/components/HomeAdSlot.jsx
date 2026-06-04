@@ -12,7 +12,8 @@ export default function HomeAdSlot({ adCodes, placement, code, label }) {
   if (!String(resolved.code || '').trim()) return null;
 
   const source = resolved.resolvedFrom || placement || label;
-  if (!claimAdSource(source)) return null;
+  const owner = placement || label || source;
+  if (!claimAdSource(source, owner)) return null;
 
   return (
     <PageAdSlot
