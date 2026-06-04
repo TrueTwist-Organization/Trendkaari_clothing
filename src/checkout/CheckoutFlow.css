@@ -880,6 +880,50 @@
   transform: translateY(-2px);
 }
 
+.co-contact-alt {
+  margin-top: 4px;
+  padding: 14px 14px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(122, 30, 72, 0.14);
+  background: rgba(248, 242, 235, 0.55);
+}
+
+.co-contact-alt__heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--co-accent, #7a1e48);
+}
+
+.co-contact-alt__icons {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--co-accent, #7a1e48);
+}
+
+.co-contact-alt__hint {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: rgba(42, 0, 25, 0.55);
+  font-size: 12px;
+}
+
+.co-contact-alt__or {
+  margin: 10px 0;
+}
+
+.co-contact-alt__error {
+  margin: 8px 0 0;
+}
+
 .co-or-divider {
   display: flex;
   align-items: center;
@@ -888,6 +932,7 @@
   color: var(--co-accent);
   font-size: 11px;
   letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .co-or-line {
@@ -1471,6 +1516,8 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: all 0.25s;
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
 .co-btn-back:hover {
@@ -1495,6 +1542,8 @@
   overflow: hidden;
   box-shadow: none;
   transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
 .co-btn-primary:hover:not(:disabled) {

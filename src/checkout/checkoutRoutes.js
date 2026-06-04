@@ -12,6 +12,9 @@ export function checkoutPathForStep(stepIndex) {
 
 export function stepIndexFromSlug(slug) {
   const normalized = String(slug || DEFAULT_CHECKOUT_SLUG).toLowerCase();
+  if (normalized === 'account') {
+    return CHECKOUT_STEPS.findIndex((s) => s.id === 'contact');
+  }
   const idx = CHECKOUT_STEPS.findIndex((s) => s.path === normalized);
   return idx >= 0 ? idx : 0;
 }
@@ -33,6 +36,7 @@ export function isCheckoutPath(pathname) {
 
 export function normalizeCheckoutSlug(slug) {
   if (slug === 'error') return 'error';
+  if (slug === 'account') return 'contact';
   const idx = stepIndexFromSlug(slug);
   return slugFromStepIndex(idx);
 }

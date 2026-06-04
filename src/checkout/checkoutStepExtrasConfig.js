@@ -38,18 +38,11 @@ export const CHECKOUT_STEP_EXTRAS = {
       { icon: 'receipt', label: 'GST invoice', sub: 'On request' },
     ],
   },
-  account: {
-    tip: {
-      tone: 'calm',
-      title: 'Faster next time',
-      text: 'Sign in to save addresses, track orders, and checkout faster on your next visit.',
-    },
-  },
   contact: {
     tip: {
       tone: 'calm',
       title: 'Stay updated',
-      text: 'We will send order confirmations and delivery updates to your phone and email.',
+      text: 'Use email or phone — whichever you prefer. Order and delivery updates go to the one you enter.',
     },
   },
   address: {

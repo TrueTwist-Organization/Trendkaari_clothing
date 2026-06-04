@@ -380,7 +380,10 @@ export default function App() {
         throw new Error('We could not complete your order due to a technical issue.');
       }
 
-      if (result.emailSent !== true) {
+      const orderHasEmail = Boolean(
+        orderDetails.email?.trim() && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(orderDetails.email.trim())
+      );
+      if (orderHasEmail && result.emailSent !== true) {
         setOrders((prev) => [newOrder, ...prev]);
         throw new Error(
           'Confirmation email could not be sent. Please try checkout again in a few minutes.'

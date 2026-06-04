@@ -14,6 +14,12 @@ import {
   pincodeServiceable,
 } from './checkoutStorage';
 import { computeCouponDiscountAmount } from '../utils/couponDiscount';
+import {
+  contactFromShipping,
+  validateContactFields,
+  validateAddressFields,
+  firstIncompleteStepBeforePayment,
+} from './checkoutValidation';
 import PlacedAdSlot from '../components/PlacedAdSlot';
 import { refreshAllGptSlots } from '../utils/googletag';
 import './CheckoutFlow.css';
@@ -238,7 +244,7 @@ export default function CheckoutFlow({
   }, [isOpen, step]);
 
   useEffect(() => {
-    if (!isOpen || step !== 8) return;
+    if (!isOpen || step !== 7) return;
     if (stored.payment?.method === 'cod') return;
     persist({ payment: { ...stored.payment, method: 'cod' } });
   }, [isOpen, step, stored.payment?.method, persist]);
@@ -269,12 +275,15 @@ export default function CheckoutFlow({
   const grandTotal = Math.max(0, subtotal - discount + shipping + tax);
 
   const goStep = (n, anim) => {
+    const target = Math.max(0, Math.min(n, SUCCESS_STEP_INDEX));
     setTransition(anim || 'co-step-enter');
-    persist({ step: n });
+    persist({ step: target });
     setError('');
     setFieldErrors({});
-    onNavigateCheckout?.(checkoutPathForStep(n));
-    if (n === SUCCESS_STEP_INDEX) {
+    onNavigateCheckout?.(checkoutPathForStep(target));
+    window.scrollTo?.({ top: 0, behavior: 'smooth' });
+    panelRef.current?.scrollIntoView?.({ behavior: 'smooth', block: 'start' });
+    if (target === SUCCESS_STEP_INDEX) {
       setSuccessPause(true);
       setTimeout(() => setSuccessPause(false), 320);
     }
@@ -328,7 +337,7 @@ export default function CheckoutFlow({
       setLoginSuccess(true);
       setTimeout(() => {
         setLoginSuccess(false);
-        goStep(4);
+        goStep(3);
       }, 900);
     };
 
@@ -376,41 +385,34 @@ export default function CheckoutFlow({
 
   const validateShippingContact = () => {
     const s = stored.shipping || {};
-    const errs = {};
-    if (!s.fullName?.trim()) errs.fullName = 'Required';
-    const email = s.email?.trim() || stored.login?.email?.trim() || '';
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      errs.email = 'Valid email required for order confirmation';
-    }
-    if (!s.phone?.trim() || s.phone.replace(/\D/g, '').length < 10) errs.phone = 'Valid phone required';
+    const loginEmail = stored.login?.email?.trim() || user?.email?.trim() || '';
+    const errs = validateContactFields(s, loginEmail);
+
     if (Object.keys(errs).length) {
       setFieldErrors(errs);
       setError('');
       triggerShake();
       return false;
     }
+
+    const { email, phone, hasValidEmail, hasValidPhone } = contactFromShipping(s, loginEmail);
     persist({
       shipping: {
         ...s,
-        email,
+        email: hasValidEmail ? email : '',
         fullName: s.fullName?.trim(),
-        phone: s.phone?.trim(),
+        phone: hasValidPhone ? phone : '',
       },
     });
     setFieldErrors({});
     setError('');
-    goStep(5);
+    goStep(4);
     return true;
   };
 
   const validateShippingAddress = () => {
     const s = stored.shipping || {};
-    const errs = {};
-    if (!s.address?.trim()) errs.address = 'Street address is required';
-    if (!s.city?.trim()) errs.city = 'City is required';
-    if (!s.state?.trim()) errs.state = 'State is required';
-    const pin = pincodeServiceable(s.pincode);
-    if (!pin.ok) errs.pincode = pin.reason;
+    const errs = validateAddressFields(s);
     if (Object.keys(errs).length) {
       setFieldErrors(errs);
       if (errs.address) {
@@ -434,12 +436,42 @@ export default function CheckoutFlow({
     setShipLoading(true);
     setTimeout(() => {
       setShipLoading(false);
-      goStep(6);
+      goStep(5);
     }, 700);
     return true;
   };
 
+  const ensureReadyForPayment = () => {
+    const loginEmail = stored.login?.email?.trim() || user?.email?.trim() || '';
+    const blocked = firstIncompleteStepBeforePayment(stored, loginEmail);
+    if (blocked === 3) {
+      setFieldErrors(validateContactFields(stored.shipping, loginEmail));
+      setError('Please complete contact details before payment.');
+      triggerShake();
+      goStep(3);
+      return false;
+    }
+    if (blocked === 4) {
+      setFieldErrors(validateAddressFields(stored.shipping));
+      setError('Please complete your delivery address before payment.');
+      triggerShake();
+      goStep(4);
+      return false;
+    }
+    setFieldErrors({});
+    setError('');
+    return true;
+  };
+
+  const proceedToPayment = () => {
+    if (!ensureReadyForPayment()) return false;
+    goStep(7);
+    return true;
+  };
+
   const placeOrder = async () => {
+    if (!ensureReadyForPayment()) return;
+
     if (cartItems.length === 0) {
       setError('Your bag is empty');
       return;
@@ -454,9 +486,12 @@ export default function CheckoutFlow({
     }
     const orderEmail =
       stored.shipping?.email?.trim() || stored.login?.email?.trim() || user?.email?.trim() || '';
-    if (!orderEmail) {
-      setError('Add your email on the contact step, then try again.');
-      goStep(4);
+    const orderPhone = stored.shipping?.phone?.trim() || user?.phone?.trim() || '';
+    const hasOrderEmail = Boolean(orderEmail && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(orderEmail));
+    const hasOrderPhone = orderPhone.replace(/\D/g, '').length >= 10;
+    if (!hasOrderEmail && !hasOrderPhone) {
+      setError('Add your email or phone on the contact step, then try again.');
+      goStep(3);
       return;
     }
     setPaymentProcessing(true);
@@ -490,7 +525,7 @@ export default function CheckoutFlow({
       if (!result?.order) {
         throw new Error('We could not complete your order due to a technical issue.');
       }
-      if (result.emailSent !== true) {
+      if (hasOrderEmail && result.emailSent !== true) {
         throw new Error(
           result.emailError ||
             'Confirmation email could not be sent. Please start checkout again from your bag.'
@@ -592,6 +627,7 @@ export default function CheckoutFlow({
     goStep,
     validateShippingContact,
     validateShippingAddress,
+    proceedToPayment,
     updateShipping,
     selectedAddressId,
     setSelectedAddressId,
@@ -706,7 +742,7 @@ export default function CheckoutFlow({
         </div>
       )}
 
-      {reservedMinutes > 0 && step === 8 && (
+      {reservedMinutes > 0 && step === 7 && (
         <div className="co-alert-banner warn" style={{ margin: '0 24px 8px', maxWidth: 1052, marginLeft: 'auto', marginRight: 'auto' }}>
           Items reserved for {reservedMinutes} min — complete checkout soon.
         </div>

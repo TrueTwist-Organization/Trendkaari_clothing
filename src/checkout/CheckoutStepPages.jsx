@@ -1,9 +1,6 @@
 import {
   Mail,
-  Lock,
   Phone,
-  Eye,
-  EyeOff,
   MapPin,
   User,
   Home,
@@ -32,6 +29,18 @@ function wrapStep(stepIndex, node, adCodes, shellProps = {}) {
 }
 
 function NavRow({ onBack, onNext, backLabel = 'Back', nextLabel = 'Continue', nextDisabled, nextLoading }) {
+  const handleNext = () => {
+    if (nextDisabled || nextLoading || !onNext) return;
+    try {
+      const result = onNext();
+      if (result && typeof result.then === 'function') {
+        result.catch(() => {});
+      }
+    } catch {
+      /* validation handlers surface their own errors */
+    }
+  };
+
   return (
     <div className="co-cta-row">
       {onBack && (
@@ -43,7 +52,7 @@ function NavRow({ onBack, onNext, backLabel = 'Back', nextLabel = 'Continue', ne
         type="button"
         className={`co-btn-primary ${nextLoading ? 'loading' : ''}`}
         disabled={nextDisabled || nextLoading}
-        onClick={onNext}
+        onClick={handleNext}
       >
         {nextLoading ? 'Please wait…' : nextLabel}
       </button>
@@ -71,23 +80,12 @@ export default function CheckoutStepPages({ step, ctx }) {
     handleRemoveCoupon,
     onUpdateQty,
     onRemoveItem,
-    authMode,
-    setAuthMode,
-    loginTab,
-    setLoginTab,
-    user,
-    loginSuccess,
-    showPwd,
-    setShowPwd,
-    loading,
     error,
     fieldErrors,
-    shake,
-    validateLogin,
-    updateLogin,
     goStep,
     validateShippingContact,
     validateShippingAddress,
+    proceedToPayment,
     updateShipping,
     pinInfo,
     shipLoading,
@@ -101,7 +99,6 @@ export default function CheckoutStepPages({ step, ctx }) {
     onClose,
     reservedMinutes,
     PAY_METHODS,
-    AssistantIllustration,
     MapUnfoldIllustration,
     allProducts = [],
     onAddToCart,
@@ -311,7 +308,7 @@ export default function CheckoutStepPages({ step, ctx }) {
               <strong>₹{grandTotal}</strong>
             </div>
           </div>
-          <NavRow onBack={() => goStep(1)} onNext={() => goStep(3)} nextLabel="Continue — account" />
+          <NavRow onBack={() => goStep(1)} onNext={() => goStep(3)} nextLabel="Continue — contact" />
         </div>
       ),
       adCodes,
@@ -320,165 +317,19 @@ export default function CheckoutStepPages({ step, ctx }) {
   }
 
   if (step === 3) {
-    const showLoginForm = !user && authMode !== 'guest';
-
     return wrapStep(
       3,
       (
-        <div className={cardClass}>
+        <form
+          className={cardClass}
+          noValidate
+          onSubmit={(e) => {
+            e.preventDefault();
+            validateShippingContact();
+          }}
+        >
           <div className="co-page-head">
             <span className="co-page-badge">04</span>
-            <div>
-              <h2 className="co-step-heading">Your account</h2>
-              <p className="co-step-sub">Sign in, create an account, or checkout as guest</p>
-            </div>
-          </div>
-          {loginSuccess && (
-            <div className="co-login-success" role="status">
-              Welcome back — your bag is ready ✨
-            </div>
-          )}
-          {user ? (
-            <div className="co-account-card co-account-card--signed">
-              <AssistantIllustration wave />
-              <div>
-                <strong>{user.name || 'Member'}</strong>
-                <p>{user.email}</p>
-              </div>
-            </div>
-          ) : (
-            <>
-              <div className="co-pill-group co-pill-group--account">
-                <button
-                  type="button"
-                  className={`co-pill ${authMode === 'login' ? 'active' : ''}`}
-                  onClick={() => setAuthMode('login')}
-                >
-                  Sign in
-                </button>
-                <button
-                  type="button"
-                  className={`co-pill ${authMode === 'register' ? 'active' : ''}`}
-                  onClick={() => setAuthMode('register')}
-                >
-                  Create account
-                </button>
-                <button
-                  type="button"
-                  className={`co-pill ${authMode === 'guest' ? 'active' : ''}`}
-                  onClick={() => setAuthMode('guest')}
-                >
-                  Guest
-                </button>
-              </div>
-              {showLoginForm && (
-                <form
-                  className="co-account-form"
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    validateLogin();
-                  }}
-                >
-                  <div className="co-pill-group co-pill-group--compact">
-                    <button
-                      type="button"
-                      className={`co-pill ${loginTab === 'email' ? 'active' : ''}`}
-                      onClick={() => setLoginTab('email')}
-                    >
-                      Email
-                    </button>
-                    <button
-                      type="button"
-                      className={`co-pill ${loginTab === 'otp' ? 'active' : ''}`}
-                      onClick={() => setLoginTab('otp')}
-                    >
-                      Phone OTP
-                    </button>
-                  </div>
-                  <div className={`co-field ${shake ? 'shake' : ''}`}>
-                    <Mail size={18} className="co-field-icon" />
-                    <input
-                      type="email"
-                      placeholder=" "
-                      value={stored.login?.email || ''}
-                      onChange={(e) => updateLogin('email', e.target.value)}
-                    />
-                    <label>Email</label>
-                    {fieldErrors.email && <p className="co-field-error">{fieldErrors.email}</p>}
-                  </div>
-                  {loginTab === 'otp' ? (
-                    <div className="co-field">
-                      <Phone size={18} className="co-field-icon" />
-                      <input
-                        type="tel"
-                        placeholder=" "
-                        value={stored.login?.phone || ''}
-                        onChange={(e) => updateLogin('phone', e.target.value)}
-                      />
-                      <label>Phone (+91)</label>
-                    </div>
-                  ) : (
-                    <div className={`co-field ${fieldErrors.password ? 'shake' : ''}`}>
-                      <Lock size={18} className="co-field-icon" />
-                      <input
-                        type={showPwd ? 'text' : 'password'}
-                        placeholder=" "
-                        value={stored.login?.password || ''}
-                        onChange={(e) => updateLogin('password', e.target.value)}
-                      />
-                      <label>Password</label>
-                      <button type="button" className="co-pwd-toggle" onClick={() => setShowPwd((v) => !v)}>
-                        {showPwd ? <EyeOff size={18} /> : <Eye size={18} />}
-                      </button>
-                      {fieldErrors.password && <p className="co-field-error">{fieldErrors.password}</p>}
-                    </div>
-                  )}
-                  {error && <p className="co-field-error">{error}</p>}
-                </form>
-              )}
-              {authMode === 'guest' && (
-                <div className="co-guest-note">
-                  <p>Checkout without an account. We&apos;ll email your order confirmation.</p>
-                  <div className="co-field">
-                    <Mail size={18} className="co-field-icon" />
-                    <input
-                      type="email"
-                      placeholder=" "
-                      value={stored.login?.email || ''}
-                      onChange={(e) => updateLogin('email', e.target.value)}
-                    />
-                    <label>Email (optional)</label>
-                  </div>
-                </div>
-              )}
-            </>
-          )}
-          <NavRow
-            onBack={() => goStep(2)}
-            onNext={() => {
-              if (user) {
-                goStep(4);
-                return;
-              }
-              validateLogin();
-            }}
-            nextLabel={user ? 'Continue — delivery' : authMode === 'guest' ? 'Continue as guest' : 'Sign in & continue'}
-            nextLoading={loading}
-          />
-        </div>
-      ),
-      adCodes,
-      shellProps
-    );
-  }
-
-  if (step === 4) {
-    return wrapStep(
-      4,
-      (
-        <div className={cardClass}>
-          <div className="co-page-head">
-            <span className="co-page-badge">05</span>
             <div>
               <h2 className="co-step-heading">Contact details</h2>
               <p className="co-step-sub">Who should receive this order?</p>
@@ -494,43 +345,76 @@ export default function CheckoutStepPages({ step, ctx }) {
             <label>Full name</label>
             {fieldErrors.fullName && <p className="co-field-error">{fieldErrors.fullName}</p>}
           </div>
-          <div className="co-field">
-            <Mail size={18} className="co-field-icon" />
-            <input
-              type="email"
-              placeholder=" "
-              value={stored.shipping?.email || stored.login?.email || ''}
-              onChange={(e) => updateShipping('email', e.target.value)}
-            />
-            <label>Email</label>
-            {fieldErrors.email && <p className="co-field-error">{fieldErrors.email}</p>}
+          <div className="co-contact-alt">
+            <p className="co-contact-alt__heading">
+              <span className="co-contact-alt__icons" aria-hidden>
+                <Mail size={16} />
+                <Phone size={16} />
+              </span>
+              Email / phone
+              <span className="co-contact-alt__hint">Fill either one</span>
+            </p>
+            <div className="co-field">
+              <Mail size={18} className="co-field-icon" />
+              <input
+                type="email"
+                placeholder=" "
+                value={stored.shipping?.email || stored.login?.email || ''}
+                onChange={(e) => updateShipping('email', e.target.value)}
+                autoComplete="email"
+              />
+              <label>Email</label>
+              {fieldErrors.email && <p className="co-field-error">{fieldErrors.email}</p>}
+            </div>
+            <div className="co-or-divider co-contact-alt__or" aria-hidden>
+              <span className="co-or-line" />
+              <span>or</span>
+              <span className="co-or-line" />
+            </div>
+            <div className="co-field">
+              <Phone size={18} className="co-field-icon" />
+              <input
+                type="tel"
+                placeholder=" "
+                value={stored.shipping?.phone || ''}
+                onChange={(e) => updateShipping('phone', e.target.value)}
+                autoComplete="tel"
+              />
+              <label>Phone</label>
+              {fieldErrors.phone && <p className="co-field-error">{fieldErrors.phone}</p>}
+            </div>
+            {fieldErrors.contact && (
+              <p className="co-field-error co-contact-alt__error" role="alert">
+                {fieldErrors.contact}
+              </p>
+            )}
           </div>
-          <div className="co-field">
-            <Phone size={18} className="co-field-icon" />
-            <input
-              type="tel"
-              placeholder=" "
-              value={stored.shipping?.phone || ''}
-              onChange={(e) => updateShipping('phone', e.target.value)}
-            />
-            <label>Phone</label>
-            {fieldErrors.phone && <p className="co-field-error">{fieldErrors.phone}</p>}
-          </div>
-          <NavRow onBack={() => goStep(3)} onNext={validateShippingContact} nextLabel="Continue — address" />
-        </div>
+          <NavRow
+            onBack={() => goStep(2)}
+            onNext={validateShippingContact}
+            nextLabel="Continue — address"
+          />
+        </form>
       ),
       adCodes,
       shellProps
     );
   }
 
-  if (step === 5) {
+  if (step === 4) {
     return wrapStep(
-      5,
+      4,
       (
-        <div className={`${cardClass} co-ship-form`}>
+        <form
+          className={`${cardClass} co-ship-form`}
+          noValidate
+          onSubmit={(e) => {
+            e.preventDefault();
+            validateShippingAddress();
+          }}
+        >
           <div className="co-page-head">
-            <span className="co-page-badge">06</span>
+            <span className="co-page-badge">05</span>
             <div>
               <h2 className="co-step-heading">Delivery address</h2>
               <p className="co-step-sub">Where should we ship your order?</p>
@@ -637,25 +521,25 @@ export default function CheckoutStepPages({ step, ctx }) {
           )}
           {error && <p className="co-field-error co-step-error-banner">{error}</p>}
           <NavRow
-            onBack={() => goStep(4)}
+            onBack={() => goStep(3)}
             onNext={validateShippingAddress}
             nextLabel="Review order"
             nextLoading={shipLoading}
           />
-        </div>
+        </form>
       ),
       adCodes,
       shellProps
     );
   }
 
-  if (step === 6) {
+  if (step === 5) {
     return wrapStep(
-      6,
+      5,
       (
         <div className={`${cardClass} co-page-card--review`}>
           <div className="co-page-head">
-            <span className="co-page-badge">07</span>
+            <span className="co-page-badge">06</span>
             <div>
               <h2 className="co-step-heading">Review items</h2>
               <p className="co-step-sub">Check everything in your bag</p>
@@ -675,7 +559,7 @@ export default function CheckoutStepPages({ step, ctx }) {
               </div>
             ))}
           </div>
-          <NavRow onBack={() => goStep(5)} onNext={() => goStep(7)} nextLabel="Continue — summary" />
+          <NavRow onBack={() => goStep(4)} onNext={() => goStep(6)} nextLabel="Continue — summary" />
         </div>
       ),
       adCodes,
@@ -683,13 +567,13 @@ export default function CheckoutStepPages({ step, ctx }) {
     );
   }
 
-  if (step === 7) {
+  if (step === 6) {
     return wrapStep(
-      7,
+      6,
       (
         <div className={`${cardClass} co-page-card--review`}>
           <div className="co-page-head">
-            <span className="co-page-badge">08</span>
+            <span className="co-page-badge">07</span>
             <div>
               <h2 className="co-step-heading">Order summary</h2>
               <p className="co-step-sub">Delivery details & final totals</p>
@@ -700,11 +584,11 @@ export default function CheckoutStepPages({ step, ctx }) {
             <div>
               <strong>{stored.shipping?.fullName}</strong>
               <p>
-                {stored.shipping?.phone} · {stored.shipping?.email}
+                {[stored.shipping?.phone, stored.shipping?.email].filter(Boolean).join(' · ')}
                 <br />
                 {stored.shipping?.address}, {stored.shipping?.city} — {stored.shipping?.pincode}
               </p>
-              <button type="button" className="co-link-btn" onClick={() => goStep(5)}>
+              <button type="button" className="co-link-btn" onClick={() => goStep(4)}>
                 Edit address
               </button>
             </div>
@@ -724,7 +608,7 @@ export default function CheckoutStepPages({ step, ctx }) {
             appliedCoupon={appliedCoupon}
             compact
           />
-          <NavRow onBack={() => goStep(6)} onNext={() => goStep(8)} nextLabel="Proceed to payment" />
+          <NavRow onBack={() => goStep(5)} onNext={proceedToPayment} nextLabel="Proceed to payment" />
         </div>
       ),
       adCodes,
@@ -732,13 +616,13 @@ export default function CheckoutStepPages({ step, ctx }) {
     );
   }
 
-  if (step === 8) {
+  if (step === 7) {
     return wrapStep(
-      8,
+      7,
       (
         <div className={cardClass}>
           <div className="co-page-head">
-            <span className="co-page-badge">09</span>
+            <span className="co-page-badge">08</span>
             <div>
               <h2 className="co-step-heading">Payment</h2>
               <p className="co-step-sub">Pay ₹{grandTotal} · secure checkout</p>
@@ -784,7 +668,7 @@ export default function CheckoutStepPages({ step, ctx }) {
           {paymentFail && <p className="co-field-error">Payment failed — try again.</p>}
           {error && <p className="co-field-error">{error}</p>}
           <NavRow
-            onBack={() => goStep(7)}
+            onBack={() => goStep(6)}
             onNext={placeOrder}
             nextLabel={paymentProcessing ? 'Processing…' : 'Place order'}
             nextLoading={paymentProcessing}

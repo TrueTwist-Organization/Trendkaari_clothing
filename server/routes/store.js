@@ -44,11 +44,10 @@ router.post('/orders', optionalUser, async (req, res) => {
   const guestEmail = String(orderDetails.email || '').trim();
   const guestPhone = String(orderDetails.phone || '').trim();
 
-  if (!user && !guestEmail) {
-    return res.status(400).json({ error: 'Email is required to place your order' });
-  }
-  if (!user && guestPhone.replace(/\D/g, '').length < 10) {
-    return res.status(400).json({ error: 'Valid phone number is required' });
+  const hasValidEmail = Boolean(guestEmail && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(guestEmail));
+  const hasValidPhone = guestPhone.replace(/\D/g, '').length >= 10;
+  if (!user && !hasValidEmail && !hasValidPhone) {
+    return res.status(400).json({ error: 'Email or phone number is required to place your order' });
   }
 
   const newOrder = {
