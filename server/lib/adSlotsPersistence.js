@@ -159,7 +159,7 @@ export async function savePersistedAdSlots(adSlots, { allowEmpty = false } = {})
   if (useBlobPersistence()) {
     const { put } = await import('@vercel/blob');
     await put(BLOB_PATHNAME, payload, {
-      access: 'private',
+      access: 'public',
       addRandomSuffix: false,
       allowOverwrite: true,
       contentType: 'application/json',

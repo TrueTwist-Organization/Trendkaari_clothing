@@ -128,7 +128,7 @@ async function saveToBlob(store) {
   const mainPayload = { ...store };
   delete mainPayload.adSlots;
   await put(BLOB_PATHNAME, JSON.stringify(mainPayload), {
-    access: 'private',
+    access: 'public',
     addRandomSuffix: false,
     allowOverwrite: true,
     contentType: 'application/json',
