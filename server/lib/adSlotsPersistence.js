@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { useRedisPersistence } from './redisStore.js';
+import { getDefaultAdSlots } from './defaultAdSlots.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const LOCAL_AD_SLOTS_PATH = path.join(__dirname, '../data/ad-slots.json');
@@ -70,6 +71,9 @@ async function readFromDisk() {
 
 /** Default slots shipped in repo — used when production blob/redis is still empty. */
 function readBundledAdSlots() {
+  const imported = getDefaultAdSlots();
+  if (imported.length) return imported;
+
   try {
     if (!fs.existsSync(LOCAL_AD_SLOTS_PATH)) return [];
     const parsed = JSON.parse(fs.readFileSync(LOCAL_AD_SLOTS_PATH, 'utf8'));
@@ -181,7 +185,11 @@ export async function savePersistedAdSlots(adSlots, { allowEmpty = false } = {})
 /** Always read fresh from durable storage for public/admin APIs */
 export async function resolveStoreAdSlots(fallback = []) {
   const persisted = await loadPersistedAdSlots({ bypassCache: true });
-  if (persisted !== undefined) return persisted;
+  if (persisted?.length) return persisted;
+
+  const defaults = getDefaultAdSlots();
+  if (defaults.length) return defaults;
+
   if (memCacheLoaded && memCache?.length) return memCache;
   return Array.isArray(fallback) ? fallback : [];
 }
