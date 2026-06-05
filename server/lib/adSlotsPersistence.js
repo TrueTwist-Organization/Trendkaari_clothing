@@ -100,15 +100,25 @@ async function mergeWithBundledDefaults(list = []) {
   return mergeAdSlotRecords(bundled, validSaved);
 }
 
-/** If remote storage has corrupt/partial/ bloated ads, rewrite with merged defaults. */
+/** If remote storage has corrupt/partial/bloated ads, rewrite with bundled defaults. */
 async function healAdSlotsIfNeeded(rawList = []) {
   const valid = sanitizeAdSlotList(rawList);
-  const merged = await mergeWithBundledDefaults(rawList);
   const bundled = readBundledAdSlots();
-  const needsHeal =
-    valid.length > MAX_SAVED_AD_SLOTS ||
-    valid.length < merged.length ||
-    (bundled.length > 0 && valid.length > bundled.length + 2);
+
+  if (valid.length > MAX_SAVED_AD_SLOTS) {
+    if (useRedisPersistence() || useBlobPersistence()) {
+      try {
+        await savePersistedAdSlots(bundled, { allowEmpty: false });
+        console.log(`[ad-slots] trimmed bloated storage (${valid.length} → ${bundled.length} slots)`);
+      } catch (err) {
+        console.warn('[ad-slots] trim save failed:', err.message);
+      }
+    }
+    return bundled;
+  }
+
+  const merged = mergeAdSlotRecords(bundled, valid);
+  const needsHeal = valid.length < merged.length;
 
   if (!needsHeal) return valid.length ? valid : merged;
 
