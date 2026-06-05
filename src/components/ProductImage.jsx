@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import { getProductImageCandidates } from '../utils/productImages';
 
 const FALLBACK_SRC =
   'data:image/svg+xml,' +
@@ -7,12 +8,30 @@ const FALLBACK_SRC =
   );
 
 /** Product image with safe fallback when file is missing or fails to load. */
-export default function ProductImage({ src, alt, className = '', loading = 'lazy', decoding = 'async' }) {
-  const [currentSrc, setCurrentSrc] = useState(src || FALLBACK_SRC);
+export default function ProductImage({
+  src,
+  images,
+  product,
+  alt,
+  className = '',
+  loading = 'lazy',
+  decoding = 'async',
+}) {
+  const candidates = useMemo(() => {
+    const fromProduct = product ? getProductImageCandidates(product) : [];
+    const merged = [src, ...(Array.isArray(images) ? images : []), ...fromProduct]
+      .map((value) => String(value || '').trim())
+      .filter(Boolean);
+    return [...new Set(merged)];
+  }, [src, images, product]);
+
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    setCurrentSrc(src || FALLBACK_SRC);
-  }, [src]);
+    setIndex(0);
+  }, [candidates.join('|')]);
+
+  const currentSrc = candidates[index] || FALLBACK_SRC;
 
   return (
     <img
@@ -22,7 +41,13 @@ export default function ProductImage({ src, alt, className = '', loading = 'lazy
       loading={loading}
       decoding={decoding}
       onError={() => {
-        if (currentSrc !== FALLBACK_SRC) setCurrentSrc(FALLBACK_SRC);
+        if (index + 1 < candidates.length) {
+          setIndex((prev) => prev + 1);
+          return;
+        }
+        if (currentSrc !== FALLBACK_SRC) {
+          setIndex(candidates.length);
+        }
       }}
     />
   );

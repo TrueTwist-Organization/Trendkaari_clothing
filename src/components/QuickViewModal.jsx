@@ -3,6 +3,8 @@ import { X, Star, ShoppingBag, Plus, Minus, Heart, Truck, RefreshCw, ShieldCheck
 import './QuickViewModal.css';
 import ProductDiscountChip from './ProductDiscountChip';
 import StoreCouponsPromo from './StoreCouponsPromo';
+import ProductImage from './ProductImage';
+import { getProductGalleryImages, getProductPrimaryImage } from '../utils/productImages';
 
 export default function QuickViewModal({ 
   product, 
@@ -87,7 +89,7 @@ export default function QuickViewModal({
   };
 
   // Use the actual list of unzipped images inside the product directory
-  const pImages = product.images && product.images.length > 0 ? product.images : [product.image];
+  const pImages = getProductGalleryImages(product);
 
   // Filter similar items (prioritize same category, excluding active product)
   const categorySuggestions = allProducts.filter(p => p.category === product.category && p.id !== product.id);
@@ -133,11 +135,12 @@ export default function QuickViewModal({
             <div className="gallery-main-display">
               <span className="quickview-discount-tag-new">{product.discount || "SPECIAL DEAL"}</span>
               <div className="main-image-zoom-box">
-                <img 
-                  src={pImages[activeImageIndex] || product.image} 
-                  alt={product.title} 
-                  style={{ objectFit: 'cover' }}
-                  className="main-view-img" 
+                <ProductImage
+                  product={product}
+                  src={pImages[activeImageIndex] || getProductPrimaryImage(product)}
+                  images={pImages}
+                  alt={product.title}
+                  className="main-view-img"
                 />
               </div>
             </div>

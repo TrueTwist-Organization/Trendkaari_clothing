@@ -25,6 +25,7 @@ import {
 } from '../lib/giftCombos.js';
 import { saveComboImages } from '../lib/comboImage.js';
 import { createImageUpload, handleMultipartUpload, shouldUseMemoryUpload } from '../lib/uploadMiddleware.js';
+import { mergeUploadedProductImages, normalizeProductImages } from '../lib/productImages.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const UPLOAD_DIR = path.join(__dirname, '../../public/product-media');
@@ -306,7 +307,7 @@ router.get('/products', requireAdmin, async (req, res) => {
       console.warn('[admin] catalog auto-sync failed:', err.message);
     }
   }
-  let list = [...(store.products || [])];
+  let list = [...(store.products || [])].map(normalizeProductImages);
   const gender = req.query.gender;
   const category = req.query.category;
   const search = req.query.search?.toLowerCase();
@@ -339,7 +340,7 @@ router.post('/products', requireAdmin, uploadProductImages, async (req, res) => 
 
     const uploadedUrls = await saveUploadedProductImages(req.files || [], UPLOAD_DIR);
 
-    const product = buildProductFromPayload(parsed, uploadedUrls);
+    const product = normalizeProductImages(buildProductFromPayload(parsed, uploadedUrls));
     await updateStore((store) => {
       const maxId = store.products.reduce((m, p) => Math.max(m, p.id || 0), 0);
       product.id = maxId + 1;
@@ -366,7 +367,7 @@ router.patch('/products/:id', requireAdmin, uploadProductImages, async (req, res
     await updateStore((store) => {
       store.products = store.products.map((p) => {
         if (p.id !== id) return p;
-        updated = buildProductFromPayload({ ...p, ...parsed }, uploadedUrls, p);
+        updated = normalizeProductImages(buildProductFromPayload({ ...p, ...parsed }, uploadedUrls, p));
         updated.id = id;
         return updated;
       });
@@ -694,11 +695,7 @@ function buildProductFromPayload(data, newImages = [], existing = null) {
   const variants = data.variants || existing?.variants || [];
   const sizes = collectSizes(variants, data.sizes);
   const stock = computeTotalStock(variants, data.stock);
-  const images = [
-    ...(newImages.length ? newImages : []),
-    ...(data.images || existing?.images || []),
-  ].filter(Boolean);
-  const image = data.image || images[0] || existing?.image || '';
+  const { image, images } = mergeUploadedProductImages(data, newImages, existing);
 
   const base = {
     id: data.id ?? existing?.id,

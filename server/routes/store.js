@@ -4,12 +4,14 @@ import { sendOrderConfirmationEmail } from '../lib/orderEmail.js';
 import { optionalUser } from '../middleware/userAuth.js';
 import { getStoreSettings, getActiveAdSlots } from '../lib/siteConfig.js';
 import { getPublicGiftCombos } from '../lib/giftCombos.js';
+import { normalizeProductImages } from '../lib/productImages.js';
 
 const router = Router();
 
 router.get('/products', (req, res) => {
   const store = readStore();
-  res.json({ products: store.products });
+  const products = (store.products || []).map(normalizeProductImages);
+  res.json({ products });
 });
 
 router.get('/coupons', (req, res) => {

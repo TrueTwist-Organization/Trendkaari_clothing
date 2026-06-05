@@ -8,6 +8,7 @@ import PageBackButton from './PageBackButton';
 import StoreCouponsPromo from './StoreCouponsPromo';
 import PlacedAdSlot from './PlacedAdSlot';
 import ProductImage from './ProductImage';
+import { getProductGalleryImages } from '../utils/productImages';
 import { getAdCode } from '../utils/resolveAdCode';
 
 export default function ProductDetailPage({ 
@@ -63,7 +64,7 @@ export default function ProductDetailPage({
   };
 
   // Use the actual list of unzipped images inside the product directory
-  const pImages = product.images && product.images.length > 0 ? product.images : [product.image];
+  const pImages = getProductGalleryImages(product);
 
   // Filter similar items (prioritize same category, excluding active product)
   const categorySuggestions = allProducts.filter(p => p.category === product.category && p.id !== product.id);
@@ -116,8 +117,10 @@ export default function ProductDetailPage({
               <span className="pdp-discount-tag-label">{product.discount || 'SPECIAL OFFER'}</span>
               <div className="pdp-main-image-viewport">
                 <ProductImage
-                  key={pImages[activeImageIndex] || product.image}
-                  src={pImages[activeImageIndex] || product.image}
+                  key={pImages[activeImageIndex] || getProductGalleryImages(product)[0]}
+                  product={product}
+                  src={pImages[activeImageIndex]}
+                  images={pImages}
                   alt={product.title}
                   className="pdp-main-img"
                   loading="eager"

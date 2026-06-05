@@ -5,6 +5,8 @@ import {
   getSearchSectionSuggestions,
   resolveSearchToCategory,
 } from '../utils/searchCategories';
+import ProductImage from './ProductImage';
+import { getProductPrimaryImage } from '../utils/productImages';
 import './SearchDrawer.css';
 
 const popularKeywords = [
@@ -200,7 +202,12 @@ export default function SearchDrawer({
                     role="button"
                     tabIndex={0}
                   >
-                    <img src={product.image} alt={product.title} className="search-result-img" />
+                    <ProductImage
+                      product={product}
+                      src={getProductPrimaryImage(product)}
+                      alt={product.title}
+                      className="search-result-img"
+                    />
                     <div className="search-result-info">
                       <h5 className="search-result-title">{product.title}</h5>
                       <div className="search-result-prices">
@@ -222,7 +229,12 @@ export default function SearchDrawer({
                     role="button"
                     tabIndex={0}
                   >
-                    <img src={product.image} alt={product.title} className="search-result-img" />
+                    <ProductImage
+                      product={product}
+                      src={getProductPrimaryImage(product)}
+                      alt={product.title}
+                      className="search-result-img"
+                    />
                     <div className="search-result-info">
                       <h5 className="search-result-title">{product.title}</h5>
                       <div className="search-result-prices">

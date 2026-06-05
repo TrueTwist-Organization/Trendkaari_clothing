@@ -13,6 +13,7 @@ import { findMenuGroupForTag, MENU_MEN_GROUPS, MENU_WOMEN_GROUPS } from '../data
 import PageBackButton from './PageBackButton';
 import PlacedAdSlot from './PlacedAdSlot';
 import ProductImage from './ProductImage';
+import { getProductHoverImage, getProductPrimaryImage, getProductGalleryImages } from '../utils/productImages';
 import { getAdCode } from '../utils/resolveAdCode';
 
 const MOBILE_TABS_MQ = '(max-width: 768px)';
@@ -701,8 +702,10 @@ export default function CollectionListingPage({
                 const currentSelectedSize = selectedSizes[product.id] || "";
                 
                 // Secondary image for hover swap effect
-                const hasSecondaryImage = product.images && product.images.length > 1;
-                const hoverImage = hasSecondaryImage ? product.images[1] : product.image;
+                const gallery = getProductGalleryImages(product);
+                const primaryImage = getProductPrimaryImage(product);
+                const hasSecondaryImage = gallery.length > 1;
+                const hoverImage = getProductHoverImage(product);
                 const showMidGridAd =
                   hasGridAd &&
                   (index + 1) % 2 === 0 &&
@@ -720,7 +723,9 @@ export default function CollectionListingPage({
                     >
                       {/* Primary Image */}
                       <ProductImage
-                        src={product.image}
+                        product={product}
+                        src={primaryImage}
+                        images={gallery}
                         alt={product.title}
                         className="card-img-element main-photo"
                       />
@@ -728,7 +733,9 @@ export default function CollectionListingPage({
                       {/* Secondary Hover Image (swaps smoothly on hover) */}
                       {hasSecondaryImage && (
                         <ProductImage
+                          product={product}
                           src={hoverImage}
+                          images={gallery}
                           alt={`${product.title} Alternate View`}
                           className="card-img-element hover-swap-photo"
                         />

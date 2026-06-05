@@ -9,6 +9,7 @@ import {
 } from '../../api/adminApi';
 import { fetchStoreProducts } from '../../api/storeApi';
 import { getAdminToken, setAdminToken } from '../../api/client';
+import { getProductGalleryImages, getProductPrimaryImage } from '../../utils/productImages';
 import {
   FABRIC_TAGS,
   GENTS_CATEGORIES,
@@ -227,26 +228,33 @@ export default function ProductsPage({ onToast }) {
     setSubCategory(p.subCategory || p.category);
     setFabricTags(p.fabricTags || ['Cotton']);
     setVariants(p.variants?.length ? p.variants : [emptyVariant(p.gender || 'ladies')]);
-    setExistingImages(p.images || [p.image]);
+    setExistingImages(getProductGalleryImages(p));
     setDetailForm(productToDetailFormState(p));
     setImageFiles([]);
     setStep(0);
     setShowForm(true);
   };
 
-  const buildPayload = () => ({
-    title,
-    description,
-    price: Number(price),
-    originalPrice: Number(originalPrice || price),
-    gender,
-    subCategory,
-    fabricTags,
-    variants,
-    images: existingImages,
-    image: existingImages[0] || '',
-    ...detailFormToPayload(detailForm),
-  });
+  const buildPayload = () => {
+    const payload = {
+      title,
+      description,
+      price: Number(price),
+      originalPrice: Number(originalPrice || price),
+      gender,
+      subCategory,
+      fabricTags,
+      variants,
+      ...detailFormToPayload(detailForm),
+    };
+
+    if (editing || existingImages.length) {
+      payload.images = existingImages;
+      payload.image = existingImages[0] || '';
+    }
+
+    return payload;
+  };
 
   const handlePublish = async () => {
     if (!title || !price) {
@@ -672,7 +680,7 @@ export default function ProductsPage({ onToast }) {
                 <tr key={p.id}>
                   <td>
                     <div className="admin-cyber-table-product">
-                      <img src={p.image} alt="" />
+                      <img src={getProductPrimaryImage(p)} alt="" />
                       <div>
                         <strong>{p.title}</strong>
                         <span>SKU LIB-{p.id}</span>
