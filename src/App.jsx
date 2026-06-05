@@ -7,7 +7,7 @@ import SiteTopAdStrip from './components/SiteTopAdStrip';
 import HomeAdSlot from './components/HomeAdSlot';
 import GiftCollectionSection from './components/GiftCollectionSection';
 import CategoriesSection from './components/CategoriesSection';
-import ReviewsSection from './components/ReviewsSection';
+import NewArrivalsSection from './components/NewArrivalsSection';
 import Footer from './components/Footer';
 import InfoPage from './components/InfoPage';
 import { getInfoPage } from './data/footerInfoPages';
@@ -29,6 +29,7 @@ import {
   submitStoreOrder,
 } from './api/storeApi';
 import { loadCatalogProducts } from './utils/loadCatalog';
+import { CATALOG_VERSION_KEY } from './utils/catalogSync';
 import { applySiteSettingsToDocument } from './utils/siteSettings';
 import { adSlotsToCodeMap } from './utils/adSlots';
 import { resetAdDedupe } from './utils/adDedupe';
@@ -236,20 +237,7 @@ export default function App() {
     }
   };
 
-  // Load catalog first; refetch when tab becomes visible so admin adds show on storefront
   useEffect(() => {
-    const applyCatalog = (list) => {
-      if (list?.length) setProductsList(list);
-    };
-
-    loadCatalogProducts().then(applyCatalog);
-
-    const onVisible = () => {
-      if (document.visibilityState !== 'visible') return;
-      loadCatalogProducts({ force: true }).then(applyCatalog);
-    };
-    document.addEventListener('visibilitychange', onVisible);
-
     fetchStoreSettings().then((s) => {
       if (s) setSiteSettings(applySiteSettingsToDocument(s));
     });
@@ -265,8 +253,38 @@ export default function App() {
         if (list?.length) setAdCodes(adSlotsToCodeMap(list));
       });
     });
+  }, []);
 
-    return () => document.removeEventListener('visibilitychange', onVisible);
+  // Load catalog first; refetch when tab visible, admin adds product, or on interval
+  useEffect(() => {
+    const applyCatalog = (list) => {
+      if (list?.length) setProductsList(list);
+    };
+
+    const refreshCatalog = () => loadCatalogProducts({ force: true }).then(applyCatalog);
+
+    loadCatalogProducts().then(applyCatalog);
+
+    const onVisible = () => {
+      if (document.visibilityState !== 'visible') return;
+      refreshCatalog();
+    };
+    document.addEventListener('visibilitychange', onVisible);
+
+    const onStorage = (e) => {
+      if (e.key === CATALOG_VERSION_KEY) refreshCatalog();
+    };
+    window.addEventListener('storage', onStorage);
+
+    const pollId = window.setInterval(() => {
+      if (document.visibilityState === 'visible') refreshCatalog();
+    }, 20_000);
+
+    return () => {
+      document.removeEventListener('visibilitychange', onVisible);
+      window.removeEventListener('storage', onStorage);
+      window.clearInterval(pollId);
+    };
   }, []);
 
   // Resolve PDP after catalog / gift combos load (direct URL, refresh)
@@ -672,6 +690,12 @@ export default function App() {
               <>
                 <HeroSlider onSelectCategory={handleSelectCategory} />
                 <HomeAdSlot adCodes={adCodes} placement="home_after_hero" />
+
+                <NewArrivalsSection
+                  products={productsList}
+                  onOpenQuickView={handleOpenQuickView}
+                  onViewAll={() => navigateToRoute('/category/all')}
+                />
 
                 <TrendsSection onSelectCategory={handleSelectCategory} />
                 <HomeAdSlot adCodes={adCodes} placement="home_after_trends" />

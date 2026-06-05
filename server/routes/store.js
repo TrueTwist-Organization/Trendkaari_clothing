@@ -8,11 +8,31 @@ import { normalizeProductImages } from '../lib/productImages.js';
 
 const router = Router();
 
+function sortProductsForStorefront(products = []) {
+  return [...products].sort((a, b) => {
+    const aAdmin = a.adminCreated || a.source === 'admin';
+    const bAdmin = b.adminCreated || b.source === 'admin';
+    if (aAdmin && !bAdmin) return -1;
+    if (!aAdmin && bAdmin) return 1;
+    if (aAdmin && bAdmin) {
+      return (
+        new Date(b.adminCreatedAt || 0).getTime() - new Date(a.adminCreatedAt || 0).getTime()
+      );
+    }
+    return Number(b.id) - Number(a.id);
+  });
+}
+
 router.get('/products', async (req, res) => {
-  res.set('Cache-Control', 'no-store');
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate');
+  res.set('Pragma', 'no-cache');
   const store = await readFreshStore();
-  const products = (store.products || []).map(normalizeProductImages);
-  res.json({ products });
+  const products = sortProductsForStorefront(store.products || []).map(normalizeProductImages);
+  res.json({
+    products,
+    updatedAt: store._storeUpdatedAt || null,
+    total: products.length,
+  });
 });
 
 router.get('/coupons', (req, res) => {

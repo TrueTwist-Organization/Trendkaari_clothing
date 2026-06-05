@@ -697,7 +697,7 @@ export default function CollectionListingPage({
 
           {/* Listing Grid */}
           {sortedItems.length > 0 ? (
-            <div className="collection-products-grid">
+            <div className="collection-products-grid" id="catalog-products-list">
               {sortedItems.map((product, index) => {
                 const currentSelectedSize = selectedSizes[product.id] || "";
                 

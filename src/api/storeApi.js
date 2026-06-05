@@ -1,8 +1,9 @@
 import { publicApiFetch, getUserToken } from './client';
 
-export async function fetchStoreProducts() {
+export async function fetchStoreProducts({ cacheBust = false } = {}) {
+  const query = cacheBust ? `?_=${Date.now()}` : '';
   try {
-    const data = await publicApiFetch('/api/store/products');
+    const data = await publicApiFetch(`/api/store/products${query}`);
     return data.products;
   } catch {
     return null;
