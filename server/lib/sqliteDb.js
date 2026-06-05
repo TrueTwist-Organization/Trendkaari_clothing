@@ -195,6 +195,15 @@ export async function saveStoreToSqlite(store) {
   }
 }
 
+export async function saveAdSlotsToSqlite(adSlots) {
+  await ensureSchema();
+  const db = getClient();
+  await db.execute({
+    sql: 'INSERT OR REPLACE INTO app_meta (key, data) VALUES (?, ?)',
+    args: ['adSlots', JSON.stringify(Array.isArray(adSlots) ? adSlots : [])],
+  });
+}
+
 export async function importJsonStoreToSqlite(jsonStore) {
   await saveStoreToSqlite(jsonStore);
   return loadStoreFromSqlite();

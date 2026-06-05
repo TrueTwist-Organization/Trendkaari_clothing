@@ -12,6 +12,7 @@ import { PRIMARY_AD_PLACEMENT_KEYS } from '../src/constants/adPlacements.js';
 import { encodeAdCode } from '../server/lib/adSlotCode.js';
 import { buildGptAdHtml } from '../server/lib/gptAdTemplates.js';
 import { savePersistedAdSlots } from '../server/lib/adSlotsPersistence.js';
+import { saveAdSlotsToSqlite } from '../server/lib/sqliteDb.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const OUT_PATH = path.join(__dirname, '../server/data/ad-slots.json');
@@ -32,19 +33,8 @@ fs.writeFileSync(OUT_PATH, JSON.stringify(slots, null, 2), 'utf8');
 console.log(`Wrote ${slots.length} primary ad slots → ${OUT_PATH}`);
 
 if (process.env.USE_SQLITE === 'true') {
-  const { loadStoreFromSqlite, saveStoreToSqlite } = await import('../server/lib/sqliteDb.js');
-  const store = (await loadStoreFromSqlite()) || {
-    products: [],
-    orders: [],
-    users: [],
-    coupons: [],
-    giftCombos: [],
-    admin: null,
-    settings: {},
-  };
-  store.adSlots = slots;
-  await saveStoreToSqlite(store);
-  console.log('Synced ad slots into SQLite store.');
+  await saveAdSlotsToSqlite(slots);
+  console.log('Synced ad slots into SQLite (products untouched).');
 }
 
 if (process.argv.includes('--push')) {

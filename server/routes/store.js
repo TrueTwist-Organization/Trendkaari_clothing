@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { readStore, updateStore, resolveStoreAdSlots } from '../lib/store.js';
+import { readStore, readFreshStore, updateStore, resolveStoreAdSlots } from '../lib/store.js';
 import { sendOrderConfirmationEmail } from '../lib/orderEmail.js';
 import { optionalUser } from '../middleware/userAuth.js';
 import { getStoreSettings, getActiveAdSlots } from '../lib/siteConfig.js';
@@ -8,8 +8,9 @@ import { normalizeProductImages } from '../lib/productImages.js';
 
 const router = Router();
 
-router.get('/products', (req, res) => {
-  const store = readStore();
+router.get('/products', async (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  const store = await readFreshStore();
   const products = (store.products || []).map(normalizeProductImages);
   res.json({ products });
 });

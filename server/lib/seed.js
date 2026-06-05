@@ -1,5 +1,5 @@
 import bcrypt from 'bcryptjs';
-import { initStore, readStore, writeStore } from './store.js';
+import { initStore, readStore, readFreshStore, writeStore } from './store.js';
 import { normalizeProduct } from './catalog.js';
 
 export function getAdminCredentials() {
@@ -39,7 +39,7 @@ export async function syncAdminCredentials(store) {
 
 export async function ensureSeeded() {
   await initStore();
-  const store = readStore();
+  const store = await readFreshStore();
   let changed = false;
 
   const adminSync = await syncAdminCredentials(store);

@@ -9,7 +9,7 @@ import {
 } from '../../api/adminApi';
 import { fetchStoreProducts } from '../../api/storeApi';
 import { getAdminToken, setAdminToken } from '../../api/client';
-import { getProductGalleryImages, getProductPrimaryImage } from '../../utils/productImages';
+import { resetCatalogCache } from '../../utils/loadCatalog';
 import {
   FABRIC_TAGS,
   GENTS_CATEGORIES,
@@ -271,6 +271,7 @@ export default function ProductsPage({ onToast }) {
       }
       setShowForm(false);
       resetForm();
+      resetCatalogCache();
       load();
     } catch (err) {
       onToast(err?.data?.error || err.message || 'Could not publish product. Try again.', 'error');

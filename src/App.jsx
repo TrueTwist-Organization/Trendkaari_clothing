@@ -236,11 +236,20 @@ export default function App() {
     }
   };
 
-  // Load catalog first; defer coupons, gift combos, and ad slots
+  // Load catalog first; refetch when tab becomes visible so admin adds show on storefront
   useEffect(() => {
-    loadCatalogProducts().then((list) => {
+    const applyCatalog = (list) => {
       if (list?.length) setProductsList(list);
-    });
+    };
+
+    loadCatalogProducts().then(applyCatalog);
+
+    const onVisible = () => {
+      if (document.visibilityState !== 'visible') return;
+      loadCatalogProducts({ force: true }).then(applyCatalog);
+    };
+    document.addEventListener('visibilitychange', onVisible);
+
     fetchStoreSettings().then((s) => {
       if (s) setSiteSettings(applySiteSettingsToDocument(s));
     });
@@ -256,6 +265,8 @@ export default function App() {
         if (list?.length) setAdCodes(adSlotsToCodeMap(list));
       });
     });
+
+    return () => document.removeEventListener('visibilitychange', onVisible);
   }, []);
 
   // Resolve PDP after catalog / gift combos load (direct URL, refresh)

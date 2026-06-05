@@ -3,7 +3,7 @@ import bcrypt from 'bcryptjs';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
-import { readStore, updateStore, replaceAdSlots, mergeAdSlots, resolveStoreAdSlots } from '../lib/store.js';
+import { readStore, readFreshStore, updateStore, replaceAdSlots, mergeAdSlots, resolveStoreAdSlots } from '../lib/store.js';
 import { syncAdminCredentials, getAdminCredentials } from '../lib/seed.js';
 import { syncCatalogFromSource } from '../lib/catalog.js';
 import { saveUploadedProductImages } from '../lib/imageProcess.js';
@@ -298,7 +298,7 @@ function slimProductForList(p) {
 }
 
 router.get('/products', requireAdmin, async (req, res) => {
-  const store = readStore();
+  const store = await readFreshStore();
   let list = [...(store.products || [])].map(normalizeProductImages);
   const gender = req.query.gender;
   const category = req.query.category;
@@ -334,9 +334,12 @@ router.post('/products', requireAdmin, uploadProductImages, async (req, res) => 
 
     const product = normalizeProductImages(buildProductFromPayload(parsed, uploadedUrls));
     await updateStore((store) => {
-      const maxId = store.products.reduce((m, p) => Math.max(m, p.id || 0), 0);
+      const maxId = store.products.reduce((m, p) => Math.max(m, Number(p.id) || 0), 0);
       product.id = maxId + 1;
-      store.products = [product, ...store.products];
+      product.source = 'admin';
+      product.adminCreated = true;
+      product.adminCreatedAt = product.adminCreatedAt || new Date().toISOString();
+      store.products = [product, ...(store.products || [])];
       return store;
     });
 
@@ -692,6 +695,7 @@ function buildProductFromPayload(data, newImages = [], existing = null) {
   const base = {
     id: data.id ?? existing?.id,
     source: existing?.source || 'admin',
+    adminCreated: existing?.adminCreated ?? true,
     adminCreatedAt: existing?.adminCreatedAt || new Date().toISOString(),
     title: data.title,
     description: data.description || '',

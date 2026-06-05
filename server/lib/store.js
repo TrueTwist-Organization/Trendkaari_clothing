@@ -57,7 +57,8 @@ function startBackgroundSeed() {
   void (async () => {
     try {
       await ensureSeeded();
-      if (!storeCache?.products?.length) {
+      // Never auto-import catalog over saved DB — only seed when store is truly empty locally
+      if (!usesRemotePersistence() && !storeCache?.products?.length) {
         const result = await syncCatalogFromSource();
         console.log(`[store] Catalog synced: ${result.count} products`);
       }
@@ -308,6 +309,32 @@ export function readStore() {
     throw new Error('Store not initialized');
   }
   return structuredClone(storeCache);
+}
+
+/** Always reload from SQLite / Blob / disk before serving API reads — fixes stale admin + user lists. */
+export async function readFreshStore() {
+  await initStore();
+
+  try {
+    if (usesRemotePersistence()) {
+      const remote = await loadFromRemote();
+      if (remote) {
+        storeCache = structuredClone(remote);
+        return structuredClone(remote);
+      }
+    } else if (canWriteLocalFile()) {
+      storeCache = loadFromLocal();
+    }
+  } catch (err) {
+    console.warn('[store] readFreshStore failed:', err.message);
+  }
+
+  return readStore();
+}
+
+export function invalidateStoreCache() {
+  storeCache = null;
+  initPromise = null;
 }
 
 export async function writeStore(store) {
