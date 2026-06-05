@@ -7,6 +7,7 @@ import SiteTopAdStrip from './components/SiteTopAdStrip';
 import HomeAdSlot from './components/HomeAdSlot';
 import GiftCollectionSection from './components/GiftCollectionSection';
 import CategoriesSection from './components/CategoriesSection';
+import ReviewsSection from './components/ReviewsSection';
 import NewArrivalsSection from './components/NewArrivalsSection';
 import Footer from './components/Footer';
 import InfoPage from './components/InfoPage';
