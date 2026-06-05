@@ -1,6 +1,6 @@
 /**
- * Order confirmation email. When SMTP is not configured or send fails,
- * checkout shows the Technical Error screen instead of Order confirmed.
+ * Order confirmation email. Checkout always shows the Technical Error screen
+ * after place order (never the Order confirmed success page).
  */
 export function isOrderEmailConfigured() {
   return Boolean(
