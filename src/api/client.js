@@ -108,11 +108,20 @@ export async function apiFetch(path, options = {}) {
     );
   }
 
-  let data;
-  try {
-    data = await res.json();
-  } catch {
-    throw new Error('Invalid API response. Restart: npm run dev');
+  let data = {};
+  const contentType = res.headers.get('content-type') || '';
+  if (contentType.includes('application/json')) {
+    try {
+      data = await res.json();
+    } catch {
+      throw new Error('Invalid API response. Restart: npm run dev');
+    }
+  } else if (!res.ok) {
+    throw new Error(friendlyApiError(path, res, data));
+  } else {
+    throw new Error(
+      'API returned HTML instead of JSON. Run npm run dev (website + API together) or check the live API deployment.'
+    );
   }
   if (!res.ok) {
     const err = new Error(friendlyApiError(path, res, data));
