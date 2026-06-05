@@ -10,6 +10,7 @@ import {
 import { fetchStoreProducts } from '../../api/storeApi';
 import { getAdminToken, setAdminToken } from '../../api/client';
 import { resetCatalogCache } from '../../utils/loadCatalog';
+import { getProductGalleryImages, getProductPrimaryImage } from '../../utils/productImages';
 import {
   FABRIC_TAGS,
   GENTS_CATEGORIES,
@@ -73,7 +74,7 @@ export default function ProductsPage({ onToast }) {
   const [filePreviews, setFilePreviews] = useState([]);
   const [existingImages, setExistingImages] = useState([]);
   const [mediaDragOver, setMediaDragOver] = useState(false);
-  const [detailForm, setDetailForm] = useState(emptyDetailFormState);
+  const [detailForm, setDetailForm] = useState(emptyDetailFormState());
   const fileInputRef = useRef(null);
 
   const applyProductList = (list) => {

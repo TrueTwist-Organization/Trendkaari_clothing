@@ -19,11 +19,20 @@ export default function DashboardPage() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
+  const [loadError, setLoadError] = useState('');
 
   const loadData = () => {
     setRefreshing(true);
+    setLoadError('');
     fetchAnalytics()
-      .then(setData)
+      .then((payload) => {
+        setData(payload);
+        setLoadError('');
+      })
+      .catch((err) => {
+        setData(null);
+        setLoadError(err.message || 'Could not load dashboard data.');
+      })
       .finally(() => {
         setLoading(false);
         setRefreshing(false);
@@ -46,7 +55,18 @@ export default function DashboardPage() {
     );
   }
 
-  if (!data) return null;
+  if (!data) {
+    return (
+      <div className="admin-cyber-page" style={{ display: 'grid', placeItems: 'center', minHeight: '60vh', textAlign: 'center', gap: 16 }}>
+        <p className="admin-cyber-error" role="alert">
+          {loadError || 'Dashboard data unavailable.'}
+        </p>
+        <button type="button" className="admin-cyber-btn admin-cyber-btn--primary" onClick={handleRefresh}>
+          Retry
+        </button>
+      </div>
+    );
+  }
 
   // Math check for average order value
   const avgOrderValue = Math.round(data.totalSales / (data.totalOrders || 1));
