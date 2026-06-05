@@ -5,7 +5,8 @@ import { useRedisPersistence } from './redisStore.js';
 import { useSqlitePersistence, loadStoreFromSqlite } from './sqliteDb.js';
 import { isValidAdSlot, sanitizeAdSlotList } from './adSlotValidation.js';
 
-const MAX_SAVED_AD_SLOTS = 30;
+/** Admin defines 66 placements — allow all filled slots to persist (no artificial 30 cap). */
+const MAX_SAVED_AD_SLOTS = 80;
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const LOCAL_AD_SLOTS_PATH = path.join(__dirname, '../data/ad-slots.json');
