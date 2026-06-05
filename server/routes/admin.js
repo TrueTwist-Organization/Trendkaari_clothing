@@ -498,7 +498,7 @@ router.patch('/settings', requireAdmin, async (req, res) => {
 });
 
 router.get('/ad-slots', requireAdmin, async (req, res) => {
-  const adSlots = await resolveStoreAdSlots(readStore().adSlots, { includeDefaults: false });
+  const adSlots = await resolveStoreAdSlots([], { includeDefaults: false });
   res.json({ adSlots: getAdSlotsForAdmin({ adSlots }) });
 });
 

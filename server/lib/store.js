@@ -279,7 +279,6 @@ export async function writeStore(store) {
 
 /** Save ad slots from admin — replaces store with all filled slots in the save payload */
 export async function replaceAdSlots(adSlots) {
-  await initStore();
   const list = Array.isArray(adSlots) ? adSlots : [];
 
   if (list.length === 0) {
@@ -290,16 +289,19 @@ export async function replaceAdSlots(adSlots) {
   }
 
   await savePersistedAdSlots(list, { allowEmpty: list.length === 0 });
-  storeCache.adSlots = structuredClone(list);
+  if (storeCache) {
+    storeCache.adSlots = structuredClone(list);
+  }
   primeAdSlotsCache(list);
   return list;
 }
 
 /** Merge incoming slots into existing — used when saving one slot at a time */
 export async function mergeAdSlots(adSlots) {
-  await initStore();
   const merged = await mergeAndPersistAdSlots(adSlots ?? []);
-  storeCache.adSlots = structuredClone(merged);
+  if (storeCache) {
+    storeCache.adSlots = structuredClone(merged);
+  }
   primeAdSlotsCache(merged);
   return merged;
 }

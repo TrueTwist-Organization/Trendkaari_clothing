@@ -24,7 +24,7 @@ router.get('/settings', (req, res) => {
 
 router.get('/ad-slots', async (req, res) => {
   const placement = req.query.placement || null;
-  const adSlots = await resolveStoreAdSlots(readStore().adSlots);
+  const adSlots = await resolveStoreAdSlots([]);
   res.json({ adSlots: getActiveAdSlots({ adSlots }, placement || null) });
 });
 

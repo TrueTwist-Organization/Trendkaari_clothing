@@ -106,12 +106,51 @@ function encodeSlotsForWire(slots = {}) {
 async function putAdSlots(body) {
   return apiFetch('/api/admin/ad-slots', {
     method: 'PUT',
-    body: JSON.stringify({ replaceAll: true, ...body }),
+    body: JSON.stringify(body),
   });
 }
 
-function isSaveBlocked(err) {
-  return err?.status === 400;
+function isRetryableSaveError(err) {
+  const status = err?.status;
+  if (status === 400 || status === 413 || status === 502 || status === 503 || status === 504) {
+    return true;
+  }
+  const message = String(err?.message || '').toLowerCase();
+  return (
+    message.includes('html') ||
+    message.includes('invalid api') ||
+    message.includes('timed out') ||
+    message.includes('too large') ||
+    message.includes('error page')
+  );
+}
+
+async function saveAdSlotsOneByOne(slots) {
+  const filled = Object.entries(slots).filter(([, code]) => String(code || '').trim());
+  if (!filled.length) {
+    return putAdSlots({ ...encodeSlotsForWire(slots), replaceAll: true });
+  }
+
+  let lastResult = null;
+  for (const [placement, code] of filled) {
+    lastResult = await putAdSlots({
+      slots: { [placement]: utf8ToBase64(code) },
+      slotsEncoded: true,
+      clientFilledCount: 1,
+      merge: true,
+      replaceAll: false,
+    });
+  }
+
+  return (
+    lastResult ||
+    putAdSlots({
+      slots: encodeSlotsForWire(slots).slots,
+      slotsEncoded: true,
+      clientFilledCount: filled.length,
+      replaceAll: true,
+    })
+  );
 }
 
 /** Save ad slots — replaceAll so cleared boxes are removed from storage. */
@@ -126,10 +165,16 @@ export async function saveAdminAdSlots(slots) {
   try {
     return await putAdSlots({ payloadB64: utf8ToBase64(JSON.stringify(inner)) });
   } catch (bulkEncodedErr) {
-    if (!isSaveBlocked(bulkEncodedErr)) throw bulkEncodedErr;
+    if (!isRetryableSaveError(bulkEncodedErr)) throw bulkEncodedErr;
   }
 
-  return putAdSlots(inner);
+  try {
+    return await putAdSlots(inner);
+  } catch (directErr) {
+    if (!isRetryableSaveError(directErr)) throw directErr;
+  }
+
+  return saveAdSlotsOneByOne(slots);
 }
 
 export function fetchAdminGiftCombos() {

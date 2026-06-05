@@ -36,11 +36,18 @@ function isFastReadPath(req) {
   if (req.method !== 'GET') return false;
   if (path === '/api/health') return true;
   if (path.endsWith('/auth/me')) return true;
+  if (path === '/api/store/ad-slots') return true;
   return false;
 }
 
+/** Ad slot reads/writes use dedicated blob storage — skip loading the full store blob. */
+function isAdSlotsPath(req) {
+  const path = req.path || '';
+  return path.endsWith('/ad-slots') || path.includes('/ad-slots');
+}
+
 app.use(async (req, res, next) => {
-  if (isFastReadPath(req)) return next();
+  if (isFastReadPath(req) || isAdSlotsPath(req)) return next();
   try {
     await initStore();
     next();
