@@ -2958,7 +2958,7 @@
       ],
       "rating": "4.8",
       "reviewsCount": 187,
-      "stock": 24,
+      "stock": 23,
       "gender": "ladies",
       "fabricTags": [
         "Cotton"
@@ -2969,7 +2969,7 @@
           "color": "Default",
           "colorHex": "#f5f5f5",
           "stockBySize": {
-            "XS": 4,
+            "XS": 3,
             "S": 4,
             "M": 4,
             "L": 4,
@@ -6843,7 +6843,7 @@
       ],
       "rating": "4.5",
       "reviewsCount": 112,
-      "stock": 23,
+      "stock": 22,
       "gender": "ladies",
       "fabricTags": [
         "Cotton"
@@ -6854,7 +6854,7 @@
           "color": "Default",
           "colorHex": "#f5f5f5",
           "stockBySize": {
-            "XS": 3,
+            "XS": 2,
             "S": 4,
             "M": 4,
             "L": 4,
@@ -17792,7 +17792,7 @@
       ],
       "rating": "4.3",
       "reviewsCount": 75,
-      "stock": 24,
+      "stock": 19,
       "gender": "gents",
       "fabricTags": [
         "Cotton"
@@ -17803,7 +17803,7 @@
           "color": "Default",
           "colorHex": "#f5f5f5",
           "stockBySize": {
-            "S": 4,
+            "S": 3,
             "M": 4,
             "L": 4,
             "XL": 4,
@@ -22256,6 +22256,678 @@
   ],
   "orders": [
     {
+      "id": "ORD-252283",
+      "userId": "USR-1779344334203",
+      "customerName": "Jinal",
+      "email": "jinalman30@gmail.com",
+      "phone": "9874563210",
+      "address": "szdvsz, sdv , dv x, dsv d, 987456",
+      "items": [
+        {
+          "id": 1050,
+          "title": "Powder Blue Gingham Tie-Front Peplum Top",
+          "price": 99,
+          "originalPrice": 198,
+          "discount": "50% OFF",
+          "category": "women",
+          "subCategory": "tops",
+          "wearType": "western",
+          "image": "/tops/10/1.webp",
+          "images": [
+            "/tops/10/1.webp",
+            "/tops/10/2.webp",
+            "/tops/10/3.webp",
+            "/tops/10/4.webp",
+            "/tops/10/5.webp"
+          ],
+          "description": "Discover Powder Blue Gingham Tie-Front Peplum Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "rating": "4.5",
+          "reviewsCount": 112,
+          "stock": 23,
+          "gender": "ladies",
+          "fabricTags": [
+            "Cotton"
+          ],
+          "variants": [
+            {
+              "id": "default",
+              "color": "Default",
+              "colorHex": "#f5f5f5",
+              "stockBySize": {
+                "XS": 3,
+                "S": 4,
+                "M": 4,
+                "L": 4,
+                "XL": 4,
+                "XXL": 4
+              }
+            }
+          ],
+          "descriptionLong": "Discover Powder Blue Gingham Tie-Front Peplum Top from FlexFit Studio—where tradition meets contemporary design. This tops is crafted in Premium Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+          "highlights": {
+            "Material composition": "Premium Cotton",
+            "Fit type": "Regular / Straight Fit",
+            "Neck style": "Designer Neckline",
+            "Sleeve type": "Three-Quarter (3/4) Sleeves",
+            "Pattern": "Ethnic weave / print",
+            "Country of Origin": "India"
+          },
+          "aboutItems": [
+            "PREMIUM FABRIC: Handpicked Premium Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
+            "DESIGN & CRAFT: Powder Blue Gingham Tie-Front Peplum Top features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+            "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
+            "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
+            "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
+          ],
+          "additionalInfo": {
+            "Net Quantity": "1 Set",
+            "Country of Origin": "India",
+            "Ideal For": "Festive, wedding guest, party wear",
+            "Product Care": "Dry clean / gentle hand wash"
+          },
+          "sizeChart": [
+            {
+              "size": "XS",
+              "chest": "32 – 34",
+              "shoulder": "14",
+              "length": "38",
+              "sleeve": "16"
+            },
+            {
+              "size": "S",
+              "chest": "34 – 36",
+              "shoulder": "14.5",
+              "length": "40",
+              "sleeve": "17"
+            },
+            {
+              "size": "M",
+              "chest": "36 – 38",
+              "shoulder": "15",
+              "length": "42",
+              "sleeve": "17.5"
+            },
+            {
+              "size": "L",
+              "chest": "38 – 40",
+              "shoulder": "15.5",
+              "length": "44",
+              "sleeve": "18"
+            },
+            {
+              "size": "XL",
+              "chest": "40 – 42",
+              "shoulder": "16",
+              "length": "46",
+              "sleeve": "18.5"
+            },
+            {
+              "size": "XXL",
+              "chest": "42 – 44",
+              "shoulder": "16.5",
+              "length": "48",
+              "sleeve": "19"
+            }
+          ],
+          "sizeChartType": "ethnic",
+          "selectedSize": "XS",
+          "quantity": 1
+        }
+      ],
+      "subtotal": 99,
+      "discount": 0,
+      "grandTotal": 99,
+      "status": "Pending",
+      "paymentStatus": "Paid",
+      "date": "4/6/2026, 2:17:27 pm",
+      "createdAt": "2026-06-04T08:47:27.685Z"
+    },
+    {
+      "id": "ORD-923754",
+      "userId": "USR-1779344334203",
+      "customerName": "Jinal",
+      "email": "jinalman30@gmail.com",
+      "phone": "9874563210",
+      "address": "szafv, dsvx, dxv, xdv , 968574",
+      "items": [
+        {
+          "id": 1018,
+          "title": "Deep Teal Velvet Sequin Lehenga",
+          "price": 249,
+          "originalPrice": 498,
+          "discount": "50% OFF",
+          "category": "women",
+          "subCategory": "lehengas",
+          "wearType": "traditional",
+          "image": "/lehengas/Lehengas/8/LBL101KS588_1_700x.webp",
+          "images": [
+            "/lehengas/Lehengas/8/LBL101KS588_1_700x.webp",
+            "/lehengas/Lehengas/8/LBL101KS588_2_700x.webp",
+            "/lehengas/Lehengas/8/LBL101KS588_3_700x.webp",
+            "/lehengas/Lehengas/8/LBL101KS588_4_700x.webp",
+            "/lehengas/Lehengas/8/LBL101KS588_5_700x.webp",
+            "/lehengas/Lehengas/8/LBL101KS588_6_700x.webp",
+            "/lehengas/Lehengas/8/LBL101KS588_7_700x.webp"
+          ],
+          "description": "Discover Deep Teal Velvet Sequin Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "rating": "4.5",
+          "reviewsCount": 216,
+          "stock": 20,
+          "gender": "ladies",
+          "fabricTags": [
+            "Cotton"
+          ],
+          "variants": [
+            {
+              "id": "default",
+              "color": "Default",
+              "colorHex": "#f5f5f5",
+              "stockBySize": {
+                "XS": 0,
+                "S": 4,
+                "M": 4,
+                "L": 4,
+                "XL": 4,
+                "XXL": 4
+              }
+            }
+          ],
+          "descriptionLong": "Discover Deep Teal Velvet Sequin Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+          "highlights": {
+            "Material composition": "Premium Viscose / Muslin Cotton",
+            "Fit type": "Flared / A-line",
+            "Neck style": "Designer Neckline",
+            "Sleeve type": "Three-Quarter (3/4) Sleeves",
+            "Pattern": "Ethnic weave / print",
+            "Country of Origin": "India"
+          },
+          "aboutItems": [
+            "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
+            "DESIGN & CRAFT: Deep Teal Velvet Sequin Lehenga features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+            "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
+            "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
+            "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
+          ],
+          "additionalInfo": {
+            "Net Quantity": "1 Set",
+            "Country of Origin": "India",
+            "Ideal For": "Festive, wedding guest, party wear",
+            "Product Care": "Dry clean / gentle hand wash"
+          },
+          "sizeChart": [
+            {
+              "size": "XS",
+              "chest": "32 – 34",
+              "shoulder": "14",
+              "length": "38",
+              "sleeve": "16"
+            },
+            {
+              "size": "S",
+              "chest": "34 – 36",
+              "shoulder": "14.5",
+              "length": "40",
+              "sleeve": "17"
+            },
+            {
+              "size": "M",
+              "chest": "36 – 38",
+              "shoulder": "15",
+              "length": "42",
+              "sleeve": "17.5"
+            },
+            {
+              "size": "L",
+              "chest": "38 – 40",
+              "shoulder": "15.5",
+              "length": "44",
+              "sleeve": "18"
+            },
+            {
+              "size": "XL",
+              "chest": "40 – 42",
+              "shoulder": "16",
+              "length": "46",
+              "sleeve": "18.5"
+            },
+            {
+              "size": "XXL",
+              "chest": "42 – 44",
+              "shoulder": "16.5",
+              "length": "48",
+              "sleeve": "19"
+            }
+          ],
+          "sizeChartType": "ethnic",
+          "selectedSize": "XS",
+          "quantity": 1
+        }
+      ],
+      "subtotal": 249,
+      "discount": 0,
+      "grandTotal": 249,
+      "status": "Pending",
+      "paymentStatus": "Paid",
+      "date": "4/6/2026, 1:55:36 pm",
+      "createdAt": "2026-06-04T08:25:36.004Z"
+    },
+    {
+      "id": "ORD-451290",
+      "userId": "USR-1779344334203",
+      "customerName": "Jinal",
+      "email": "jinalman30@gmail.com",
+      "phone": "9874563214",
+      "address": " xd bcfwdx, fwse3h, tyej64e, 142058",
+      "items": [
+        {
+          "id": 1016,
+          "title": "Ruby Red Embroidered Bridal Lehenga",
+          "price": 249,
+          "originalPrice": 498,
+          "discount": "50% OFF",
+          "category": "women",
+          "subCategory": "lehengas",
+          "wearType": "traditional",
+          "image": "/lehengas/Lehengas/6/LBL101KS616_1_700x.webp",
+          "images": [
+            "/lehengas/Lehengas/6/LBL101KS616_1_700x.webp",
+            "/lehengas/Lehengas/6/LBL101KS616_2_700x.webp",
+            "/lehengas/Lehengas/6/LBL101KS616_3_700x.webp",
+            "/lehengas/Lehengas/6/LBL101KS616_4_700x.webp",
+            "/lehengas/Lehengas/6/LBL101KS616_5_700x.webp",
+            "/lehengas/Lehengas/6/LBL101KS616_6_700x.webp",
+            "/lehengas/Lehengas/6/LBL101KS616_7_700x.webp"
+          ],
+          "description": "Discover Ruby Red Embroidered Bridal Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "rating": "4.8",
+          "reviewsCount": 187,
+          "stock": 24,
+          "gender": "ladies",
+          "fabricTags": [
+            "Cotton"
+          ],
+          "variants": [
+            {
+              "id": "default",
+              "color": "Default",
+              "colorHex": "#f5f5f5",
+              "stockBySize": {
+                "XS": 4,
+                "S": 4,
+                "M": 4,
+                "L": 4,
+                "XL": 4,
+                "XXL": 4
+              }
+            }
+          ],
+          "descriptionLong": "Discover Ruby Red Embroidered Bridal Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+          "highlights": {
+            "Material composition": "Premium Viscose / Muslin Cotton",
+            "Fit type": "Flared / A-line",
+            "Neck style": "Designer Neckline",
+            "Sleeve type": "Three-Quarter (3/4) Sleeves",
+            "Pattern": "Ethnic weave / print",
+            "Country of Origin": "India"
+          },
+          "aboutItems": [
+            "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
+            "DESIGN & CRAFT: Ruby Red Embroidered Bridal Lehenga features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+            "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
+            "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
+            "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
+          ],
+          "additionalInfo": {
+            "Net Quantity": "1 Set",
+            "Country of Origin": "India",
+            "Ideal For": "Festive, wedding guest, party wear",
+            "Product Care": "Dry clean / gentle hand wash"
+          },
+          "sizeChart": [
+            {
+              "size": "XS",
+              "chest": "32 – 34",
+              "shoulder": "14",
+              "length": "38",
+              "sleeve": "16"
+            },
+            {
+              "size": "S",
+              "chest": "34 – 36",
+              "shoulder": "14.5",
+              "length": "40",
+              "sleeve": "17"
+            },
+            {
+              "size": "M",
+              "chest": "36 – 38",
+              "shoulder": "15",
+              "length": "42",
+              "sleeve": "17.5"
+            },
+            {
+              "size": "L",
+              "chest": "38 – 40",
+              "shoulder": "15.5",
+              "length": "44",
+              "sleeve": "18"
+            },
+            {
+              "size": "XL",
+              "chest": "40 – 42",
+              "shoulder": "16",
+              "length": "46",
+              "sleeve": "18.5"
+            },
+            {
+              "size": "XXL",
+              "chest": "42 – 44",
+              "shoulder": "16.5",
+              "length": "48",
+              "sleeve": "19"
+            }
+          ],
+          "sizeChartType": "ethnic",
+          "selectedSize": "XS",
+          "quantity": 1
+        }
+      ],
+      "subtotal": 249,
+      "discount": 0,
+      "grandTotal": 249,
+      "status": "Pending",
+      "paymentStatus": "Paid",
+      "date": "4/6/2026, 1:51:42 pm",
+      "createdAt": "2026-06-04T08:21:42.195Z"
+    },
+    {
+      "id": "ORD-414197",
+      "userId": "USR-1779344334203",
+      "customerName": "Jinal",
+      "email": "jinalman30@gmail.com",
+      "phone": "9874563210",
+      "address": "vz, sdzbv , xdb , bfd, 741258, xdb ",
+      "items": [
+        {
+          "id": 1019,
+          "title": "Ruby Red Bandhani Print Lehenga",
+          "price": 249,
+          "originalPrice": 498,
+          "discount": "50% OFF",
+          "category": "women",
+          "subCategory": "lehengas",
+          "wearType": "traditional",
+          "image": "/lehengas/Lehengas/9/040A1693_700x.webp",
+          "images": [
+            "/lehengas/Lehengas/9/040A1693_700x.webp",
+            "/lehengas/Lehengas/9/040A1695_700x.webp",
+            "/lehengas/Lehengas/9/040A1698_700x.webp",
+            "/lehengas/Lehengas/9/040A1707_700x.webp",
+            "/lehengas/Lehengas/9/040A1708_700x.webp",
+            "/lehengas/Lehengas/9/040A1719_700x.webp"
+          ],
+          "description": "Discover Ruby Red Bandhani Print Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "rating": "4.6",
+          "reviewsCount": 59,
+          "stock": 20,
+          "gender": "ladies",
+          "fabricTags": [
+            "Cotton"
+          ],
+          "variants": [
+            {
+              "id": "default",
+              "color": "Default",
+              "colorHex": "#f5f5f5",
+              "stockBySize": {
+                "XS": 0,
+                "S": 4,
+                "M": 4,
+                "L": 4,
+                "XL": 4,
+                "XXL": 4
+              }
+            }
+          ],
+          "descriptionLong": "Discover Ruby Red Bandhani Print Lehenga from FlexFit Studio—where tradition meets contemporary design. This lehengas is crafted in Premium Viscose / Muslin Cotton for a luxurious feel and flattering fall. Whether you are dressing for a festival, reception or intimate celebration, this piece delivers statement style with everyday comfort. Made in India with quality you can trust.",
+          "highlights": {
+            "Material composition": "Premium Viscose / Muslin Cotton",
+            "Fit type": "Flared / A-line",
+            "Neck style": "Designer Neckline",
+            "Sleeve type": "Three-Quarter (3/4) Sleeves",
+            "Pattern": "Ethnic weave / print",
+            "Country of Origin": "India"
+          },
+          "aboutItems": [
+            "PREMIUM FABRIC: Handpicked Premium Viscose / Muslin Cotton for graceful drape, breathability and all-day comfort—ideal for festive celebrations, weddings and special occasions.",
+            "DESIGN & CRAFT: Ruby Red Bandhani Print Lehenga features thoughtful detailing with refined finishing. The silhouette is designed to complement Indian body types while staying easy to style.",
+            "VERSATILE STYLING: Pair with minimal jewellery and heels for events, or keep it light for brunch and family gatherings. A FlexFit Studio favourite for modern ethnic dressing.",
+            "COMFORT FIT: Tailored for ease of movement without compromising elegance. Soft lining and quality stitching ensure you feel as good as you look.",
+            "CARE INSTRUCTIONS: Dry clean recommended for first wear; gentle hand wash thereafter. Store folded in a cool, dry place away from direct sunlight."
+          ],
+          "additionalInfo": {
+            "Net Quantity": "1 Set",
+            "Country of Origin": "India",
+            "Ideal For": "Festive, wedding guest, party wear",
+            "Product Care": "Dry clean / gentle hand wash"
+          },
+          "sizeChart": [
+            {
+              "size": "XS",
+              "chest": "32 – 34",
+              "shoulder": "14",
+              "length": "38",
+              "sleeve": "16"
+            },
+            {
+              "size": "S",
+              "chest": "34 – 36",
+              "shoulder": "14.5",
+              "length": "40",
+              "sleeve": "17"
+            },
+            {
+              "size": "M",
+              "chest": "36 – 38",
+              "shoulder": "15",
+              "length": "42",
+              "sleeve": "17.5"
+            },
+            {
+              "size": "L",
+              "chest": "38 – 40",
+              "shoulder": "15.5",
+              "length": "44",
+              "sleeve": "18"
+            },
+            {
+              "size": "XL",
+              "chest": "40 – 42",
+              "shoulder": "16",
+              "length": "46",
+              "sleeve": "18.5"
+            },
+            {
+              "size": "XXL",
+              "chest": "42 – 44",
+              "shoulder": "16.5",
+              "length": "48",
+              "sleeve": "19"
+            }
+          ],
+          "sizeChartType": "ethnic",
+          "selectedSize": "XS",
+          "quantity": 1
+        }
+      ],
+      "subtotal": 249,
+      "discount": 0,
+      "grandTotal": 249,
+      "status": "Pending",
+      "paymentStatus": "Paid",
+      "date": "4/6/2026, 12:53:26 pm",
+      "createdAt": "2026-06-04T07:23:26.414Z"
+    },
+    {
+      "id": "ORD-379840",
+      "userId": "USR-1779344334203",
+      "customerName": "Jinal",
+      "email": "jinalman33@gmail.com",
+      "phone": "23456789078907",
+      "address": "wq, w, w, w, 365620, w",
+      "items": [
+        {
+          "id": 3510,
+          "title": "Ivory Cream Tropical Palm Camp Shirt",
+          "price": 149,
+          "originalPrice": 298,
+          "discount": "50% OFF",
+          "category": "men",
+          "subCategory": "shirts",
+          "wearType": "western",
+          "image": "/mens/shirts/shirt/shirt 10/s-ps-36-s-stenfia-original-imahkffeggujam9s.webp",
+          "images": [
+            "/mens/shirts/shirt/shirt 10/s-ps-36-s-stenfia-original-imahkffeggujam9s.webp",
+            "/mens/shirts/shirt/shirt 10/s-ps-36-s-stenfia-original-imahkffekhx5s6cz.webp",
+            "/mens/shirts/shirt/shirt 10/s-ps-36-s-stenfia-original-imahkffew3uehhhc.webp",
+            "/mens/shirts/shirt/shirt 10/s-ps-36-s-stenfia-original-imahkffeztdfbyhj.webp"
+          ],
+          "description": "FlexFit Studio presents Ivory Cream Tropical Palm Camp Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "rating": "4.3",
+          "reviewsCount": 75,
+          "stock": 24,
+          "gender": "gents",
+          "fabricTags": [
+            "Cotton"
+          ],
+          "variants": [
+            {
+              "id": "default",
+              "color": "Default",
+              "colorHex": "#f5f5f5",
+              "stockBySize": {
+                "S": 4,
+                "M": 4,
+                "L": 4,
+                "XL": 4,
+                "XXL": 4
+              }
+            }
+          ],
+          "descriptionLong": "FlexFit Studio presents Ivory Cream Tropical Palm Camp Shirt—a perfect blend of comfort and everyday style. Crafted with attention to detail, this piece elevates your casual wardrobe with a versatile regular fit that flatters most body types. The 60% Cotton, 40% Polyester construction feels lightweight and breathable, with moisture-wicking performance for active days. A sleek finish and smooth texture add modern appeal—pair with jeans, joggers or layer under a jacket. Country of Origin: India.",
+          "highlights": {
+            "Material composition": "60% Cotton, 40% Polyester",
+            "Fit type": "Regular Fit",
+            "Sleeve type": "Short / Half Sleeve",
+            "Collar style": "Round Neck",
+            "Length": "Standard Length",
+            "Country of Origin": "India"
+          },
+          "aboutItems": [
+            "MATERIAL & FABRIC: Ivory Cream Tropical Palm Camp Shirt is crafted from a 60% Cotton, 40% Polyester blend for a soft, lightweight and flexible feel. Breathable knit helps reduce discomfort while FlexFit moisture management wicks sweat away—keeping you dry through workouts, casual outings and everyday wear.",
+            "REGULAR FIT & VERSATILE STYLE: Designed for a relaxed regular fit with standard length for a classic silhouette. Easy movement for gym sessions, weekend plans or office-casual looks. Reinforced neck tape adds durability and a premium finish.",
+            "COLOR & DURABILITY: Quality fabric holds colour well wash after wash. The tee maintains shape and texture over time—making it a reliable wardrobe staple from FlexFit Studio.",
+            "EASY CARE: Quick-dry, machine-wash friendly fabric resists wrinkles and shrinkage when cared for as per label. Double-stitched seams support long-lasting daily use.",
+            "MOISTURE-WICKING & BREATHABLE: Air circulation helps prevent overheating in warm weather. Ideal for sports, travel and all-day comfort."
+          ],
+          "additionalInfo": {
+            "Net Quantity": "1 Count",
+            "Country of Origin": "India",
+            "Item Weight": "Approx. 250 g",
+            "Product Care": "Machine wash cold, do not bleach, dry in shade"
+          },
+          "sizeChart": [
+            {
+              "size": "S",
+              "chest": "34 – 36",
+              "shoulder": "16.5",
+              "length": "27.5",
+              "sleeve": "7.5"
+            },
+            {
+              "size": "M",
+              "chest": "36 – 38",
+              "shoulder": "17",
+              "length": "28.2",
+              "sleeve": "8"
+            },
+            {
+              "size": "L",
+              "chest": "38 – 41",
+              "shoulder": "17.8",
+              "length": "29",
+              "sleeve": "8.5"
+            },
+            {
+              "size": "XL",
+              "chest": "41 – 44",
+              "shoulder": "18.5",
+              "length": "29.8",
+              "sleeve": "9"
+            },
+            {
+              "size": "XXL",
+              "chest": "44 – 47",
+              "shoulder": "19.2",
+              "length": "30.5",
+              "sleeve": "9.5"
+            }
+          ],
+          "sizeChartType": "mens",
+          "isGiftCombo": false,
+          "partnerProduct": null,
+          "selectedSize": "S",
+          "quantity": 1
+        }
+      ],
+      "subtotal": 149,
+      "discount": 0,
+      "grandTotal": 149,
+      "status": "Pending",
+      "paymentStatus": "Paid",
+      "date": "4/6/2026, 12:52:40 pm",
+      "createdAt": "2026-06-04T07:22:40.297Z"
+    },
+    {
       "id": "ORD-737332",
       "userId": "USR-1779448804442",
       "customerName": "Guest",
@@ -24456,5 +25128,18 @@
       "updatedAt": "2026-05-21T05:37:10.557Z"
     }
   ],
-  "adSlots": []
+  "adSlots": [
+    {
+      "placement": "home_below_header",
+      "code": "PHNjcmlwdCBhc3luYyBzcmM9Imh0dHBzOi8vc2VjdXJlcHViYWRzLmcuZG91YmxlY2xpY2submV0L3RhZy9qcy9ncHQuanMiIGNyb3Nzb3JpZ2luPSJhbm9ueW1vdXMiPjwvc2NyaXB0Pgo8c2NyaXB0PgogIHdpbmRvdy5nb29nbGV0YWcgPSB3aW5kb3cuZ29vZ2xldGFnIHx8IHtjbWQ6IFtdfTsKICBnb29nbGV0YWcuY21kLnB1c2goZnVuY3Rpb24oKSB7CiAgICBnb29nbGV0YWcuZGVmaW5lU2xvdCgnLzIzMzQ0MTE2NjU0L2ExJywgW1szMzYsIDI4MF0sIFsyNTAsIDI1MF0sIFszMDAsIDI1MF0sIFsyMDAsIDIwMF0sIFs0ODAsIDMyMF0sICdmbHVpZCddLCAnZGl2LWdwdC1hZC0xNzgwNDc5Mzg3OTI5LTAnKS5hZGRTZXJ2aWNlKGdvb2dsZXRhZy5wdWJhZHMoKSk7CiAgICBnb29nbGV0YWcucHViYWRzKCkuZW5hYmxlU2luZ2xlUmVxdWVzdCgpOwogICAgZ29vZ2xldGFnLmVuYWJsZVNlcnZpY2VzKCk7CiAgfSk7Cjwvc2NyaXB0Pgo8IS0tIC8yMzM0NDExNjY1NC9hMSAtLT4KPGRpdiBpZD0nZGl2LWdwdC1hZC0xNzgwNDc5Mzg3OTI5LTAnIHN0eWxlPSdtaW4td2lkdGg6IDIwMHB4OyBtaW4taGVpZ2h0OiAyMDBweDsnPgogIDxzY3JpcHQ+CiAgICBnb29nbGV0YWcuY21kLnB1c2goZnVuY3Rpb24oKSB7IGdvb2dsZXRhZy5kaXNwbGF5KCdkaXYtZ3B0LWFkLTE3ODA0NzkzODc5MjktMCcpOyB9KTsKICA8L3NjcmlwdD4KPC9kaXY+",
+      "encoded": true,
+      "updatedAt": "2026-06-04T06:20:14.102Z"
+    },
+    {
+      "placement": "home_after_hero",
+      "code": "PHNjcmlwdCBhc3luYyBzcmM9Imh0dHBzOi8vc2VjdXJlcHViYWRzLmcuZG91YmxlY2xpY2submV0L3RhZy9qcy9ncHQuanMiIGNyb3Nzb3JpZ2luPSJhbm9ueW1vdXMiPjwvc2NyaXB0Pgo8c2NyaXB0PgogIHdpbmRvdy5nb29nbGV0YWcgPSB3aW5kb3cuZ29vZ2xldGFnIHx8IHtjbWQ6IFtdfTsKICBnb29nbGV0YWcuY21kLnB1c2goZnVuY3Rpb24oKSB7CiAgICBnb29nbGV0YWcuZGVmaW5lU2xvdCgnLzIzMzQ0MTE2NjU0L2EyJywgW1syMDAsIDIwMF0sIFs0ODAsIDMyMF0sICdmbHVpZCcsIFszMzYsIDI4MF0sIFsyNTAsIDI1MF0sIFszMDAsIDI1MF1dLCAnZGl2LWdwdC1hZC0xNzgwNDc5NDQ1NjA0LTAnKS5hZGRTZXJ2aWNlKGdvb2dsZXRhZy5wdWJhZHMoKSk7CiAgICBnb29nbGV0YWcucHViYWRzKCkuZW5hYmxlU2luZ2xlUmVxdWVzdCgpOwogICAgZ29vZ2xldGFnLmVuYWJsZVNlcnZpY2VzKCk7CiAgfSk7Cjwvc2NyaXB0Pgo8IS0tIC8yMzM0NDExNjY1NC9hMiAtLT4KPGRpdiBpZD0nZGl2LWdwdC1hZC0xNzgwNDc5NDQ1NjA0LTAnIHN0eWxlPSdtaW4td2lkdGg6IDIwMHB4OyBtaW4taGVpZ2h0OiAyMDBweDsnPgogIDxzY3JpcHQ+CiAgICBnb29nbGV0YWcuY21kLnB1c2goZnVuY3Rpb24oKSB7IGdvb2dsZXRhZy5kaXNwbGF5KCdkaXYtZ3B0LWFkLTE3ODA0Nzk0NDU2MDQtMCcpOyB9KTsKICA8L3NjcmlwdD4KPC9kaXY+",
+      "encoded": true,
+      "updatedAt": "2026-06-04T06:20:14.102Z"
+    }
+  ]
 }
