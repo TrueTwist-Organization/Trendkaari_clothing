@@ -1,0 +1,198 @@
+/* Technical error — matches checkout light theme (white + brand plum) */
+
+.checkout-flow-root .co-fail-root {
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 16px 0 32px;
+  animation: coSpotlight 0.8s var(--co-ease-luxury);
+}
+
+.checkout-flow-root .co-fail-inner {
+  width: 100%;
+  padding: 0 8px;
+}
+
+.checkout-flow-root .co-fail-hero {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.checkout-flow-root .co-fail-badge {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--co-primary);
+  background: var(--co-bg-soft);
+  border: 2px solid var(--co-primary);
+  box-shadow: 0 4px 16px rgba(96, 11, 69, 0.12);
+}
+
+.checkout-flow-root .co-fail-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--co-primary);
+  margin: 0 0 10px;
+  font-family: var(--co-font-body);
+}
+
+.checkout-flow-root .co-fail-title {
+  font-family: var(--co-font-body);
+  font-size: clamp(1.85rem, 4.5vw, 2.35rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin: 0 0 14px;
+  color: var(--co-primary);
+  line-height: 1.15;
+}
+
+.checkout-flow-root .co-fail-lead {
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--co-text-muted);
+  max-width: 420px;
+}
+
+.checkout-flow-root .co-fail-lead strong {
+  color: var(--co-primary);
+  font-weight: 600;
+}
+
+.checkout-flow-root .co-fail-detail-msg {
+  margin: 14px auto 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--error, #c0392b);
+  max-width: 400px;
+}
+
+.checkout-flow-root .co-fail-card {
+  background: var(--co-bg);
+  border: 1px solid var(--co-border-glow);
+  border-radius: 0;
+  padding: 20px 22px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-md, 0 4px 12px rgba(0, 0, 0, 0.08));
+}
+
+.checkout-flow-root .co-fail-card--next {
+  border-left: 3px solid var(--co-primary);
+}
+
+.checkout-flow-root .co-fail-card__head {
+  margin: 0 0 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--co-border-glow);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--co-primary);
+  font-family: var(--co-font-body);
+}
+
+.checkout-flow-root .co-fail-card__head--gold {
+  color: var(--co-primary);
+}
+
+.checkout-flow-root .co-fail-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.checkout-flow-root .co-fail-list__item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--co-border-glow);
+}
+
+.checkout-flow-root .co-fail-list__item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.checkout-flow-root .co-fail-list__item:first-child {
+  padding-top: 0;
+}
+
+.checkout-flow-root .co-fail-list__icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--co-cta-text);
+  background: var(--co-primary);
+  border: 1px solid var(--co-primary);
+  box-shadow: none;
+}
+
+.checkout-flow-root .co-fail-list__item strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: var(--co-text);
+  font-weight: 600;
+}
+
+.checkout-flow-root .co-fail-list__item p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--co-text-muted);
+}
+
+.checkout-flow-root .co-fail-steps {
+  margin: 0;
+  padding: 0 0 0 20px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--co-text-muted);
+}
+
+.checkout-flow-root .co-fail-steps li {
+  margin-bottom: 6px;
+}
+
+.checkout-flow-root .co-fail-steps li::marker {
+  color: var(--co-primary);
+  font-weight: 700;
+}
+
+.checkout-flow-root .co-fail-actions {
+  flex-direction: column;
+  align-items: stretch;
+  margin-top: 8px;
+}
+
+.checkout-flow-root .co-fail-actions .co-btn-primary {
+  width: 100%;
+  max-width: none;
+}
+
+.checkout-flow-root .co-fail-actions .co-btn-back {
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 520px) {
+  .checkout-flow-root .co-fail-root {
+    padding: 8px 0 24px;
+  }
+
+  .checkout-flow-root .co-fail-card {
+    padding: 18px 16px;
+  }
+}

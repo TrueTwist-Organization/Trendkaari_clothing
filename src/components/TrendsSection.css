@@ -1,0 +1,333 @@
+/* Premium Trends Section — pink & white (matches Gift Collection) */
+.trends-section-wrapper {
+  --trends-pink: #ff6b9d;
+  --trends-pink-dark: #e85588;
+  --trends-pink-pale: #fff5f8;
+  background: linear-gradient(180deg, #ffffff 0%, var(--trends-pink-pale) 42%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 60px 0;
+}
+
+.trends-section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.trends-header-title-clean {
+  font-family: 'Cinzel', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.trends-section-header::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 2px;
+  margin: 14px auto 0;
+  background: linear-gradient(90deg, transparent, var(--trends-pink), transparent);
+}
+
+/* Carousel Outer Wrapper with absolute-positioned side chevrons */
+.trends-carousel-outer-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Circular Next/Prev Navigation Buttons (Exactly like screenshot) */
+.carousel-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1.5px solid rgba(255, 107, 157, 0.25);
+  color: #e85588;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 107, 157, 0.12);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 50;
+}
+
+.prev-btn {
+  left: -20px;
+}
+
+.next-btn {
+  right: -20px;
+}
+
+.carousel-nav-btn:hover {
+  background: linear-gradient(135deg, var(--trends-pink) 0%, var(--trends-pink-dark) 100%);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 6px 20px rgba(255, 107, 157, 0.35);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.carousel-nav-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+/* 2. Staggered Rectangular Morphing Carousel Container */
+.trends-staggered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centered align is extremely high-end! */
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.trend-staggered-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); /* Liquified height-morph cubic curves! */
+}
+
+/* Height system mapping on the image viewport */
+.trend-pos-1 .trend-card-image-viewport,
+.trend-pos-5 .trend-card-image-viewport {
+  width: 100%;
+  height: 380px !important;
+}
+
+.trend-pos-2 .trend-card-image-viewport,
+.trend-pos-4 .trend-card-image-viewport {
+  width: 100%;
+  height: 460px !important;
+}
+
+.trend-pos-3 .trend-card-image-viewport {
+  width: 100%;
+  height: 540px !important;
+}
+
+/* Width distributions for cards in the flex row */
+.trend-pos-1,
+.trend-pos-5 {
+  width: 18%;
+}
+
+.trend-pos-2,
+.trend-pos-4 {
+  width: 20%;
+}
+
+.trend-pos-3 {
+  width: 22%;
+}
+
+/* Framed look: white border on soft pink section */
+.trend-card-image-viewport {
+  position: relative;
+  width: 100%;
+  border: 5px solid #ffffff;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(255, 107, 157, 0.14);
+  background-color: #ffffff;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.trend-staggered-card:hover .trend-card-image-viewport {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(255, 107, 157, 0.22);
+}
+
+.trend-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Shop All pill button overlayed at bottom right corner (Exactly like screenshot) */
+.trend-pill-btn-wrapper {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.trend-shop-pill-btn {
+  background-color: #ffffff;
+  color: #333333;
+  border: none; /* Completely borderless pill button */
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.trend-shop-pill-btn .bag-icon {
+  color: #333333;
+  transition: color 0.3s ease;
+}
+
+.trend-staggered-card:hover .trend-shop-pill-btn {
+  background-color: #ffffff;
+  color: #e85588;
+  box-shadow: 0 6px 18px rgba(255, 107, 157, 0.2);
+}
+
+.trend-staggered-card:hover .trend-shop-pill-btn .bag-icon {
+  color: #ff6b9d;
+}
+
+/* ==================== RESPONSIVE MEDIA QUERIES ==================== */
+
+@media (max-width: 1024px) {
+  .trends-header-title-clean {
+    font-size: 1.8rem;
+  }
+
+  .carousel-nav-btn {
+    width: 38px;
+    height: 38px;
+  }
+  .prev-btn {
+    left: -10px;
+  }
+  .next-btn {
+    right: -10px;
+  }
+
+  .trend-pos-1 .trend-card-image-viewport,
+  .trend-pos-5 .trend-card-image-viewport {
+    height: 300px !important;
+  }
+
+  .trend-pos-2 .trend-card-image-viewport,
+  .trend-pos-4 .trend-card-image-viewport {
+    height: 360px !important;
+  }
+
+  .trend-pos-3 .trend-card-image-viewport {
+    height: 420px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .trends-section-wrapper {
+    padding: 32px 0;
+  }
+
+  .trends-section-header {
+    margin-bottom: 24px;
+  }
+
+  .trends-header-title-clean {
+    font-size: 1.5rem;
+  }
+
+  .carousel-nav-btn {
+    width: 36px;
+    height: 36px;
+  }
+  .prev-btn {
+    left: 8px;
+  }
+  .next-btn {
+    right: 8px;
+  }
+
+  .trends-carousel-outer-wrapper {
+    padding: 0 8px;
+  }
+
+  .trend-pos-1 .trend-card-image-viewport,
+  .trend-pos-5 .trend-card-image-viewport {
+    height: 240px !important;
+  }
+
+  .trend-pos-2 .trend-card-image-viewport,
+  .trend-pos-4 .trend-card-image-viewport {
+    height: 290px !important;
+  }
+
+  .trend-pos-3 .trend-card-image-viewport {
+    height: 340px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .trends-staggered-container {
+    gap: 8px;
+    padding: 0 4px;
+  }
+
+  .carousel-nav-btn {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .prev-btn {
+    left: -5px !important;
+  }
+
+  .next-btn {
+    right: -5px !important;
+  }
+
+  /* HIDE CARD 1 & 5 ON MOBILE TO SHOW EXACTLY 3 SPACIOUS CARDS! */
+  .trend-pos-1,
+  .trend-pos-5 {
+    display: none !important;
+  }
+
+  .trend-pos-2,
+  .trend-pos-4 {
+    display: block !important;
+    width: 31% !important;
+  }
+
+  .trend-pos-2 .trend-card-image-viewport,
+  .trend-pos-4 .trend-card-image-viewport {
+    height: 200px !important;
+  }
+
+  .trend-pos-3 {
+    display: block !important;
+    width: 35% !important;
+  }
+
+  .trend-pos-3 .trend-card-image-viewport {
+    height: 265px !important;
+  }
+
+  .trend-shop-pill-btn {
+    padding: 4px 8px !important;
+    font-size: 0.52rem !important;
+    gap: 3px !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .trend-pill-btn-wrapper {
+    bottom: 8px !important;
+    right: 8px !important;
+  }
+}

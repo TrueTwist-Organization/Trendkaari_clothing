@@ -1,0 +1,108 @@
+/* Sits below fixed header — margin matches announcement + main header heights */
+.site-top-ad-strip {
+  --site-announcement-h: 34px;
+  --site-main-header-h: 100px;
+  --site-header-total: calc(var(--site-announcement-h) + var(--site-main-header-h) - 6px);
+
+  margin-top: var(--site-header-total);
+  width: 100%;
+  background: #fff;
+  position: relative;
+  z-index: 900;
+  border-bottom: 1px solid var(--border-color, #efefef);
+  box-sizing: border-box;
+}
+
+.site-top-ad-strip .ad-slot-embed--global,
+.site-top-ad-strip .page-ad-slot-wrap--global-top {
+  margin: 0 auto;
+  padding: 2px 12px;
+  max-width: 1100px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.site-top-ad-strip .page-ad-slot-wrap--global-top {
+  padding-top: 0;
+}
+
+.site-top-ad-strip .page-ad-slot-wrap--global-top + .ad-slot-embed--global,
+.site-top-ad-strip .ad-slot-embed--global + .page-ad-slot-wrap--global-top {
+  border-top: 1px solid var(--border-color, #efefef);
+}
+
+.site-top-ad-strip .ad-slot-embed {
+  margin: 0;
+  min-height: 0;
+}
+
+.site-top-ad-strip .ad-slot-embed--global,
+.site-top-ad-strip .ad-slot-embed--page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  line-height: 0;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.site-top-ad-strip iframe,
+.site-top-ad-strip ins.adsbygoogle,
+.site-top-ad-strip [id^='div-gpt-ad-'],
+.site-top-ad-strip img {
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.site-top-ad-strip .ad-fit-shell {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .site-top-ad-strip {
+    --site-announcement-h: 30px;
+    --site-main-header-h: 88px;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-top-ad-strip {
+    --site-announcement-h: 28px;
+    --site-main-header-h: 64px;
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
+    box-sizing: border-box;
+  }
+
+  .site-top-ad-strip .ad-slot-embed--global,
+  .site-top-ad-strip .page-ad-slot-wrap--global-top {
+    padding: 2px 8px;
+    max-width: 100%;
+    overflow: visible;
+  }
+
+  .site-top-ad-strip .ad-slot-embed {
+    overflow: visible;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-top-ad-strip {
+    --site-announcement-h: 28px;
+    --site-main-header-h: 60px;
+  }
+}
+
+/* Hero already sits below ad strip — no extra gap */
+.site-top-ad-strip[data-has-ads='true'] + .main-content .hero-slider-section {
+  padding-top: 0;
+}

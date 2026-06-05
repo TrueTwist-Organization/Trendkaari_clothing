@@ -1,0 +1,239 @@
+.account-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10040;
+  opacity: 1;
+  visibility: visible;
+}
+
+.account-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 10, 20, 0.45);
+  backdrop-filter: blur(2px);
+  cursor: pointer;
+}
+
+.account-drawer-overlay .drawer-right.account-drawer {
+  transform: translateX(0);
+}
+
+.account-drawer-header {
+  background: linear-gradient(135deg, #600b45 0%, #8b1568 100%);
+  color: #fff;
+  border-bottom: none;
+}
+
+.account-drawer-header .drawer-close-btn {
+  color: #fff;
+}
+
+.account-drawer-header .drawer-close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.account-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 1px;
+}
+
+.account-drawer-content {
+  background: #fcfbf7;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.account-user-card {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #e8d4dc;
+  margin-bottom: 24px;
+}
+
+.account-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #600b45;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.account-user-card strong {
+  display: block;
+  color: #1a1a1a;
+}
+
+.account-user-card span {
+  display: block;
+  font-size: 13px;
+  color: #666;
+}
+
+.account-section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #600b45;
+  margin: 0 0 12px;
+}
+
+.account-muted {
+  color: #888;
+  font-size: 14px;
+}
+
+.account-orders-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.account-order-card {
+  padding: 12px 14px;
+  background: #fff;
+  border: 1px solid #e8d4dc;
+}
+
+.account-order-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.account-order-top strong {
+  font-size: 12px;
+  color: #600b45;
+}
+
+@media (max-width: 768px) {
+  .account-drawer-overlay .drawer-right {
+    max-width: 100%;
+  }
+
+  .account-drawer-panel {
+    padding: 16px;
+  }
+
+  .account-order-card {
+    padding: 10px 12px;
+  }
+}
+
+.account-status {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 2px 8px;
+  background: #fdeded;
+  color: #600b45;
+}
+
+.account-status--delivered {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.account-status--cancelled {
+  background: #f5f5f5;
+  color: #757575;
+}
+
+.account-order-cancel-wrap {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed #e8d4dc;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.account-cancel-hint {
+  font-size: 11px;
+  color: #8a6a4a;
+  letter-spacing: 0.02em;
+}
+
+.account-cancel-hint--confirmed {
+  color: #600b45;
+  font-weight: 600;
+}
+
+.account-cancel-order-btn {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #c62828;
+  background: #fff;
+  border: 1px solid rgba(198, 40, 40, 0.45);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.account-cancel-order-btn:hover:not(:disabled) {
+  background: #ffebee;
+  border-color: #c62828;
+}
+
+.account-cancel-order-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.account-cancel-error {
+  font-size: 13px;
+  color: #c62828;
+  background: #ffebee;
+  border: 1px solid rgba(198, 40, 40, 0.25);
+  padding: 10px 12px;
+  margin: 0 0 12px;
+}
+
+.account-order-meta,
+.account-order-items {
+  display: block;
+  font-size: 12px;
+  color: #888;
+}
+
+.account-order-total {
+  display: block;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 4px 0;
+}
+
+.account-logout-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: auto;
+  flex-shrink: 0;
+}

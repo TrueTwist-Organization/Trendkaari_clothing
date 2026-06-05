@@ -1,0 +1,129 @@
+/* ═══════════════════════════════════════════════════════════════
+   FlexFit — Global mobile responsive utilities
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  --mobile-nav-height: 60px;
+  --header-offset-mobile: 92px; /* announcement ~28 + header ~64 */
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --page-bottom-mobile: calc(var(--mobile-nav-height) + var(--safe-bottom) + 12px);
+}
+
+/* Prevent horizontal overflow; stable gutter avoids layout shift */
+html {
+  overflow-x: clip;
+  scrollbar-gutter: stable;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+}
+
+.overlay {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Mobile: space for bottom nav + safe area */
+@media (max-width: 768px) {
+  .app-container {
+    padding-bottom: var(--page-bottom-mobile);
+  }
+
+  .main-content {
+    padding-bottom: 8px;
+  }
+
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .section-padding {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .section-title {
+    font-size: 18px;
+    letter-spacing: 1.5px;
+  }
+
+  /* Drawers full width on phones */
+  .drawer {
+    max-width: 100%;
+  }
+
+  .drawer-header,
+  .drawer-content {
+    padding: 16px;
+  }
+
+  .mobile-bottom-navbar {
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: var(--safe-bottom);
+    height: calc(var(--mobile-nav-height) + var(--safe-bottom));
+  }
+
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .section-padding {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+/* ─── Ads: full width, visible on mobile + laptop (no clipping) ─── */
+.page-ad-slot-wrap,
+.ad-slot-embed,
+.ad-slot-embed__content,
+.ad-fit-viewport,
+.ad-fit-shell {
+  max-width: 100%;
+  min-width: 0;
+  overflow: visible;
+}
+
+.drawer .ad-slot-embed,
+.drawer .page-ad-slot-wrap,
+.checkout-flow-root .page-ad-slot-wrap,
+.checkout-flow-root .ad-slot-embed,
+.category-mobile-sidebar-ads .page-ad-slot-wrap,
+.collection-filters-sidebar .page-ad-slot-wrap {
+  max-width: 100%;
+  min-width: 0;
+  overflow: visible;
+}
+
+.main-content .page-ad-slot-wrap,
+.main-content .ad-slot-embed {
+  overflow: visible;
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .app-container,
+  .main-content,
+  #root {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  .main-content .page-ad-slot-wrap,
+  .main-content .ad-slot-embed,
+  .site-top-ad-strip,
+  .site-top-ad-strip .ad-slot-embed {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: visible;
+  }
+}

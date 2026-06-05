@@ -1,0 +1,46 @@
+.page-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  padding: 8px 18px;
+  border: 1.5px solid #600b45;
+  border-radius: 999px;
+  background: rgba(96, 11, 69, 0.08);
+  color: #600b45;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.page-back-btn:hover {
+  background: #600b45;
+  color: #fff;
+  border-color: #600b45;
+}
+
+.page-back-btn:active {
+  transform: scale(0.98);
+}
+
+.page-back-btn--minimal {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
+  color: #600b45;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.page-back-btn--minimal:hover {
+  background: none;
+  color: #4b0030;
+  text-decoration: underline;
+}

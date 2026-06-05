@@ -1,0 +1,37 @@
+.product-discount-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 3px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #fdf8f2 0%, #f3ebe0 100%);
+  border: 1px solid rgba(212, 180, 131, 0.65);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.product-discount-chip__pct {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #600b45;
+  letter-spacing: 0.02em;
+}
+
+.product-discount-chip__lbl {
+  font-size: 0.58rem;
+  font-weight: 600;
+  color: #9a7b5c;
+  text-transform: lowercase;
+}
+
+.product-discount-chip--compact .product-discount-chip__pct {
+  font-size: 0.62rem;
+}
+
+.product-discount-chip--compact .product-discount-chip__lbl {
+  font-size: 0.52rem;
+}
+
+.product-discount-chip--compact {
+  padding: 3px 7px;
+}

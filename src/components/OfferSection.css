@@ -1,0 +1,596 @@
+/* Offer section — light editorial strip (matches home page flow) */
+
+/* —— Continuous offer marquee —— */
+.offer-marquee {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  overflow: hidden;
+  background: var(--brand-plum);
+  border-bottom: 1px solid rgba(212, 180, 131, 0.25);
+}
+
+.offer-marquee__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.offer-marquee__track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .offer-marquee__track {
+    animation: offer-marquee-scroll 32s linear infinite;
+  }
+}
+
+.offer-marquee__group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 11px 0;
+}
+
+.offer-marquee__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 28px;
+  font-family: 'Montserrat', var(--font-sans, sans-serif);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.offer-marquee__item svg {
+  color: var(--brand-gold-light);
+  flex-shrink: 0;
+}
+
+.offer-marquee__sep {
+  margin-left: 6px;
+  color: var(--brand-gold);
+  opacity: 0.85;
+  font-size: 0.65rem;
+}
+
+.offer-marquee__fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 48px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.offer-marquee__fade--left {
+  left: 0;
+  background: linear-gradient(90deg, var(--brand-plum) 0%, transparent 100%);
+}
+
+.offer-marquee__fade--right {
+  right: 0;
+  background: linear-gradient(270deg, var(--brand-plum) 0%, transparent 100%);
+}
+
+@keyframes offer-marquee-scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+body.is-scrolling .offer-marquee__track {
+  animation-play-state: paused;
+}
+
+.offer-section {
+  position: relative;
+  width: 100%;
+  padding: 52px clamp(16px, 4vw, 48px) 56px;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #faf7f9 38%,
+    #fff9fb 62%,
+    #ffffff 100%
+  );
+  border-top: 1px solid rgba(96, 11, 69, 0.06);
+  border-bottom: 1px solid rgba(96, 11, 69, 0.06);
+}
+
+.offer-section__vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 55% 80% at 12% 50%, rgba(212, 180, 131, 0.12) 0%, transparent 65%),
+    radial-gradient(ellipse 45% 70% at 88% 40%, rgba(96, 11, 69, 0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.offer-section__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(300px, 1.05fr) minmax(280px, 0.95fr);
+  gap: clamp(28px, 5vw, 56px);
+  align-items: center;
+  padding: clamp(28px, 4vw, 40px);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(96, 11, 69, 0.08);
+  box-shadow:
+    0 4px 24px rgba(96, 11, 69, 0.06),
+    0 1px 0 rgba(255, 255, 255, 0.9) inset;
+}
+
+/* —— Polaroid fan —— */
+.offer-section__visuals {
+  position: relative;
+  min-height: 400px;
+  width: 100%;
+}
+
+.offer-polaroid {
+  position: absolute;
+  margin: 0;
+  width: min(188px, 30vw);
+  transform: rotate(var(--polaroid-rotate, 0deg));
+  transition: transform 0.45s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.offer-polaroid--1 {
+  top: 4px;
+  left: 2%;
+  z-index: 3;
+}
+
+.offer-polaroid--2 {
+  top: 44%;
+  left: 32%;
+  z-index: 2;
+}
+
+.offer-polaroid--3 {
+  top: 14%;
+  right: 0;
+  left: auto;
+  z-index: 1;
+}
+
+.offer-section:hover .offer-polaroid--1 {
+  transform: rotate(calc(var(--polaroid-rotate, 0deg) - 2deg)) translateY(-6px);
+}
+
+.offer-section:hover .offer-polaroid--2 {
+  transform: rotate(calc(var(--polaroid-rotate, 0deg) + 2deg)) translateY(-8px);
+}
+
+.offer-section:hover .offer-polaroid--3 {
+  transform: rotate(calc(var(--polaroid-rotate, 0deg) - 1deg)) translateY(-5px);
+}
+
+.offer-polaroid__frame {
+  background: #fff;
+  padding: 11px 11px 0;
+  border-radius: 4px;
+  box-shadow:
+    0 16px 36px rgba(96, 11, 69, 0.12),
+    0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.offer-polaroid__img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 12%;
+  display: block;
+}
+
+.offer-polaroid__label {
+  display: block;
+  padding: 10px 4px 12px;
+  font-family: 'Montserrat', var(--font-sans, sans-serif);
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--brand-plum);
+}
+
+.offer-polaroid__caption {
+  margin: 12px 0 0;
+  padding: 0 6px;
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  font-style: italic;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--brand-plum-mid, #8b1568);
+  text-shadow: none;
+}
+
+/* —— Copy —— */
+.offer-section__copy {
+  color: var(--text-primary);
+  text-align: left;
+  padding-left: clamp(0px, 2vw, 16px);
+  max-width: 500px;
+  justify-self: end;
+  width: 100%;
+}
+
+.offer-section__brand {
+  margin: 0 0 8px;
+  font-family: 'Cinzel', 'Playfair Display', serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--brand-plum);
+}
+
+.offer-section__eyebrow {
+  margin: 0 0 28px;
+  font-family: 'Montserrat', var(--font-sans, sans-serif);
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.offer-section__headline {
+  position: relative;
+  margin: 0 0 22px;
+  min-height: 118px;
+}
+
+.offer-section__watermark {
+  position: absolute;
+  left: -4px;
+  top: -14px;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4rem, 11vw, 6.5rem);
+  font-weight: 800;
+  line-height: 0.82;
+  letter-spacing: -0.03em;
+  color: rgba(96, 11, 69, 0.06);
+  user-select: none;
+  pointer-events: none;
+}
+
+.offer-section__title {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 14px;
+  line-height: 0.95;
+}
+
+.offer-section__title-script {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(2.8rem, 8vw, 4.2rem);
+  font-weight: 400;
+  color: var(--brand-plum-mid, #8b1568);
+  text-shadow: none;
+}
+
+.offer-section__title-bold {
+  font-family: 'Montserrat', var(--font-sans, sans-serif);
+  font-size: clamp(2.4rem, 7vw, 3.5rem);
+  font-weight: 800;
+  color: var(--brand-plum);
+  letter-spacing: -0.03em;
+}
+
+.offer-section__discount {
+  margin: 0 0 24px;
+  font-family: 'Montserrat', var(--font-sans, sans-serif);
+  font-size: clamp(0.9rem, 1.7vw, 1.05rem);
+  font-weight: 400;
+  color: var(--text-muted);
+  line-height: 1.55;
+  max-width: 380px;
+}
+
+.offer-section__discount strong {
+  font-weight: 700;
+  color: var(--brand-plum);
+}
+
+.offer-section__pills {
+  list-style: none;
+  margin: 0 0 26px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.offer-section__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid rgba(96, 11, 69, 0.14);
+  font-family: 'Montserrat', var(--font-sans, sans-serif);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--brand-plum);
+  box-shadow: 0 2px 8px rgba(96, 11, 69, 0.04);
+}
+
+.offer-section__pill svg {
+  flex-shrink: 0;
+  color: var(--brand-plum-mid, #8b1568);
+  stroke: var(--brand-plum-mid, #8b1568);
+}
+
+.offer-section__cta {
+  display: inline-block;
+  padding: 14px 40px;
+  border: none;
+  border-radius: 999px;
+  background: var(--brand-plum);
+  color: #fff;
+  font-family: 'Montserrat', var(--font-sans, sans-serif);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 22px rgba(96, 11, 69, 0.22);
+}
+
+.offer-section__cta:hover {
+  background: var(--brand-plum-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(96, 11, 69, 0.28);
+}
+
+.offer-section__fine {
+  margin: 14px 0 0;
+  font-family: 'Montserrat', var(--font-sans, sans-serif);
+  font-size: 0.6rem;
+  font-weight: 400;
+  color: var(--text-light);
+  letter-spacing: 0.03em;
+}
+
+/* Tablet */
+@media (max-width: 960px) {
+  .offer-section__inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 28px 20px;
+  }
+
+  .offer-section__visuals {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: clamp(8px, 2vw, 16px);
+    min-height: auto;
+    max-width: 520px;
+    padding: 16px 8px 24px;
+    overflow: visible;
+    margin: 0 auto;
+  }
+
+  .offer-polaroid {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: min(150px, 28vw);
+    flex-shrink: 0;
+  }
+
+  .offer-polaroid--1 {
+    transform: rotate(-7deg) translateY(-4px);
+    z-index: 3;
+  }
+
+  .offer-polaroid--2 {
+    transform: rotate(5deg) translateY(8px);
+    z-index: 2;
+  }
+
+  .offer-polaroid--3 {
+    transform: rotate(-4deg) translateY(-2px);
+    z-index: 1;
+  }
+
+  .offer-section:hover .offer-polaroid--1 {
+    transform: rotate(-7deg) translateY(-4px);
+  }
+
+  .offer-section:hover .offer-polaroid--2 {
+    transform: rotate(5deg) translateY(8px);
+  }
+
+  .offer-section:hover .offer-polaroid--3 {
+    transform: rotate(-4deg) translateY(-2px);
+  }
+
+  .offer-polaroid__caption {
+    display: none;
+  }
+
+  .offer-section__copy {
+    justify-self: center;
+    text-align: center;
+    padding-left: 0;
+    max-width: 460px;
+  }
+
+  .offer-section__discount {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .offer-section__pills {
+    justify-content: center;
+  }
+
+  .offer-section__headline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .offer-section__watermark {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .offer-section__title {
+    justify-content: center;
+  }
+}
+
+/* Mobile — side-by-side polaroids (no absolute overlap / clipping) */
+@media (max-width: 768px) {
+  .offer-section {
+    overflow: visible;
+  }
+
+  .offer-section__inner {
+    gap: 28px;
+  }
+
+  .offer-section__visuals {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: clamp(6px, 2vw, 14px);
+    min-height: auto;
+    max-width: 100%;
+    padding: 12px 4px 20px;
+    overflow: visible;
+    margin: 0 auto 4px;
+  }
+
+  .offer-polaroid {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: min(118px, 29vw);
+    flex-shrink: 0;
+  }
+
+  .offer-polaroid--1 {
+    z-index: 3;
+    transform: rotate(-7deg) translateY(-4px);
+  }
+
+  .offer-polaroid--2 {
+    z-index: 2;
+    transform: rotate(5deg) translateY(8px);
+  }
+
+  .offer-polaroid--3 {
+    z-index: 1;
+    transform: rotate(-4deg) translateY(-2px);
+  }
+
+  .offer-section:hover .offer-polaroid--1 {
+    transform: rotate(-7deg) translateY(-4px);
+  }
+
+  .offer-section:hover .offer-polaroid--2 {
+    transform: rotate(5deg) translateY(8px);
+  }
+
+  .offer-section:hover .offer-polaroid--3 {
+    transform: rotate(-4deg) translateY(-2px);
+  }
+
+  .offer-polaroid__img {
+    object-position: center top;
+  }
+
+  .offer-polaroid__caption {
+    display: none;
+  }
+
+  .offer-section__headline {
+    min-height: auto;
+  }
+
+  .offer-section__watermark {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .offer-section {
+    padding: 36px 12px 40px;
+  }
+
+  .offer-section__inner {
+    padding: 22px 14px;
+    border-radius: 16px;
+  }
+
+  .offer-section__visuals {
+    padding: 10px 0 16px;
+    gap: 6px;
+  }
+
+  .offer-polaroid {
+    width: min(108px, 31vw);
+  }
+
+  .offer-polaroid__frame {
+    padding: 8px 8px 0;
+  }
+
+  .offer-polaroid__label {
+    font-size: 0.52rem;
+    padding: 8px 2px 10px;
+    letter-spacing: 0.14em;
+  }
+
+  .offer-section__eyebrow {
+    margin-bottom: 22px;
+  }
+
+  .offer-section__title-script {
+    font-size: clamp(2.2rem, 10vw, 2.8rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .offer-polaroid,
+  .offer-section__cta {
+    transition: none;
+  }
+
+  .offer-section:hover .offer-polaroid--1,
+  .offer-section:hover .offer-polaroid--2,
+  .offer-section:hover .offer-polaroid--3 {
+    transform: rotate(var(--polaroid-rotate, 0deg));
+  }
+}
