@@ -3,7 +3,8 @@
   max-width: 100%;
   min-width: 0;
   box-sizing: border-box;
-  overflow: visible;
+  overflow: hidden;
+  contain: inline-size;
 }
 
 .page-ad-slot-wrap--section {

@@ -5,10 +5,17 @@
   flex-direction: column;
   position: relative;
   background-color: #ffffff;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .main-content {
   flex-grow: 1;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
 }
 
 .product-not-found {

@@ -35,6 +35,7 @@ export default function AdSlotEmbed({ html, className = '', slotKey = '' }) {
       typeof ResizeObserver !== 'undefined' ? new ResizeObserver(fit) : null;
     resizeObserver?.observe(host);
     window.addEventListener('resize', fit);
+    window.visualViewport?.addEventListener('resize', fit);
     const fitT1 = window.setTimeout(fit, 400);
     const fitT2 = window.setTimeout(fit, 1200);
     const fitT3 = window.setTimeout(fit, 2500);
@@ -87,6 +88,7 @@ export default function AdSlotEmbed({ html, className = '', slotKey = '' }) {
       stopObserving();
       resizeObserver?.disconnect();
       window.removeEventListener('resize', fit);
+      window.visualViewport?.removeEventListener('resize', fit);
       window.clearTimeout(fitT1);
       window.clearTimeout(fitT2);
       window.clearTimeout(fitT3);

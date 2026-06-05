@@ -1,11 +1,27 @@
-function getAvailableWidth(el) {
-  if (!el) return 0;
-  const style = window.getComputedStyle(el);
+function viewportWidth() {
+  return document.documentElement?.clientWidth || window.innerWidth || 0;
+}
+
+/** Host expands to ad width — use viewport + slot padding, not host.clientWidth. */
+function getAvailableWidth(host) {
+  if (!host) return 0;
+
+  const viewport = viewportWidth();
+  const wrap =
+    host.closest('.page-ad-slot-wrap, .site-top-ad-strip, .drawer-content, .main-content') ||
+    host.parentElement ||
+    host;
+  const style = window.getComputedStyle(wrap);
   const pad =
     (parseFloat(style.paddingLeft) || 0) + (parseFloat(style.paddingRight) || 0);
-  const width = el.clientWidth || el.getBoundingClientRect().width || 0;
-  const viewport = document.documentElement?.clientWidth || window.innerWidth || width;
-  return Math.max(0, Math.min(width - pad, viewport));
+
+  if (viewport <= 900) {
+    return Math.max(0, viewport - pad);
+  }
+
+  const rect = wrap.getBoundingClientRect();
+  const fromWrap = rect.width > 0 ? rect.width - pad : viewport - pad;
+  return Math.max(0, Math.min(fromWrap, viewport - pad));
 }
 
 function measureBlock(el) {
@@ -14,6 +30,24 @@ function measureBlock(el) {
   const w = Math.max(el.scrollWidth || 0, el.offsetWidth || 0, rect.width || 0);
   const h = Math.max(el.scrollHeight || 0, el.offsetHeight || 0, rect.height || 0, 50);
   return { w, h };
+}
+
+function widestInContent(content) {
+  let maxW = 0;
+  let maxH = 50;
+
+  const measure = (el) => {
+    const { w, h } = measureBlock(el);
+    if (w > maxW) maxW = w;
+    if (h > maxH) maxH = h;
+  };
+
+  measure(content);
+  content
+    .querySelectorAll('iframe, img, ins.adsbygoogle, [id^="div-gpt-ad-"]')
+    .forEach(measure);
+
+  return { w: maxW, h: maxH };
 }
 
 function clearViewport(host) {
@@ -31,6 +65,7 @@ function clearViewport(host) {
     content.style.margin = '';
   }
   host.style.minHeight = '';
+  host.style.maxWidth = '';
 }
 
 function applyViewportScale(host, content, box, contentW, contentH) {
@@ -51,31 +86,34 @@ function applyViewportScale(host, content, box, contentW, contentH) {
   content.style.width = `${contentW}px`;
   content.style.maxWidth = 'none';
   host.style.minHeight = `${Math.ceil(contentH * scale)}px`;
+  host.style.maxWidth = `${box}px`;
 }
 
 function tightenIframes(content, box) {
   content.querySelectorAll('iframe').forEach((iframe) => {
     const attrW = parseInt(iframe.getAttribute('width') || '', 10);
-    const { w } = measureBlock(iframe);
+    const { w, h } = measureBlock(iframe);
     const natural = Math.max(attrW || 0, w);
     if (!natural || natural <= box + 1) {
       iframe.style.maxWidth = `${box}px`;
       iframe.style.width = `${Math.min(natural || box, box)}px`;
+      iframe.style.height = 'auto';
       iframe.style.margin = '0 auto';
       iframe.style.display = 'block';
       return;
     }
 
     const scale = box / natural;
-    const shell = iframe.closest('.ad-fit-shell') || document.createElement('div');
-    if (!iframe.closest('.ad-fit-shell')) {
+    let shell = iframe.closest('.ad-fit-shell');
+    if (!shell) {
+      shell = document.createElement('div');
       shell.className = 'ad-fit-shell';
       iframe.parentNode.insertBefore(shell, iframe);
       shell.appendChild(iframe);
     }
     shell.style.width = '100%';
     shell.style.maxWidth = `${box}px`;
-    shell.style.height = `${Math.ceil((iframe.offsetHeight || 250) * scale)}px`;
+    shell.style.height = `${Math.ceil((h || iframe.offsetHeight || 250) * scale)}px`;
     shell.style.overflow = 'hidden';
     shell.style.margin = '0 auto';
     iframe.style.transform = `scale(${scale})`;
@@ -83,6 +121,14 @@ function tightenIframes(content, box) {
     iframe.style.width = `${natural}px`;
     iframe.style.maxWidth = 'none';
     iframe.style.display = 'block';
+  });
+
+  content.querySelectorAll('img').forEach((img) => {
+    img.style.maxWidth = `${box}px`;
+    img.style.width = 'auto';
+    img.style.height = 'auto';
+    img.style.display = 'block';
+    img.style.margin = '0 auto';
   });
 }
 
@@ -107,10 +153,16 @@ export function fitAdsInContainer(host) {
     }
   });
 
-  content.style.maxWidth = '100%';
-  content.style.width = '100%';
+  host.style.width = '100%';
+  host.style.maxWidth = `${box}px`;
+  host.style.overflow = 'hidden';
+  host.style.boxSizing = 'border-box';
 
-  const { w: contentW, h: contentH } = measureBlock(content);
+  content.style.maxWidth = `${box}px`;
+  content.style.width = '100%';
+  content.style.boxSizing = 'border-box';
+
+  const { w: contentW, h: contentH } = widestInContent(content);
 
   if (contentW > box + 1) {
     applyViewportScale(host, content, box, contentW, contentH);
@@ -118,8 +170,6 @@ export function fitAdsInContainer(host) {
   }
 
   tightenIframes(content, box);
-  content.style.maxWidth = '100%';
-  content.style.width = '100%';
   content.style.margin = '0 auto';
 }
 

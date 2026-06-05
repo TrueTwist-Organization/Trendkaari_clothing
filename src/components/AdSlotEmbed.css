@@ -8,6 +8,7 @@
   text-align: center;
   min-height: 50px;
   box-sizing: border-box;
+  contain: inline-size;
 }
 
 .ad-slot-embed:empty {
