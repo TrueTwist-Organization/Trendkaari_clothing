@@ -80,3 +80,27 @@ html {
     padding-bottom: 24px;
   }
 }
+
+/* ─── Ads: full width, no clipping in drawers / grids ─── */
+.page-ad-slot-wrap,
+.ad-slot-embed,
+.ad-slot-embed__content {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.drawer .ad-slot-embed,
+.drawer .page-ad-slot-wrap,
+.checkout-flow-root .page-ad-slot-wrap,
+.checkout-flow-root .ad-slot-embed,
+.category-mobile-sidebar-ads .page-ad-slot-wrap,
+.collection-filters-sidebar .page-ad-slot-wrap {
+  overflow: visible;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.main-content .page-ad-slot-wrap,
+.main-content .ad-slot-embed {
+  overflow: visible;
+}

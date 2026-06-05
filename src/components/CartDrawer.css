@@ -355,6 +355,15 @@
   letter-spacing: 2px;
 }
 
+.drawer-content .ad-slot-embed,
+.drawer-content .page-ad-slot-wrap {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
 /* Secure Checkout Form Styling */
 .cart-checkout-form-container {
   display: flex;

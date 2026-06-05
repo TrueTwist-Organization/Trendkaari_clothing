@@ -1,13 +1,38 @@
+/* ─── Shared ad embed — responsive on mobile + laptop ─── */
 .ad-slot-embed {
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   margin: 12px 0;
   overflow: visible;
   text-align: center;
-  min-height: 90px;
+  min-height: 50px;
+  box-sizing: border-box;
 }
 
 .ad-slot-embed:empty {
   min-height: 0;
+}
+
+.ad-slot-embed__content {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0 auto;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.ad-fit-shell {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .ad-slot-embed--global {
@@ -31,8 +56,52 @@
   margin: 8px 0;
 }
 
+/* GPT, AdSense — stay inside slot; JS scales if still too wide */
 .ad-slot-embed iframe,
-.ad-slot-embed img {
+.ad-slot-embed img,
+.ad-slot-embed object,
+.ad-slot-embed embed,
+.ad-slot-embed ins.adsbygoogle,
+.ad-slot-embed [id^='div-gpt-ad-'] {
+  display: block;
   max-width: 100%;
-  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.ad-slot-embed iframe {
+  border: 0;
+}
+
+.ad-slot-embed ins.adsbygoogle {
+  min-width: 0 !important;
+  min-height: 50px;
+}
+
+.ad-slot-embed [id^='div-gpt-ad-'] {
+  min-width: 0 !important;
+  min-height: 50px;
+}
+
+.ad-slot-embed [id^='div-gpt-ad-'] iframe {
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .ad-slot-embed {
+    min-height: 90px;
+  }
+
+  .ad-slot-embed ins.adsbygoogle,
+  .ad-slot-embed [id^='div-gpt-ad-'] {
+    min-height: 90px;
+  }
+}
+
+@media (max-width: 767px) {
+  .ad-slot-embed {
+    margin: 10px 0;
+    padding: 0 2px;
+  }
 }

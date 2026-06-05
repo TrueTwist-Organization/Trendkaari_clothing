@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { fillAdsbygoogleIn } from '../utils/adsbygoogle';
 import { displayGptAdsIn, isGptBootstrapScript, refreshGptAdsIn } from '../utils/googletag';
 import { destroyGptSlotsForKey, prepareAdHtmlForSlot } from '../utils/adHtml';
+import { fitAdsInContainer, observeAdFills } from '../utils/fitAdsInContainer';
 import './AdSlotEmbed.css';
 
 /** Inject admin HTML/scripts so &lt;script&gt; tags actually execute */
@@ -21,9 +22,23 @@ export default function AdSlotEmbed({ html, className = '', slotKey = '' }) {
     const prepared = slotKey ? prepareAdHtmlForSlot(text, slotKey) : text;
     preparedRef.current = prepared;
     const wrap = document.createElement('div');
+    wrap.className = 'ad-slot-embed__content';
     wrap.innerHTML = prepared;
     host.appendChild(wrap);
     wrapRef.current = wrap;
+
+    const fit = () => fitAdsInContainer(host);
+
+    fit();
+    const stopObserving = observeAdFills(host, fitAdsInContainer);
+    const resizeObserver =
+      typeof ResizeObserver !== 'undefined' ? new ResizeObserver(fit) : null;
+    resizeObserver?.observe(host);
+    window.addEventListener('resize', fit);
+    const fitT1 = window.setTimeout(fit, 400);
+    const fitT2 = window.setTimeout(fit, 1200);
+    const fitT3 = window.setTimeout(fit, 2500);
+    const fitT4 = window.setTimeout(fit, 4500);
 
     wrap.querySelectorAll('script').forEach((oldScript) => {
       const src = oldScript.getAttribute('src') || '';
@@ -43,8 +58,8 @@ export default function AdSlotEmbed({ html, className = '', slotKey = '' }) {
       oldScript.parentNode.replaceChild(script, oldScript);
     });
 
-    void fillAdsbygoogleIn(wrap);
-    void displayGptAdsIn(wrap, prepared);
+    void fillAdsbygoogleIn(wrap).then(fit);
+    void displayGptAdsIn(wrap, prepared).then(fit);
 
     const observer =
       typeof IntersectionObserver !== 'undefined'
@@ -52,6 +67,7 @@ export default function AdSlotEmbed({ html, className = '', slotKey = '' }) {
             (entries) => {
               if (entries.some((e) => e.isIntersecting) && wrapRef.current) {
                 refreshGptAdsIn(wrapRef.current, preparedRef.current);
+                fit();
               }
             },
             { rootMargin: '80px', threshold: 0.01 }
@@ -62,6 +78,13 @@ export default function AdSlotEmbed({ html, className = '', slotKey = '' }) {
 
     return () => {
       observer?.disconnect();
+      stopObserving();
+      resizeObserver?.disconnect();
+      window.removeEventListener('resize', fit);
+      window.clearTimeout(fitT1);
+      window.clearTimeout(fitT2);
+      window.clearTimeout(fitT3);
+      window.clearTimeout(fitT4);
       if (slotKey) destroyGptSlotsForKey(slotKey);
     };
   }, [html, slotKey]);

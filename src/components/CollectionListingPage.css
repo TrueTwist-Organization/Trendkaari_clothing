@@ -896,12 +896,24 @@
   display: none;
 }
 
+.category-mobile-sidebar-ads .page-ad-slot-wrap,
+.collection-filters-sidebar .page-ad-slot-wrap {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: visible;
+}
+
 @media (max-width: 992px) {
   .category-mobile-sidebar-ads {
     display: flex;
     flex-direction: column;
     gap: 12px;
     margin: 0 0 16px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: visible;
   }
 }
 
