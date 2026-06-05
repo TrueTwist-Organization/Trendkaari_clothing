@@ -8,7 +8,6 @@ import HomeAdSlot from './components/HomeAdSlot';
 import GiftCollectionSection from './components/GiftCollectionSection';
 import CategoriesSection from './components/CategoriesSection';
 import ReviewsSection from './components/ReviewsSection';
-import NewArrivalsSection from './components/NewArrivalsSection';
 import Footer from './components/Footer';
 import InfoPage from './components/InfoPage';
 import { getInfoPage } from './data/footerInfoPages';
@@ -691,12 +690,6 @@ export default function App() {
               <>
                 <HeroSlider onSelectCategory={handleSelectCategory} />
                 <HomeAdSlot adCodes={adCodes} placement="home_after_hero" />
-
-                <NewArrivalsSection
-                  products={productsList}
-                  onOpenQuickView={handleOpenQuickView}
-                  onViewAll={() => navigateToRoute('/category/all')}
-                />
 
                 <TrendsSection onSelectCategory={handleSelectCategory} />
                 <HomeAdSlot adCodes={adCodes} placement="home_after_trends" />
