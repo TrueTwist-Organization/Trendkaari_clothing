@@ -367,15 +367,10 @@ export const AD_PLACEMENT_SECTIONS = [
 
 export const AD_PLACEMENT_KEYS = AD_PLACEMENT_DEFINITIONS.map((d) => d.key);
 
-/** Only these slots get saved GPT code — others stay empty and use fallbacks + dedupe. */
+/** Saved GPT code for homepage + key pages (one unique ad per section gap). */
 export const PRIMARY_AD_PLACEMENT_KEYS = [
   'site_common_ad',
-  'home_below_header',
-  'home_after_hero',
-  'home_after_promo',
-  'home_between_categories_gift',
-  'home_after_gift',
-  'home_after_reviews',
+  ...HOME_AD_PLACEMENT_KEYS,
   'category_top',
   'category_page_bottom',
   'product_top',

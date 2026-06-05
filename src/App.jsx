@@ -663,6 +663,8 @@ export default function App() {
                 <HomeAdSlot adCodes={adCodes} placement="home_after_hero" />
 
                 <TrendsSection onSelectCategory={handleSelectCategory} />
+                <HomeAdSlot adCodes={adCodes} placement="home_after_trends" />
+
                 <OfferSection onSelectCategory={handleSelectCategory} />
                 <HomeAdSlot adCodes={adCodes} placement="home_after_promo" />
 

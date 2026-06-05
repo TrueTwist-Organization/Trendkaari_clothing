@@ -11,15 +11,17 @@ export function resetAdDedupe(nextPageKey = '') {
   }
 }
 
-/** Same GAM slot path or HTML body = same ad — block duplicate stacks on one page. */
+/** Unique per placement div id — allows a1/a2 units on many slots without blocking each other. */
 export function getAdUnitFingerprint(code = '', sourceKey = '') {
   const text = String(code || '').trim();
-  const slotPath =
-    text.match(/googletag\.defineSlot\s*\(\s*['"]([^'"]+)['"]/)?.[1] ||
-    text.match(/\/\d+\/a\d+/)?.[0];
-  if (slotPath) return `gam:${slotPath}`;
+  const divId =
+    text.match(/id=['"](div-gpt-ad-[^'"]+)['"]/)?.[1] ||
+    text.match(/display\s*\(\s*['"](div-gpt-ad-[^'"]+)['"]/)?.[1] ||
+    text.match(/(div-gpt-ad-[a-zA-Z0-9_-]+)/)?.[1];
+  if (divId) return `gpt:${divId}`;
+  if (sourceKey) return `key:${String(sourceKey).trim()}`;
   if (text) return `html:${text.length}:${text.slice(0, 96)}`;
-  return `key:${String(sourceKey || '').trim()}`;
+  return 'empty';
 }
 
 /**
