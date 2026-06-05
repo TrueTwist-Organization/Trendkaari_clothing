@@ -65,13 +65,15 @@ export default function AdSlotsPage({ onToast }) {
     const removedCount = previouslySaved.filter((row) => !String(row.code || '').trim()).length;
 
     if (!filledRows.length && !previouslySaved.length) {
-      onToast('No slots had code — paste your ad HTML first', 'error');
+      onToast('All slots are already empty', 'error');
       return;
     }
 
     if (!filledRows.length) {
-      onToast('To remove all ads, clear every box and save — or keep at least one slot filled', 'error');
-      return;
+      const ok = window.confirm(
+        'Remove all ads from the live site? Every slot will be cleared. Click OK to confirm.'
+      );
+      if (!ok) return;
     }
 
     setSaving(true);
@@ -83,26 +85,27 @@ export default function AdSlotsPage({ onToast }) {
       const filledOnForm = filledRows.length;
       const result = await saveAdminAdSlots(slots);
       const saved = result?.saved ?? result?.activeAdSlots ?? 0;
-      if (saved > 0) {
-        if (saved < filledOnForm) {
+      if (result?.error && saved === 0) {
+        onToast(
+          result.error || 'Save failed — reload the page (Ctrl+F5) and try Save All again.',
+          'error'
+        );
+        return;
+      }
+      if (saved >= 0) {
+        if (filledOnForm > 0 && saved < filledOnForm) {
           onToast(
             `Only ${saved} of ${filledOnForm} slot(s) saved — check for blocked script tags and try again.`,
             'error'
           );
+        } else if (!filledOnForm) {
+          onToast('All ads removed from the live site');
         } else if (removedCount > 0) {
           onToast(`${saved} slot(s) saved — ${removedCount} removed from live site`);
         } else {
           onToast(`${saved} ad slot(s) saved — persists across refreshes`);
         }
         setRows(mergeAdSlotsForAdmin(result?.adSlots || []));
-      } else if (filledOnForm > 0) {
-        onToast(
-          result?.error ||
-            'Save failed — reload the page (Ctrl+F5) and try Save All again.',
-          'error'
-        );
-      } else {
-        onToast(result?.error || 'No slots had code — paste your ad HTML first', 'error');
       }
     } catch (err) {
       onToast(err.message, 'error');
@@ -169,11 +172,15 @@ export default function AdSlotsPage({ onToast }) {
       )}
 
       <div className="admin-ad-waf-banner glass-panel">
-        <strong>Important — avoid losing ads</strong>
+        <strong>Remove ads</strong>
         <p>
-          After opening this page, wait until your saved codes appear in the boxes below before
-          saving. If boxes look empty, <strong>reload the page</strong> first — do not click Save
-          with empty boxes (that can wipe live ads). Check{' '}
+          Clear the textarea for any slot you do not want, then click <strong>Save All Slots</strong>.
+          Cleared slots are removed from the live site. To remove every ad, clear all boxes and save
+          (you will be asked to confirm).
+        </p>
+        <p>
+          After opening this page, wait until your saved codes appear before saving. If boxes look
+          empty unexpectedly, <strong>reload the page</strong> first. Check{' '}
           <a href="/api/health" target="_blank" rel="noreferrer">
             /api/health
           </a>{' '}

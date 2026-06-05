@@ -362,18 +362,10 @@ export async function writeStore(store) {
   await saveToRemote(storeCache);
 }
 
-/** Save ad slots from admin — replaces store with all filled slots in the save payload */
+/** Save ad slots from admin — replaces store with filled slots in the save payload */
 export async function replaceAdSlots(adSlots) {
   const list = Array.isArray(adSlots) ? adSlots : [];
-
-  if (list.length === 0) {
-    const existing = await loadPersistedAdSlots({ bypassCache: true });
-    if (existing?.length > 0) {
-      throw new Error('Save would remove all ads — reload the admin page and try again.');
-    }
-  }
-
-  await savePersistedAdSlots(list, { allowEmpty: list.length === 0 });
+  await savePersistedAdSlots(list, { allowEmpty: true });
   if (storeCache) {
     storeCache.adSlots = structuredClone(list);
   }

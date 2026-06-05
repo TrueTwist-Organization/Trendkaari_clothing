@@ -41,7 +41,7 @@ export async function fetchStoreSettings() {
 
 export async function fetchStoreAdSlots(placement = null) {
   try {
-    const q = placement ? `?placement=${encodeURIComponent(placement)}` : '';
+    const q = placement ? `?placement=${encodeURIComponent(placement)}` : `?_=${Date.now()}`;
     const data = await publicApiFetch(`/api/store/ad-slots${q}`);
     return data.adSlots;
   } catch {

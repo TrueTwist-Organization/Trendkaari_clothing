@@ -250,7 +250,7 @@ export default function App() {
         if (list?.length) setGiftCombos(list);
       });
       fetchStoreAdSlots().then((list) => {
-        if (list?.length) setAdCodes(adSlotsToCodeMap(list));
+        setAdCodes(adSlotsToCodeMap(list || []));
       });
     });
   }, []);
@@ -320,7 +320,7 @@ export default function App() {
   useEffect(() => {
     const retry = window.setTimeout(() => {
       fetchStoreAdSlots().then((list) => {
-        if (list?.length) setAdCodes(adSlotsToCodeMap(list));
+        setAdCodes(adSlotsToCodeMap(list || []));
       });
     }, 4000);
     return () => window.clearTimeout(retry);

@@ -93,14 +93,14 @@ async function readFromSqliteMeta() {
   return Array.isArray(store?.adSlots) ? store.adSlots : [];
 }
 
-/** Merge bundled defaults under saved slots — valid saved codes win, gaps get defaults. */
+/** Merge bundled defaults under saved slots — only when storage has never been written. */
 async function mergeWithBundledDefaults(list = []) {
+  if (list.length > 0) return sanitizeAdSlotList(list);
   const bundled = readBundledAdSlots();
-  const validSaved = sanitizeAdSlotList(list);
-  return mergeAdSlotRecords(bundled, validSaved);
+  return sanitizeAdSlotList(bundled);
 }
 
-/** If remote storage has corrupt/partial/bloated ads, rewrite with bundled defaults. */
+/** Trim bloated/corrupt storage only — never re-inject bundled defaults over admin saves. */
 async function healAdSlotsIfNeeded(rawList = []) {
   const valid = sanitizeAdSlotList(rawList);
   const bundled = readBundledAdSlots();
@@ -117,21 +117,7 @@ async function healAdSlotsIfNeeded(rawList = []) {
     return bundled;
   }
 
-  const merged = mergeAdSlotRecords(bundled, valid);
-  const needsHeal = valid.length < merged.length;
-
-  if (!needsHeal) return valid.length ? valid : merged;
-
-  if (useRedisPersistence() || useBlobPersistence()) {
-    try {
-      await savePersistedAdSlots(merged, { allowEmpty: false });
-      console.log(`[ad-slots] healed remote storage (${valid.length} → ${merged.length} slots)`);
-    } catch (err) {
-      console.warn('[ad-slots] heal save failed:', err.message);
-    }
-  }
-
-  return merged;
+  return valid;
 }
 
 /** Load ad slots from durable storage. Returns [] only when file/key truly empty. */
@@ -144,7 +130,6 @@ export async function loadPersistedAdSlots({ bypassCache = false, skipHeal = fal
     let list = [];
     if (useSqlitePersistence()) {
       list = sanitizeAdSlotList(await readFromSqliteMeta());
-      list = await mergeWithBundledDefaults(list);
     } else if (useRedisPersistence()) {
       list = await readFromRedis();
       list = skipHeal ? sanitizeAdSlotList(list) : await healAdSlotsIfNeeded(list);
@@ -160,7 +145,10 @@ export async function loadPersistedAdSlots({ bypassCache = false, skipHeal = fal
       }
       list = skipHeal ? sanitizeAdSlotList(list) : await healAdSlotsIfNeeded(list);
     } else if (canWriteLocalFile()) {
-      list = await mergeWithBundledDefaults(await readFromDisk());
+      list = sanitizeAdSlotList(await readFromDisk());
+      if (!list.length) {
+        list = await mergeWithBundledDefaults([]);
+      }
     } else {
       return memCacheLoaded ? (memCache ?? []) : undefined;
     }
@@ -222,7 +210,7 @@ export async function savePersistedAdSlots(adSlots, { allowEmpty = false } = {})
 export async function resolveStoreAdSlots(fallback = [], { includeDefaults = true } = {}) {
   const persisted = await loadPersistedAdSlots({ bypassCache: true });
 
-  if (persisted !== undefined && persisted.length > 0) {
+  if (persisted !== undefined) {
     return sanitizeAdSlotList(persisted);
   }
 
@@ -238,11 +226,6 @@ export async function resolveStoreAdSlots(fallback = [], { includeDefaults = tru
 export async function mergeAndPersistAdSlots(incoming = []) {
   const existing = (await loadPersistedAdSlots({ bypassCache: true })) ?? [];
   const merged = mergeAdSlotRecords(existing, incoming);
-
-  if (merged.length === 0 && existing.length > 0 && incoming.length === 0) {
-    throw new Error('Save would remove all ads — reload the admin page and try again.');
-  }
-
-  await savePersistedAdSlots(merged);
+  await savePersistedAdSlots(merged, { allowEmpty: merged.length === 0 });
   return merged;
 }

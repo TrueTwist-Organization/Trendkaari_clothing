@@ -543,18 +543,6 @@ router.put('/ad-slots', requireAdmin, async (req, res) => {
     });
   }
 
-  if (useReplace && filledOnWire === 0 && next.length === 0) {
-    const existing = await resolveStoreAdSlots(undefined, { includeDefaults: false });
-    if (existing.length > 0) {
-      return res.status(400).json({
-        error:
-          'No ad code to save. Reload this page first — saving now would remove your live ads.',
-        saved: 0,
-        activeAdSlots: existing.length,
-      });
-    }
-  }
-
   let merged;
   try {
     merged = useReplace ? await replaceAdSlots(next) : await mergeAdSlots(next);

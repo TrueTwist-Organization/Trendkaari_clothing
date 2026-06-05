@@ -46,6 +46,8 @@ router.get('/settings', (req, res) => {
 });
 
 router.get('/ad-slots', async (req, res) => {
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate');
+  res.set('Pragma', 'no-cache');
   const placement = req.query.placement || null;
   const adSlots = await resolveStoreAdSlots([]);
   res.json({ adSlots: getActiveAdSlots({ adSlots }, placement || null) });
