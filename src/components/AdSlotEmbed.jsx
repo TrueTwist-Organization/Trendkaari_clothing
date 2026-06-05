@@ -1,17 +1,48 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { fillAdsbygoogleIn } from '../utils/adsbygoogle';
 import { displayGptAdsIn, isGptBootstrapScript, refreshGptAdsIn } from '../utils/googletag';
 import { destroyGptSlotsForKey, prepareAdHtmlForSlot, sanitizeAdHtmlForEmbed, hasVisibleAdMarkup, scrubPlaceholderDom } from '../utils/adHtml';
 import { fitAdsInContainer, observeAdFills, ensureGlobalAdFitListeners } from '../utils/fitAdsInContainer';
+import { scheduleAdFit } from '../utils/scheduleAdFit';
 import './AdSlotEmbed.css';
 
 /** Inject admin HTML/scripts so &lt;script&gt; tags actually execute */
-export default function AdSlotEmbed({ html, className = '', slotKey = '' }) {
+export default function AdSlotEmbed({ html, className = '', slotKey = '', eager = false }) {
   const hostRef = useRef(null);
   const wrapRef = useRef(null);
   const preparedRef = useRef('');
+  const [active, setActive] = useState(eager);
 
   useEffect(() => {
+    if (active || eager) return;
+    const host = hostRef.current;
+    if (!host) return;
+
+    const observer =
+      typeof IntersectionObserver !== 'undefined'
+        ? new IntersectionObserver(
+            (entries) => {
+              if (entries.some((entry) => entry.isIntersecting)) {
+                setActive(true);
+                observer.disconnect();
+              }
+            },
+            { rootMargin: '280px 0px', threshold: 0 }
+          )
+        : null;
+
+    if (observer) {
+      observer.observe(host);
+      return () => observer.disconnect();
+    }
+
+    setActive(true);
+    return undefined;
+  }, [active, eager]);
+
+  useEffect(() => {
+    if (!active) return;
+
     const host = hostRef.current;
     if (!host) return;
 
@@ -31,19 +62,11 @@ export default function AdSlotEmbed({ html, className = '', slotKey = '' }) {
     const fit = () => fitAdsInContainer(host);
 
     ensureGlobalAdFitListeners();
-    fit();
+    const cancelScheduledFit = scheduleAdFit(host, fit);
     const stopObserving = observeAdFills(host, fitAdsInContainer);
     const resizeObserver =
       typeof ResizeObserver !== 'undefined' ? new ResizeObserver(fit) : null;
     resizeObserver?.observe(host);
-    window.addEventListener('resize', fit);
-    window.visualViewport?.addEventListener('resize', fit);
-    const fitT1 = window.setTimeout(fit, 400);
-    const fitT2 = window.setTimeout(fit, 1200);
-    const fitT3 = window.setTimeout(fit, 2500);
-    const fitT4 = window.setTimeout(fit, 4500);
-    const fitT5 = window.setTimeout(fit, 7000);
-    const fitT6 = window.setTimeout(fit, 10000);
 
     if (typeof document !== 'undefined') {
       document.fonts?.ready?.then(fit).catch(() => {});
@@ -70,7 +93,7 @@ export default function AdSlotEmbed({ html, className = '', slotKey = '' }) {
     void fillAdsbygoogleIn(wrap).then(fit);
     void displayGptAdsIn(wrap, prepared).then(fit);
 
-    const observer =
+    const refreshObserver =
       typeof IntersectionObserver !== 'undefined'
         ? new IntersectionObserver(
             (entries) => {
@@ -83,23 +106,16 @@ export default function AdSlotEmbed({ html, className = '', slotKey = '' }) {
           )
         : null;
 
-    if (observer) observer.observe(host);
+    if (refreshObserver) refreshObserver.observe(host);
 
     return () => {
-      observer?.disconnect();
+      refreshObserver?.disconnect();
       stopObserving();
       resizeObserver?.disconnect();
-      window.removeEventListener('resize', fit);
-      window.visualViewport?.removeEventListener('resize', fit);
-      window.clearTimeout(fitT1);
-      window.clearTimeout(fitT2);
-      window.clearTimeout(fitT3);
-      window.clearTimeout(fitT4);
-      window.clearTimeout(fitT5);
-      window.clearTimeout(fitT6);
+      cancelScheduledFit();
       if (slotKey) destroyGptSlotsForKey(slotKey);
     };
-  }, [html, slotKey]);
+  }, [html, slotKey, active]);
 
   if (!String(html || '').trim()) return null;
 
@@ -111,7 +127,7 @@ export default function AdSlotEmbed({ html, className = '', slotKey = '' }) {
   return (
     <div
       ref={hostRef}
-      className={`ad-slot-embed${className ? ` ${className}` : ''}${showVisible ? '' : ' ad-slot-embed--tracking-only'}`}
+      className={`ad-slot-embed${className ? ` ${className}` : ''}${showVisible ? '' : ' ad-slot-embed--tracking-only'}${active ? ' ad-slot-embed--active' : ' ad-slot-embed--pending'}`}
       aria-hidden={showVisible ? undefined : true}
       aria-label={showVisible ? 'Advertisement' : undefined}
       hidden={!showVisible}

@@ -10,8 +10,13 @@
   box-sizing: border-box;
 }
 
-.ad-slot-embed:empty {
-  min-height: 0;
+.ad-slot-embed--pending {
+  min-height: 50px;
+}
+
+.ad-slot-embed--pending:not(.ad-slot-embed--global) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 50px;
 }
 
 .ad-slot-embed__content {

@@ -30,6 +30,10 @@
   margin-bottom: 12px;
 }
 
+.route-loading {
+  min-height: 40vh;
+}
+
 .product-not-found p {
   color: #565959;
   margin-bottom: 24px;

@@ -25,12 +25,12 @@ export default function SiteTopAdStrip({
   const visible = hasVisibleAdMarkup(sanitized);
 
   if (!visible) {
-    return <AdSlotEmbed html={code} slotKey={slotKey} className="ad-slot-embed--tracking-only" />;
+    return <AdSlotEmbed html={code} slotKey={slotKey} className="ad-slot-embed--tracking-only" eager />;
   }
 
   return (
     <div className="site-top-ad-strip" data-has-ads="true">
-      <AdSlotEmbed html={code} slotKey={slotKey} className="ad-slot-embed--global" />
+      <AdSlotEmbed html={code} slotKey={slotKey} className="ad-slot-embed--global" eager />
     </div>
   );
 }

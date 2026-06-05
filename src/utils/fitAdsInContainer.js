@@ -239,6 +239,17 @@ export function fitAllAdsInDocument() {
   });
 }
 
+let globalFitRaf = 0;
+
+export function fitAllAdsInDocumentDebounced() {
+  if (typeof window === 'undefined') return;
+  cancelAnimationFrame(globalFitRaf);
+  globalFitRaf = requestAnimationFrame(() => {
+    globalFitRaf = 0;
+    fitAllAdsInDocument();
+  });
+}
+
 export function observeAdFills(host, onFit) {
   if (!host || typeof MutationObserver === 'undefined') return () => {};
 
@@ -268,8 +279,8 @@ export function ensureGlobalAdFitListeners() {
   if (globalFitListener || typeof window === 'undefined') return;
   globalFitListener = true;
 
-  const run = () => fitAllAdsInDocument();
-  window.addEventListener('resize', run);
-  window.addEventListener('orientationchange', run);
-  window.visualViewport?.addEventListener('resize', run);
+  const run = () => fitAllAdsInDocumentDebounced();
+  window.addEventListener('resize', run, { passive: true });
+  window.addEventListener('orientationchange', run, { passive: true });
+  window.visualViewport?.addEventListener('resize', run, { passive: true });
 }

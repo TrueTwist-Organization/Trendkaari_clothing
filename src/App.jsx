@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import Header from './components/Header';
 import HeroSlider from './components/HeroSlider';
 import TrendsSection from './components/TrendsSection';
@@ -20,9 +20,6 @@ import UserAuthModal from './components/UserAuthModal';
 import AccountDrawer from './components/AccountDrawer';
 import QuickViewModal from './components/QuickViewModal';
 import MobileNavbar from './components/MobileNavbar';
-import ProductDetailPage from './components/ProductDetailPage';
-import CollectionListingPage from './components/CollectionListingPage';
-import { products as initialProducts } from './data/products';
 import {
   fetchStoreAdSlots,
   fetchStoreCoupons,
@@ -31,12 +28,13 @@ import {
   fetchStoreGiftCombos,
   submitStoreOrder,
 } from './api/storeApi';
+import { loadCatalogProducts } from './utils/loadCatalog';
 import { applySiteSettingsToDocument } from './utils/siteSettings';
 import { adSlotsToCodeMap } from './utils/adSlots';
 import { resetAdDedupe } from './utils/adDedupe';
+import { runWhenIdle } from './utils/scheduleAdFit';
 import { userMe } from './api/userApi';
 import { getUserToken, setUserToken } from './api/client';
-import CheckoutFlow from './checkout/CheckoutFlow';
 import { saveCheckoutState } from './checkout/checkoutStorage';
 import { normalizeCheckoutSlug } from './checkout/checkoutRoutes';
 import {
@@ -45,6 +43,14 @@ import {
   resolveProductPage,
 } from './utils/resolveProductPage';
 import './App.css';
+
+const ProductDetailPage = lazy(() => import('./components/ProductDetailPage'));
+const CollectionListingPage = lazy(() => import('./components/CollectionListingPage'));
+const CheckoutFlow = lazy(() => import('./checkout/CheckoutFlow'));
+
+function RouteFallback() {
+  return <div className="route-loading" aria-hidden="true" />;
+}
 
 function resolveAppRoute(pathname, productsList, giftCombos = []) {
   const route = parseRouteFromPath(pathname);
@@ -71,21 +77,21 @@ function resolveAppRoute(pathname, productsList, giftCombos = []) {
 
 export default function App() {
   // Global synchronized states
-  const [productsList, setProductsList] = useState(initialProducts);
+  const [productsList, setProductsList] = useState([]);
 
   const [giftCombos, setGiftCombos] = useState([]);
 
   const getRouteInfo = () => {
     if (typeof window === 'undefined') {
-      return resolveAppRoute('/', initialProducts, []);
+      return resolveAppRoute('/', [], []);
     }
     return resolveAppRoute(window.location.pathname, productsList, giftCombos);
   };
 
   const bootRoute =
     typeof window !== 'undefined'
-      ? resolveAppRoute(window.location.pathname, initialProducts, [])
-      : resolveAppRoute('/', initialProducts, []);
+      ? resolveAppRoute(window.location.pathname, [], [])
+      : resolveAppRoute('/', [], []);
 
   const [activeCategory, setActiveCategory] = useState(bootRoute.activeCategory);
   const [selectedProduct, setSelectedProduct] = useState(bootRoute.selectedProduct);
@@ -230,19 +236,25 @@ export default function App() {
     }
   };
 
-  // Load catalog + ad slots from API
+  // Load catalog first; defer coupons, gift combos, and ad slots
   useEffect(() => {
-    fetchStoreProducts().then((list) => {
+    loadCatalogProducts().then((list) => {
       if (list?.length) setProductsList(list);
-    });
-    fetchStoreCoupons().then((list) => {
-      if (list?.length) setCoupons(list);
     });
     fetchStoreSettings().then((s) => {
       if (s) setSiteSettings(applySiteSettingsToDocument(s));
     });
-    fetchStoreGiftCombos().then((list) => {
-      if (list?.length) setGiftCombos(list);
+
+    runWhenIdle(() => {
+      fetchStoreCoupons().then((list) => {
+        if (list?.length) setCoupons(list);
+      });
+      fetchStoreGiftCombos().then((list) => {
+        if (list?.length) setGiftCombos(list);
+      });
+      fetchStoreAdSlots().then((list) => {
+        if (list?.length) setAdCodes(adSlotsToCodeMap(list));
+      });
     });
   }, []);
 
@@ -252,6 +264,7 @@ export default function App() {
     const route = parseRouteFromPath(window.location.pathname);
     if (!route.productId) return;
     if (selectedProduct?.id === route.productId) return;
+    if (!productsList.length) return;
 
     const resolved = resolveProductPage(route.productId, productsList, giftCombos, {
       preferGiftCombo: true,
@@ -259,25 +272,30 @@ export default function App() {
     if (resolved) setSelectedProduct(resolved);
   }, [productsList, giftCombos, viewMode, selectedProduct?.id]);
 
-  const reloadAdCodes = () =>
-    fetchStoreAdSlots().then((list) => {
-      if (list?.length) setAdCodes(adSlotsToCodeMap(list));
+  // Resolve PDP after catalog loads (direct URL / refresh)
+  useEffect(() => {
+    if (viewMode !== 'product-detail' || productsList.length) return;
+    const route = parseRouteFromPath(window.location.pathname);
+    if (!route.productId) return;
+
+    loadCatalogProducts().then((list) => {
+      if (!list?.length) return;
+      setProductsList(list);
+      const resolved = resolveProductPage(route.productId, list, giftCombos, {
+        preferGiftCombo: true,
+      });
+      if (resolved) setSelectedProduct(resolved);
     });
+  }, [viewMode, giftCombos, productsList.length]);
 
   useEffect(() => {
-    reloadAdCodes();
-    const retry1 = window.setTimeout(reloadAdCodes, 2500);
-    const retry2 = window.setTimeout(reloadAdCodes, 8000);
-    return () => {
-      window.clearTimeout(retry1);
-      window.clearTimeout(retry2);
-    };
+    const retry = window.setTimeout(() => {
+      fetchStoreAdSlots().then((list) => {
+        if (list?.length) setAdCodes(adSlotsToCodeMap(list));
+      });
+    }, 4000);
+    return () => window.clearTimeout(retry);
   }, []);
-
-  // Refresh ads when navigating (checkout, category, product) so slots mount with codes ready
-  useEffect(() => {
-    reloadAdCodes();
-  }, [viewMode, isCategoryPage, checkoutSlug, selectedProduct?.id]);
 
   // Restore user session from token
   useEffect(() => {
@@ -619,7 +637,7 @@ export default function App() {
 
       {/* Main Page Layout */}
       <main className={`main-content ${viewMode === 'checkout' ? 'main-content--checkout' : ''}`}>
-        
+        <Suspense fallback={<RouteFallback />}>
         {viewMode === 'info' ? (
           <InfoPage
             slug={infoSlug}
@@ -676,6 +694,9 @@ export default function App() {
             )}
           </>
         ) : viewMode === 'product-detail' && !selectedProduct ? (
+          !productsList.length ? (
+            <RouteFallback />
+          ) : (
           <div className="product-not-found container">
             <h1>Product not found</h1>
             <p>This item may have been removed or the link is incorrect.</p>
@@ -683,6 +704,7 @@ export default function App() {
               Back to home
             </button>
           </div>
+          )
         ) : (
           <ProductDetailPage
             product={selectedProduct}
@@ -704,6 +726,7 @@ export default function App() {
           />
         )}
 
+        </Suspense>
       </main>
 
       {/* Footer */}
@@ -753,6 +776,7 @@ export default function App() {
         onSelectProduct={(p) => navigateToRoute(`/product/${p.id}`)}
       />
 
+      <Suspense fallback={null}>
       <CheckoutFlow
         isOpen={viewMode === 'checkout'}
         stepSlug={checkoutSlug}
@@ -779,6 +803,7 @@ export default function App() {
         onAddToCart={handleAddToCart}
         onSelectProduct={(p) => navigateToRoute(`/product/${p.id}`)}
       />
+      </Suspense>
 
       <UserAuthModal
         isOpen={isAuthModalOpen}
