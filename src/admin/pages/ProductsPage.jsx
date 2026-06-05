@@ -253,6 +253,11 @@ export default function ProductsPage({ onToast }) {
       onToast('Fill required basic info fields', 'error');
       return;
     }
+    if (!editing && imageFiles.length === 0 && existingImages.length === 0) {
+      onToast('Add at least one product photo before publishing.', 'error');
+      setStep(STEPS.length - 1);
+      return;
+    }
     setSaving(true);
     try {
       const fd = new FormData();
@@ -270,7 +275,7 @@ export default function ProductsPage({ onToast }) {
       resetForm();
       load();
     } catch (err) {
-      onToast(err.message, 'error');
+      onToast(err?.data?.error || err.message || 'Could not publish product. Try again.', 'error');
     } finally {
       setSaving(false);
     }

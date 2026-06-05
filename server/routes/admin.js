@@ -1,6 +1,5 @@
 import { Router } from 'express';
 import bcrypt from 'bcryptjs';
-import multer from 'multer';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
@@ -25,21 +24,27 @@ import {
   DEFAULT_GIFT_COMBOS,
 } from '../lib/giftCombos.js';
 import { saveComboImages } from '../lib/comboImage.js';
+import { createImageUpload, handleMultipartUpload, shouldUseMemoryUpload } from '../lib/uploadMiddleware.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const UPLOAD_DIR = path.join(__dirname, '../../public/product-media');
 const COMBO_UPLOAD_DIR = path.join(__dirname, '../../public/combos');
-if (!fs.existsSync(UPLOAD_DIR)) {
-  fs.mkdirSync(UPLOAD_DIR, { recursive: true });
-}
-if (!fs.existsSync(COMBO_UPLOAD_DIR)) {
-  fs.mkdirSync(COMBO_UPLOAD_DIR, { recursive: true });
+if (!shouldUseMemoryUpload()) {
+  if (!fs.existsSync(UPLOAD_DIR)) {
+    fs.mkdirSync(UPLOAD_DIR, { recursive: true });
+  }
+  if (!fs.existsSync(COMBO_UPLOAD_DIR)) {
+    fs.mkdirSync(COMBO_UPLOAD_DIR, { recursive: true });
+  }
 }
 
-const upload = multer({
-  dest: UPLOAD_DIR,
-  limits: { fileSize: 8 * 1024 * 1024 },
-});
+const upload = createImageUpload({ dest: UPLOAD_DIR });
+const uploadProductImages = handleMultipartUpload(upload, 'images', 12);
+const uploadComboImages = handleMultipartUpload(
+  createImageUpload({ dest: COMBO_UPLOAD_DIR }),
+  'images',
+  8
+);
 
 const router = Router();
 
@@ -327,7 +332,7 @@ router.get('/products', requireAdmin, async (req, res) => {
   });
 });
 
-router.post('/products', requireAdmin, upload.array('images', 12), async (req, res) => {
+router.post('/products', requireAdmin, uploadProductImages, async (req, res) => {
   try {
     const body = req.body;
     const parsed = typeof body.data === 'string' ? JSON.parse(body.data) : body;
@@ -344,12 +349,13 @@ router.post('/products', requireAdmin, upload.array('images', 12), async (req, r
 
     res.status(201).json({ message: 'Product Architecture Deployed Successfully.', product });
   } catch (err) {
-    console.error(err);
-    res.status(400).json({ error: err.message || 'Invalid product payload' });
+    console.error('[products] create failed:', err);
+    const status = err.message?.includes('not configured') ? 503 : 400;
+    res.status(status).json({ error: err.message || 'Could not publish product. Try again.' });
   }
 });
 
-router.patch('/products/:id', requireAdmin, upload.array('images', 12), async (req, res) => {
+router.patch('/products/:id', requireAdmin, uploadProductImages, async (req, res) => {
   const id = Number(req.params.id);
   try {
     const body = req.body;
@@ -370,7 +376,9 @@ router.patch('/products/:id', requireAdmin, upload.array('images', 12), async (r
     if (!updated) return res.status(404).json({ error: 'Product not found' });
     res.json({ message: 'Product updated successfully.', product: updated });
   } catch (err) {
-    res.status(400).json({ error: err.message || 'Invalid product payload' });
+    console.error('[products] update failed:', err);
+    const status = err.message?.includes('not configured') ? 503 : 400;
+    res.status(status).json({ error: err.message || 'Could not update product. Try again.' });
   }
 });
 
@@ -595,7 +603,7 @@ router.post('/gift-combos/seed-defaults', requireAdmin, async (req, res) => {
   res.json({ message: 'Default gift combos restored', giftCombos: list });
 });
 
-router.post('/gift-combos/upload', requireAdmin, upload.array('images', 12), async (req, res) => {
+router.post('/gift-combos/upload', requireAdmin, uploadComboImages, async (req, res) => {
   try {
     const urls = await saveComboImages(req.files || [], COMBO_UPLOAD_DIR);
     res.json({ urls });
