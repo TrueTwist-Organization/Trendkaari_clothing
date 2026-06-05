@@ -26,6 +26,7 @@ import {
 } from './checkoutValidation';
 import PlacedAdSlot from '../components/PlacedAdSlot';
 import { refreshAllGptSlots } from '../utils/googletag';
+import { scrollToPageTop } from '../utils/scrollToTop';
 import './CheckoutFlow.css';
 
 const PAY_METHODS = [
@@ -308,8 +309,8 @@ export default function CheckoutFlow({
     setError('');
     setFieldErrors({});
     onNavigateCheckout?.(checkoutPathForStep(target));
-    window.scrollTo?.({ top: 0, behavior: 'smooth' });
-    panelRef.current?.scrollIntoView?.({ behavior: 'smooth', block: 'start' });
+    scrollToPageTop();
+    panelRef.current?.scrollIntoView?.({ behavior: 'auto', block: 'start' });
     if (target === SUCCESS_STEP_INDEX) {
       setSuccessPause(true);
       setTimeout(() => setSuccessPause(false), 320);
@@ -567,7 +568,7 @@ export default function CheckoutFlow({
       setCompletedOrder(null);
       setOrderFailed(true);
       onNavigateCheckout?.(`/checkout/${CHECKOUT_ERROR_SLUG}`);
-      window.scrollTo?.(0, 0);
+      scrollToPageTop();
     } catch (err) {
       const msg = err?.message || '';
       if (/sign in/i.test(msg)) {
@@ -583,7 +584,7 @@ export default function CheckoutFlow({
       setCompletedOrder(null);
       setOrderFailed(true);
       onNavigateCheckout?.(`/checkout/${CHECKOUT_ERROR_SLUG}`);
-      window.scrollTo?.(0, 0);
+      scrollToPageTop();
     } finally {
       setPaymentProcessing(false);
     }

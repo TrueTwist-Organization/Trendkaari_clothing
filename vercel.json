@@ -6,7 +6,7 @@
     "api/index.js": {
       "maxDuration": 60,
       "memory": 1024,
-      "includeFiles": "server/data/ad-slots.json"
+      "includeFiles": "server/data/{store.json,ad-slots.json}"
     }
   },
   "rewrites": [

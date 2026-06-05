@@ -1,60 +1,18 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { fillAdsbygoogleIn } from '../utils/adsbygoogle';
-import { displayGptAdsIn, isGptBootstrapScript, refreshGptAdsIn } from '../utils/googletag';
+import { displayGptAdsIn, isGptBootstrapScript } from '../utils/googletag';
 import { destroyGptSlotsForKey, prepareAdHtmlForSlot, sanitizeAdHtmlForEmbed, hasVisibleAdMarkup, scrubPlaceholderDom } from '../utils/adHtml';
 import { fitAdsInContainer, observeAdFills, ensureGlobalAdFitListeners } from '../utils/fitAdsInContainer';
 import { scheduleAdFit } from '../utils/scheduleAdFit';
 import './AdSlotEmbed.css';
 
-function shouldEagerLoad(eager) {
-  if (eager) return true;
-  if (typeof window === 'undefined') return false;
-  const width =
-    window.visualViewport?.width ||
-    document.documentElement?.clientWidth ||
-    window.innerWidth ||
-    0;
-  return width > 0 && width <= 767;
-}
-
 /** Inject admin HTML/scripts so &lt;script&gt; tags actually execute */
-export default function AdSlotEmbed({ html, className = '', slotKey = '', eager = false }) {
+export default function AdSlotEmbed({ html, className = '', slotKey = '', eager = true }) {
   const hostRef = useRef(null);
-  const wrapRef = useRef(null);
   const preparedRef = useRef('');
-  const gptRefreshedRef = useRef(false);
-  const loadEager = shouldEagerLoad(eager);
-  const [active, setActive] = useState(loadEager);
 
   useEffect(() => {
-    if (active || loadEager) return;
-    const host = hostRef.current;
-    if (!host) return;
-
-    const observer =
-      typeof IntersectionObserver !== 'undefined'
-        ? new IntersectionObserver(
-            (entries) => {
-              if (entries.some((entry) => entry.isIntersecting)) {
-                setActive(true);
-                observer.disconnect();
-              }
-            },
-            { rootMargin: '320px 0px', threshold: 0 }
-          )
-        : null;
-
-    if (observer) {
-      observer.observe(host);
-      return () => observer.disconnect();
-    }
-
-    setActive(true);
-    return undefined;
-  }, [active, loadEager]);
-
-  useEffect(() => {
-    if (!active) return;
+    if (!eager) return;
 
     const host = hostRef.current;
     if (!host) return;
@@ -70,17 +28,12 @@ export default function AdSlotEmbed({ html, className = '', slotKey = '', eager 
     wrap.innerHTML = prepared;
     scrubPlaceholderDom(wrap);
     host.appendChild(wrap);
-    wrapRef.current = wrap;
 
     const fit = () => fitAdsInContainer(host);
 
     ensureGlobalAdFitListeners();
     const cancelScheduledFit = scheduleAdFit(host, fit);
     const stopObserving = observeAdFills(host, fitAdsInContainer);
-
-    if (typeof document !== 'undefined') {
-      document.fonts?.ready?.then(fit).catch(() => {});
-    }
 
     wrap.querySelectorAll('script').forEach((oldScript) => {
       const src = oldScript.getAttribute('src') || '';
@@ -103,32 +56,12 @@ export default function AdSlotEmbed({ html, className = '', slotKey = '', eager 
     void fillAdsbygoogleIn(wrap).then(fit);
     void displayGptAdsIn(wrap, prepared).then(fit);
 
-    const refreshObserver =
-      !gptRefreshedRef.current && typeof IntersectionObserver !== 'undefined'
-        ? new IntersectionObserver(
-            (entries) => {
-              if (!entries.some((e) => e.isIntersecting) || !wrapRef.current || gptRefreshedRef.current) {
-                return;
-              }
-              gptRefreshedRef.current = true;
-              refreshGptAdsIn(wrapRef.current, preparedRef.current);
-              fit();
-              refreshObserver.disconnect();
-            },
-            { rootMargin: '120px', threshold: 0 }
-          )
-        : null;
-
-    if (refreshObserver) refreshObserver.observe(host);
-
     return () => {
-      refreshObserver?.disconnect();
       stopObserving();
       cancelScheduledFit();
-      gptRefreshedRef.current = false;
       if (slotKey) destroyGptSlotsForKey(slotKey);
     };
-  }, [html, slotKey, active]);
+  }, [html, slotKey, eager]);
 
   if (!String(html || '').trim()) return null;
 
@@ -140,7 +73,7 @@ export default function AdSlotEmbed({ html, className = '', slotKey = '', eager 
   return (
     <div
       ref={hostRef}
-      className={`ad-slot-embed${className ? ` ${className}` : ''}${showVisible ? '' : ' ad-slot-embed--tracking-only'}${active ? ' ad-slot-embed--active' : ' ad-slot-embed--pending'}`}
+      className={`ad-slot-embed${className ? ` ${className}` : ''}${showVisible ? '' : ' ad-slot-embed--tracking-only'} ad-slot-embed--active`}
       aria-hidden={showVisible ? undefined : true}
       aria-label={showVisible ? 'Advertisement' : undefined}
       hidden={!showVisible}

@@ -93,6 +93,33 @@ export function getLastPersistError() {
   return lastPersistError;
 }
 
+export function canPersistWrites() {
+  return getPersistenceMode() !== 'memory-only';
+}
+
+async function retryAsync(fn, attempts = 3, delayMs = 350) {
+  let lastErr;
+  for (let i = 0; i < attempts; i += 1) {
+    try {
+      return await fn();
+    } catch (err) {
+      lastErr = err;
+      if (i < attempts - 1) {
+        await new Promise((resolve) => setTimeout(resolve, delayMs * (i + 1)));
+      }
+    }
+  }
+  throw lastErr;
+}
+
+function loadBundledStoreFallback() {
+  try {
+    return loadFromLocal();
+  } catch {
+    return null;
+  }
+}
+
 function ensureDataDir() {
   if (!fs.existsSync(DATA_DIR)) {
     fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -204,40 +231,55 @@ async function readLatestStoreBase() {
   if (usesRemotePersistence()) {
     const remote = await loadFromRemote();
     if (remote) return remote;
+    if (storeCache) return structuredClone(storeCache);
+    const bundled = loadBundledStoreFallback();
+    if (bundled) return bundled;
   }
   if (canWriteLocalFile()) return loadFromLocal();
   if (storeCache) return structuredClone(storeCache);
-  throw new Error('Store not initialized');
+  const bundled = loadBundledStoreFallback();
+  if (bundled) return bundled;
+  throw new Error('Store not initialized — refresh the page and try again.');
 }
 
 async function saveToRemote(store) {
   lastPersistError = null;
 
-  if (useSqlitePersistence()) {
-    await saveStoreToSqlite(store);
-    return;
-  }
+  const persist = async () => {
+    if (useSqlitePersistence()) {
+      await saveStoreToSqlite(store);
+      return;
+    }
 
-  if (useRedisPersistence()) {
-    await saveStoreToRedis(store);
-    return;
-  }
+    if (useRedisPersistence()) {
+      await saveStoreToRedis(store);
+      return;
+    }
 
-  if (useGitHubPersistence()) {
-    await saveStoreToGitHub(store);
-    return;
-  }
+    if (useGitHubPersistence()) {
+      await saveStoreToGitHub(store);
+      return;
+    }
 
-  if (useBlobPersistence()) {
-    await saveToBlob(store);
-    return;
-  }
+    if (useBlobPersistence()) {
+      await saveToBlob(store);
+      return;
+    }
 
-  if (process.env.VERCEL) {
-    const msg =
-      'Live save needs UPSTASH_REDIS_* or GITHUB_TOKEN on Vercel (see .env.example).';
-    lastPersistError = msg;
-    throw new Error(msg);
+    if (process.env.VERCEL) {
+      const msg =
+        'Live admin saves need cloud storage on Vercel. Add BLOB_READ_WRITE_TOKEN, UPSTASH_REDIS_*, or TURSO_DATABASE_URL in Vercel env, then redeploy.';
+      lastPersistError = msg;
+      throw new Error(msg);
+    }
+  };
+
+  try {
+    await retryAsync(persist, 3, 400);
+  } catch (err) {
+    lastPersistError = err?.message || 'Could not save to cloud database';
+    invalidateStoreCache();
+    throw err;
   }
 }
 

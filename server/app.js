@@ -9,9 +9,11 @@ import {
   initStore,
   getPersistenceMode,
   getLastPersistError,
+  canPersistWrites,
   resolveStoreAdSlots,
   readStore,
 } from './lib/store.js';
+import { useRemoteMediaUpload } from './lib/blobStorage.js';
 import { isAdminManagedProduct } from './lib/catalog.js';
 import { getActiveAdSlots } from './lib/siteConfig.js';
 import { runAutoConfirmJob } from './lib/orderAutoConfirm.js';
@@ -93,7 +95,8 @@ app.get('/api/health', async (_req, res) => {
     ok: true,
     service: 'trendkaari-api',
     persistence: getPersistenceMode(),
-    persistWrites: getPersistenceMode() !== 'memory-only',
+    persistWrites: canPersistWrites(),
+    mediaUploadReady: useRemoteMediaUpload() || !process.env.VERCEL,
     activeAdSlots,
     productCount,
     adminProductCount,

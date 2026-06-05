@@ -12,7 +12,7 @@ import {
   Menu,
   X,
 } from 'lucide-react';
-import { checkApiHealth } from '../api/client';
+import { fetchApiHealth } from '../api/client';
 
 const NAV = [
   { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
@@ -24,18 +24,49 @@ const NAV = [
   { id: 'gift-combos', label: 'Gift Combos', icon: Gift },
 ];
 
+function isLocalDevHost() {
+  if (typeof window === 'undefined') return false;
+  return /localhost|127\.0\.0\.1/.test(window.location.hostname);
+}
+
+function buildSyncStatus(health) {
+  if (!health?.ok) {
+    return {
+      tone: 'offline',
+      label: isLocalDevHost()
+        ? 'API Offline — run npm run dev'
+        : 'Live API unreachable — check connection',
+    };
+  }
+  if (!health.persistWrites) {
+    return {
+      tone: 'offline',
+      label: 'Admin saves disabled — add cloud storage in Vercel env',
+    };
+  }
+  if (health.lastPersistError) {
+    return {
+      tone: 'warn',
+      label: 'Cloud save issue — retry in a few seconds',
+    };
+  }
+  const mode = health.persistence ? ` (${health.persistence})` : '';
+  return {
+    tone: 'online',
+    label: `Database Sync: ONLINE${mode}`,
+  };
+}
+
 export default function AdminLayout({ admin, activePage, onNavigate, onLogout, children }) {
-  const [apiOnline, setApiOnline] = useState(null);
+  const [health, setHealth] = useState(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const syncStatus = buildSyncStatus(health);
 
   useEffect(() => {
-    const run = () => checkApiHealth().then(setApiOnline);
-    const start = window.setTimeout(run, 3000);
+    const run = () => fetchApiHealth().then(setHealth);
+    run();
     const id = window.setInterval(run, 60000);
-    return () => {
-      window.clearTimeout(start);
-      window.clearInterval(id);
-    };
+    return () => window.clearInterval(id);
   }, []);
 
   useEffect(() => {
@@ -97,9 +128,18 @@ export default function AdminLayout({ admin, activePage, onNavigate, onLogout, c
         </nav>
 
         <div className="admin-cyber-sidebar__foot">
-          <div className={`admin-cyber-status${apiOnline === false ? ' admin-cyber-status--offline' : ''}`}>
+          <div
+            className={`admin-cyber-status${
+              syncStatus.tone === 'offline'
+                ? ' admin-cyber-status--offline'
+                : syncStatus.tone === 'warn'
+                  ? ' admin-cyber-status--warn'
+                  : ''
+            }`}
+            title={health?.lastPersistError || undefined}
+          >
             <span className="admin-cyber-status__dot" />
-            {apiOnline === false ? 'API Offline — run npm run dev' : 'Database Sync: ONLINE'}
+            {syncStatus.label}
           </div>
           <a href="/" className="admin-cyber-nav__btn">
             <Store size={16} />

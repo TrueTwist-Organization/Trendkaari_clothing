@@ -8,6 +8,10 @@ let flushTimer = null;
 const slotRegistry = new Map();
 const displayedIds = new Set();
 
+export function preloadGptScript() {
+  return loadGptScript();
+}
+
 function loadGptScript() {
   if (document.querySelector(`script[src="${GPT_SRC}"]`)) {
     return Promise.resolve();
@@ -66,7 +70,7 @@ function scheduleGptFlush() {
   flushTimer = window.setTimeout(() => {
     flushTimer = null;
     void flushGptSlots();
-  }, 120);
+  }, 40);
 }
 
 function flushGptSlotsInCmd() {

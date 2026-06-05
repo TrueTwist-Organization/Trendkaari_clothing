@@ -35,6 +35,8 @@ import { adSlotsToCodeMap } from './utils/adSlots';
 import { AD_SLOTS_VERSION_KEY } from './utils/adSlotsSync';
 import { resetAdDedupe } from './utils/adDedupe';
 import { injectTrackingScriptsFromHtml } from './utils/injectTrackingScripts';
+import { preloadAdLibraries } from './utils/preloadAds';
+import { scrollToPageTop } from './utils/scrollToTop';
 import { runWhenIdle } from './utils/scheduleAdFit';
 import { userMe } from './api/userApi';
 import { getUserToken, setUserToken } from './api/client';
@@ -192,7 +194,7 @@ export default function App() {
       setSelectedProduct(null);
       setIsCategoryPage(true);
       setInfoSlug(null);
-      window.scrollTo(0, 0);
+      scrollToPageTop();
     } else if (segments[0] === 'product') {
       const prodId = parseInt(segments[1], 10);
       const found = resolveProductPage(prodId, productsList, giftCombos, {
@@ -202,7 +204,7 @@ export default function App() {
       setViewMode('product-detail');
       setIsCategoryPage(false);
       setInfoSlug(null);
-      window.scrollTo(0, 0);
+      scrollToPageTop();
     } else if (segments[0] === 'checkout') {
       const slug = normalizeCheckoutSlug(segments[1] || 'bag');
       if (!segments[1]) {
@@ -215,7 +217,7 @@ export default function App() {
       setIsCategoryPage(false);
       setInfoSlug(null);
       setIsCartOpen(false);
-      window.scrollTo(0, 0);
+      scrollToPageTop();
     } else if (segments[0] === 'info' && segments[1]) {
       const slug = decodeURIComponent(segments[1]);
       if (getInfoPage(slug)) {
@@ -224,7 +226,7 @@ export default function App() {
         setActiveCategory('all');
         setSelectedProduct(null);
         setIsCategoryPage(false);
-        window.scrollTo(0, 0);
+        scrollToPageTop();
       } else {
         navigateToRoute('/');
       }
@@ -235,7 +237,7 @@ export default function App() {
       setIsCategoryPage(false);
       setInfoSlug(null);
       setCheckoutSlug('bag');
-      window.scrollTo(0, 0);
+      scrollToPageTop();
     }
   };
 
@@ -261,6 +263,7 @@ export default function App() {
         if (codes.site_common_ad) {
           injectTrackingScriptsFromHtml(codes.site_common_ad, 'site_common_ad');
         }
+        void preloadAdLibraries(codes);
         setAdCodes(codes);
       });
     };
@@ -368,11 +371,16 @@ export default function App() {
       setIsCategoryPage(route.isCategoryPage);
       setInfoSlug(route.infoSlug ?? null);
       setCheckoutSlug(route.checkoutSlug ?? 'bag');
+      scrollToPageTop();
     };
 
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, [productsList, giftCombos]);
+
+  useEffect(() => {
+    scrollToPageTop();
+  }, [viewMode, isCategoryPage, activeCategory, infoSlug, checkoutSlug, selectedProduct?.id]);
 
   useEffect(() => {
     document.body.classList.toggle('category-page', isCategoryPage);
@@ -551,7 +559,7 @@ export default function App() {
       setInfoSlug(null);
       setActiveCategory('all');
       window.history.pushState({}, '', `/product/${id}`);
-      window.scrollTo(0, 0);
+      scrollToPageTop();
       return;
     }
 

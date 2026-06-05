@@ -12,6 +12,7 @@ import {
 import { findMenuGroupForTag, MENU_MEN_GROUPS, MENU_WOMEN_GROUPS } from '../data/navCategories';
 import PageBackButton from './PageBackButton';
 import PlacedAdSlot from './PlacedAdSlot';
+import { scrollToPageTop } from '../utils/scrollToTop';
 import ProductImage from './ProductImage';
 import { getProductHoverImage, getProductPrimaryImage, getProductGalleryImages } from '../utils/productImages';
 import { getAdCode } from '../utils/resolveAdCode';
@@ -70,7 +71,7 @@ export default function CollectionListingPage({
       size: [],
       color: []
     });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    scrollToPageTop();
   }, [activeCategory]);
 
   const handleSizeSelect = (productId, size) => {
@@ -349,12 +350,12 @@ export default function CollectionListingPage({
   const handleSidebarCategory = (slug) => {
     onSelectCategory(slug);
     setFiltersOpen(false);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    scrollToPageTop();
   };
 
   const handleQuickTabSelect = (cat) => {
     onSelectCategory(cat);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    scrollToPageTop();
   };
 
   const quickTabsTrack = isMobileTabs ? [...tabList, ...tabList] : tabList;

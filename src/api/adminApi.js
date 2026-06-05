@@ -24,12 +24,46 @@ export function syncAdminCatalog() {
   return apiFetch('/api/admin/products/sync-catalog', { method: 'POST' });
 }
 
+function isRetryableProductSaveError(err) {
+  const status = err?.status;
+  if (status === 502 || status === 503 || status === 504 || status === 500) return true;
+  const message = String(err?.message || '').toLowerCase();
+  return (
+    message.includes('timed out') ||
+    message.includes('try again') ||
+    message.includes('unavailable') ||
+    message.includes('error page')
+  );
+}
+
+async function withProductSaveRetry(fn) {
+  let lastErr;
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    try {
+      return await fn();
+    } catch (err) {
+      lastErr = err;
+      if (!isRetryableProductSaveError(err) || attempt === 2) throw err;
+      await new Promise((resolve) => window.setTimeout(resolve, 700 * (attempt + 1)));
+    }
+  }
+  throw lastErr;
+}
+
+export function fetchAdminSystemStatus() {
+  return apiFetch('/api/admin/system/status');
+}
+
 export function createProduct(formData) {
-  return apiFetch('/api/admin/products', { method: 'POST', body: formData });
+  return withProductSaveRetry(() =>
+    apiFetch('/api/admin/products', { method: 'POST', body: formData })
+  );
 }
 
 export function updateProduct(id, formData) {
-  return apiFetch(`/api/admin/products/${id}`, { method: 'PATCH', body: formData });
+  return withProductSaveRetry(() =>
+    apiFetch(`/api/admin/products/${id}`, { method: 'PATCH', body: formData })
+  );
 }
 
 export function deleteProduct(id) {

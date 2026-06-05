@@ -6,6 +6,8 @@ import App from './App.jsx';
 import AdminApp from './admin/AdminApp.jsx';
 import { adSlotsToCodeMap } from './utils/adSlots';
 import { injectTrackingScriptsFromHtml } from './utils/injectTrackingScripts';
+import { preloadAdLibraries } from './utils/preloadAds';
+import { installScrollRestoration } from './utils/scrollToTop';
 
 const isAdminRoute =
   typeof window !== 'undefined' &&
@@ -13,6 +15,8 @@ const isAdminRoute =
 
 async function bootstrap() {
   if (!isAdminRoute) {
+    installScrollRestoration();
+
     try {
       const res = await fetch('/api/store/ad-slots');
       if (res.ok) {
@@ -21,9 +25,12 @@ async function bootstrap() {
         if (codes.site_common_ad) {
           injectTrackingScriptsFromHtml(codes.site_common_ad, 'site_common_ad');
         }
+        void preloadAdLibraries(codes);
+      } else {
+        void preloadAdLibraries();
       }
     } catch {
-      // App will retry after mount
+      void preloadAdLibraries();
     }
   }
 

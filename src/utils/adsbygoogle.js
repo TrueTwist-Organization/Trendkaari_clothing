@@ -3,6 +3,10 @@ const ADSENSE_SRC =
 
 let loadPromise = null;
 
+export function preloadAdsenseScript() {
+  return loadAdsenseScript();
+}
+
 function loadAdsenseScript() {
   if (window.adsbygoogle) return Promise.resolve();
   if (loadPromise) return loadPromise;

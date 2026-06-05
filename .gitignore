@@ -38,3 +38,5 @@ __MACOSX/
 *.sw?
 .vercel
 .tmp/
+
+.vercel

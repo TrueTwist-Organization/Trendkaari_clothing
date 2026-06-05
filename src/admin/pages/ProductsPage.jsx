@@ -8,7 +8,7 @@ import {
   updateProduct,
 } from '../../api/adminApi';
 import { fetchStoreProducts } from '../../api/storeApi';
-import { getAdminToken, setAdminToken } from '../../api/client';
+import { fetchApiHealth, getAdminToken, setAdminToken } from '../../api/client';
 import { resetCatalogCache } from '../../utils/loadCatalog';
 import { bumpCatalogVersion } from '../../utils/catalogSync';
 import { getProductGalleryImages, getProductPrimaryImage } from '../../utils/productImages';
@@ -62,6 +62,7 @@ export default function ProductsPage({ onToast }) {
   const [saving, setSaving] = useState(false);
   const [loadError, setLoadError] = useState('');
   const [syncing, setSyncing] = useState(false);
+  const [saveBlocked, setSaveBlocked] = useState(false);
 
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -165,6 +166,12 @@ export default function ProductsPage({ onToast }) {
   useEffect(() => {
     load();
   }, [load]);
+
+  useEffect(() => {
+    fetchApiHealth().then((health) => {
+      setSaveBlocked(Boolean(health.ok && health.persistWrites === false));
+    });
+  }, []);
 
   const categories = gender === 'gents' ? GENTS_CATEGORIES : LADIES_CATEGORIES;
 
@@ -328,6 +335,13 @@ export default function ProductsPage({ onToast }) {
           </div>
         )}
       </header>
+
+      {saveBlocked && (
+        <p className="admin-cyber-error admin-cyber-error--banner" role="alert">
+          Product saves are disabled on this server. Add BLOB_READ_WRITE_TOKEN in Vercel environment
+          variables, then redeploy. Viewing still works from any PC.
+        </p>
+      )}
 
       {loadError && !showForm && (
         <p className="admin-cyber-error admin-cyber-error--banner" role="alert">

@@ -2,7 +2,7 @@ import AdSlotEmbed from './AdSlotEmbed';
 import './PageAdSlot.css';
 
 /** Page ad strip — hidden when slot has no saved code. */
-export default function PageAdSlot({ code, label, variant = 'section', eager = false }) {
+export default function PageAdSlot({ code, label, variant = 'section', eager = true }) {
   if (!String(code || '').trim()) return null;
 
   return (
