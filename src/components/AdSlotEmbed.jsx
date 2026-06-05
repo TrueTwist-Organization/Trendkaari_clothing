@@ -39,6 +39,12 @@ export default function AdSlotEmbed({ html, className = '', slotKey = '' }) {
     const fitT2 = window.setTimeout(fit, 1200);
     const fitT3 = window.setTimeout(fit, 2500);
     const fitT4 = window.setTimeout(fit, 4500);
+    const fitT5 = window.setTimeout(fit, 7000);
+    const fitT6 = window.setTimeout(fit, 10000);
+
+    if (typeof document !== 'undefined') {
+      document.fonts?.ready?.then(fit).catch(() => {});
+    }
 
     wrap.querySelectorAll('script').forEach((oldScript) => {
       const src = oldScript.getAttribute('src') || '';
@@ -85,6 +91,8 @@ export default function AdSlotEmbed({ html, className = '', slotKey = '' }) {
       window.clearTimeout(fitT2);
       window.clearTimeout(fitT3);
       window.clearTimeout(fitT4);
+      window.clearTimeout(fitT5);
+      window.clearTimeout(fitT6);
       if (slotKey) destroyGptSlotsForKey(slotKey);
     };
   }, [html, slotKey]);

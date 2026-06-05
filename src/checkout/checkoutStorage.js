@@ -1,4 +1,5 @@
 const STORAGE_KEY = 'flexfit_checkout_v1';
+const FAILURE_KEY = 'flexfit_checkout_order_failed';
 
 const defaultState = () => ({
   step: 0,
@@ -65,6 +66,41 @@ export function clearCheckoutState() {
   } catch {
     /* ignore */
   }
+}
+
+/** Persist order failure so /checkout/error survives refresh and blocks success screen. */
+export function saveOrderFailure(message = '') {
+  try {
+    sessionStorage.setItem(
+      FAILURE_KEY,
+      JSON.stringify({ message: String(message || ''), at: Date.now() })
+    );
+  } catch {
+    /* ignore */
+  }
+}
+
+export function loadOrderFailure() {
+  try {
+    const raw = sessionStorage.getItem(FAILURE_KEY);
+    if (!raw) return null;
+    const data = JSON.parse(raw);
+    return data && typeof data === 'object' ? data : null;
+  } catch {
+    return null;
+  }
+}
+
+export function clearOrderFailure() {
+  try {
+    sessionStorage.removeItem(FAILURE_KEY);
+  } catch {
+    /* ignore */
+  }
+}
+
+export function hasOrderFailure() {
+  return Boolean(loadOrderFailure());
 }
 
 export function pincodeServiceable(pincode) {

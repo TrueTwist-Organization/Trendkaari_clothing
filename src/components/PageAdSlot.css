@@ -128,21 +128,32 @@
 
 @media (max-width: 767px) {
   .page-ad-slot-wrap--section {
-    padding: 0 12px;
+    padding: 0 8px;
     margin: 6px auto 10px;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
   .page-ad-slot-wrap--checkout {
-    padding: 0 8px;
+    padding: 0 6px;
     margin: 10px auto;
+    overflow: hidden;
   }
 
   .page-ad-slot-wrap--pdp {
     margin: 10px 0;
+    overflow: hidden;
   }
 
   .page-ad-slot-wrap--sidebar {
     margin: 10px 0;
+    overflow: hidden;
+  }
+
+  .page-ad-slot-wrap {
+    overflow: hidden;
   }
 }
 

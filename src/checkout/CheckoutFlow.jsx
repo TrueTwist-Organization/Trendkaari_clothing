@@ -6,11 +6,15 @@ import OrderTechnicalError from './OrderTechnicalError';
 import CheckoutStepPages from './CheckoutStepPages';
 import { SUCCESS_STEP_INDEX, CHECKOUT_STEPS } from './checkoutSteps';
 import { getCheckoutStepExtras } from './checkoutStepExtrasConfig';
-import { checkoutPathForStep, stepIndexFromSlug } from './checkoutRoutes';
+import { checkoutPathForStep, stepIndexFromSlug, isCheckoutErrorSlug, isSuccessSlug, CHECKOUT_ERROR_SLUG } from './checkoutRoutes';
 import {
   loadCheckoutState,
   saveCheckoutState,
   clearCheckoutState,
+  saveOrderFailure,
+  loadOrderFailure,
+  clearOrderFailure,
+  hasOrderFailure,
   pincodeServiceable,
 } from './checkoutStorage';
 import { computeCouponDiscountAmount } from '../utils/couponDiscount';
@@ -127,7 +131,9 @@ export default function CheckoutFlow({
   onAddToCart,
   onSelectProduct,
 }) {
-  const step = stepIndexFromSlug(stepSlug);
+  const rawStep = stepIndexFromSlug(stepSlug);
+  const step = rawStep >= 0 ? rawStep : 0;
+  const initialFailure = loadOrderFailure();
   const [stored, setStored] = useState(loadCheckoutState);
   const [authMode, setAuthMode] = useState('login');
   const [loginTab, setLoginTab] = useState('email');
@@ -145,8 +151,10 @@ export default function CheckoutFlow({
   const [paymentProcessing, setPaymentProcessing] = useState(false);
   const [paymentFail, setPaymentFail] = useState(false);
   const [completedOrder, setCompletedOrder] = useState(null);
-  const [orderFailed, setOrderFailed] = useState(false);
-  const [orderFailMessage, setOrderFailMessage] = useState('');
+  const [orderFailed, setOrderFailed] = useState(
+    () => isCheckoutErrorSlug(stepSlug) || Boolean(initialFailure)
+  );
+  const [orderFailMessage, setOrderFailMessage] = useState(() => initialFailure?.message || '');
   const [confetti, setConfetti] = useState([]);
   const [loginSuccess, setLoginSuccess] = useState(false);
   const [successPause, setSuccessPause] = useState(false);
@@ -250,7 +258,7 @@ export default function CheckoutFlow({
   }, [isOpen, step, stored.payment?.method, persist]);
 
   useEffect(() => {
-    if (!isOpen || !onNavigateCheckout || orderFailed) return;
+    if (!isOpen || !onNavigateCheckout || orderFailed || isCheckoutErrorSlug(stepSlug)) return;
     if (step === SUCCESS_STEP_INDEX && !completedOrder) {
       onNavigateCheckout(checkoutPathForStep(0));
       return;
@@ -258,7 +266,25 @@ export default function CheckoutFlow({
     if (cartItems.length === 0 && step !== 0 && step !== SUCCESS_STEP_INDEX) {
       onNavigateCheckout(checkoutPathForStep(0));
     }
-  }, [isOpen, step, cartItems.length, completedOrder, orderFailed, onNavigateCheckout]);
+  }, [isOpen, step, stepSlug, cartItems.length, completedOrder, orderFailed, onNavigateCheckout]);
+
+  useEffect(() => {
+    if (!isOpen || !onNavigateCheckout) return;
+    if (isCheckoutErrorSlug(stepSlug)) return;
+    if (!hasOrderFailure() && !orderFailed) return;
+    if (!isSuccessSlug(stepSlug)) return;
+    setOrderFailed(true);
+    const saved = loadOrderFailure();
+    if (saved?.message) setOrderFailMessage(saved.message);
+    onNavigateCheckout(`/checkout/${CHECKOUT_ERROR_SLUG}`);
+  }, [isOpen, stepSlug, orderFailed, onNavigateCheckout]);
+
+  useEffect(() => {
+    if (!isOpen || !isCheckoutErrorSlug(stepSlug)) return;
+    setOrderFailed(true);
+    const saved = loadOrderFailure();
+    if (saved?.message) setOrderFailMessage(saved.message);
+  }, [isOpen, stepSlug]);
 
   useEffect(() => {
     const onKey = (e) => {
@@ -540,6 +566,9 @@ export default function CheckoutFlow({
       };
       setCompletedOrder(order);
       persist({ lastOrderId: order.id });
+      clearOrderFailure();
+      setOrderFailed(false);
+      setOrderFailMessage('');
       spawnConfetti();
       goStep(SUCCESS_STEP_INDEX);
     } catch (err) {
@@ -551,10 +580,12 @@ export default function CheckoutFlow({
       setPaymentFail(false);
       setError('');
       setOrderFailMessage(msg || 'We could not complete your order due to a technical issue.');
+      saveOrderFailure(msg || 'We could not complete your order due to a technical issue.');
       onClearCart?.();
       clearCheckoutState();
+      setCompletedOrder(null);
       setOrderFailed(true);
-      onNavigateCheckout?.('/checkout/error');
+      onNavigateCheckout?.(`/checkout/${CHECKOUT_ERROR_SLUG}`);
       window.scrollTo?.(0, 0);
     } finally {
       setPaymentProcessing(false);
@@ -657,7 +688,8 @@ export default function CheckoutFlow({
 
   if (!isOpen) return null;
 
-  const showTechnicalError = orderFailed;
+  const showTechnicalError =
+    orderFailed || isCheckoutErrorSlug(stepSlug) || hasOrderFailure();
   const stepExtras = getCheckoutStepExtras(step, CHECKOUT_STEPS);
   const wideCheckout = Boolean(stepExtras?.showSuggestions);
 
@@ -677,11 +709,13 @@ export default function CheckoutFlow({
           <OrderTechnicalError
             detailMessage={orderFailMessage}
             onSelectProductsAgain={() => {
+              clearOrderFailure();
               setOrderFailed(false);
               setOrderFailMessage('');
               onContinueShopping?.();
             }}
             onReviewCart={() => {
+              clearOrderFailure();
               setOrderFailed(false);
               setOrderFailMessage('');
               handleClose();

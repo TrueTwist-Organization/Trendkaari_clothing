@@ -102,5 +102,17 @@ html {
 
 .main-content .page-ad-slot-wrap,
 .main-content .ad-slot-embed {
-  overflow: visible;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .main-content .page-ad-slot-wrap,
+  .main-content .ad-slot-embed,
+  .site-top-ad-strip,
+  .site-top-ad-strip .ad-slot-embed {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
