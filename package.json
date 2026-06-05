@@ -13,7 +13,8 @@
     "preview": "vite preview",
     "generate-cutouts": "NUMBA_DISABLE_JIT=1 python3 scripts/generate-cutouts.py",
     "sync-catalog": "node scripts/sync-catalog-to-store.js",
-  "migrate:sqlite": "USE_SQLITE=true node scripts/migrate-store-to-sqlite.js",
+    "migrate:sqlite": "USE_SQLITE=true node scripts/migrate-store-to-sqlite.js",
+    "restore-ads": "node scripts/restore-ad-slots.js",
     "enrich-descriptions": "node scripts/enrich-product-descriptions.js",
     "sync-logo": "node scripts/sync-logo.js",
     "fix-titles": "node scripts/fix-generic-product-titles.js && node scripts/enrich-product-descriptions.js"

@@ -1,0 +1,53 @@
+/**
+ * Restore all ad placements with Google Publisher Tag units (a1 / a2).
+ *
+ * Usage:
+ *   node scripts/restore-ad-slots.js
+ *   BLOB_READ_WRITE_TOKEN=... node scripts/restore-ad-slots.js --push
+ */
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { AD_PLACEMENT_KEYS } from '../src/constants/adPlacements.js';
+import { encodeAdCode } from '../server/lib/adSlotCode.js';
+import { buildGptAdHtml } from '../server/lib/gptAdTemplates.js';
+import { savePersistedAdSlots } from '../server/lib/adSlotsPersistence.js';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const OUT_PATH = path.join(__dirname, '../server/data/ad-slots.json');
+const now = new Date().toISOString();
+
+const slots = AD_PLACEMENT_KEYS.map((placement, index) => {
+  const unit = index % 2 === 0 ? 'a1' : 'a2';
+  const html = buildGptAdHtml(placement, { unit });
+  return {
+    placement,
+    code: encodeAdCode(html),
+    encoded: true,
+    updatedAt: now,
+  };
+});
+
+fs.writeFileSync(OUT_PATH, JSON.stringify(slots, null, 2), 'utf8');
+console.log(`Wrote ${slots.length} ad slots → ${OUT_PATH}`);
+
+if (process.env.USE_SQLITE === 'true') {
+  const { loadStoreFromSqlite, saveStoreToSqlite } = await import('../server/lib/sqliteDb.js');
+  const store = (await loadStoreFromSqlite()) || {
+    products: [],
+    orders: [],
+    users: [],
+    coupons: [],
+    giftCombos: [],
+    admin: null,
+    settings: {},
+  };
+  store.adSlots = slots;
+  await saveStoreToSqlite(store);
+  console.log('Synced ad slots into SQLite store.');
+}
+
+if (process.argv.includes('--push')) {
+  await savePersistedAdSlots(slots);
+  console.log('Pushed ad slots to remote persistence (Blob/Redis).');
+}
