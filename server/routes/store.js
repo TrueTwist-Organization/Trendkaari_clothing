@@ -50,7 +50,13 @@ router.get('/ad-slots', async (req, res) => {
   res.set('Pragma', 'no-cache');
   const placement = req.query.placement || null;
   const adSlots = await resolveStoreAdSlots([]);
-  res.json({ adSlots: getActiveAdSlots({ adSlots }, placement || null) });
+  res.json({
+    adSlots: getActiveAdSlots({ adSlots }, placement || null),
+    updatedAt: adSlots.reduce((max, slot) => {
+      const t = Date.parse(slot.updatedAt || '');
+      return Number.isFinite(t) && t > max ? t : max;
+    }, 0) || null,
+  });
 });
 
 router.get('/gift-combos', (req, res) => {

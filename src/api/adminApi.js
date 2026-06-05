@@ -125,42 +125,9 @@ function isRetryableSaveError(err) {
   );
 }
 
-async function saveAdSlotsOneByOne(slots) {
-  const filled = Object.entries(slots).filter(([, code]) => String(code || '').trim());
-  if (!filled.length) {
-    return putAdSlots({ ...encodeSlotsForWire(slots), replaceAll: true });
-  }
-
-  let lastResult = null;
-  for (const [placement, code] of filled) {
-    lastResult = await putAdSlots({
-      slots: { [placement]: utf8ToBase64(code) },
-      slotsEncoded: true,
-      clientFilledCount: 1,
-      merge: true,
-      replaceAll: false,
-    });
-  }
-
-  return (
-    lastResult ||
-    putAdSlots({
-      slots: encodeSlotsForWire(slots).slots,
-      slotsEncoded: true,
-      clientFilledCount: filled.length,
-      replaceAll: true,
-    })
-  );
-}
-
-/** Save ad slots — replaceAll so cleared boxes are removed from storage. */
+/** Save ad slots — always replaceAll so cleared boxes are removed from storage. */
 export async function saveAdminAdSlots(slots) {
   const inner = encodeSlotsForWire(slots);
-  const filled = Object.entries(slots).filter(([, code]) => String(code || '').trim());
-
-  if (!filled.length) {
-    return putAdSlots({ ...inner, replaceAll: true });
-  }
 
   try {
     return await putAdSlots({ payloadB64: utf8ToBase64(JSON.stringify(inner)) });
@@ -168,13 +135,7 @@ export async function saveAdminAdSlots(slots) {
     if (!isRetryableSaveError(bulkEncodedErr)) throw bulkEncodedErr;
   }
 
-  try {
-    return await putAdSlots(inner);
-  } catch (directErr) {
-    if (!isRetryableSaveError(directErr)) throw directErr;
-  }
-
-  return saveAdSlotsOneByOne(slots);
+  return putAdSlots(inner);
 }
 
 export function fetchAdminGiftCombos() {

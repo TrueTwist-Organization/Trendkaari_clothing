@@ -3,7 +3,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { useRedisPersistence } from './redisStore.js';
 import { useSqlitePersistence, loadStoreFromSqlite } from './sqliteDb.js';
-import { getDefaultAdSlots } from './defaultAdSlots.js';
 import { isValidAdSlot, sanitizeAdSlotList } from './adSlotValidation.js';
 
 const MAX_SAVED_AD_SLOTS = 30;
@@ -50,7 +49,11 @@ async function readFromBlob() {
   const { head } = await import('@vercel/blob');
   const meta = await head(BLOB_PATHNAME);
   if (!meta?.url) return [];
-  const res = await fetch(meta.url, { cache: 'no-store' });
+  const bust = meta.uploadedAt || Date.now();
+  const res = await fetch(`${meta.url}?v=${encodeURIComponent(String(bust))}`, {
+    cache: 'no-store',
+    headers: { 'Cache-Control': 'no-cache', Pragma: 'no-cache' },
+  });
   if (!res.ok) {
     throw new Error(`blob fetch failed (${res.status})`);
   }
@@ -73,48 +76,27 @@ async function readFromDisk() {
   return Array.isArray(parsed) ? parsed : [];
 }
 
-/** Default slots shipped in repo — used when production blob/redis is still empty. */
-function readBundledAdSlots() {
-  const imported = getDefaultAdSlots();
-  if (imported.length) return imported;
-
-  try {
-    if (!fs.existsSync(LOCAL_AD_SLOTS_PATH)) return [];
-    const parsed = JSON.parse(fs.readFileSync(LOCAL_AD_SLOTS_PATH, 'utf8'));
-    return Array.isArray(parsed) ? parsed : [];
-  } catch {
-    return [];
-  }
-}
-
 async function readFromSqliteMeta() {
   if (!useSqlitePersistence()) return [];
   const store = await loadStoreFromSqlite();
   return Array.isArray(store?.adSlots) ? store.adSlots : [];
 }
 
-/** Merge bundled defaults under saved slots — only when storage has never been written. */
-async function mergeWithBundledDefaults(list = []) {
-  if (list.length > 0) return sanitizeAdSlotList(list);
-  const bundled = readBundledAdSlots();
-  return sanitizeAdSlotList(bundled);
-}
-
-/** Trim bloated/corrupt storage only — never re-inject bundled defaults over admin saves. */
+/** Trim bloated storage only — never restore bundled/repo defaults. */
 async function healAdSlotsIfNeeded(rawList = []) {
   const valid = sanitizeAdSlotList(rawList);
-  const bundled = readBundledAdSlots();
 
   if (valid.length > MAX_SAVED_AD_SLOTS) {
+    const trimmed = valid.slice(0, MAX_SAVED_AD_SLOTS);
     if (useRedisPersistence() || useBlobPersistence()) {
       try {
-        await savePersistedAdSlots(bundled, { allowEmpty: false });
-        console.log(`[ad-slots] trimmed bloated storage (${valid.length} → ${bundled.length} slots)`);
+        await savePersistedAdSlots(trimmed, { allowEmpty: false });
+        console.log(`[ad-slots] trimmed bloated storage (${valid.length} → ${trimmed.length} slots)`);
       } catch (err) {
         console.warn('[ad-slots] trim save failed:', err.message);
       }
     }
-    return bundled;
+    return trimmed;
   }
 
   return valid;
@@ -146,9 +128,6 @@ export async function loadPersistedAdSlots({ bypassCache = false, skipHeal = fal
       list = skipHeal ? sanitizeAdSlotList(list) : await healAdSlotsIfNeeded(list);
     } else if (canWriteLocalFile()) {
       list = sanitizeAdSlotList(await readFromDisk());
-      if (!list.length) {
-        list = await mergeWithBundledDefaults([]);
-      }
     } else {
       return memCacheLoaded ? (memCache ?? []) : undefined;
     }
@@ -176,6 +155,12 @@ export async function savePersistedAdSlots(adSlots, { allowEmpty = false } = {})
   const payload = JSON.stringify(list);
   memCache = list;
   memCacheLoaded = true;
+
+  if (useSqlitePersistence()) {
+    const { saveAdSlotsToSqlite } = await import('./sqliteDb.js');
+    await saveAdSlotsToSqlite(list);
+    return list;
+  }
 
   if (useRedisPersistence()) {
     const { Redis } = await import('@upstash/redis');
@@ -207,19 +192,13 @@ export async function savePersistedAdSlots(adSlots, { allowEmpty = false } = {})
 }
 
 /** Always read fresh from durable storage for public/admin APIs */
-export async function resolveStoreAdSlots(fallback = [], { includeDefaults = true } = {}) {
+export async function resolveStoreAdSlots(fallback = []) {
   const persisted = await loadPersistedAdSlots({ bypassCache: true });
 
   if (persisted !== undefined) {
     return sanitizeAdSlotList(persisted);
   }
 
-  if (includeDefaults) {
-    const defaults = sanitizeAdSlotList(getDefaultAdSlots());
-    if (defaults.length) return defaults;
-  }
-
-  if (memCacheLoaded && memCache?.length) return sanitizeAdSlotList(memCache);
   return sanitizeAdSlotList(Array.isArray(fallback) ? fallback : []);
 }
 

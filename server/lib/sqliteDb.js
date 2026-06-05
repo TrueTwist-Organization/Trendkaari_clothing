@@ -180,15 +180,19 @@ export async function saveStoreToSqlite(store) {
       sql: 'INSERT OR REPLACE INTO app_meta (key, data) VALUES (?, ?)',
       args: ['settings', JSON.stringify(store.settings ?? DEFAULT_SITE_SETTINGS)],
     },
-    {
+  ];
+
+  if ('adSlots' in store) {
+    stmts.push({
       sql: 'INSERT OR REPLACE INTO app_meta (key, data) VALUES (?, ?)',
       args: ['adSlots', JSON.stringify(store.adSlots ?? [])],
-    },
-    {
-      sql: 'INSERT OR REPLACE INTO app_meta (key, data) VALUES (?, ?)',
-      args: ['_storeUpdatedAt', JSON.stringify(store._storeUpdatedAt || new Date().toISOString())],
-    },
-  ];
+    });
+  }
+
+  stmts.push({
+    sql: 'INSERT OR REPLACE INTO app_meta (key, data) VALUES (?, ?)',
+    args: ['_storeUpdatedAt', JSON.stringify(store._storeUpdatedAt || new Date().toISOString())],
+  });
 
   for (const chunk of chunkStatements(stmts)) {
     await db.batch(chunk, 'write');

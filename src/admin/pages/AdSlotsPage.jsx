@@ -3,6 +3,7 @@ import { Copy, Save } from 'lucide-react';
 import { fetchAdminAdSlots, saveAdminAdSlots } from '../../api/adminApi';
 import { AD_PLACEMENT_DEFINITIONS, AD_PLACEMENT_SECTIONS } from '../../constants/adPlacements';
 import { mergeAdSlotsForAdmin } from '../../utils/adSlots';
+import { bumpAdSlotsVersion } from '../../utils/adSlotsSync';
 import { CHECKOUT_STEPS } from '../../checkout/checkoutSteps';
 
 function buildDefaultRows() {
@@ -106,6 +107,7 @@ export default function AdSlotsPage({ onToast }) {
           onToast(`${saved} ad slot(s) saved — persists across refreshes`);
         }
         setRows(mergeAdSlotsForAdmin(result?.adSlots || []));
+        bumpAdSlotsVersion();
       }
     } catch (err) {
       onToast(err.message, 'error');

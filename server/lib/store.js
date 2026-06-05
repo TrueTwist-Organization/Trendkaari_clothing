@@ -23,6 +23,7 @@ import {
   primeAdSlotsCache,
   mergeAndPersistAdSlots,
 } from './adSlotsPersistence.js';
+import { sanitizeAdSlotList } from './adSlotValidation.js';
 import { ensureSeeded } from './seed.js';
 import { syncCatalogFromSource } from './catalog.js';
 
@@ -98,6 +99,12 @@ function ensureDataDir() {
   }
 }
 
+function stripLegacyAdSlots(store) {
+  if (!store || typeof store !== 'object') return store;
+  delete store.adSlots;
+  return store;
+}
+
 function loadFromLocal() {
   ensureDataDir();
   if (!fs.existsSync(STORE_PATH)) {
@@ -122,7 +129,7 @@ async function loadFromBlob() {
     if (!meta?.url) return null;
     const res = await fetch(meta.url);
     if (!res.ok) return null;
-    return JSON.parse(await res.text());
+    return stripLegacyAdSlots(JSON.parse(await res.text()));
   } catch (err) {
     if (err?.name === 'BlobNotFoundError' || err?.message?.includes('not found')) {
       return null;
@@ -245,7 +252,7 @@ export async function initStore() {
     ]);
 
     if (remote) {
-      storeCache = remote;
+      storeCache = stripLegacyAdSlots(remote);
     } else if (useSqlitePersistence()) {
       storeCache = loadFromLocal();
       try {
@@ -259,13 +266,9 @@ export async function initStore() {
     }
 
     storeCache.adSlots =
-      useSqlitePersistence() && Array.isArray(storeCache.adSlots) && storeCache.adSlots.length
-        ? storeCache.adSlots
-        : adSlots !== undefined
-          ? adSlots
-          : Array.isArray(storeCache.adSlots)
-            ? storeCache.adSlots
-            : [];
+      adSlots !== undefined
+        ? adSlots
+        : [];
 
     startBackgroundSeed();
 
@@ -340,26 +343,22 @@ export function invalidateStoreCache() {
 }
 
 export async function writeStore(store) {
-  const useSqlite = useSqlitePersistence();
-  const persisted = useSqlite ? store.adSlots : await loadPersistedAdSlots({ bypassCache: true });
-  const keepAds =
-    store.adSlots?.length > 0
-      ? store.adSlots
-      : persisted?.length > 0
-        ? persisted
-        : storeCache?.adSlots?.length > 0
-          ? storeCache.adSlots
-          : [];
+  const keepAds = sanitizeAdSlotList(
+    (await loadPersistedAdSlots({ bypassCache: true, skipHeal: true })) ?? []
+  );
 
-  store.adSlots = keepAds;
+  stripLegacyAdSlots(store);
   store._storeUpdatedAt = new Date().toISOString();
   storeCache = structuredClone(store);
+  storeCache.adSlots = structuredClone(keepAds);
   primeAdSlotsCache(keepAds);
 
-  if (!useSqlite) {
-    saveToLocal(storeCache);
+  if (!useSqlitePersistence()) {
+    const localCopy = structuredClone(store);
+    delete localCopy.adSlots;
+    saveToLocal(localCopy);
   }
-  await saveToRemote(storeCache);
+  await saveToRemote(stripLegacyAdSlots(structuredClone(store)));
 }
 
 /** Save ad slots from admin — replaces store with filled slots in the save payload */

@@ -32,6 +32,7 @@ import { loadCatalogProducts } from './utils/loadCatalog';
 import { CATALOG_VERSION_KEY } from './utils/catalogSync';
 import { applySiteSettingsToDocument } from './utils/siteSettings';
 import { adSlotsToCodeMap } from './utils/adSlots';
+import { AD_SLOTS_VERSION_KEY } from './utils/adSlotsSync';
 import { resetAdDedupe } from './utils/adDedupe';
 import { runWhenIdle } from './utils/scheduleAdFit';
 import { userMe } from './api/userApi';
@@ -249,10 +250,37 @@ export default function App() {
       fetchStoreGiftCombos().then((list) => {
         if (list?.length) setGiftCombos(list);
       });
+    });
+  }, []);
+
+  useEffect(() => {
+    const refreshAds = () => {
       fetchStoreAdSlots().then((list) => {
         setAdCodes(adSlotsToCodeMap(list || []));
       });
-    });
+    };
+
+    runWhenIdle(refreshAds);
+
+    const onVisible = () => {
+      if (document.visibilityState === 'visible') refreshAds();
+    };
+    document.addEventListener('visibilitychange', onVisible);
+
+    const onStorage = (e) => {
+      if (e.key === AD_SLOTS_VERSION_KEY) refreshAds();
+    };
+    window.addEventListener('storage', onStorage);
+
+    const pollId = window.setInterval(() => {
+      if (document.visibilityState === 'visible') refreshAds();
+    }, 60_000);
+
+    return () => {
+      document.removeEventListener('visibilitychange', onVisible);
+      window.removeEventListener('storage', onStorage);
+      window.clearInterval(pollId);
+    };
   }, []);
 
   // Load catalog first; refetch when tab visible, admin adds product, or on interval
@@ -316,15 +344,6 @@ export default function App() {
       if (resolved) setSelectedProduct(resolved);
     });
   }, [viewMode, giftCombos, productsList.length]);
-
-  useEffect(() => {
-    const retry = window.setTimeout(() => {
-      fetchStoreAdSlots().then((list) => {
-        setAdCodes(adSlotsToCodeMap(list || []));
-      });
-    }, 4000);
-    return () => window.clearTimeout(retry);
-  }, []);
 
   // Restore user session from token
   useEffect(() => {
