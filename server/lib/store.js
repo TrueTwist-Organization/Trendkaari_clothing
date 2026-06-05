@@ -9,6 +9,12 @@ import {
 } from './githubStore.js';
 import { loadStoreFromRedis, saveStoreToRedis, useRedisPersistence } from './redisStore.js';
 import {
+  loadStoreFromSqlite,
+  saveStoreToSqlite,
+  useSqlitePersistence,
+  getSqliteMode,
+} from './sqliteDb.js';
+import {
   loadPersistedAdSlots,
   savePersistedAdSlots,
   resolveStoreAdSlots,
@@ -70,6 +76,7 @@ function canWriteLocalFile() {
 }
 
 export function getPersistenceMode() {
+  if (useSqlitePersistence()) return getSqliteMode() === 'turso' ? 'turso-sqlite' : 'sqlite';
   if (useRedisPersistence()) return 'upstash-redis';
   if (useGitHubPersistence()) return 'github';
   if (useBlobPersistence()) return 'vercel-blob';
@@ -136,6 +143,15 @@ async function saveToBlob(store) {
 }
 
 async function loadFromRemote() {
+  if (useSqlitePersistence()) {
+    const fromSqlite = await loadStoreFromSqlite();
+    if (fromSqlite) {
+      console.log(`[store] loaded from SQLite (${getSqliteMode()})`);
+      return fromSqlite;
+    }
+    return null;
+  }
+
   if (useRedisPersistence()) {
     const fromRedis = await loadStoreFromRedis();
     if (fromRedis) {
@@ -150,9 +166,11 @@ async function loadFromRemote() {
       console.log('[store] loaded from Vercel Blob');
       return fromBlob;
     }
+    console.warn('[store] Vercel Blob empty or unavailable — not using stale GitHub copy');
+    return null;
   }
 
-  if (useGitHubPersistence() || process.env.VERCEL) {
+  if (useGitHubPersistence()) {
     try {
       const fromGitHub = await loadStoreFromGitHub();
       if (fromGitHub) {
@@ -167,8 +185,28 @@ async function loadFromRemote() {
   return null;
 }
 
+function usesRemotePersistence() {
+  return useSqlitePersistence() || useRedisPersistence() || useBlobPersistence() || useGitHubPersistence();
+}
+
+/** Fresh read before writes — prevents serverless instances from overwriting each other. */
+async function readLatestStoreBase() {
+  if (usesRemotePersistence()) {
+    const remote = await loadFromRemote();
+    if (remote) return remote;
+  }
+  if (canWriteLocalFile()) return loadFromLocal();
+  if (storeCache) return structuredClone(storeCache);
+  throw new Error('Store not initialized');
+}
+
 async function saveToRemote(store) {
   lastPersistError = null;
+
+  if (useSqlitePersistence()) {
+    await saveStoreToSqlite(store);
+    return;
+  }
 
   if (useRedisPersistence()) {
     await saveStoreToRedis(store);
@@ -205,16 +243,30 @@ export async function initStore() {
 
     if (remote) {
       storeCache = remote;
+    } else if (useSqlitePersistence()) {
+      storeCache = loadFromLocal();
+      try {
+        await saveStoreToSqlite(storeCache);
+        console.log('[store] seeded SQLite from store.json');
+      } catch (err) {
+        console.warn('[store] sqlite seed failed:', err.message);
+      }
     } else {
       storeCache = loadFromLocal();
     }
 
     storeCache.adSlots =
-      adSlots !== undefined ? adSlots : Array.isArray(storeCache.adSlots) ? storeCache.adSlots : [];
+      useSqlitePersistence() && Array.isArray(storeCache.adSlots) && storeCache.adSlots.length
+        ? storeCache.adSlots
+        : adSlots !== undefined
+          ? adSlots
+          : Array.isArray(storeCache.adSlots)
+            ? storeCache.adSlots
+            : [];
 
     startBackgroundSeed();
 
-    if (remote) {
+    if (remote || useSqlitePersistence()) {
       return storeCache;
     }
 
@@ -259,7 +311,8 @@ export function readStore() {
 }
 
 export async function writeStore(store) {
-  const persisted = await loadPersistedAdSlots({ bypassCache: true });
+  const useSqlite = useSqlitePersistence();
+  const persisted = useSqlite ? store.adSlots : await loadPersistedAdSlots({ bypassCache: true });
   const keepAds =
     store.adSlots?.length > 0
       ? store.adSlots
@@ -270,10 +323,13 @@ export async function writeStore(store) {
           : [];
 
   store.adSlots = keepAds;
+  store._storeUpdatedAt = new Date().toISOString();
   storeCache = structuredClone(store);
   primeAdSlotsCache(keepAds);
 
-  saveToLocal(storeCache);
+  if (!useSqlite) {
+    saveToLocal(storeCache);
+  }
   await saveToRemote(storeCache);
 }
 
@@ -308,7 +364,7 @@ export async function mergeAdSlots(adSlots) {
 
 export async function updateStore(mutator) {
   await initStore();
-  const store = readStore();
+  const store = structuredClone(await readLatestStoreBase());
   const next = mutator(store) ?? store;
   await writeStore(next);
   return next;

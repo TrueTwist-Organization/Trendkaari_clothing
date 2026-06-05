@@ -100,16 +100,6 @@ export default function ProductsPage({ onToast }) {
       const data = await fetchAdminProducts(params);
       let count = applyProductList(data?.products);
 
-      if (count === 0 && genderFilter === 'all') {
-        try {
-          await syncAdminCatalog();
-          const again = await fetchAdminProducts(params);
-          count = applyProductList(again?.products);
-        } catch (syncErr) {
-          console.warn('Auto sync failed', syncErr);
-        }
-      }
-
       if (count === 0) {
         const fallback = await fetchStoreProducts();
         if (fallback?.length) {

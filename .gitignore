@@ -17,6 +17,9 @@ dist-ssr
 .env.*
 !.env.example
 
+# SQLite database (local dev — use migrate:sqlite to create from store.json)
+server/data/*.db
+
 # Source asset archives (catalog already in public/ + store.json)
 *.zip
 *.pdf

@@ -13,11 +13,13 @@
     "preview": "vite preview",
     "generate-cutouts": "NUMBA_DISABLE_JIT=1 python3 scripts/generate-cutouts.py",
     "sync-catalog": "node scripts/sync-catalog-to-store.js",
+  "migrate:sqlite": "USE_SQLITE=true node scripts/migrate-store-to-sqlite.js",
     "enrich-descriptions": "node scripts/enrich-product-descriptions.js",
     "sync-logo": "node scripts/sync-logo.js",
     "fix-titles": "node scripts/fix-generic-product-titles.js && node scripts/enrich-product-descriptions.js"
   },
   "dependencies": {
+    "@libsql/client": "^0.17.3",
     "@upstash/redis": "^1.38.0",
     "@vercel/blob": "^2.4.0",
     "bcryptjs": "^3.0.2",

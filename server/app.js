@@ -5,7 +5,14 @@ import jwt from 'jsonwebtoken';
 import adminRoutes from './routes/admin.js';
 import authRoutes from './routes/auth.js';
 import storeRoutes from './routes/store.js';
-import { initStore, getPersistenceMode, resolveStoreAdSlots } from './lib/store.js';
+import {
+  initStore,
+  getPersistenceMode,
+  getLastPersistError,
+  resolveStoreAdSlots,
+  readStore,
+} from './lib/store.js';
+import { isAdminManagedProduct } from './lib/catalog.js';
 import { getActiveAdSlots } from './lib/siteConfig.js';
 import { runAutoConfirmJob } from './lib/orderAutoConfirm.js';
 
@@ -70,12 +77,28 @@ app.get('/api/health', async (_req, res) => {
   } catch {
     activeAdSlots = 0;
   }
+  let productCount = 0;
+  let adminProductCount = 0;
+  let storeUpdatedAt = null;
+  try {
+    const store = readStore();
+    productCount = store.products?.length || 0;
+    adminProductCount = (store.products || []).filter(isAdminManagedProduct).length;
+    storeUpdatedAt = store._storeUpdatedAt || null;
+  } catch {
+    /* store may not be ready */
+  }
+
   res.json({
     ok: true,
     service: 'trendkaari-api',
     persistence: getPersistenceMode(),
     persistWrites: getPersistenceMode() !== 'memory-only',
     activeAdSlots,
+    productCount,
+    adminProductCount,
+    storeUpdatedAt,
+    lastPersistError: getLastPersistError(),
   });
 });
 

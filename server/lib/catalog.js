@@ -1,5 +1,28 @@
 import { updateStore, readStore } from './store.js';
 
+/** Admin-added or admin-edited products must never be wiped by catalog sync. */
+export function isAdminManagedProduct(p) {
+  if (!p) return false;
+  if (p.source === 'admin' || p.adminCreated === true) return true;
+  const urls = [p.image, ...(p.images || [])].filter(Boolean);
+  return urls.some(
+    (u) =>
+      typeof u === 'string' &&
+      (u.includes('blob.vercel-storage.com') ||
+        u.includes('/product-media/'))
+  );
+}
+
+function mergeCatalogIntoExisting(existing, catalog) {
+  if (isAdminManagedProduct(existing)) return existing;
+  return {
+    ...catalog,
+    ...existing,
+    stock: existing.stock ?? catalog.stock,
+    variants: existing.variants?.length ? existing.variants : catalog.variants,
+  };
+}
+
 export function normalizeProduct(p) {
   const gender =
     p.category === 'men' || p.category === 'gents' || p.wearType === 'gents' ? 'gents' : 'ladies';
@@ -35,17 +58,7 @@ export async function syncCatalogFromSource() {
     const byId = new Map((store.products || []).map((p) => [p.id, p]));
     for (const p of normalized) {
       const existing = byId.get(p.id);
-      byId.set(
-        p.id,
-        existing
-          ? {
-              ...existing,
-              ...p,
-              stock: existing.stock ?? p.stock,
-              variants: existing.variants?.length ? existing.variants : p.variants,
-            }
-          : p
-      );
+      byId.set(p.id, existing ? mergeCatalogIntoExisting(existing, p) : p);
     }
     store.products = [...byId.values()].sort((a, b) => Number(a.id) - Number(b.id));
     return store;

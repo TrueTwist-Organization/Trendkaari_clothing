@@ -298,15 +298,7 @@ function slimProductForList(p) {
 }
 
 router.get('/products', requireAdmin, async (req, res) => {
-  let store = readStore();
-  if (!store.products?.length) {
-    try {
-      await syncCatalogFromSource();
-      store = readStore();
-    } catch (err) {
-      console.warn('[admin] catalog auto-sync failed:', err.message);
-    }
-  }
+  const store = readStore();
   let list = [...(store.products || [])].map(normalizeProductImages);
   const gender = req.query.gender;
   const category = req.query.category;
@@ -699,6 +691,8 @@ function buildProductFromPayload(data, newImages = [], existing = null) {
 
   const base = {
     id: data.id ?? existing?.id,
+    source: existing?.source || 'admin',
+    adminCreatedAt: existing?.adminCreatedAt || new Date().toISOString(),
     title: data.title,
     description: data.description || '',
     descriptionLong: data.descriptionLong || '',
