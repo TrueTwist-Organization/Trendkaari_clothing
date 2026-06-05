@@ -95,9 +95,19 @@ html {
 .checkout-flow-root .ad-slot-embed,
 .category-mobile-sidebar-ads .page-ad-slot-wrap,
 .collection-filters-sidebar .page-ad-slot-wrap {
-  overflow: visible;
   max-width: 100%;
   min-width: 0;
+}
+
+@media (max-width: 767px) {
+  .drawer .ad-slot-embed,
+  .drawer .page-ad-slot-wrap,
+  .checkout-flow-root .page-ad-slot-wrap,
+  .checkout-flow-root .ad-slot-embed,
+  .category-mobile-sidebar-ads .page-ad-slot-wrap,
+  .collection-filters-sidebar .page-ad-slot-wrap {
+    overflow: hidden;
+  }
 }
 
 .main-content .page-ad-slot-wrap,

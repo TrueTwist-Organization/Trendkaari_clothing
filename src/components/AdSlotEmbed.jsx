@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react';
 import { fillAdsbygoogleIn } from '../utils/adsbygoogle';
 import { displayGptAdsIn, isGptBootstrapScript, refreshGptAdsIn } from '../utils/googletag';
-import { destroyGptSlotsForKey, prepareAdHtmlForSlot } from '../utils/adHtml';
-import { fitAdsInContainer, observeAdFills } from '../utils/fitAdsInContainer';
+import { destroyGptSlotsForKey, prepareAdHtmlForSlot, sanitizeAdHtmlForEmbed, hasVisibleAdMarkup, scrubPlaceholderDom } from '../utils/adHtml';
+import { fitAdsInContainer, observeAdFills, ensureGlobalAdFitListeners } from '../utils/fitAdsInContainer';
 import './AdSlotEmbed.css';
 
 /** Inject admin HTML/scripts so &lt;script&gt; tags actually execute */
@@ -16,7 +16,7 @@ export default function AdSlotEmbed({ html, className = '', slotKey = '' }) {
     if (!host) return;
 
     host.innerHTML = '';
-    const text = String(html || '').trim();
+    const text = sanitizeAdHtmlForEmbed(String(html || '').trim());
     if (!text) return;
 
     const prepared = slotKey ? prepareAdHtmlForSlot(text, slotKey) : text;
@@ -24,11 +24,13 @@ export default function AdSlotEmbed({ html, className = '', slotKey = '' }) {
     const wrap = document.createElement('div');
     wrap.className = 'ad-slot-embed__content';
     wrap.innerHTML = prepared;
+    scrubPlaceholderDom(wrap);
     host.appendChild(wrap);
     wrapRef.current = wrap;
 
     const fit = () => fitAdsInContainer(host);
 
+    ensureGlobalAdFitListeners();
     fit();
     const stopObserving = observeAdFills(host, fitAdsInContainer);
     const resizeObserver =
@@ -101,11 +103,18 @@ export default function AdSlotEmbed({ html, className = '', slotKey = '' }) {
 
   if (!String(html || '').trim()) return null;
 
+  const sanitized = sanitizeAdHtmlForEmbed(html);
+  if (!sanitized) return null;
+
+  const showVisible = hasVisibleAdMarkup(sanitized);
+
   return (
     <div
       ref={hostRef}
-      className={`ad-slot-embed${className ? ` ${className}` : ''}`}
-      aria-label="Advertisement"
+      className={`ad-slot-embed${className ? ` ${className}` : ''}${showVisible ? '' : ' ad-slot-embed--tracking-only'}`}
+      aria-hidden={showVisible ? undefined : true}
+      aria-label={showVisible ? 'Advertisement' : undefined}
+      hidden={!showVisible}
     />
   );
 }

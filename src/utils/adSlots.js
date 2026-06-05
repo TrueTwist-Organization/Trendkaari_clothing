@@ -1,4 +1,5 @@
 import { AD_PLACEMENT_DEFINITIONS } from '../constants/adPlacements';
+import { sanitizeAdHtmlForEmbed } from './adHtml.js';
 
 export { AD_PLACEMENT_DEFINITIONS };
 
@@ -36,7 +37,7 @@ export function adSlotsToCodeMap(slots = []) {
   const map = {};
   (slots || []).forEach((slot) => {
     if (!slot?.placement) return;
-    const code = decodeAdCodeClient(slot.code, slot.encoded !== false);
+    const code = sanitizeAdHtmlForEmbed(decodeAdCodeClient(slot.code, slot.encoded !== false));
     if (code.trim()) map[slot.placement] = code;
   });
   return map;

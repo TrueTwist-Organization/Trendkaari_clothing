@@ -1,5 +1,6 @@
 import AdSlotEmbed from './AdSlotEmbed';
 import { claimAdSource } from '../utils/adDedupe';
+import { hasVisibleAdMarkup, sanitizeAdHtmlForEmbed } from '../utils/adHtml';
 import './SiteTopAdStrip.css';
 
 /** One ad below header — homepage uses home_below_header when set, else site common. */
@@ -19,6 +20,13 @@ export default function SiteTopAdStrip({
 
   if (!code) return null;
   if (!claimAdSource(sourceKey, slotKey)) return null;
+
+  const sanitized = sanitizeAdHtmlForEmbed(code);
+  const visible = hasVisibleAdMarkup(sanitized);
+
+  if (!visible) {
+    return <AdSlotEmbed html={code} slotKey={slotKey} className="ad-slot-embed--tracking-only" />;
+  }
 
   return (
     <div className="site-top-ad-strip" data-has-ads="true">
