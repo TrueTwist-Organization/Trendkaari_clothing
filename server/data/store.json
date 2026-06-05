@@ -22385,11 +22385,10 @@
       "subtotal": 99,
       "discount": 0,
       "grandTotal": 99,
-      "status": "Processing",
+      "status": "Pending",
       "paymentStatus": "Paid",
       "date": "4/6/2026, 2:17:27 pm",
-      "createdAt": "2026-06-04T08:47:27.685Z",
-      "confirmedAt": "2026-06-05T17:40:12.127Z"
+      "createdAt": "2026-06-04T08:47:27.685Z"
     },
     {
       "id": "ORD-923754",
@@ -22523,11 +22522,10 @@
       "subtotal": 249,
       "discount": 0,
       "grandTotal": 249,
-      "status": "Processing",
+      "status": "Pending",
       "paymentStatus": "Paid",
       "date": "4/6/2026, 1:55:36 pm",
-      "createdAt": "2026-06-04T08:25:36.004Z",
-      "confirmedAt": "2026-06-05T17:40:12.127Z"
+      "createdAt": "2026-06-04T08:25:36.004Z"
     },
     {
       "id": "ORD-451290",
@@ -22661,11 +22659,10 @@
       "subtotal": 249,
       "discount": 0,
       "grandTotal": 249,
-      "status": "Processing",
+      "status": "Pending",
       "paymentStatus": "Paid",
       "date": "4/6/2026, 1:51:42 pm",
-      "createdAt": "2026-06-04T08:21:42.195Z",
-      "confirmedAt": "2026-06-05T17:40:12.127Z"
+      "createdAt": "2026-06-04T08:21:42.195Z"
     },
     {
       "id": "ORD-414197",
@@ -22798,11 +22795,10 @@
       "subtotal": 249,
       "discount": 0,
       "grandTotal": 249,
-      "status": "Processing",
+      "status": "Pending",
       "paymentStatus": "Paid",
       "date": "4/6/2026, 12:53:26 pm",
-      "createdAt": "2026-06-04T07:23:26.414Z",
-      "confirmedAt": "2026-06-05T17:40:12.127Z"
+      "createdAt": "2026-06-04T07:23:26.414Z"
     },
     {
       "id": "ORD-379840",
@@ -22926,11 +22922,10 @@
       "subtotal": 149,
       "discount": 0,
       "grandTotal": 149,
-      "status": "Processing",
+      "status": "Pending",
       "paymentStatus": "Paid",
       "date": "4/6/2026, 12:52:40 pm",
-      "createdAt": "2026-06-04T07:22:40.297Z",
-      "confirmedAt": "2026-06-05T17:40:12.127Z"
+      "createdAt": "2026-06-04T07:22:40.297Z"
     },
     {
       "id": "ORD-737332",
@@ -25133,5 +25128,18 @@
       "updatedAt": "2026-05-21T05:37:10.557Z"
     }
   ],
-  "_storeUpdatedAt": "2026-06-05T17:55:11.926Z"
+  "adSlots": [
+    {
+      "placement": "home_below_header",
+      "code": "PHNjcmlwdCBhc3luYyBzcmM9Imh0dHBzOi8vc2VjdXJlcHViYWRzLmcuZG91YmxlY2xpY2submV0L3RhZy9qcy9ncHQuanMiIGNyb3Nzb3JpZ2luPSJhbm9ueW1vdXMiPjwvc2NyaXB0Pgo8c2NyaXB0PgogIHdpbmRvdy5nb29nbGV0YWcgPSB3aW5kb3cuZ29vZ2xldGFnIHx8IHtjbWQ6IFtdfTsKICBnb29nbGV0YWcuY21kLnB1c2goZnVuY3Rpb24oKSB7CiAgICBnb29nbGV0YWcuZGVmaW5lU2xvdCgnLzIzMzQ0MTE2NjU0L2ExJywgW1szMzYsIDI4MF0sIFsyNTAsIDI1MF0sIFszMDAsIDI1MF0sIFsyMDAsIDIwMF0sIFs0ODAsIDMyMF0sICdmbHVpZCddLCAnZGl2LWdwdC1hZC0xNzgwNDc5Mzg3OTI5LTAnKS5hZGRTZXJ2aWNlKGdvb2dsZXRhZy5wdWJhZHMoKSk7CiAgICBnb29nbGV0YWcucHViYWRzKCkuZW5hYmxlU2luZ2xlUmVxdWVzdCgpOwogICAgZ29vZ2xldGFnLmVuYWJsZVNlcnZpY2VzKCk7CiAgfSk7Cjwvc2NyaXB0Pgo8IS0tIC8yMzM0NDExNjY1NC9hMSAtLT4KPGRpdiBpZD0nZGl2LWdwdC1hZC0xNzgwNDc5Mzg3OTI5LTAnIHN0eWxlPSdtaW4td2lkdGg6IDIwMHB4OyBtaW4taGVpZ2h0OiAyMDBweDsnPgogIDxzY3JpcHQ+CiAgICBnb29nbGV0YWcuY21kLnB1c2goZnVuY3Rpb24oKSB7IGdvb2dsZXRhZy5kaXNwbGF5KCdkaXYtZ3B0LWFkLTE3ODA0NzkzODc5MjktMCcpOyB9KTsKICA8L3NjcmlwdD4KPC9kaXY+",
+      "encoded": true,
+      "updatedAt": "2026-06-04T06:20:14.102Z"
+    },
+    {
+      "placement": "home_after_hero",
+      "code": "PHNjcmlwdCBhc3luYyBzcmM9Imh0dHBzOi8vc2VjdXJlcHViYWRzLmcuZG91YmxlY2xpY2submV0L3RhZy9qcy9ncHQuanMiIGNyb3Nzb3JpZ2luPSJhbm9ueW1vdXMiPjwvc2NyaXB0Pgo8c2NyaXB0PgogIHdpbmRvdy5nb29nbGV0YWcgPSB3aW5kb3cuZ29vZ2xldGFnIHx8IHtjbWQ6IFtdfTsKICBnb29nbGV0YWcuY21kLnB1c2goZnVuY3Rpb24oKSB7CiAgICBnb29nbGV0YWcuZGVmaW5lU2xvdCgnLzIzMzQ0MTE2NjU0L2EyJywgW1syMDAsIDIwMF0sIFs0ODAsIDMyMF0sICdmbHVpZCcsIFszMzYsIDI4MF0sIFsyNTAsIDI1MF0sIFszMDAsIDI1MF1dLCAnZGl2LWdwdC1hZC0xNzgwNDc5NDQ1NjA0LTAnKS5hZGRTZXJ2aWNlKGdvb2dsZXRhZy5wdWJhZHMoKSk7CiAgICBnb29nbGV0YWcucHViYWRzKCkuZW5hYmxlU2luZ2xlUmVxdWVzdCgpOwogICAgZ29vZ2xldGFnLmVuYWJsZVNlcnZpY2VzKCk7CiAgfSk7Cjwvc2NyaXB0Pgo8IS0tIC8yMzM0NDExNjY1NC9hMiAtLT4KPGRpdiBpZD0nZGl2LWdwdC1hZC0xNzgwNDc5NDQ1NjA0LTAnIHN0eWxlPSdtaW4td2lkdGg6IDIwMHB4OyBtaW4taGVpZ2h0OiAyMDBweDsnPgogIDxzY3JpcHQ+CiAgICBnb29nbGV0YWcuY21kLnB1c2goZnVuY3Rpb24oKSB7IGdvb2dsZXRhZy5kaXNwbGF5KCdkaXYtZ3B0LWFkLTE3ODA0Nzk0NDU2MDQtMCcpOyB9KTsKICA8L3NjcmlwdD4KPC9kaXY+",
+      "encoded": true,
+      "updatedAt": "2026-06-04T06:20:14.102Z"
+    }
+  ]
 }
