@@ -1,5 +1,5 @@
 /**
- * Restore all ad placements with Google Publisher Tag units (a1 / a2).
+ * Restore primary ad placements only (one ad per section — no stacks).
  *
  * Usage:
  *   node scripts/restore-ad-slots.js
@@ -8,7 +8,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { AD_PLACEMENT_KEYS } from '../src/constants/adPlacements.js';
+import { PRIMARY_AD_PLACEMENT_KEYS } from '../src/constants/adPlacements.js';
 import { encodeAdCode } from '../server/lib/adSlotCode.js';
 import { buildGptAdHtml } from '../server/lib/gptAdTemplates.js';
 import { savePersistedAdSlots } from '../server/lib/adSlotsPersistence.js';
@@ -17,7 +17,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const OUT_PATH = path.join(__dirname, '../server/data/ad-slots.json');
 const now = new Date().toISOString();
 
-const slots = AD_PLACEMENT_KEYS.map((placement, index) => {
+const slots = PRIMARY_AD_PLACEMENT_KEYS.map((placement, index) => {
   const unit = index % 2 === 0 ? 'a1' : 'a2';
   const html = buildGptAdHtml(placement, { unit });
   return {
@@ -29,7 +29,7 @@ const slots = AD_PLACEMENT_KEYS.map((placement, index) => {
 });
 
 fs.writeFileSync(OUT_PATH, JSON.stringify(slots, null, 2), 'utf8');
-console.log(`Wrote ${slots.length} ad slots → ${OUT_PATH}`);
+console.log(`Wrote ${slots.length} primary ad slots → ${OUT_PATH}`);
 
 if (process.env.USE_SQLITE === 'true') {
   const { loadStoreFromSqlite, saveStoreToSqlite } = await import('../server/lib/sqliteDb.js');

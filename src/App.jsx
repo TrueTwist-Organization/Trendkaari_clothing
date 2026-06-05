@@ -663,13 +663,9 @@ export default function App() {
                 <HomeAdSlot adCodes={adCodes} placement="home_after_hero" />
 
                 <TrendsSection onSelectCategory={handleSelectCategory} />
-                <HomeAdSlot adCodes={adCodes} placement="home_after_trends" />
-
                 <OfferSection onSelectCategory={handleSelectCategory} />
-                <HomeAdSlot adCodes={adCodes} placement="home_main" />
                 <HomeAdSlot adCodes={adCodes} placement="home_after_promo" />
 
-                <HomeAdSlot adCodes={adCodes} placement="home_before_categories" />
                 <CategoriesSection
                   activeCategory={activeCategory}
                   onSelectCategory={handleSelectCategory}
@@ -687,7 +683,6 @@ export default function App() {
                 />
                 <HomeAdSlot adCodes={adCodes} placement="home_after_gift" />
 
-                <HomeAdSlot adCodes={adCodes} placement="home_before_reviews" />
                 <ReviewsSection />
                 <HomeAdSlot adCodes={adCodes} placement="home_after_reviews" />
               </>

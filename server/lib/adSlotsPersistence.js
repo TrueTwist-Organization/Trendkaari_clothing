@@ -6,6 +6,8 @@ import { useSqlitePersistence, loadStoreFromSqlite } from './sqliteDb.js';
 import { getDefaultAdSlots } from './defaultAdSlots.js';
 import { isValidAdSlot, sanitizeAdSlotList } from './adSlotValidation.js';
 
+const MAX_SAVED_AD_SLOTS = 20;
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const LOCAL_AD_SLOTS_PATH = path.join(__dirname, '../data/ad-slots.json');
 
@@ -98,14 +100,15 @@ async function mergeWithBundledDefaults(list = []) {
   return mergeAdSlotRecords(bundled, validSaved);
 }
 
-/** If remote storage has corrupt/partial ads, rewrite with merged defaults. */
+/** If remote storage has corrupt/partial/ bloated ads, rewrite with merged defaults. */
 async function healAdSlotsIfNeeded(rawList = []) {
   const valid = sanitizeAdSlotList(rawList);
   const merged = await mergeWithBundledDefaults(rawList);
+  const bundled = readBundledAdSlots();
   const needsHeal =
+    valid.length > MAX_SAVED_AD_SLOTS ||
     valid.length < merged.length ||
-    valid.some((slot) => !isValidAdSlot(slot)) ||
-    (valid.length > 0 && valid.length < readBundledAdSlots().length * 0.5);
+    (bundled.length > 0 && valid.length > bundled.length + 2);
 
   if (!needsHeal) return valid.length ? valid : merged;
 

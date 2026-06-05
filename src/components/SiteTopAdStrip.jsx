@@ -19,7 +19,7 @@ export default function SiteTopAdStrip({
   const sourceKey = useHome ? 'home_below_header' : globalSlotKey;
 
   if (!code) return null;
-  if (!claimAdSource(sourceKey, slotKey)) return null;
+  if (!claimAdSource(sourceKey, slotKey, code)) return null;
 
   const sanitized = sanitizeAdHtmlForEmbed(code);
   const visible = hasVisibleAdMarkup(sanitized);

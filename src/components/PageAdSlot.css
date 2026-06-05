@@ -12,6 +12,7 @@
   margin: 8px auto 12px;
   max-width: min(1280px, 100%);
   width: 100%;
+  overflow: visible;
 }
 
 .page-ad-slot-wrap--section .ad-slot-embed--page {
@@ -43,10 +44,11 @@
 }
 
 .ad-slot-embed [id^='div-gpt-ad-'] {
-  min-height: 50px;
+  min-height: 250px;
   max-width: 100%;
   margin: 0 auto;
   display: block;
+  overflow: visible;
 }
 
 .ad-slot-embed--sidebar {

@@ -366,3 +366,21 @@ export const AD_PLACEMENT_SECTIONS = [
 ];
 
 export const AD_PLACEMENT_KEYS = AD_PLACEMENT_DEFINITIONS.map((d) => d.key);
+
+/** Only these slots get saved GPT code — others stay empty and use fallbacks + dedupe. */
+export const PRIMARY_AD_PLACEMENT_KEYS = [
+  'site_common_ad',
+  'home_below_header',
+  'home_after_hero',
+  'home_after_promo',
+  'home_between_categories_gift',
+  'home_after_gift',
+  'home_after_reviews',
+  'category_top',
+  'category_page_bottom',
+  'product_top',
+  'product_page_bottom',
+  'cart_above_checkout',
+  'checkout_all_steps_top',
+  'checkout_all_steps_bottom',
+];

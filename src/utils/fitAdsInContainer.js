@@ -156,7 +156,8 @@ function tightenIframes(content, box) {
     slot.style.width = '100%';
     slot.style.minWidth = '0';
     slot.style.margin = '0 auto';
-    slot.style.overflow = 'hidden';
+    slot.style.overflow = 'visible';
+    slot.style.minHeight = isMobileView() ? '250px' : '280px';
   });
 
   content.querySelectorAll('img').forEach((img) => {
