@@ -655,14 +655,12 @@ export default function App() {
         }}
       />
 
-      {viewMode !== 'checkout' && (
-        <SiteTopAdStrip
-          globalCode={adCodes.site_common_ad || adCodes.global_banner}
-          globalSlotKey={adCodes.site_common_ad ? 'site_common_ad' : 'global_banner'}
-          homeBelowHeaderCode={adCodes.home_below_header}
-          showHomeSlot={viewMode === 'home' && !isCategoryPage}
-        />
-      )}
+      {viewMode !== 'checkout' &&
+        (viewMode === 'home' && !isCategoryPage ? (
+          <SiteTopAdStrip code={adCodes.home_below_header} slotKey="home_below_header" />
+        ) : (
+          <SiteTopAdStrip code={adCodes.site_common_ad} slotKey="site_common_ad" />
+        ))}
 
       {/* Main Page Layout */}
       <main className={`main-content ${viewMode === 'checkout' ? 'main-content--checkout' : ''}`}>
@@ -790,7 +788,7 @@ export default function App() {
         coupons={coupons}
         onOpenCheckout={handleOpenCheckout}
         user={user}
-        adAboveCheckout={adCodes.cart_above_checkout || adCodes.site_common_ad}
+        adAboveCheckout={adCodes.cart_above_checkout}
       />
 
       <WishlistDrawer

@@ -37,12 +37,7 @@ export default function CheckoutStepPageShell({
 
   return (
     <div className="co-step-page-with-ads">
-      <PlacedAdSlot
-        adCodes={adCodes}
-        placement={keys.top}
-        allowGlobal
-        variant="checkout"
-      />
+      <PlacedAdSlot adCodes={adCodes} placement={keys.top} variant="checkout" />
       <div className="co-step-page-stack">
         {children}
         <CheckoutStepExtras
@@ -57,7 +52,6 @@ export default function CheckoutStepPageShell({
       <PlacedAdSlot
         adCodes={adCodes}
         placement={keys.bottom}
-        allowGlobal
         allowDuplicateSource
         variant="checkout"
       />

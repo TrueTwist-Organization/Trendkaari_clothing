@@ -26,7 +26,7 @@ export default function ProductDetailPage({
   if (!product) return null;
 
   const hasSuggestionsGridAd = Boolean(
-    getAdCode(adCodes, 'product_suggestions_every_2', [], { allowGlobal: true })
+    getAdCode(adCodes, 'product_suggestions_every_2'),
   );
 
   const [selectedSize, setSelectedSize] = useState(product.sizes ? product.sizes[0] : '');
@@ -88,7 +88,7 @@ export default function ProductDetailPage({
         </div>
       </nav>
 
-      <PlacedAdSlot adCodes={adCodes} placement="product_top" allowGlobal variant="pdp" />
+      <PlacedAdSlot adCodes={adCodes} placement="product_top" variant="pdp" />
 
       <div className="pdp-main-layout product-layout">
         
@@ -132,7 +132,6 @@ export default function ProductDetailPage({
           <PlacedAdSlot
             adCodes={adCodes}
             placement="product_gallery_bottom"
-            allowGlobal
             variant="pdp-gallery"
           />
         </div>
@@ -152,7 +151,7 @@ export default function ProductDetailPage({
           ) : null}
           <p className="pdp-sku-label">SKU: LIB-{(product.id * 8934).toString(16).toUpperCase()}</p>
 
-          <PlacedAdSlot adCodes={adCodes} placement="product_after_title" allowGlobal variant="pdp" />
+          <PlacedAdSlot adCodes={adCodes} placement="product_after_title" variant="pdp" />
 
           {/* Ratings Summary */}
           <div className="pdp-ratings-row">
@@ -164,7 +163,7 @@ export default function ProductDetailPage({
             <span className="pdp-ratings-count">{product.reviewsCount} Verified Customer Reviews</span>
           </div>
 
-          <PlacedAdSlot adCodes={adCodes} placement="product_after_rating" allowGlobal variant="pdp" />
+          <PlacedAdSlot adCodes={adCodes} placement="product_after_rating" variant="pdp" />
 
           {/* Pricing Box */}
           <div className="pdp-pricing-box">
@@ -178,13 +177,13 @@ export default function ProductDetailPage({
           </div>
           <p className="pdp-inclusive-taxes">inclusive of all taxes</p>
 
-          <PlacedAdSlot adCodes={adCodes} placement="product_after_price" allowGlobal variant="pdp" />
+          <PlacedAdSlot adCodes={adCodes} placement="product_after_price" variant="pdp" />
 
           <StoreCouponsPromo coupons={coupons} />
 
-          <PlacedAdSlot adCodes={adCodes} placement="product_after_offers" allowGlobal variant="pdp" />
+          <PlacedAdSlot adCodes={adCodes} placement="product_after_offers" variant="pdp" />
 
-          <PlacedAdSlot adCodes={adCodes} placement="product_before_size" allowGlobal variant="pdp" />
+          <PlacedAdSlot adCodes={adCodes} placement="product_before_size" variant="pdp" />
 
           {/* Sizing Selector Section */}
           <div className="pdp-size-selector-section">
@@ -207,9 +206,9 @@ export default function ProductDetailPage({
             </div>
           </div>
 
-          <PlacedAdSlot adCodes={adCodes} placement="product_after_size" allowGlobal variant="pdp" />
+          <PlacedAdSlot adCodes={adCodes} placement="product_after_size" variant="pdp" />
 
-          <PlacedAdSlot adCodes={adCodes} placement="product_above_cart" allowGlobal variant="pdp" />
+          <PlacedAdSlot adCodes={adCodes} placement="product_above_cart" variant="pdp" />
 
           {/* Quantity Selector Section */}
           <div className="pdp-qty-section">
@@ -241,17 +240,17 @@ export default function ProductDetailPage({
             </button>
           </div>
 
-          <PlacedAdSlot adCodes={adCodes} placement="product_below_cart" allowGlobal variant="pdp" />
+          <PlacedAdSlot adCodes={adCodes} placement="product_below_cart" variant="pdp" />
           </div>
 
           <div className="pdp-details-scroll">
-          <PlacedAdSlot adCodes={adCodes} placement="product_before_details" allowGlobal variant="pdp" />
+          <PlacedAdSlot adCodes={adCodes} placement="product_before_details" variant="pdp" />
 
           <ProductDetailsAmazon product={product} />
 
-          <PlacedAdSlot adCodes={adCodes} placement="product_after_details" allowGlobal variant="pdp" />
+          <PlacedAdSlot adCodes={adCodes} placement="product_after_details" variant="pdp" />
 
-          <PlacedAdSlot adCodes={adCodes} placement="product_before_trust" allowGlobal variant="pdp" />
+          <PlacedAdSlot adCodes={adCodes} placement="product_before_trust" variant="pdp" />
 
                     {/* Trust strip details */}
           <div className="pdp-trust-strip">
@@ -278,14 +277,13 @@ export default function ProductDetailPage({
             </div>
           </div>
 
-          <PlacedAdSlot adCodes={adCodes} placement="product_after_trust" allowGlobal variant="pdp" />
+          <PlacedAdSlot adCodes={adCodes} placement="product_after_trust" variant="pdp" />
 
                 {suggestions.length > 0 && (
         <div className="pdp-suggestions-section pdp-suggestions-in-col">
           <PlacedAdSlot
             adCodes={adCodes}
             placement="product_before_suggestions"
-            allowGlobal
             variant="pdp"
           />
           <div className="pdp-suggestions-header-box">
@@ -326,7 +324,6 @@ export default function ProductDetailPage({
                   adCodes={adCodes}
                   placement="product_suggestions_every_2"
                   ownerKey={`product_suggestions_every_2_${index}`}
-                  allowGlobal
                   allowDuplicateSource
                   variant="pdp-suggestions-full"
                 />
@@ -338,7 +335,6 @@ export default function ProductDetailPage({
           <PlacedAdSlot
             adCodes={adCodes}
             placement="product_after_suggestions"
-            allowGlobal
             variant="pdp"
           />
         </div>
@@ -399,7 +395,7 @@ export default function ProductDetailPage({
         </div>
       )}
 
-      <PlacedAdSlot adCodes={adCodes} placement="product_page_bottom" allowGlobal variant="section" />
+      <PlacedAdSlot adCodes={adCodes} placement="product_page_bottom" variant="section" />
     </div>
   );
 }

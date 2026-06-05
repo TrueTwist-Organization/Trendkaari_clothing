@@ -700,7 +700,6 @@ export default function CheckoutFlow({
           <PlacedAdSlot
             adCodes={adCodes}
             placement="checkout_step_error_top"
-            allowGlobal
             variant="checkout"
           />
           <OrderTechnicalError
@@ -722,7 +721,6 @@ export default function CheckoutFlow({
           <PlacedAdSlot
             adCodes={adCodes}
             placement="checkout_step_error_bottom"
-            allowGlobal
             allowDuplicateSource
             variant="checkout"
           />

@@ -302,17 +302,15 @@ const CHECKOUT_SLOTS = [
   },
   {
     key: 'checkout_all_steps_top',
-    title: 'Checkout — All Steps (Top Fallback)',
-    description:
-      'Fallback top ad on every checkout page when that page’s own top slot is empty. Paste once here instead of all per-page slots.',
-    placeholder: 'Paste ad HTML/script for all checkout pages (top)…',
+    title: 'Checkout — All Steps (Top)',
+    description: 'Optional shared top slot — only used if you wire it on a checkout page; per-step top slots are preferred.',
+    placeholder: 'Paste ad HTML/script for checkout top…',
   },
   {
     key: 'checkout_all_steps_bottom',
-    title: 'Checkout — All Steps (Bottom Fallback)',
-    description:
-      'Fallback bottom ad on every checkout page when that page’s own bottom slot is empty.',
-    placeholder: 'Paste ad HTML/script for all checkout pages (bottom)…',
+    title: 'Checkout — All Steps (Bottom)',
+    description: 'Optional shared bottom slot — only used if you wire it on a checkout page; per-step bottom slots are preferred.',
+    placeholder: 'Paste ad HTML/script for checkout bottom…',
   },
   ...CHECKOUT_STEP_PAGE_SLOTS,
   ...CHECKOUT_ERROR_PAGE_SLOTS,
