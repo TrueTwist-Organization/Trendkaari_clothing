@@ -1,12 +1,12 @@
-/* ─── Shared ad embed — responsive on mobile + laptop ─── */
+/* ─── Shared ad embed — responsive on mobile + laptop (no clipping) ─── */
 .ad-slot-embed {
   width: 100%;
   max-width: 100%;
   min-width: 0;
-  margin: 12px 0;
+  margin: 12px auto;
   overflow: visible;
   text-align: center;
-  min-height: 250px;
+  min-height: 90px;
   box-sizing: border-box;
 }
 
@@ -34,7 +34,7 @@
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  overflow: hidden;
+  overflow: visible;
   box-sizing: border-box;
 }
 
@@ -49,7 +49,7 @@
 }
 
 .ad-slot-embed--global {
-  margin: 0;
+  margin: 0 auto;
 }
 
 .site-top-ad-strip .ad-slot-embed--global {
@@ -57,16 +57,16 @@
 }
 
 .site-top-ad-strip .ad-slot-embed {
-  margin: 0;
+  margin: 0 auto;
 }
 
 .ad-slot-embed--fullwidth {
   grid-column: 1 / -1;
-  margin: 16px 0 8px;
+  margin: 16px auto 8px;
 }
 
 .ad-slot-embed--compact {
-  margin: 8px 0;
+  margin: 8px auto;
 }
 
 .ad-slot-embed iframe,
@@ -88,12 +88,12 @@
 
 .ad-slot-embed ins.adsbygoogle {
   min-width: 0 !important;
-  min-height: 50px;
+  min-height: 90px;
 }
 
 .ad-slot-embed [id^='div-gpt-ad-'] {
   min-width: 0 !important;
-  min-height: 250px;
+  min-height: 90px;
   overflow: visible;
 }
 
@@ -116,9 +116,10 @@
   .ad-slot-embed {
     margin: 8px auto;
     padding: 0;
-    overflow: hidden;
+    overflow: visible;
     width: 100%;
     max-width: 100%;
+    min-height: 250px;
   }
 
   .ad-slot-embed__content,
@@ -126,7 +127,7 @@
   .ad-fit-shell {
     max-width: 100%;
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .ad-slot-embed iframe,
@@ -135,12 +136,13 @@
   .ad-slot-embed ins.adsbygoogle,
   .ad-slot-embed img {
     max-width: 100% !important;
-    width: 100% !important;
     min-width: 0 !important;
     box-sizing: border-box !important;
+    height: auto;
   }
 
-  .ad-fit-viewport .ad-slot-embed__content {
-    width: auto;
+  .ad-slot-embed ins.adsbygoogle,
+  .ad-slot-embed [id^='div-gpt-ad-'] {
+    min-height: 250px;
   }
 }

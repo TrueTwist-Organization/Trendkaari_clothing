@@ -3,8 +3,7 @@
   max-width: 100%;
   min-width: 0;
   box-sizing: border-box;
-  overflow: hidden;
-  contain: inline-size;
+  overflow: visible;
 }
 
 .page-ad-slot-wrap--section {
@@ -25,9 +24,10 @@
 
 .page-ad-slot-wrap--sidebar {
   padding: 0;
-  margin: 12px 0;
+  margin: 12px auto;
   min-width: 0;
   max-width: 100%;
+  overflow: visible;
 }
 
 .page-ad-slot-wrap--grid-full {
@@ -35,7 +35,8 @@
   width: 100%;
   max-width: 100%;
   min-width: 0;
-  margin: 12px 0 4px;
+  margin: 12px auto 4px;
+  overflow: visible;
 }
 
 .ad-slot-embed--page {
@@ -44,7 +45,7 @@
 }
 
 .ad-slot-embed [id^='div-gpt-ad-'] {
-  min-height: 250px;
+  min-height: 90px;
   max-width: 100%;
   margin: 0 auto;
   display: block;
@@ -52,20 +53,21 @@
 }
 
 .ad-slot-embed--sidebar {
-  margin: 12px 0;
+  margin: 12px auto;
   max-width: 100%;
 }
 
 .ad-slot-embed--grid-full {
-  margin: 8px 0 16px;
+  margin: 8px auto 16px;
   max-width: 100%;
 }
 
 .page-ad-slot-wrap--pdp {
-  margin: 14px 0;
+  margin: 14px auto;
   width: 100%;
   max-width: 100%;
   min-width: 0;
+  overflow: visible;
 }
 
 .ad-slot-embed--pdp {
@@ -78,6 +80,7 @@
   width: 100%;
   max-width: 100%;
   flex-shrink: 0;
+  overflow: visible;
 }
 
 .page-ad-slot-wrap--pdp-suggestions-full {
@@ -85,7 +88,8 @@
   width: 100%;
   max-width: 100%;
   min-width: 0;
-  margin: 16px 0 8px;
+  margin: 16px auto 8px;
+  overflow: visible;
 }
 
 .page-ad-slot-wrap--checkout {
@@ -105,7 +109,7 @@
 }
 
 .page-ad-slot-wrap--global-top {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   overflow: visible;
 }
@@ -131,32 +135,36 @@
 
 @media (max-width: 767px) {
   .page-ad-slot-wrap--section {
-    padding: 0 8px;
-    margin: 6px auto 10px;
+    padding: 0 12px;
+    margin: 8px auto 12px;
     max-width: 100%;
     width: 100%;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .page-ad-slot-wrap--checkout {
-    padding: 0 6px;
+    padding: 0 8px;
     margin: 10px auto;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .page-ad-slot-wrap--pdp {
-    margin: 10px 0;
-    overflow: hidden;
+    margin: 10px auto;
+    overflow: visible;
   }
 
   .page-ad-slot-wrap--sidebar {
-    margin: 10px 0;
-    overflow: hidden;
+    margin: 10px auto;
+    overflow: visible;
   }
 
   .page-ad-slot-wrap {
-    overflow: hidden;
+    overflow: visible;
+  }
+
+  .ad-slot-embed [id^='div-gpt-ad-'] {
+    min-height: 250px;
   }
 }
 
@@ -166,6 +174,6 @@
   }
 
   .page-ad-slot-wrap--checkout {
-    padding: 0 6px;
+    padding: 0 8px;
   }
 }

@@ -81,12 +81,15 @@ html {
   }
 }
 
-/* ─── Ads: full width, no clipping in drawers / grids ─── */
+/* ─── Ads: full width, visible on mobile + laptop (no clipping) ─── */
 .page-ad-slot-wrap,
 .ad-slot-embed,
-.ad-slot-embed__content {
+.ad-slot-embed__content,
+.ad-fit-viewport,
+.ad-fit-shell {
   max-width: 100%;
   min-width: 0;
+  overflow: visible;
 }
 
 .drawer .ad-slot-embed,
@@ -97,22 +100,12 @@ html {
 .collection-filters-sidebar .page-ad-slot-wrap {
   max-width: 100%;
   min-width: 0;
-}
-
-@media (max-width: 767px) {
-  .drawer .ad-slot-embed,
-  .drawer .page-ad-slot-wrap,
-  .checkout-flow-root .page-ad-slot-wrap,
-  .checkout-flow-root .ad-slot-embed,
-  .category-mobile-sidebar-ads .page-ad-slot-wrap,
-  .collection-filters-sidebar .page-ad-slot-wrap {
-    overflow: hidden;
-  }
+  overflow: visible;
 }
 
 .main-content .page-ad-slot-wrap,
 .main-content .ad-slot-embed {
-  overflow: hidden;
+  overflow: visible;
   max-width: 100%;
 }
 
@@ -120,16 +113,17 @@ html {
   .app-container,
   .main-content,
   #root {
-    max-width: 100vw;
-    overflow-x: hidden;
+    max-width: 100%;
+    overflow-x: clip;
   }
 
   .main-content .page-ad-slot-wrap,
   .main-content .ad-slot-embed,
   .site-top-ad-strip,
   .site-top-ad-strip .ad-slot-embed {
-    max-width: 100vw;
+    max-width: 100%;
     width: 100%;
     box-sizing: border-box;
+    overflow: visible;
   }
 }

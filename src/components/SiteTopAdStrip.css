@@ -77,8 +77,8 @@
     --site-announcement-h: 28px;
     --site-main-header-h: 64px;
     width: 100%;
-    max-width: 100vw;
-    overflow: hidden;
+    max-width: 100%;
+    overflow: visible;
     box-sizing: border-box;
   }
 
@@ -86,11 +86,11 @@
   .site-top-ad-strip .page-ad-slot-wrap--global-top {
     padding: 2px 8px;
     max-width: 100%;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .site-top-ad-strip .ad-slot-embed {
-    overflow: hidden;
+    overflow: visible;
     max-width: 100%;
   }
 }
