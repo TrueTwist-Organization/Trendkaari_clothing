@@ -13,6 +13,8 @@ import {
   saveStoreToSqlite,
   useSqlitePersistence,
   getSqliteMode,
+  upsertProductInSqlite,
+  deleteProductFromSqlite,
 } from './sqliteDb.js';
 import {
   loadPersistedAdSlots,
@@ -395,4 +397,42 @@ export async function updateStore(mutator) {
   const next = mutator(store) ?? store;
   await writeStore(next);
   return next;
+}
+
+/** Add or update one product — uses SQLite row upsert when available (no product count limit). */
+export async function saveSingleProduct(product) {
+  await initStore();
+  const store = structuredClone(await readLatestStoreBase());
+  const idx = store.products.findIndex((p) => p.id === product.id);
+  if (idx >= 0) store.products[idx] = product;
+  else store.products.unshift(product);
+  store._storeUpdatedAt = new Date().toISOString();
+  storeCache = structuredClone(store);
+
+  if (useSqlitePersistence()) {
+    await upsertProductInSqlite(product);
+    return product;
+  }
+
+  await writeStore(store);
+  return product;
+}
+
+/** Remove one product by id. */
+export async function removeSingleProduct(productId) {
+  await initStore();
+  const store = structuredClone(await readLatestStoreBase());
+  const before = store.products.length;
+  store.products = store.products.filter((p) => p.id !== productId);
+  if (store.products.length === before) return false;
+  store._storeUpdatedAt = new Date().toISOString();
+  storeCache = structuredClone(store);
+
+  if (useSqlitePersistence()) {
+    await deleteProductFromSqlite(productId);
+    return true;
+  }
+
+  await writeStore(store);
+  return true;
 }

@@ -3,7 +3,8 @@ import bcrypt from 'bcryptjs';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
-import { readStore, readFreshStore, updateStore, replaceAdSlots, mergeAdSlots, resolveStoreAdSlots } from '../lib/store.js';
+import { readStore, readFreshStore, updateStore, saveSingleProduct, removeSingleProduct, replaceAdSlots, mergeAdSlots, resolveStoreAdSlots } from '../lib/store.js';
+import { nextAdminProductId } from '../lib/productIds.js';
 import { syncAdminCredentials, getAdminCredentials } from '../lib/seed.js';
 import { syncCatalogFromSource } from '../lib/catalog.js';
 import { saveUploadedProductImages } from '../lib/imageProcess.js';
@@ -39,8 +40,8 @@ if (!shouldUseMemoryUpload()) {
   }
 }
 
-const upload = createImageUpload({ dest: UPLOAD_DIR });
-const uploadProductImages = handleMultipartUpload(upload, 'images', 12);
+const upload = createImageUpload({ dest: UPLOAD_DIR, maxFiles: 30 });
+const uploadProductImages = handleMultipartUpload(upload, 'images', 30);
 const uploadComboImages = handleMultipartUpload(
   createImageUpload({ dest: COMBO_UPLOAD_DIR }),
   'images',
@@ -268,7 +269,7 @@ router.get('/analytics/overview', requireAdmin, async (req, res) => {
 router.post('/products/sync-catalog', requireAdmin, async (req, res) => {
   try {
     const result = await syncCatalogFromSource();
-    res.json({ message: `Synced ${result.count} products from catalog`, ...result });
+    res.json({ message: result.message || `Synced ${result.count} products`, ...result });
   } catch (err) {
     res.status(500).json({ error: err.message || 'Catalog sync failed' });
   }
@@ -333,15 +334,12 @@ router.post('/products', requireAdmin, uploadProductImages, async (req, res) => 
     const uploadedUrls = await saveUploadedProductImages(req.files || [], UPLOAD_DIR);
 
     const product = normalizeProductImages(buildProductFromPayload(parsed, uploadedUrls));
-    await updateStore((store) => {
-      const maxId = store.products.reduce((m, p) => Math.max(m, Number(p.id) || 0), 0);
-      product.id = maxId + 1;
-      product.source = 'admin';
-      product.adminCreated = true;
-      product.adminCreatedAt = product.adminCreatedAt || new Date().toISOString();
-      store.products = [product, ...(store.products || [])];
-      return store;
-    });
+    const store = await readFreshStore();
+    product.id = nextAdminProductId(store.products || []);
+    product.source = 'admin';
+    product.adminCreated = true;
+    product.adminCreatedAt = new Date().toISOString();
+    await saveSingleProduct(product);
 
     res.status(201).json({ message: 'Product Architecture Deployed Successfully.', product });
   } catch (err) {
@@ -359,17 +357,17 @@ router.patch('/products/:id', requireAdmin, uploadProductImages, async (req, res
     const uploadedUrls = await saveUploadedProductImages(req.files || [], UPLOAD_DIR);
 
     let updated = null;
-    await updateStore((store) => {
-      store.products = store.products.map((p) => {
-        if (p.id !== id) return p;
-        updated = normalizeProductImages(buildProductFromPayload({ ...p, ...parsed }, uploadedUrls, p));
-        updated.id = id;
-        return updated;
-      });
-      return store;
-    });
+    const store = await readFreshStore();
+    const existing = store.products.find((p) => p.id === id);
+    if (!existing) return res.status(404).json({ error: 'Product not found' });
 
-    if (!updated) return res.status(404).json({ error: 'Product not found' });
+    updated = normalizeProductImages(buildProductFromPayload({ ...existing, ...parsed }, uploadedUrls, existing));
+    updated.id = id;
+    updated.source = existing.source || 'admin';
+    updated.adminCreated = existing.adminCreated ?? true;
+    updated.adminCreatedAt = existing.adminCreatedAt || new Date().toISOString();
+    await saveSingleProduct(updated);
+
     res.json({ message: 'Product updated successfully.', product: updated });
   } catch (err) {
     console.error('[products] update failed:', err);
@@ -380,10 +378,8 @@ router.patch('/products/:id', requireAdmin, uploadProductImages, async (req, res
 
 router.delete('/products/:id', requireAdmin, async (req, res) => {
   const id = Number(req.params.id);
-  await updateStore((store) => {
-    store.products = store.products.filter((p) => p.id !== id);
-    return store;
-  });
+  const removed = await removeSingleProduct(id);
+  if (!removed) return res.status(404).json({ error: 'Product not found' });
   res.json({ message: 'Product removed from catalog' });
 });
 

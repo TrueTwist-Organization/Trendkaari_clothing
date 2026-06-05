@@ -301,7 +301,7 @@ export default function ProductsPage({ onToast }) {
       <header className="admin-cyber-page__head admin-cyber-page__head--row">
         <div>
           <h1>Inventory & Product Management</h1>
-          <p>{products.length} active apparel records</p>
+          <p>{products.length} active apparel records — add as many products as you need</p>
         </div>
         {!showForm && (
           <div className="admin-cyber-page__actions">
@@ -311,7 +311,7 @@ export default function ProductsPage({ onToast }) {
               disabled={syncing}
               onClick={handleSyncCatalog}
             >
-              {syncing ? <span className="admin-chrome-loader" /> : 'Sync catalog'}
+              {syncing ? <span className="admin-chrome-loader" /> : 'Import catalog SKUs'}
             </button>
             <button
               type="button"
@@ -664,7 +664,7 @@ export default function ProductsPage({ onToast }) {
               {products.length === 0 && (
                 <tr>
                   <td colSpan={6} className="admin-cyber-table-empty">
-                    No products found. Run <strong>npm run dev</strong>, then click <strong>Sync catalog</strong>.
+                    No products yet. Click <strong>ADD NEW PRODUCT</strong> — there is no limit on how many you can add.
                   </td>
                 </tr>
               )}

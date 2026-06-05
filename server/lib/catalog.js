@@ -1,4 +1,5 @@
 import { updateStore, readStore } from './store.js';
+import { ADMIN_PRODUCT_ID_BASE } from './productIds.js';
 
 /** Admin-added or admin-edited products must never be wiped by catalog sync. */
 export function isAdminManagedProduct(p) {
@@ -58,6 +59,9 @@ export async function syncCatalogFromSource() {
     const byId = new Map((store.products || []).map((p) => [p.id, p]));
     for (const p of normalized) {
       const existing = byId.get(p.id);
+      if (existing && (isAdminManagedProduct(existing) || Number(existing.id) >= ADMIN_PRODUCT_ID_BASE)) {
+        continue;
+      }
       byId.set(p.id, existing ? mergeCatalogIntoExisting(existing, p) : p);
     }
     store.products = [...byId.values()].sort((a, b) => Number(a.id) - Number(b.id));
@@ -65,5 +69,11 @@ export async function syncCatalogFromSource() {
   });
 
   const store = readStore();
-  return { count: store.products.length, products: store.products };
+  const adminAdded = (store.products || []).filter(isAdminManagedProduct).length;
+  return {
+    count: store.products.length,
+    adminAdded,
+    products: store.products,
+    message: `Catalog updated. ${store.products.length} total products (${adminAdded} admin-added). Admin products are never removed.`,
+  };
 }

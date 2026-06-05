@@ -204,6 +204,35 @@ export async function saveAdSlotsToSqlite(adSlots) {
   });
 }
 
+async function touchStoreUpdatedAt(db) {
+  await db.execute({
+    sql: 'INSERT OR REPLACE INTO app_meta (key, data) VALUES (?, ?)',
+    args: ['_storeUpdatedAt', JSON.stringify(new Date().toISOString())],
+  });
+}
+
+export async function upsertProductInSqlite(product) {
+  await ensureSchema();
+  const db = getClient();
+  await db.batch(
+    [
+      {
+        sql: 'INSERT OR REPLACE INTO products (id, data) VALUES (?, ?)',
+        args: [Number(product.id), JSON.stringify(product)],
+      },
+    ],
+    'write'
+  );
+  await touchStoreUpdatedAt(db);
+}
+
+export async function deleteProductFromSqlite(productId) {
+  await ensureSchema();
+  const db = getClient();
+  await db.batch([{ sql: 'DELETE FROM products WHERE id = ?', args: [Number(productId)] }], 'write');
+  await touchStoreUpdatedAt(db);
+}
+
 export async function importJsonStoreToSqlite(jsonStore) {
   await saveStoreToSqlite(jsonStore);
   return loadStoreFromSqlite();
