@@ -16,6 +16,7 @@ import SearchDrawer from './components/SearchDrawer';
 import CartDrawer from './components/CartDrawer';
 import WishlistDrawer from './components/WishlistDrawer';
 import { loadWishlist, saveWishlist, isInWishlist } from './utils/wishlistStorage';
+import { loadCart, saveCart, clearCartStorage } from './utils/cartStorage';
 import UserAuthModal from './components/UserAuthModal';
 import AccountDrawer from './components/AccountDrawer';
 import QuickViewModal from './components/QuickViewModal';
@@ -105,7 +106,7 @@ export default function App() {
   const [infoSlug, setInfoSlug] = useState(bootRoute.infoSlug ?? null);
   const [checkoutSlug, setCheckoutSlug] = useState(bootRoute.checkoutSlug ?? 'bag');
 
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(() => loadCart());
   const [wishlistItems, setWishlistItems] = useState(() => loadWishlist());
   
   // Drawer visibility states
@@ -411,6 +412,10 @@ export default function App() {
     };
   }, []);
 
+  useEffect(() => {
+    saveCart(cartItems);
+  }, [cartItems]);
+
   const buildLocalOrder = (orderDetails) => ({
     id: 'ORD-' + Math.floor(100000 + Math.random() * 900000),
     customerName: orderDetails.name,
@@ -473,6 +478,7 @@ export default function App() {
       const refreshed = await fetchStoreProducts();
       if (refreshed?.length) setProductsList(refreshed);
       setCartItems([]);
+      clearCartStorage();
       return {
         order: {
           ...newOrder,
@@ -537,6 +543,7 @@ export default function App() {
 
   const handleClearCart = () => {
     setCartItems([]);
+    clearCartStorage();
   };
 
   const handleSelectCategory = (category) => {
