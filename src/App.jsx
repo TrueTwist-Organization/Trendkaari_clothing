@@ -48,6 +48,7 @@ import {
   parseRouteFromPath,
   resolveProductPage,
 } from './utils/resolveProductPage';
+import { categoryPath, normalizeCategoryPathname, slugToCategory } from './utils/categorySlug';
 import './App.css';
 
 const ProductDetailPage = lazy(() => import('./components/ProductDetailPage'));
@@ -189,7 +190,7 @@ export default function App() {
     // Parse new route
     const segments = routePath.split('/').filter(Boolean);
     if (segments[0] === 'category') {
-      const cat = decodeURIComponent(segments[1] || 'all');
+      const cat = slugToCategory(segments[1] || 'all');
       setActiveCategory(cat);
       setViewMode('home');
       setSelectedProduct(null);
@@ -361,6 +362,21 @@ export default function App() {
       .then((data) => setUser(data.user))
       .catch(() => setUserToken(null));
   }, []);
+
+  // Clean legacy category URLs (/category/dupatta%20sets → /category/dupatta-sets)
+  useEffect(() => {
+    const clean = normalizeCategoryPathname(window.location.pathname);
+    if (clean === window.location.pathname) return;
+
+    window.history.replaceState({}, '', clean);
+    const route = resolveAppRoute(clean, productsList, giftCombos);
+    setActiveCategory(route.activeCategory);
+    setViewMode(route.viewMode);
+    setSelectedProduct(route.selectedProduct);
+    setIsCategoryPage(route.isCategoryPage);
+    setInfoSlug(route.infoSlug ?? null);
+    setCheckoutSlug(route.checkoutSlug ?? 'bag');
+  }, [productsList, giftCombos]);
 
   // Listen to popstate event (browser back/forward button clicks)
   useEffect(() => {
@@ -550,7 +566,7 @@ export default function App() {
     if (category === 'all') {
       navigateToRoute('/');
     } else {
-      navigateToRoute(`/category/${encodeURIComponent(category)}`);
+      navigateToRoute(categoryPath(category));
     }
   };
 
@@ -777,7 +793,7 @@ export default function App() {
             onBack={handleGoBack}
             onBackToHome={() => {
               if (activeCategory && activeCategory !== 'all') {
-                navigateToRoute(`/category/${encodeURIComponent(activeCategory)}`);
+                navigateToRoute(categoryPath(activeCategory));
               } else {
                 navigateToRoute('/');
               }

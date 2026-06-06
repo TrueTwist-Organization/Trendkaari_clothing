@@ -1,5 +1,6 @@
 import React from 'react';
 import CategoryCircleImage from './CategoryCircleImage';
+import { categoryPath } from '../utils/categorySlug';
 import './CategoriesSection.css';
 
 const womenCategoriesList = [
@@ -36,7 +37,7 @@ function CategoryCircleItem({ cat, onSelectCategory }) {
       }, 200);
       return;
     }
-    const url = `${window.location.origin}/category/${encodeURIComponent(cat.tag)}`;
+    const url = `${window.location.origin}${categoryPath(cat.tag)}`;
     window.open(url, '_blank');
   };
 
