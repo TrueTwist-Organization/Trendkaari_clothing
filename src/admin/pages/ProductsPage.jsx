@@ -217,18 +217,33 @@ export default function ProductsPage({ onToast }) {
     setDetailForm(emptyDetailFormState());
   };
 
-  const startEdit = (p) => {
-    setEditing(p);
-    setTitle(p.title);
-    setDescription(p.description || '');
-    setPrice(String(p.price));
-    setOriginalPrice(String(p.originalPrice));
-    setGender(p.gender || (p.category === 'men' ? 'gents' : 'ladies'));
-    setSubCategory(p.subCategory || p.category);
-    setFabricTags(p.fabricTags || ['Cotton']);
-    setVariants(p.variants?.length ? p.variants : [emptyVariant(p.gender || 'ladies')]);
-    setExistingImages(getProductGalleryImages(p));
-    setDetailForm(productToDetailFormState(p));
+  const startEdit = async (p) => {
+    let product = p;
+    const listGallery = getProductGalleryImages(p);
+
+    if (listGallery.length <= 1) {
+      try {
+        const catalog = await fetchStoreProducts();
+        const full = catalog.find((item) => item.id === p.id);
+        if (full && getProductGalleryImages(full).length > listGallery.length) {
+          product = { ...p, ...full };
+        }
+      } catch {
+        /* keep list product */
+      }
+    }
+
+    setEditing(product);
+    setTitle(product.title);
+    setDescription(product.description || '');
+    setPrice(String(product.price));
+    setOriginalPrice(String(product.originalPrice));
+    setGender(product.gender || (product.category === 'men' ? 'gents' : 'ladies'));
+    setSubCategory(product.subCategory || product.category);
+    setFabricTags(product.fabricTags || ['Cotton']);
+    setVariants(product.variants?.length ? product.variants : [emptyVariant(product.gender || 'ladies')]);
+    setExistingImages(getProductGalleryImages(product));
+    setDetailForm(productToDetailFormState(product));
     setImageFiles([]);
     setStep(0);
     setShowForm(true);

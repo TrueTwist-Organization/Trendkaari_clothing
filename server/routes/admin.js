@@ -342,7 +342,11 @@ function slimProductForList(p) {
     subCategory: p.subCategory,
     wearType: p.wearType,
     image: p.image,
-    images: p.images?.length ? [p.images[0]] : [p.image],
+    images: Array.isArray(p.images) && p.images.length
+      ? p.images
+      : p.image
+        ? [p.image]
+        : [],
     stock: p.stock,
     fabricTags: p.fabricTags,
     sizes: p.sizes,
