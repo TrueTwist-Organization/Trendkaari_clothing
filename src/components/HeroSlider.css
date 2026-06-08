@@ -15,7 +15,7 @@
   overflow: hidden;
   box-sizing: border-box;
   padding-top: 100px;
-  padding-bottom: 36px;
+  padding-bottom: 0;
 }
 
 .hero-mockup-content {
@@ -164,8 +164,10 @@
   max-width: 1450px;
   /* Expands to cover full container width beautifully! */
   margin-top: auto;
-  margin-bottom: 0;
-  padding: 0 10px 8px;
+  /* Push to the absolute bottom! */
+  margin-bottom: 0 !important;
+  /* Perfect zero gap contact with bottom edge! */
+  padding: 0 10px;
   box-sizing: border-box;
 }
 
@@ -306,7 +308,7 @@
   .hero-slider-section {
     --hero-header-offset: 108px;
     padding-top: var(--hero-header-offset);
-    padding-bottom: 28px;
+    padding-bottom: 0;
     min-height: auto;
     height: auto;
   }
@@ -394,7 +396,7 @@
   .hero-slider-section {
     --hero-header-offset: 88px;
     padding-top: var(--hero-header-offset);
-    padding-bottom: 28px;
+    padding-bottom: 0;
     min-height: auto;
   }
 
@@ -465,9 +467,9 @@
   .hero-arches-container {
     gap: 8px;
     margin-top: 12px;
-    padding: 0 4px 6px;
+    padding: 0 4px;
     width: 100%;
-    margin-bottom: 0;
+    margin-bottom: -4px !important;
   }
 
   .arch-1,
