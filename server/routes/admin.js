@@ -7,6 +7,7 @@ import { readStore, readFreshStore, updateStore, saveSingleProduct, removeSingle
 import { nextAdminProductId } from '../lib/productIds.js';
 import { syncAdminCredentials, getAdminCredentials } from '../lib/seed.js';
 import { syncCatalogFromSource } from '../lib/catalog.js';
+import { migrateAllProductPrices } from '../lib/migrateProductPrices.js';
 import { saveUploadedProductImages } from '../lib/imageProcess.js';
 import { enrichProductRecord } from '../lib/enrichProduct.js';
 import { requireAdmin, signAdminToken } from '../middleware/auth.js';
@@ -272,6 +273,20 @@ router.post('/products/sync-catalog', requireAdmin, async (req, res) => {
     res.json({ message: result.message || `Synced ${result.count} products`, ...result });
   } catch (err) {
     res.status(500).json({ error: err.message || 'Catalog sync failed' });
+  }
+});
+
+router.post('/products/migrate-prices', requireAdmin, async (req, res) => {
+  try {
+    const result = await migrateAllProductPrices({ force: true });
+    res.json({
+      message: result.migrated
+        ? `Updated prices on ${result.changedCount} of ${result.total} products`
+        : 'Prices already on latest tiers',
+      ...result,
+    });
+  } catch (err) {
+    res.status(500).json({ error: err.message || 'Price migration failed' });
   }
 });
 

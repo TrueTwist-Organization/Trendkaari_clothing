@@ -133,6 +133,7 @@ export async function loadStoreFromSqlite() {
     settings: meta.settings ?? { ...DEFAULT_SITE_SETTINGS },
     adSlots: Array.isArray(meta.adSlots) ? meta.adSlots : [],
     _storeUpdatedAt: meta._storeUpdatedAt ?? null,
+    _priceMigrationVersion: Number(meta._priceMigrationVersion) || 0,
   };
 }
 
@@ -193,6 +194,13 @@ export async function saveStoreToSqlite(store) {
     sql: 'INSERT OR REPLACE INTO app_meta (key, data) VALUES (?, ?)',
     args: ['_storeUpdatedAt', JSON.stringify(store._storeUpdatedAt || new Date().toISOString())],
   });
+
+  if (store._priceMigrationVersion != null) {
+    stmts.push({
+      sql: 'INSERT OR REPLACE INTO app_meta (key, data) VALUES (?, ?)',
+      args: ['_priceMigrationVersion', JSON.stringify(store._priceMigrationVersion)],
+    });
+  }
 
   for (const chunk of chunkStatements(stmts)) {
     await db.batch(chunk, 'write');

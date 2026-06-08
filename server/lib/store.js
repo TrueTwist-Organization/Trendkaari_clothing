@@ -26,6 +26,7 @@ import {
 import { sanitizeAdSlotList } from './adSlotValidation.js';
 import { ensureSeeded } from './seed.js';
 import { syncCatalogFromSource } from './catalog.js';
+import { migratePricesInStore } from './productPricing.js';
 
 export { resolveStoreAdSlots };
 
@@ -269,6 +270,28 @@ export async function initStore() {
       adSlots !== undefined
         ? adSlots
         : [];
+
+    const { store: migratedStore, migrated: pricesMigrated, changedCount, counts } =
+      migratePricesInStore(storeCache);
+    storeCache = migratedStore;
+
+    if (pricesMigrated) {
+      try {
+        const payload = stripLegacyAdSlots(structuredClone(storeCache));
+        if (usesRemotePersistence()) {
+          await saveToRemote(payload);
+        }
+        if (canWriteLocalFile()) {
+          saveToLocal(payload);
+        }
+        console.log(
+          `[store] price migration applied to ${changedCount} products`,
+          counts || {}
+        );
+      } catch (err) {
+        console.warn('[store] price migration save failed:', err.message);
+      }
+    }
 
     startBackgroundSeed();
 
