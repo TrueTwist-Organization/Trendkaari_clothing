@@ -15,7 +15,7 @@
   overflow: hidden;
   box-sizing: border-box;
   padding-top: 100px;
-  padding-bottom: 0;
+  padding-bottom: 8px;
 }
 
 .hero-mockup-content {

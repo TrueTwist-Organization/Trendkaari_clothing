@@ -1,4 +1,4 @@
-import { SITE_LOGO_ALT, SITE_LOGO_SRC, SITE_NAME } from '../constants/brand';
+import { SITE_NAME } from '../constants/brand';
 import './HeroCouponStrip.css';
 
 const DEFAULT_OFFER = {
@@ -22,33 +22,34 @@ function pickFeaturedCoupon(coupons = []) {
     headline,
     subline: match.minPurchase
       ? `On orders above ₹${match.minPurchase}`
-      : DEFAULT_OFFER.subline,
+      : 'On your 1st order',
     code: String(match.code || DEFAULT_OFFER.code).toUpperCase(),
-    spine: isFlat ? `SAVE ₹${discount}` : `UPTO ${discount}% OFF`,
+    spine: isFlat ? `UPTO ₹${discount} OFF` : `UPTO ${discount}% OFF`,
   };
 }
 
 export default function HeroCouponStrip({ coupons = [], onShopNow, onOpenApp }) {
   const offer = pickFeaturedCoupon(coupons);
 
-  const handleShop = () => {
-    onShopNow?.();
-  };
-
-  const handleApp = () => {
+  const handleBrandClick = () => {
     if (onOpenApp) {
       onOpenApp();
       return;
     }
-    handleShop();
+    onShopNow?.();
   };
 
   return (
     <section className="hero-coupon-strip" aria-label="Special offers">
-      <div className="hero-coupon-strip__wrap">
-        <div className="hero-coupon-strip__ticket">
-          <article className="hero-coupon-strip__panel hero-coupon-strip__panel--offer">
-            <div className="hero-coupon-strip__scallop hero-coupon-strip__scallop--left" aria-hidden />
+      <div className="hero-coupon-strip__inner">
+        <div className="hero-coupon-strip__dots" aria-hidden>
+          {Array.from({ length: 11 }, (_, i) => (
+            <span key={i} className={`hero-coupon-strip__dot${i === 5 ? ' is-active' : ''}`} />
+          ))}
+        </div>
+
+        <div className="hero-coupon-strip__row">
+          <article className="hero-coupon-strip__coupon hero-coupon-strip__coupon--offer">
             <img
               className="hero-coupon-strip__models"
               src="/banners/promo-couple-luxe.png"
@@ -64,33 +65,24 @@ export default function HeroCouponStrip({ coupons = [], onShopNow, onOpenApp }) 
               <span className="hero-coupon-strip__code-label">USE CODE:</span>
               <strong>{offer.code}</strong>
             </div>
-            <div className="hero-coupon-strip__tear" aria-hidden />
           </article>
 
-          <article className="hero-coupon-strip__panel hero-coupon-strip__panel--brand">
-            <button type="button" className="hero-coupon-strip__brand-hit" onClick={handleApp}>
-              <img
-                className="hero-coupon-strip__logo"
-                src={SITE_LOGO_SRC}
-                alt={SITE_LOGO_ALT}
-                loading="lazy"
-              />
-              <div className="hero-coupon-strip__brand-copy">
-                <span className="hero-coupon-strip__brand-name">{SITE_NAME}</span>
-                <span className="hero-coupon-strip__brand-cta">
-                  SHOP
-                  <br />
-                  NEW ARRIVALS
-                </span>
-              </div>
+          <article className="hero-coupon-strip__coupon hero-coupon-strip__coupon--brand">
+            <button type="button" className="hero-coupon-strip__brand-hit" onClick={handleBrandClick}>
+              <span className="hero-coupon-strip__brand-mark">{SITE_NAME}</span>
+              <span className="hero-coupon-strip__brand-cta">
+                SHOP
+                <br />
+                NEW ARRIVALS
+              </span>
             </button>
           </article>
-        </div>
 
-        <aside className="hero-coupon-strip__spine" aria-label={offer.spine}>
-          <span className="hero-coupon-strip__spine-text">{offer.spine}</span>
-          <span className="hero-coupon-strip__spine-new">NEW</span>
-        </aside>
+          <aside className="hero-coupon-strip__spine" aria-label={offer.spine}>
+            <span className="hero-coupon-strip__spine-text">{offer.spine}</span>
+            <span className="hero-coupon-strip__spine-new">NEW</span>
+          </aside>
+        </div>
       </div>
     </section>
   );
