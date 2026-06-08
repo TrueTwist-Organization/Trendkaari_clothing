@@ -15,14 +15,34 @@ import { getCategoryDisplayName } from '../utils/categoryFilter';
 function getRelatedProducts(allProducts, product) {
   const subTag = (product.subCategory || '').toLowerCase();
   const gender = (product.category || '').toLowerCase();
+  const pool = (allProducts || []).filter((p) => p.id !== product.id);
 
-  return (allProducts || []).filter((p) => {
-    if (p.id === product.id) return false;
-    if (subTag) {
-      return (p.subCategory || '').toLowerCase() === subTag && (p.category || '').toLowerCase() === gender;
-    }
-    return (p.category || '').toLowerCase() === gender;
-  });
+  const sameSub = pool.filter(
+    (p) =>
+      subTag &&
+      (p.subCategory || '').toLowerCase() === subTag &&
+      (p.category || '').toLowerCase() === gender,
+  );
+  const sameSubIds = new Set(sameSub.map((p) => p.id));
+
+  const sameCategory = pool.filter(
+    (p) =>
+      !sameSubIds.has(p.id) &&
+      (p.category || '').toLowerCase() === gender,
+  );
+  const sameCategoryIds = new Set(sameCategory.map((p) => p.id));
+
+  const others = pool.filter(
+    (p) => !sameSubIds.has(p.id) && !sameCategoryIds.has(p.id),
+  );
+
+  return [...sameSub, ...sameCategory, ...others];
+}
+
+/** Ad row after 6th card, or after the last card when fewer than 6 suggestions exist. */
+function getSuggestionAdInsertIndex(total) {
+  if (total <= 0) return -1;
+  return total >= 6 ? 5 : total - 1;
 }
 
 export default function ProductDetailPage({ 
@@ -41,6 +61,9 @@ export default function ProductDetailPage({
 
   const hasSuggestionsGridAd = Boolean(
     getAdCode(adCodes, 'product_suggestions_every_2'),
+  );
+  const hasRelatedAfter6Ad = Boolean(
+    getAdCode(adCodes, 'product_related_after_6'),
   );
 
   const [selectedSize, setSelectedSize] = useState(product.sizes ? product.sizes[0] : '');
@@ -84,6 +107,7 @@ export default function ProductDetailPage({
   const relatedCategoryTag = (product.subCategory || product.category || '').toLowerCase();
   const relatedProducts = getRelatedProducts(allProducts, product);
   const relatedCategoryLabel = getCategoryDisplayName(relatedCategoryTag);
+  const suggestionAdAfterIndex = getSuggestionAdInsertIndex(relatedProducts.length);
 
   return (
     <div className="product-detail-page-container container">
@@ -322,6 +346,10 @@ export default function ProductDetailPage({
                 hasSuggestionsGridAd &&
                 (index + 1) % 4 === 0 &&
                 index < relatedProducts.length - 1;
+              const showAfterSixAd =
+                hasRelatedAfter6Ad &&
+                suggestionAdAfterIndex >= 0 &&
+                index === suggestionAdAfterIndex;
 
               return (
                 <React.Fragment key={item.id}>
@@ -346,6 +374,13 @@ export default function ProductDetailPage({
                       </div>
                     </div>
                   </article>
+                  {showAfterSixAd && (
+                    <PlacedAdSlot
+                      adCodes={adCodes}
+                      placement="product_related_after_6"
+                      variant="pdp-suggestions-full"
+                    />
+                  )}
                   {showSugAd && (
                     <PlacedAdSlot
                       adCodes={adCodes}

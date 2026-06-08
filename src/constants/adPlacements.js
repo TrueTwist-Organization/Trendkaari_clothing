@@ -244,6 +244,13 @@ const PRODUCT_SLOTS = [
     placeholder: 'Paste ad HTML/script…',
   },
   {
+    key: 'product_related_after_6',
+    title: 'Product — Related Grid After 6 Items',
+    description:
+      '“More {Category}” suggestions grid — full-width ad after the 6th product (or after the last product when fewer than 6). Shows on every product page that has suggestions.',
+    placeholder: 'Paste ad HTML/script (banner / AdSense)…',
+  },
+  {
     key: 'product_suggestions_every_2',
     title: 'Product — Every 2 Suggestions',
     description: 'Inside “You may also like” — after every 2 related products.',
