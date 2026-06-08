@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import HeroOfferTicket from './HeroOfferTicket';
 import './HeroSlider.css';
 
 const ARCH_IMAGE_FALLBACK = '/lehengas/Lehengas/1/040A3523_700x.webp';
@@ -69,8 +68,6 @@ export default function HeroSlider({ onSelectCategory }) {
             <p className="hero-headline-tag">Curated for every moment</p>
             <p className="hero-tagline-accent">Ethnic · Contemporary · Timeless</p>
           </div>
-
-          <HeroOfferTicket />
         </div>
 
         {/* Staggered cathedral arches: Static coordinates and static content */}

@@ -942,8 +942,8 @@ body.pdp-page .product-detail-page-container {
 
 .pdp-related-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(10px, 1.15vw, 18px);
   width: 100%;
 }
 
@@ -951,16 +951,35 @@ body.pdp-page .product-detail-page-container {
   grid-column: 1 / -1;
 }
 
-@media (max-width: 1200px) {
-  .pdp-related-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
+.pdp-related-grid .pdp-suggested-info {
+  padding: 10px 8px;
 }
 
-@media (max-width: 992px) {
+.pdp-related-grid .pdp-suggested-product-title {
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+.pdp-related-grid .pdp-suggested-price-curr {
+  font-size: 13px;
+}
+
+.pdp-related-grid .pdp-suggested-price-orig {
+  font-size: 11px;
+}
+
+@media (max-width: 1100px) {
   .pdp-related-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 16px;
+  }
+
+  .pdp-related-grid .pdp-suggested-info {
+    padding: 12px;
+  }
+
+  .pdp-related-grid .pdp-suggested-product-title {
+    font-size: 12px;
   }
 }
 
