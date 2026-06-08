@@ -844,6 +844,152 @@ body.pdp-page .product-detail-page-container {
 }
 
 /* ==========================================
+   Full-width related products (same sub-category)
+   ========================================== */
+.pdp-related-section {
+  width: 100%;
+  border-top: 1px solid rgba(96, 11, 69, 0.08);
+  padding: 48px 0 36px;
+  margin-top: 24px;
+  background: linear-gradient(180deg, #fff 0%, #fdf8fb 38%, #fff 100%);
+  position: relative;
+}
+
+.pdp-related-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(520px, 72%);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 180, 131, 0.55), transparent);
+  pointer-events: none;
+}
+
+.pdp-related-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 32px;
+  padding: 0 12px;
+}
+
+.pdp-related-eyebrow {
+  margin: 0 0 10px;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--brand-plum-mid);
+}
+
+.pdp-related-title {
+  margin: 0;
+  font-family: 'Cinzel', var(--font-serif), serif;
+  font-size: clamp(1.55rem, 3.2vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
+}
+
+.pdp-related-title-prefix {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--brand-plum);
+}
+
+.pdp-related-title-category {
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #1a1a1a 0%, var(--brand-plum) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.pdp-related-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: min(220px, 60%);
+  margin: 16px auto 14px;
+}
+
+.pdp-related-divider span:first-child,
+.pdp-related-divider span:last-child {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(96, 11, 69, 0.35));
+}
+
+.pdp-related-divider span:last-child {
+  background: linear-gradient(270deg, transparent, rgba(96, 11, 69, 0.35));
+}
+
+.pdp-related-divider__gem {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  transform: rotate(45deg);
+  background: linear-gradient(135deg, var(--brand-gold) 0%, var(--brand-plum-mid) 100%);
+  box-shadow: 0 0 0 3px rgba(212, 180, 131, 0.18);
+}
+
+.pdp-related-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.pdp-related-grid .page-ad-slot-wrap--pdp-suggestions-full {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 1200px) {
+  .pdp-related-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 992px) {
+  .pdp-related-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pdp-related-section {
+    padding: 36px 0 24px;
+    margin-top: 12px;
+  }
+
+  .pdp-related-header {
+    margin-bottom: 24px;
+  }
+
+  .pdp-related-eyebrow {
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+  }
+
+  .pdp-related-title {
+    font-size: clamp(1.35rem, 6vw, 1.65rem);
+  }
+
+  .pdp-related-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+
+/* ==========================================
    YOU MAY ALSO LIKE suggestions section (PDP)
    ========================================== */
 .pdp-suggestions-section {

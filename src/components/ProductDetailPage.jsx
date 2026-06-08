@@ -10,6 +10,20 @@ import PlacedAdSlot from './PlacedAdSlot';
 import ProductImage from './ProductImage';
 import { getProductGalleryImages } from '../utils/productImages';
 import { getAdCode } from '../utils/resolveAdCode';
+import { getCategoryDisplayName } from '../utils/categoryFilter';
+
+function getRelatedProducts(allProducts, product) {
+  const subTag = (product.subCategory || '').toLowerCase();
+  const gender = (product.category || '').toLowerCase();
+
+  return (allProducts || []).filter((p) => {
+    if (p.id === product.id) return false;
+    if (subTag) {
+      return (p.subCategory || '').toLowerCase() === subTag && (p.category || '').toLowerCase() === gender;
+    }
+    return (p.category || '').toLowerCase() === gender;
+  });
+}
 
 export default function ProductDetailPage({ 
   product, 
@@ -66,10 +80,10 @@ export default function ProductDetailPage({
   // Use the actual list of unzipped images inside the product directory
   const pImages = getProductGalleryImages(product);
 
-  // Filter similar items (prioritize same category, excluding active product)
-  const categorySuggestions = allProducts.filter(p => p.category === product.category && p.id !== product.id);
-  const otherSuggestions = allProducts.filter(p => p.category !== product.category && p.id !== product.id);
-  const suggestions = [...categorySuggestions, ...otherSuggestions].slice(0, 4);
+  // Same sub-category products (e.g. all T-Shirts when viewing a T-Shirt)
+  const relatedCategoryTag = (product.subCategory || product.category || '').toLowerCase();
+  const relatedProducts = getRelatedProducts(allProducts, product);
+  const relatedCategoryLabel = getCategoryDisplayName(relatedCategoryTag);
 
   return (
     <div className="product-detail-page-container container">
@@ -279,72 +293,76 @@ export default function ProductDetailPage({
 
           <PlacedAdSlot adCodes={adCodes} placement="product_after_trust" variant="pdp" />
 
-                {suggestions.length > 0 && (
-        <div className="pdp-suggestions-section pdp-suggestions-in-col">
-          <PlacedAdSlot
-            adCodes={adCodes}
-            placement="product_before_suggestions"
-            variant="pdp"
-          />
-          <div className="pdp-suggestions-header-box">
-            <h3 className="pdp-suggestions-title">YOU MAY ALSO LIKE</h3>
-            <div className="pdp-suggestions-bar-decor"></div>
-          </div>
-          <div className="pdp-suggestions-grid">
-            {suggestions.map((item, index) => {
-              const showSugAd =
-                hasSuggestionsGridAd &&
-                (index + 1) % 2 === 0 &&
-                index < suggestions.length - 1;
-
-              return (
-              <React.Fragment key={item.id}>
-              <div 
-                className="pdp-suggested-card hover-zoom-container"
-                onClick={() => handleSelectSuggested(item)}
-              >
-                <div className="pdp-suggested-img-box">
-                  <img 
-                    src={item.image} 
-                    alt={item.title} 
-                    className="pdp-suggested-img hover-zoom-img" 
-                  />
-                </div>
-                <div className="pdp-suggested-info">
-                  <h4 className="pdp-suggested-product-title">{item.title}</h4>
-                  <div className="pdp-suggested-price-row">
-                    <span className="pdp-suggested-price-curr">₹{item.price}</span>
-                    <ProductDiscountChip product={item} className="product-discount-chip--compact" />
-                    <span className="pdp-suggested-price-orig">₹{item.originalPrice}</span>
-                  </div>
-                </div>
-              </div>
-              {showSugAd && (
-                <PlacedAdSlot
-                  adCodes={adCodes}
-                  placement="product_suggestions_every_2"
-                  ownerKey={`product_suggestions_every_2_${index}`}
-                  allowDuplicateSource
-                  variant="pdp-suggestions-full"
-                />
-              )}
-              </React.Fragment>
-            );
-            })}
-          </div>
-          <PlacedAdSlot
-            adCodes={adCodes}
-            placement="product_after_suggestions"
-            variant="pdp"
-          />
-        </div>
-      )}
-
           </div>
 
         </div>
 
       </div>
+
+      {relatedProducts.length > 0 && (
+        <section className="pdp-related-section" aria-label={`More ${relatedCategoryLabel}`}>
+          <PlacedAdSlot adCodes={adCodes} placement="product_before_suggestions" variant="pdp" />
+
+          <div className="pdp-related-header">
+            <p className="pdp-related-eyebrow">Shop the collection</p>
+            <h2 className="pdp-related-title">
+              <span className="pdp-related-title-prefix">More</span>{' '}
+              <span className="pdp-related-title-category">{relatedCategoryLabel}</span>
+            </h2>
+            <div className="pdp-related-divider" aria-hidden>
+              <span />
+              <span className="pdp-related-divider__gem" />
+              <span />
+            </div>
+          </div>
+
+          <div className="pdp-related-grid">
+            {relatedProducts.map((item, index) => {
+              const showSugAd =
+                hasSuggestionsGridAd &&
+                (index + 1) % 4 === 0 &&
+                index < relatedProducts.length - 1;
+
+              return (
+                <React.Fragment key={item.id}>
+                  <article
+                    className="pdp-suggested-card hover-zoom-container"
+                    onClick={() => handleSelectSuggested(item)}
+                  >
+                    <div className="pdp-suggested-img-box">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="pdp-suggested-img hover-zoom-img"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="pdp-suggested-info">
+                      <h3 className="pdp-suggested-product-title">{item.title}</h3>
+                      <div className="pdp-suggested-price-row">
+                        <span className="pdp-suggested-price-curr">₹{item.price}</span>
+                        <ProductDiscountChip product={item} className="product-discount-chip--compact" />
+                        <span className="pdp-suggested-price-orig">₹{item.originalPrice}</span>
+                      </div>
+                    </div>
+                  </article>
+                  {showSugAd && (
+                    <PlacedAdSlot
+                      adCodes={adCodes}
+                      placement="product_suggestions_every_2"
+                      ownerKey={`product_suggestions_every_2_${index}`}
+                      allowDuplicateSource
+                      variant="pdp-suggestions-full"
+                    />
+                  )}
+                </React.Fragment>
+              );
+            })}
+          </div>
+
+          <PlacedAdSlot adCodes={adCodes} placement="product_after_suggestions" variant="pdp" />
+        </section>
+      )}
 
       {showSizeChart && (
         <div className="pdp-size-chart-modal" role="dialog" aria-modal="true">
