@@ -245,9 +245,9 @@ const PRODUCT_SLOTS = [
   },
   {
     key: 'product_related_after_6',
-    title: 'Product — Related Grid After 6 Items',
+    title: 'Product — Every 6 Suggestions',
     description:
-      '“More {Category}” suggestions grid — full-width ad after the 6th product (or after the last product when fewer than 6). Shows on every product page that has suggestions.',
+      '“More {Category}” grid — full-width ad row after every 6 related products (6, 12, 18…).',
     placeholder: 'Paste ad HTML/script (banner / AdSense)…',
   },
   {

@@ -39,13 +39,7 @@ function getRelatedProducts(allProducts, product) {
   return [...sameSub, ...sameCategory, ...others];
 }
 
-/** Ad row after 6th card, or after the last card when fewer than 6 suggestions exist. */
-function getSuggestionAdInsertIndex(total) {
-  if (total <= 0) return -1;
-  return total >= 6 ? 5 : total - 1;
-}
-
-export default function ProductDetailPage({ 
+export default function ProductDetailPage({
   product, 
   onBack,
   onBackToHome, 
@@ -107,7 +101,6 @@ export default function ProductDetailPage({
   const relatedCategoryTag = (product.subCategory || product.category || '').toLowerCase();
   const relatedProducts = getRelatedProducts(allProducts, product);
   const relatedCategoryLabel = getCategoryDisplayName(relatedCategoryTag);
-  const suggestionAdAfterIndex = getSuggestionAdInsertIndex(relatedProducts.length);
 
   return (
     <div className="product-detail-page-container container">
@@ -348,8 +341,8 @@ export default function ProductDetailPage({
                 index < relatedProducts.length - 1;
               const showAfterSixAd =
                 hasRelatedAfter6Ad &&
-                suggestionAdAfterIndex >= 0 &&
-                index === suggestionAdAfterIndex;
+                (index + 1) % 6 === 0 &&
+                index < relatedProducts.length - 1;
 
               return (
                 <React.Fragment key={item.id}>
@@ -378,6 +371,8 @@ export default function ProductDetailPage({
                     <PlacedAdSlot
                       adCodes={adCodes}
                       placement="product_related_after_6"
+                      ownerKey={`product_related_after_6_${index}`}
+                      allowDuplicateSource
                       variant="pdp-suggestions-full"
                     />
                   )}
