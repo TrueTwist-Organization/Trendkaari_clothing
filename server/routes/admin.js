@@ -3,20 +3,7 @@ import bcrypt from 'bcryptjs';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
-import {
-  readStore,
-  readFreshStore,
-  updateStore,
-  saveSingleProduct,
-  removeSingleProduct,
-  replaceAdSlots,
-  mergeAdSlots,
-  resolveStoreAdSlots,
-  canPersistWrites,
-  getPersistenceMode,
-  getLastPersistError,
-} from '../lib/store.js';
-import { useRemoteMediaUpload } from '../lib/blobStorage.js';
+import { readStore, readFreshStore, updateStore, saveSingleProduct, removeSingleProduct, replaceAdSlots, mergeAdSlots, resolveStoreAdSlots } from '../lib/store.js';
 import { nextAdminProductId } from '../lib/productIds.js';
 import { syncAdminCredentials, getAdminCredentials } from '../lib/seed.js';
 import { syncCatalogFromSource } from '../lib/catalog.js';
@@ -63,50 +50,13 @@ const uploadComboImages = handleMultipartUpload(
 
 const router = Router();
 
-function writableStoreResponse() {
-  return {
-    error:
-      'Admin saves are disabled on this server. In Vercel → Settings → Environment Variables, add BLOB_READ_WRITE_TOKEN (or Upstash Redis / Turso), then redeploy.',
-    persistence: getPersistenceMode(),
-    persistWrites: false,
-  };
-}
-
-function requireWritableStore(req, res, next) {
-  if (!canPersistWrites()) {
-    return res.status(503).json(writableStoreResponse());
-  }
-  next();
-}
-
-router.get('/system/status', requireAdmin, async (_req, res) => {
-  try {
-    await readFreshStore();
-    res.json({
-      ok: true,
-      persistence: getPersistenceMode(),
-      persistWrites: canPersistWrites(),
-      mediaUploadReady: useRemoteMediaUpload() || !process.env.VERCEL,
-      lastPersistError: getLastPersistError(),
-    });
-  } catch (err) {
-    res.status(503).json({
-      ok: false,
-      persistence: getPersistenceMode(),
-      persistWrites: canPersistWrites(),
-      mediaUploadReady: useRemoteMediaUpload() || !process.env.VERCEL,
-      lastPersistError: err.message || getLastPersistError(),
-    });
-  }
-});
-
 router.post('/auth/login', async (req, res) => {
   const { email, password } = req.body || {};
   if (!email || !password) {
     return res.status(400).json({ error: 'Email and password are required' });
   }
 
-  let store = await readFreshStore();
+  let store = readStore();
   const creds = getAdminCredentials();
   const emailNorm = String(email).toLowerCase();
   const wantsConfiguredLogin =
@@ -149,14 +99,10 @@ router.post('/auth/login', async (req, res) => {
   }
 
   if (synced.changed) {
-    try {
-      await updateStore((s) => {
-        s.admin = store.admin;
-        return s;
-      });
-    } catch (err) {
-      console.error('[admin] credential sync failed:', err);
-    }
+    void updateStore((s) => {
+      s.admin = store.admin;
+      return s;
+    });
   }
 
   const token = signAdminToken({
@@ -320,7 +266,7 @@ router.get('/analytics/overview', requireAdmin, async (req, res) => {
   });
 });
 
-router.post('/products/sync-catalog', requireAdmin, requireWritableStore, async (req, res) => {
+router.post('/products/sync-catalog', requireAdmin, async (req, res) => {
   try {
     const result = await syncCatalogFromSource();
     res.json({ message: result.message || `Synced ${result.count} products`, ...result });
@@ -342,11 +288,7 @@ function slimProductForList(p) {
     subCategory: p.subCategory,
     wearType: p.wearType,
     image: p.image,
-    images: Array.isArray(p.images) && p.images.length
-      ? p.images
-      : p.image
-        ? [p.image]
-        : [],
+    images: p.images?.length ? [p.images[0]] : [p.image],
     stock: p.stock,
     fabricTags: p.fabricTags,
     sizes: p.sizes,
@@ -384,7 +326,7 @@ router.get('/products', requireAdmin, async (req, res) => {
   });
 });
 
-router.post('/products', requireAdmin, requireWritableStore, uploadProductImages, async (req, res) => {
+router.post('/products', requireAdmin, uploadProductImages, async (req, res) => {
   try {
     const body = req.body;
     const parsed = typeof body.data === 'string' ? JSON.parse(body.data) : body;
@@ -407,7 +349,7 @@ router.post('/products', requireAdmin, requireWritableStore, uploadProductImages
   }
 });
 
-router.patch('/products/:id', requireAdmin, requireWritableStore, uploadProductImages, async (req, res) => {
+router.patch('/products/:id', requireAdmin, uploadProductImages, async (req, res) => {
   const id = Number(req.params.id);
   try {
     const body = req.body;
@@ -434,17 +376,11 @@ router.patch('/products/:id', requireAdmin, requireWritableStore, uploadProductI
   }
 });
 
-router.delete('/products/:id', requireAdmin, requireWritableStore, async (req, res) => {
+router.delete('/products/:id', requireAdmin, async (req, res) => {
   const id = Number(req.params.id);
-  try {
-    const removed = await removeSingleProduct(id);
-    if (!removed) return res.status(404).json({ error: 'Product not found' });
-    res.json({ message: 'Product removed from catalog' });
-  } catch (err) {
-    console.error('[products] delete failed:', err);
-    const status = err.message?.includes('not configured') ? 503 : 500;
-    res.status(status).json({ error: err.message || 'Could not delete product. Try again.' });
-  }
+  const removed = await removeSingleProduct(id);
+  if (!removed) return res.status(404).json({ error: 'Product not found' });
+  res.json({ message: 'Product removed from catalog' });
 });
 
 router.get('/orders', requireAdmin, async (req, res) => {
@@ -457,7 +393,7 @@ router.get('/orders', requireAdmin, async (req, res) => {
   res.json({ orders });
 });
 
-router.patch('/orders/:orderId/status', requireAdmin, requireWritableStore, async (req, res) => {
+router.patch('/orders/:orderId/status', requireAdmin, async (req, res) => {
   const { orderId } = req.params;
   const { status } = req.body || {};
   const valid = ['Pending', 'Processing', 'Shipped', 'Delivered', 'Cancelled'];
@@ -488,7 +424,7 @@ router.patch('/orders/:orderId/status', requireAdmin, requireWritableStore, asyn
   res.json({ message: 'Order status updated', order: updated });
 });
 
-router.delete('/orders/:orderId', requireAdmin, requireWritableStore, async (req, res) => {
+router.delete('/orders/:orderId', requireAdmin, async (req, res) => {
   const { orderId } = req.params;
   await updateStore((store) => {
     store.orders = store.orders.filter((o) => o.id !== orderId);
@@ -502,7 +438,7 @@ router.get('/coupons', requireAdmin, async (req, res) => {
   res.json({ coupons: store.coupons });
 });
 
-router.post('/coupons', requireAdmin, requireWritableStore, async (req, res) => {
+router.post('/coupons', requireAdmin, async (req, res) => {
   const { code, discount, minPurchase, discountType } = req.body || {};
   if (!code || discount == null || discount === '' || !minPurchase) {
     return res.status(400).json({ error: 'All coupon fields required' });
@@ -534,7 +470,7 @@ router.post('/coupons', requireAdmin, requireWritableStore, async (req, res) => 
   res.status(201).json({ message: 'Coupon activated', coupon });
 });
 
-router.delete('/coupons/:code', requireAdmin, requireWritableStore, async (req, res) => {
+router.delete('/coupons/:code', requireAdmin, async (req, res) => {
   const code = req.params.code.toUpperCase();
   if (code === 'SALE100') {
     return res.status(400).json({ error: 'SALE100 is a protected base coupon' });
@@ -551,7 +487,7 @@ router.get('/settings', requireAdmin, async (req, res) => {
   res.json({ settings: getStoreSettings(store) });
 });
 
-router.patch('/settings', requireAdmin, requireWritableStore, async (req, res) => {
+router.patch('/settings', requireAdmin, async (req, res) => {
   const body = req.body || {};
   const next = mergeSiteSettings(body);
   await updateStore((store) => {
@@ -586,7 +522,7 @@ function parseAdSlotsBody(body = {}) {
   return body;
 }
 
-router.put('/ad-slots', requireAdmin, requireWritableStore, async (req, res) => {
+router.put('/ad-slots', requireAdmin, async (req, res) => {
   const parsed = parseAdSlotsBody(req.body || {});
   const { slots, slotsEncoded, clientFilledCount, merge: mergeMode, replaceAll } = parsed;
   if (!slots || typeof slots !== 'object' || Array.isArray(slots)) {
@@ -638,7 +574,7 @@ router.get('/gift-combos', requireAdmin, async (req, res) => {
   res.json({ giftCombos: list });
 });
 
-router.post('/gift-combos/seed-defaults', requireAdmin, requireWritableStore, async (req, res) => {
+router.post('/gift-combos/seed-defaults', requireAdmin, async (req, res) => {
   const list = DEFAULT_GIFT_COMBOS.map((c, i) => buildGiftComboFromBody(c, null));
   await updateStore((s) => {
     s.giftCombos = list;
@@ -647,7 +583,7 @@ router.post('/gift-combos/seed-defaults', requireAdmin, requireWritableStore, as
   res.json({ message: 'Default gift combos restored', giftCombos: list });
 });
 
-router.post('/gift-combos/upload', requireAdmin, requireWritableStore, uploadComboImages, async (req, res) => {
+router.post('/gift-combos/upload', requireAdmin, uploadComboImages, async (req, res) => {
   try {
     const urls = await saveComboImages(req.files || [], COMBO_UPLOAD_DIR);
     res.json({ urls });
@@ -657,7 +593,7 @@ router.post('/gift-combos/upload', requireAdmin, requireWritableStore, uploadCom
   }
 });
 
-router.post('/gift-combos', requireAdmin, requireWritableStore, async (req, res) => {
+router.post('/gift-combos', requireAdmin, async (req, res) => {
   const body = req.body || {};
   const combo = buildGiftComboFromBody({
     ...body,
@@ -683,7 +619,7 @@ router.post('/gift-combos', requireAdmin, requireWritableStore, async (req, res)
   res.status(201).json({ message: 'Gift combo created', combo });
 });
 
-router.patch('/gift-combos/:id', requireAdmin, requireWritableStore, async (req, res) => {
+router.patch('/gift-combos/:id', requireAdmin, async (req, res) => {
   const { id } = req.params;
   const body = req.body || {};
   let updated = null;
@@ -716,7 +652,7 @@ router.patch('/gift-combos/:id', requireAdmin, requireWritableStore, async (req,
   res.json({ message: 'Gift combo updated', combo: updated });
 });
 
-router.delete('/gift-combos/:id', requireAdmin, requireWritableStore, async (req, res) => {
+router.delete('/gift-combos/:id', requireAdmin, async (req, res) => {
   const { id } = req.params;
   let removed = false;
   await updateStore((s) => {

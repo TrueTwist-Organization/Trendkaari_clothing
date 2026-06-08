@@ -7,7 +7,7 @@ const COMMON_SLOTS = [
     key: 'site_common_ad',
     title: 'All Pages — Common Ad',
     description:
-      'Paste ad code once — shows below the site header on every page (home, category, product, info). Google Analytics, Snapchat Pixel, and similar tracking scripts are injected into the page <head> automatically.',
+      'Paste ad code once — shows below the site header on every page (home, category, product, info). One slot for the whole site.',
     placeholder: 'Paste ad HTML/script (e.g. Google AdSense)…',
   },
 ];

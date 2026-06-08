@@ -1,6 +1,5 @@
 import React from 'react';
 import { Home, Heart, User, ShoppingBag } from 'lucide-react';
-import { scrollToPageTop } from '../utils/scrollToTop';
 import './MobileNavbar.css';
 
 export default function MobileNavbar({
@@ -14,7 +13,7 @@ export default function MobileNavbar({
 }) {
   const handleHomeClick = () => {
     onSelectCategory('all');
-    scrollToPageTop();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (

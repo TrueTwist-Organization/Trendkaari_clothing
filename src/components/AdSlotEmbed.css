@@ -15,7 +15,8 @@
 }
 
 .ad-slot-embed--pending:not(.ad-slot-embed--global) {
-  min-height: 90px;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 50px;
 }
 
 .ad-slot-embed__content {
@@ -119,31 +120,6 @@
     width: 100%;
     max-width: 100%;
     min-height: 250px;
-  }
-
-  .ad-slot-embed--pending:not(.ad-slot-embed--global) {
-    min-height: 250px;
-    content-visibility: visible;
-  }
-
-  .ad-slot-embed iframe,
-  .ad-slot-embed [id^='div-gpt-ad-'] iframe {
-    transform: none !important;
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  .ad-fit-shell,
-  .ad-fit-viewport {
-    transform: none !important;
-    height: auto !important;
-    min-height: 250px;
-  }
-
-  .ad-slot-embed__content {
-    transform: none !important;
-    width: 100% !important;
-    max-width: 100% !important;
   }
 
   .ad-slot-embed__content,

@@ -8,7 +8,7 @@ import {
   updateProduct,
 } from '../../api/adminApi';
 import { fetchStoreProducts } from '../../api/storeApi';
-import { fetchApiHealth, getAdminToken, setAdminToken } from '../../api/client';
+import { getAdminToken, setAdminToken } from '../../api/client';
 import { resetCatalogCache } from '../../utils/loadCatalog';
 import { bumpCatalogVersion } from '../../utils/catalogSync';
 import { getProductGalleryImages, getProductPrimaryImage } from '../../utils/productImages';
@@ -62,7 +62,6 @@ export default function ProductsPage({ onToast }) {
   const [saving, setSaving] = useState(false);
   const [loadError, setLoadError] = useState('');
   const [syncing, setSyncing] = useState(false);
-  const [saveBlocked, setSaveBlocked] = useState(false);
 
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -167,12 +166,6 @@ export default function ProductsPage({ onToast }) {
     load();
   }, [load]);
 
-  useEffect(() => {
-    fetchApiHealth().then((health) => {
-      setSaveBlocked(Boolean(health.ok && health.persistWrites === false));
-    });
-  }, []);
-
   const categories = gender === 'gents' ? GENTS_CATEGORIES : LADIES_CATEGORIES;
 
   useEffect(() => {
@@ -217,33 +210,18 @@ export default function ProductsPage({ onToast }) {
     setDetailForm(emptyDetailFormState());
   };
 
-  const startEdit = async (p) => {
-    let product = p;
-    const listGallery = getProductGalleryImages(p);
-
-    if (listGallery.length <= 1) {
-      try {
-        const catalog = await fetchStoreProducts();
-        const full = catalog.find((item) => item.id === p.id);
-        if (full && getProductGalleryImages(full).length > listGallery.length) {
-          product = { ...p, ...full };
-        }
-      } catch {
-        /* keep list product */
-      }
-    }
-
-    setEditing(product);
-    setTitle(product.title);
-    setDescription(product.description || '');
-    setPrice(String(product.price));
-    setOriginalPrice(String(product.originalPrice));
-    setGender(product.gender || (product.category === 'men' ? 'gents' : 'ladies'));
-    setSubCategory(product.subCategory || product.category);
-    setFabricTags(product.fabricTags || ['Cotton']);
-    setVariants(product.variants?.length ? product.variants : [emptyVariant(product.gender || 'ladies')]);
-    setExistingImages(getProductGalleryImages(product));
-    setDetailForm(productToDetailFormState(product));
+  const startEdit = (p) => {
+    setEditing(p);
+    setTitle(p.title);
+    setDescription(p.description || '');
+    setPrice(String(p.price));
+    setOriginalPrice(String(p.originalPrice));
+    setGender(p.gender || (p.category === 'men' ? 'gents' : 'ladies'));
+    setSubCategory(p.subCategory || p.category);
+    setFabricTags(p.fabricTags || ['Cotton']);
+    setVariants(p.variants?.length ? p.variants : [emptyVariant(p.gender || 'ladies')]);
+    setExistingImages(getProductGalleryImages(p));
+    setDetailForm(productToDetailFormState(p));
     setImageFiles([]);
     setStep(0);
     setShowForm(true);
@@ -350,13 +328,6 @@ export default function ProductsPage({ onToast }) {
           </div>
         )}
       </header>
-
-      {saveBlocked && (
-        <p className="admin-cyber-error admin-cyber-error--banner" role="alert">
-          Product saves are disabled on this server. Add BLOB_READ_WRITE_TOKEN in Vercel environment
-          variables, then redeploy. Viewing still works from any PC.
-        </p>
-      )}
 
       {loadError && !showForm && (
         <p className="admin-cyber-error admin-cyber-error--banner" role="alert">

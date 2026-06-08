@@ -1,6 +1,3 @@
-const fittingHosts = new WeakSet();
-const lastFitByHost = new WeakMap();
-
 function viewportWidth() {
   return (
     window.visualViewport?.width ||
@@ -145,9 +142,9 @@ function fitIframe(iframe, box) {
   iframe.style.minWidth = '0';
   iframe.style.border = '0';
 
-  if (naturalW <= box + 1 || isMobileView()) {
+  if (naturalW <= box + 1) {
     iframe.style.maxWidth = `${box}px`;
-    iframe.style.width = isMobileView() ? '100%' : `${naturalW}px`;
+    iframe.style.width = `${naturalW}px`;
     iframe.style.height = `${naturalH}px`;
     iframe.style.transform = '';
     return;
@@ -248,29 +245,17 @@ function syncHostHeight(host) {
     isMobileView() ? 250 : 90
   );
 
-  const nextHeight = Math.ceil(measured);
-  host.style.minHeight = `${nextHeight}px`;
-  if (isMobileView()) {
-    host.style.height = '';
-  } else if (viewport) {
-    viewport.style.minHeight = `${nextHeight}px`;
-    viewport.style.height = `${nextHeight}px`;
+  host.style.minHeight = `${Math.ceil(measured)}px`;
+  if (viewport) {
+    viewport.style.minHeight = `${Math.ceil(measured)}px`;
+    viewport.style.height = `${Math.ceil(measured)}px`;
   }
-}
-
-function fitCacheKey(host, box) {
-  const content = host.querySelector('.ad-slot-embed__content');
-  const contentW = content?.scrollWidth || 0;
-  const iframeCount = content?.querySelectorAll('iframe').length || 0;
-  const gptCount = content?.querySelectorAll('[id^="div-gpt-ad-"]').length || 0;
-  return `${box}|${contentW}|${iframeCount}|${gptCount}`;
 }
 
 /** Scale ad blocks to fit width — full ad stays visible (no clipping). */
 export function fitAdsInContainer(host) {
   if (!host || typeof window === 'undefined') return;
   if (host.classList.contains('ad-slot-embed--tracking-only')) return;
-  if (fittingHosts.has(host)) return;
 
   const box = getAvailableWidth(host);
   if (!box) return;
@@ -278,18 +263,6 @@ export function fitAdsInContainer(host) {
   const content = host.querySelector('.ad-slot-embed__content');
   if (!content) return;
 
-  const cacheKey = fitCacheKey(host, box);
-  if (lastFitByHost.get(host) === cacheKey) return;
-
-  fittingHosts.add(host);
-  try {
-    fitAdsInContainerInner(host, box, content, cacheKey);
-  } finally {
-    fittingHosts.delete(host);
-  }
-}
-
-function fitAdsInContainerInner(host, box, content, cacheKey) {
   clearViewport(host);
 
   content.querySelectorAll('.ad-fit-shell').forEach((shell) => {
@@ -316,8 +289,7 @@ function fitAdsInContainerInner(host, box, content, cacheKey) {
 
   let { w: contentW, h: contentH } = widestInContent(content, box);
 
-  const needsScale = contentW > box + 1 || stillOverflows(host, box);
-  if (needsScale && !isMobileView()) {
+  if (contentW > box + 1 || (isMobileView() && stillOverflows(host, box))) {
     contentW = Math.max(contentW, content.scrollWidth, host.scrollWidth, box + 1);
     contentH = Math.max(contentH, content.scrollHeight, 250);
     applyViewportScale(host, content, box, contentW, contentH);
@@ -325,7 +297,6 @@ function fitAdsInContainerInner(host, box, content, cacheKey) {
 
   content.style.margin = '0 auto';
   syncHostHeight(host);
-  lastFitByHost.set(host, cacheKey);
 }
 
 /** Re-fit every ad slot on the page (orientation / late GPT fill). */
@@ -352,9 +323,8 @@ export function observeAdFills(host, onFit) {
 
   let timer = null;
   const schedule = () => {
-    if (fittingHosts.has(host)) return;
     clearTimeout(timer);
-    timer = window.setTimeout(() => onFit(host), isMobileView() ? 500 : 250);
+    timer = window.setTimeout(() => onFit(host), 60);
   };
 
   const observer = new MutationObserver(schedule);
@@ -362,7 +332,7 @@ export function observeAdFills(host, onFit) {
     childList: true,
     subtree: true,
     attributes: true,
-    attributeFilter: ['width', 'height', 'class'],
+    attributeFilter: ['style', 'width', 'height', 'class'],
   });
 
   return () => {

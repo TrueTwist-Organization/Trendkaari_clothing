@@ -1,7 +1,6 @@
 /** Resolve catalog + gift-combo product payloads for PDP routes. */
 
 import { buildGiftComboPayload } from './giftComboProduct';
-import { slugToCategory } from './categorySlug';
 
 export function findCatalogProduct(productsList, id) {
   if (id == null || id === '') return null;
@@ -123,7 +122,7 @@ export function parseRouteFromPath(pathname = '') {
   if (segments[0] === 'category') {
     return {
       viewMode: 'home',
-      activeCategory: slugToCategory(segments[1] || 'all'),
+      activeCategory: decodeURIComponent(segments[1] || 'all'),
       selectedProduct: null,
       isCategoryPage: true,
       infoSlug: null,

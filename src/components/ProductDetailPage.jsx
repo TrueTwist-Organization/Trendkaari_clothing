@@ -10,7 +10,6 @@ import PlacedAdSlot from './PlacedAdSlot';
 import ProductImage from './ProductImage';
 import { getProductGalleryImages } from '../utils/productImages';
 import { getAdCode } from '../utils/resolveAdCode';
-import { scrollToPageTop } from '../utils/scrollToTop';
 
 export default function ProductDetailPage({ 
   product, 
@@ -40,7 +39,7 @@ export default function ProductDetailPage({
 
   // Scroll to top when a product loads in full page mode
   useEffect(() => {
-    scrollToPageTop();
+    window.scrollTo(0, 0);
     setActiveImageIndex(0);
   }, [product?.id]);
 
@@ -61,7 +60,7 @@ export default function ProductDetailPage({
     setSelectedSize(newProduct.sizes ? newProduct.sizes[0] : '');
     setQuantity(1);
     setActiveImageIndex(0);
-    scrollToPageTop();
+    window.scrollTo(0, 0);
   };
 
   // Use the actual list of unzipped images inside the product directory

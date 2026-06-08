@@ -1,12 +1,11 @@
 import AdSlotEmbed from './AdSlotEmbed';
 import { claimAdSource } from '../utils/adDedupe';
 import { hasVisibleAdMarkup, sanitizeAdHtmlForEmbed } from '../utils/adHtml';
-import { stripTrackingScriptsFromHtml } from '../utils/injectTrackingScripts';
 import './SiteTopAdStrip.css';
 
 /** Header strip — only the ad code saved for the given slot key. */
 export default function SiteTopAdStrip({ code, slotKey }) {
-  const trimmed = stripTrackingScriptsFromHtml(String(code || '').trim());
+  const trimmed = String(code || '').trim();
   if (!trimmed || !slotKey) return null;
   if (!claimAdSource(slotKey, slotKey, trimmed)) return null;
 

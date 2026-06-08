@@ -8,10 +8,6 @@ let flushTimer = null;
 const slotRegistry = new Map();
 const displayedIds = new Set();
 
-export function preloadGptScript() {
-  return loadGptScript();
-}
-
 function loadGptScript() {
   if (document.querySelector(`script[src="${GPT_SRC}"]`)) {
     return Promise.resolve();
@@ -70,7 +66,7 @@ function scheduleGptFlush() {
   flushTimer = window.setTimeout(() => {
     flushTimer = null;
     void flushGptSlots();
-  }, 40);
+  }, 120);
 }
 
 function flushGptSlotsInCmd() {
@@ -99,14 +95,16 @@ function flushGptSlotsInCmd() {
     try {
       const existing = findSlotByElementId(config.id);
       if (existing) {
-        if (!displayedIds.has(config.id)) {
-          window.googletag.display(config.id);
-          displayedIds.add(config.id);
-        }
+        window.googletag.pubads().refresh([existing]);
+        displayedIds.add(config.id);
         return;
       }
       window.googletag.display(config.id);
       displayedIds.add(config.id);
+      const slot = findSlotByElementId(config.id);
+      if (slot) {
+        window.googletag.pubads().refresh([slot]);
+      }
     } catch (err) {
       console.warn('[gpt] display failed', config.id, err);
     }

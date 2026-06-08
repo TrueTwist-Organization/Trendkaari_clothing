@@ -12,9 +12,9 @@ export function scheduleAdFit(host, fitFn) {
   };
 
   run();
-  timers.push(window.setTimeout(run, 150));
-  timers.push(window.setTimeout(run, 600));
+  timers.push(window.setTimeout(run, 400));
   timers.push(window.setTimeout(run, 1500));
+  timers.push(window.setTimeout(run, 3500));
 
   return () => {
     cancelAnimationFrame(raf);

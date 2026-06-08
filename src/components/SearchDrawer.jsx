@@ -7,7 +7,6 @@ import {
 } from '../utils/searchCategories';
 import ProductImage from './ProductImage';
 import { getProductPrimaryImage } from '../utils/productImages';
-import { scrollToPageTop } from '../utils/scrollToTop';
 import './SearchDrawer.css';
 
 const popularKeywords = [
@@ -61,8 +60,8 @@ export default function SearchDrawer({
       onSelectCategory(slug);
       if (closeDrawer) onClose();
       setTimeout(() => {
-        scrollToPageTop();
-      }, 100);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 200);
     },
     [onSelectCategory, onClose]
   );

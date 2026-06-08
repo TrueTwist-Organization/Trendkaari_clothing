@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { SlidersHorizontal, ArrowUpDown, ChevronDown, ChevronLeft, ChevronRight, Check, Eye, ShoppingCart, Star } from 'lucide-react';
+import { SlidersHorizontal, ArrowUpDown, ChevronDown, Check, Eye, ShoppingCart, Star } from 'lucide-react';
 import './CollectionListingPage.css';
 import ProductDiscountChip from './ProductDiscountChip';
 import { filterProductsByCategory, getCategoryDisplayName } from '../utils/categoryFilter';
@@ -12,32 +12,11 @@ import {
 import { findMenuGroupForTag, MENU_MEN_GROUPS, MENU_WOMEN_GROUPS } from '../data/navCategories';
 import PageBackButton from './PageBackButton';
 import PlacedAdSlot from './PlacedAdSlot';
-import { scrollToPageTop } from '../utils/scrollToTop';
 import ProductImage from './ProductImage';
 import { getProductHoverImage, getProductPrimaryImage, getProductGalleryImages } from '../utils/productImages';
 import { getAdCode } from '../utils/resolveAdCode';
 
 const MOBILE_TABS_MQ = '(max-width: 768px)';
-const PAGE_SIZE = 10;
-
-function getPageNumbers(current, total) {
-  if (total <= 7) {
-    return Array.from({ length: total }, (_, i) => i + 1);
-  }
-
-  const pages = new Set([1, total]);
-  for (let i = current - 1; i <= current + 1; i += 1) {
-    if (i >= 1 && i <= total) pages.add(i);
-  }
-
-  const sorted = [...pages].sort((a, b) => a - b);
-  const result = [];
-  for (let i = 0; i < sorted.length; i += 1) {
-    if (i > 0 && sorted[i] - sorted[i - 1] > 1) result.push('…');
-    result.push(sorted[i]);
-  }
-  return result;
-}
 
 function QuickTabButton({ cat, isActive, onSelect }) {
   return (
@@ -72,7 +51,6 @@ export default function CollectionListingPage({
     color: []
   });
   const [filtersOpen, setFiltersOpen] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
   const [isMobileTabs, setIsMobileTabs] = useState(() =>
     typeof window !== 'undefined' ? window.matchMedia(MOBILE_TABS_MQ).matches : false,
   );
@@ -92,13 +70,8 @@ export default function CollectionListingPage({
       size: [],
       color: []
     });
-    setCurrentPage(1);
-    scrollToPageTop();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [activeCategory]);
-
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [filters, sortBy]);
 
   const handleSizeSelect = (productId, size) => {
     setSelectedSizes(prev => ({
@@ -335,22 +308,6 @@ export default function CollectionListingPage({
     return b.id - a.id; // Featured/Default (Recent arrivals)
   });
 
-  const totalPages = Math.max(1, Math.ceil(sortedItems.length / PAGE_SIZE));
-  const safePage = Math.min(currentPage, totalPages);
-  const paginatedItems = sortedItems.slice(
-    (safePage - 1) * PAGE_SIZE,
-    safePage * PAGE_SIZE
-  );
-  const rangeStart = sortedItems.length === 0 ? 0 : (safePage - 1) * PAGE_SIZE + 1;
-  const rangeEnd = Math.min(safePage * PAGE_SIZE, sortedItems.length);
-  const pageNumbers = getPageNumbers(safePage, totalPages);
-
-  const goToPage = (page) => {
-    const next = Math.max(1, Math.min(page, totalPages));
-    setCurrentPage(next);
-    scrollToPageTop();
-  };
-
   const toggleFilter = (type, val) => {
     setFilters(prev => {
       const active = prev[type].includes(val)
@@ -392,12 +349,12 @@ export default function CollectionListingPage({
   const handleSidebarCategory = (slug) => {
     onSelectCategory(slug);
     setFiltersOpen(false);
-    scrollToPageTop();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleQuickTabSelect = (cat) => {
     onSelectCategory(cat);
-    scrollToPageTop();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const quickTabsTrack = isMobileTabs ? [...tabList, ...tabList] : tabList;
@@ -682,7 +639,7 @@ export default function CollectionListingPage({
           {/* Top Bar: Items count and Sorting dropdown */}
           <div className="collection-sorting-topbar">
             <span className="listing-count-label">
-              Showing <strong>{rangeStart}–{rangeEnd}</strong> of <strong>{sortedItems.length}</strong> styles
+              Showing <strong>{sortedItems.length}</strong> of <strong>{items.length}</strong> styles
             </span>
             
             <div className="sorting-selector-group">
@@ -733,7 +690,7 @@ export default function CollectionListingPage({
           {/* Listing Grid */}
           {sortedItems.length > 0 ? (
             <div className="collection-products-grid" id="catalog-products-list">
-              {paginatedItems.map((product, index) => {
+              {sortedItems.map((product, index) => {
                 const currentSelectedSize = selectedSizes[product.id] || "";
                 
                 // Secondary image for hover swap effect
@@ -744,7 +701,7 @@ export default function CollectionListingPage({
                 const showMidGridAd =
                   hasGridAd &&
                   (index + 1) % 2 === 0 &&
-                  index < paginatedItems.length - 1;
+                  index < sortedItems.length - 1;
 
                 return (
                   <React.Fragment key={product.id}>
@@ -856,55 +813,6 @@ export default function CollectionListingPage({
               })}
             </div>
           ) : null}
-
-          {sortedItems.length > 0 && totalPages > 1 && (
-            <nav className="collection-pagination" aria-label="Product pages">
-              <button
-                type="button"
-                className="collection-page-btn collection-page-btn--nav"
-                onClick={() => goToPage(safePage - 1)}
-                disabled={safePage <= 1}
-                aria-label="Previous page"
-              >
-                <ChevronLeft size={16} aria-hidden />
-                <span>Previous</span>
-              </button>
-
-              <div className="collection-page-numbers">
-                {pageNumbers.map((page, idx) =>
-                  page === '…' ? (
-                    <span key={`ellipsis-${idx}`} className="collection-page-ellipsis" aria-hidden>
-                      …
-                    </span>
-                  ) : (
-                    <button
-                      key={page}
-                      type="button"
-                      className={`collection-page-btn collection-page-btn--num${
-                        page === safePage ? ' is-active' : ''
-                      }`}
-                      onClick={() => goToPage(page)}
-                      aria-label={`Page ${page}`}
-                      aria-current={page === safePage ? 'page' : undefined}
-                    >
-                      {page}
-                    </button>
-                  )
-                )}
-              </div>
-
-              <button
-                type="button"
-                className="collection-page-btn collection-page-btn--nav"
-                onClick={() => goToPage(safePage + 1)}
-                disabled={safePage >= totalPages}
-                aria-label="Next page"
-              >
-                <span>Next</span>
-                <ChevronRight size={16} aria-hidden />
-              </button>
-            </nav>
-          )}
 
           {sortedItems.length > 0 && (
             <PlacedAdSlot

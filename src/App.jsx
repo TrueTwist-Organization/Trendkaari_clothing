@@ -16,7 +16,6 @@ import SearchDrawer from './components/SearchDrawer';
 import CartDrawer from './components/CartDrawer';
 import WishlistDrawer from './components/WishlistDrawer';
 import { loadWishlist, saveWishlist, isInWishlist } from './utils/wishlistStorage';
-import { loadCart, saveCart, clearCartStorage } from './utils/cartStorage';
 import UserAuthModal from './components/UserAuthModal';
 import AccountDrawer from './components/AccountDrawer';
 import QuickViewModal from './components/QuickViewModal';
@@ -35,9 +34,6 @@ import { applySiteSettingsToDocument } from './utils/siteSettings';
 import { adSlotsToCodeMap } from './utils/adSlots';
 import { AD_SLOTS_VERSION_KEY } from './utils/adSlotsSync';
 import { resetAdDedupe } from './utils/adDedupe';
-import { injectTrackingScriptsFromHtml } from './utils/injectTrackingScripts';
-import { preloadAdLibraries } from './utils/preloadAds';
-import { scrollToPageTop } from './utils/scrollToTop';
 import { runWhenIdle } from './utils/scheduleAdFit';
 import { userMe } from './api/userApi';
 import { getUserToken, setUserToken } from './api/client';
@@ -48,7 +44,6 @@ import {
   parseRouteFromPath,
   resolveProductPage,
 } from './utils/resolveProductPage';
-import { categoryPath, normalizeCategoryPathname, slugToCategory } from './utils/categorySlug';
 import './App.css';
 
 const ProductDetailPage = lazy(() => import('./components/ProductDetailPage'));
@@ -107,7 +102,7 @@ export default function App() {
   const [infoSlug, setInfoSlug] = useState(bootRoute.infoSlug ?? null);
   const [checkoutSlug, setCheckoutSlug] = useState(bootRoute.checkoutSlug ?? 'bag');
 
-  const [cartItems, setCartItems] = useState(() => loadCart());
+  const [cartItems, setCartItems] = useState([]);
   const [wishlistItems, setWishlistItems] = useState(() => loadWishlist());
   
   // Drawer visibility states
@@ -190,13 +185,13 @@ export default function App() {
     // Parse new route
     const segments = routePath.split('/').filter(Boolean);
     if (segments[0] === 'category') {
-      const cat = slugToCategory(segments[1] || 'all');
+      const cat = decodeURIComponent(segments[1] || 'all');
       setActiveCategory(cat);
       setViewMode('home');
       setSelectedProduct(null);
       setIsCategoryPage(true);
       setInfoSlug(null);
-      scrollToPageTop();
+      window.scrollTo(0, 0);
     } else if (segments[0] === 'product') {
       const prodId = parseInt(segments[1], 10);
       const found = resolveProductPage(prodId, productsList, giftCombos, {
@@ -206,7 +201,7 @@ export default function App() {
       setViewMode('product-detail');
       setIsCategoryPage(false);
       setInfoSlug(null);
-      scrollToPageTop();
+      window.scrollTo(0, 0);
     } else if (segments[0] === 'checkout') {
       const slug = normalizeCheckoutSlug(segments[1] || 'bag');
       if (!segments[1]) {
@@ -219,7 +214,7 @@ export default function App() {
       setIsCategoryPage(false);
       setInfoSlug(null);
       setIsCartOpen(false);
-      scrollToPageTop();
+      window.scrollTo(0, 0);
     } else if (segments[0] === 'info' && segments[1]) {
       const slug = decodeURIComponent(segments[1]);
       if (getInfoPage(slug)) {
@@ -228,7 +223,7 @@ export default function App() {
         setActiveCategory('all');
         setSelectedProduct(null);
         setIsCategoryPage(false);
-        scrollToPageTop();
+        window.scrollTo(0, 0);
       } else {
         navigateToRoute('/');
       }
@@ -239,7 +234,7 @@ export default function App() {
       setIsCategoryPage(false);
       setInfoSlug(null);
       setCheckoutSlug('bag');
-      scrollToPageTop();
+      window.scrollTo(0, 0);
     }
   };
 
@@ -261,12 +256,7 @@ export default function App() {
   useEffect(() => {
     const refreshAds = () => {
       fetchStoreAdSlots().then((list) => {
-        const codes = adSlotsToCodeMap(list || []);
-        if (codes.site_common_ad) {
-          injectTrackingScriptsFromHtml(codes.site_common_ad, 'site_common_ad');
-        }
-        void preloadAdLibraries(codes);
-        setAdCodes(codes);
+        setAdCodes(adSlotsToCodeMap(list || []));
       });
     };
 
@@ -363,21 +353,6 @@ export default function App() {
       .catch(() => setUserToken(null));
   }, []);
 
-  // Clean legacy category URLs (/category/dupatta%20sets → /category/dupatta-sets)
-  useEffect(() => {
-    const clean = normalizeCategoryPathname(window.location.pathname);
-    if (clean === window.location.pathname) return;
-
-    window.history.replaceState({}, '', clean);
-    const route = resolveAppRoute(clean, productsList, giftCombos);
-    setActiveCategory(route.activeCategory);
-    setViewMode(route.viewMode);
-    setSelectedProduct(route.selectedProduct);
-    setIsCategoryPage(route.isCategoryPage);
-    setInfoSlug(route.infoSlug ?? null);
-    setCheckoutSlug(route.checkoutSlug ?? 'bag');
-  }, [productsList, giftCombos]);
-
   // Listen to popstate event (browser back/forward button clicks)
   useEffect(() => {
     const handlePopState = () => {
@@ -388,16 +363,11 @@ export default function App() {
       setIsCategoryPage(route.isCategoryPage);
       setInfoSlug(route.infoSlug ?? null);
       setCheckoutSlug(route.checkoutSlug ?? 'bag');
-      scrollToPageTop();
     };
 
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, [productsList, giftCombos]);
-
-  useEffect(() => {
-    scrollToPageTop();
-  }, [viewMode, isCategoryPage, activeCategory, infoSlug, checkoutSlug, selectedProduct?.id]);
 
   useEffect(() => {
     document.body.classList.toggle('category-page', isCategoryPage);
@@ -427,10 +397,6 @@ export default function App() {
       document.body.classList.remove('is-scrolling');
     };
   }, []);
-
-  useEffect(() => {
-    saveCart(cartItems);
-  }, [cartItems]);
 
   const buildLocalOrder = (orderDetails) => ({
     id: 'ORD-' + Math.floor(100000 + Math.random() * 900000),
@@ -494,7 +460,6 @@ export default function App() {
       const refreshed = await fetchStoreProducts();
       if (refreshed?.length) setProductsList(refreshed);
       setCartItems([]);
-      clearCartStorage();
       return {
         order: {
           ...newOrder,
@@ -559,14 +524,13 @@ export default function App() {
 
   const handleClearCart = () => {
     setCartItems([]);
-    clearCartStorage();
   };
 
   const handleSelectCategory = (category) => {
     if (category === 'all') {
       navigateToRoute('/');
     } else {
-      navigateToRoute(categoryPath(category));
+      navigateToRoute(`/category/${encodeURIComponent(category)}`);
     }
   };
 
@@ -582,7 +546,7 @@ export default function App() {
       setInfoSlug(null);
       setActiveCategory('all');
       window.history.pushState({}, '', `/product/${id}`);
-      scrollToPageTop();
+      window.scrollTo(0, 0);
       return;
     }
 
@@ -710,14 +674,12 @@ export default function App() {
         }}
       />
 
-      {viewMode !== 'checkout' && (
-        <>
+      {viewMode !== 'checkout' &&
+        (viewMode === 'home' && !isCategoryPage ? (
+          <SiteTopAdStrip code={adCodes.home_below_header} slotKey="home_below_header" />
+        ) : (
           <SiteTopAdStrip code={adCodes.site_common_ad} slotKey="site_common_ad" />
-          {viewMode === 'home' && !isCategoryPage ? (
-            <SiteTopAdStrip code={adCodes.home_below_header} slotKey="home_below_header" />
-          ) : null}
-        </>
-      )}
+        ))}
 
       {/* Main Page Layout */}
       <main className={`main-content ${viewMode === 'checkout' ? 'main-content--checkout' : ''}`}>
@@ -744,6 +706,7 @@ export default function App() {
             ) : (
               <>
                 <HeroSlider onSelectCategory={handleSelectCategory} />
+                <HomeAdSlot adCodes={adCodes} placement="home_after_hero" eager />
 
                 <TrendsSection onSelectCategory={handleSelectCategory} />
                 <HomeAdSlot adCodes={adCodes} placement="home_after_trends" />
@@ -792,7 +755,7 @@ export default function App() {
             onBack={handleGoBack}
             onBackToHome={() => {
               if (activeCategory && activeCategory !== 'all') {
-                navigateToRoute(categoryPath(activeCategory));
+                navigateToRoute(`/category/${encodeURIComponent(activeCategory)}`);
               } else {
                 navigateToRoute('/');
               }

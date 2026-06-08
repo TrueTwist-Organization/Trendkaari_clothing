@@ -191,18 +191,11 @@ export async function apiFetch(path, options = {}) {
   return data;
 }
 
-export async function fetchApiHealth() {
+export async function checkApiHealth() {
   try {
     const res = await fetch(`${API_BASE}/api/health`);
-    if (!res.ok) return { ok: false };
-    const data = await res.json();
-    return { ok: true, ...data };
+    return res.ok;
   } catch {
-    return { ok: false };
+    return false;
   }
-}
-
-export async function checkApiHealth() {
-  const health = await fetchApiHealth();
-  return health.ok === true;
 }

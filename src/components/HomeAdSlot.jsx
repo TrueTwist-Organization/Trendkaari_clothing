@@ -3,7 +3,7 @@ import { resolveAdCode } from '../utils/resolveAdCode';
 import { claimAdSource } from '../utils/adDedupe';
 
 /** Homepage section ad — one saved unit per page (no duplicate fallbacks). */
-export default function HomeAdSlot({ adCodes, placement, code, label }) {
+export default function HomeAdSlot({ adCodes, placement, code, label, eager = false }) {
   const resolved =
     placement && adCodes
       ? resolveAdCode(adCodes, placement)
@@ -20,6 +20,7 @@ export default function HomeAdSlot({ adCodes, placement, code, label }) {
       code={resolved.code}
       label={placement || label}
       variant="section"
+      eager={eager}
     />
   );
 }
