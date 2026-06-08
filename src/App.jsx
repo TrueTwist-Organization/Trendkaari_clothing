@@ -167,7 +167,7 @@ export default function App() {
 
   // Active Dynamic Coupons database
   const [coupons, setCoupons] = useState([
-    { code: 'SALE100', discount: 20, discountType: 'flat', minPurchase: 199 },
+    { code: 'SALE100', discount: 20, discountType: 'flat', minPurchase: 129 },
     { code: 'FESTIVE50', discount: 50, discountType: 'flat', minPurchase: 499 },
   ]);
   const [siteSettings, setSiteSettings] = useState(null);

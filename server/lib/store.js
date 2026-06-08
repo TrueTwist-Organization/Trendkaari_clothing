@@ -39,8 +39,8 @@ const DEFAULT_STORE = {
   orders: [],
   users: [],
   coupons: [
-    { code: 'SALE100', discount: 20, discountType: 'flat', minPurchase: 199 },
-    { code: 'FESTIVE50', discount: 50, discountType: 'flat', minPurchase: 249 },
+    { code: 'SALE100', discount: 20, discountType: 'flat', minPurchase: 129 },
+    { code: 'FESTIVE50', discount: 50, discountType: 'flat', minPurchase: 149 },
     { code: 'FFLAT30', discount: 30, discountType: 'flat', minPurchase: 149 },
   ],
   admin: null,

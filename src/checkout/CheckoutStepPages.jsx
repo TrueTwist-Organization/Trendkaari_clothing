@@ -114,7 +114,7 @@ export default function CheckoutStepPages({ step, ctx }) {
   };
 
   const saleCoupon = coupons.find((c) => c.code === 'SALE100') || coupons[0];
-  const promoMin = saleCoupon?.minPurchase ?? 199;
+  const promoMin = saleCoupon?.minPurchase ?? 129;
   const promoOffLabel = saleCoupon ? formatCouponDiscountShort(saleCoupon) : '₹20 off';
   const promoCode = saleCoupon?.code ?? 'SALE100';
 

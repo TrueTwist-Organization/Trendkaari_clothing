@@ -160,7 +160,7 @@ export function CheckoutProductSuggestions({
   );
 }
 
-export function CheckoutFreeShipBar({ subtotal, target = 199 }) {
+export function CheckoutFreeShipBar({ subtotal, target = 129 }) {
   const pct = Math.min(100, Math.round((subtotal / target) * 100));
   const remaining = Math.max(0, target - subtotal);
   const unlocked = remaining <= 0;

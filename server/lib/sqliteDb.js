@@ -7,8 +7,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DEFAULT_DB_PATH = path.join(__dirname, '../data/trendkaari.db');
 
 const DEFAULT_COUPONS = [
-  { code: 'SALE100', discount: 20, discountType: 'flat', minPurchase: 199 },
-  { code: 'FESTIVE50', discount: 50, discountType: 'flat', minPurchase: 249 },
+  { code: 'SALE100', discount: 20, discountType: 'flat', minPurchase: 129 },
+  { code: 'FESTIVE50', discount: 50, discountType: 'flat', minPurchase: 149 },
   { code: 'FFLAT30', discount: 30, discountType: 'flat', minPurchase: 149 },
 ];
 

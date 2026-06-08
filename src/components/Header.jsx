@@ -40,7 +40,7 @@ export default function Header({
       {/* Top Announcement Bar */}
       <div className="announcement-bar">
         <div className="announcement-track">
-          <span>SHOP ₹199+ & GET FLAT ₹20 OFF | USE CODE: SALE100</span>
+          <span>SHOP ₹129+ & GET FLAT ₹20 OFF | USE CODE: SALE100</span>
           <span className="divider-dot">•</span>
           <span className="mobile-hidden">FREE SHIPPING ON ALL ORDERS WITHIN INDIA</span>
           <span className="divider-dot mobile-hidden">•</span>

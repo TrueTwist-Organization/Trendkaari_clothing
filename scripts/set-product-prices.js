@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
- * Set all product prices to fixed tiers: ₹99, ₹149, ₹199, ₹249 only.
+ * Set all product prices to fixed tiers: ₹99, ₹129, ₹139, ₹149 only.
+ * Prices rotate within each sub-category so no category shares one price.
  * Updates src/data/products.js and server/data/store.json if present.
  */
 import { writeFileSync, readFileSync, existsSync } from 'fs';
@@ -11,39 +12,40 @@ const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const PRODUCTS_PATH = path.join(ROOT, '../src/data/products.js');
 const STORE_PATH = path.join(ROOT, '../server/data/store.json');
 
-const PRICE_TIERS = [99, 149, 199, 249];
+const PRICE_TIERS = [99, 129, 139, 149];
 
-function tierFromIndex(index, total) {
-  if (total <= 1) return PRICE_TIERS[0];
-  const bucket = Math.min(
-    PRICE_TIERS.length - 1,
-    Math.floor((index / total) * PRICE_TIERS.length)
-  );
-  return PRICE_TIERS[bucket];
-}
-
-function tierFromOldPrice(oldPrice, minOld, maxOld) {
-  if (maxOld <= minOld) return PRICE_TIERS[0];
-  const ratio = (oldPrice - minOld) / (maxOld - minOld);
-  const idx = Math.min(PRICE_TIERS.length - 1, Math.floor(ratio * PRICE_TIERS.length));
-  return PRICE_TIERS[idx];
+function categoryKey(product) {
+  return (product.subCategory || product.category || 'other').toLowerCase().trim();
 }
 
 function applyPricing(products) {
-  const sorted = [...products].sort(
-    (a, b) => (Number(a.price) || 0) - (Number(b.price) || 0)
-  );
-  const minOld = Number(sorted[0]?.price) || 99;
-  const maxOld = Number(sorted[sorted.length - 1]?.price) || 249;
-  const rankById = new Map(sorted.map((p, i) => [p.id, i]));
+  const groups = new Map();
 
-  return products.map((p) => {
-    const rank = rankById.get(p.id) ?? 0;
-    const price = tierFromIndex(rank, products.length);
+  for (const product of products) {
+    const key = categoryKey(product);
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(product);
+  }
+
+  const priceById = new Map();
+
+  for (const [key, group] of groups) {
+    const sorted = [...group].sort((a, b) => Number(a.id) - Number(b.id));
+    const offset = Math.abs(key.split('').reduce((n, c) => n + c.charCodeAt(0), 0)) % PRICE_TIERS.length;
+
+    sorted.forEach((product, index) => {
+      const tierIdx = (offset + index) % PRICE_TIERS.length;
+      priceById.set(product.id, PRICE_TIERS[tierIdx]);
+    });
+  }
+
+  return products.map((product) => {
+    const price = priceById.get(product.id) ?? PRICE_TIERS[0];
     const originalPrice = Math.round(price * 2);
     const discountPct = Math.max(1, Math.round((1 - price / originalPrice) * 100));
+
     return {
-      ...p,
+      ...product,
       price,
       originalPrice,
       discount: `${discountPct}% OFF`,
@@ -73,10 +75,10 @@ if (existsSync(STORE_PATH)) {
   writeFileSync(STORE_PATH, JSON.stringify(store, null, 2), 'utf8');
 }
 
-const counts = PRICE_TIERS.reduce((acc, t) => {
-  acc[t] = updated.filter((p) => p.price === t).length;
+const counts = PRICE_TIERS.reduce((acc, tier) => {
+  acc[tier] = updated.filter((p) => p.price === tier).length;
   return acc;
 }, {});
 
-console.log(`Updated ${updated.length} products → tiers only: ₹99, ₹149, ₹199, ₹249`);
+console.log(`Updated ${updated.length} products → tiers only: ₹99, ₹129, ₹139, ₹149`);
 console.log(counts);
