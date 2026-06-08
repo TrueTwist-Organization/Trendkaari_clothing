@@ -1,6 +1,7 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react';
 import Header from './components/Header';
 import HeroSlider from './components/HeroSlider';
+import HeroCouponStrip from './components/HeroCouponStrip';
 import TrendsSection from './components/TrendsSection';
 import OfferSection from './components/OfferSection';
 import SiteTopAdStrip from './components/SiteTopAdStrip';
@@ -744,6 +745,10 @@ export default function App() {
             ) : (
               <>
                 <HeroSlider onSelectCategory={handleSelectCategory} />
+                <HeroCouponStrip
+                  coupons={coupons}
+                  onShopNow={() => handleSelectCategory('women-kurtas')}
+                />
                 <HomeAdSlot adCodes={adCodes} placement="home_after_hero" />
 
                 <TrendsSection onSelectCategory={handleSelectCategory} />
